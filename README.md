@@ -1,5 +1,12 @@
 # Fındık ile Pamuk
 
+**Privacy Policy / Gizlilik Politikası:** [docs/GIZLILIK.md](docs/GIZLILIK.md) ·
+**Terms of Service / Kullanım Koşulları:** [docs/KOSULLAR.md](docs/KOSULLAR.md)
+
+This tool uses the **YouTube API Services** to upload the owner's own episodes to the owner's own YouTube
+channel. [YouTube Terms of Service](https://www.youtube.com/t/terms) ·
+[Google Privacy Policy](https://policies.google.com/privacy)
+
 Çocuklar (3-7 yaş) için Türkçe, özgün 3D kısa çizgi film serisi ve onu üreten otomasyon.
 Her bölüm tek bir değer işler (paylaşmak, dürüstlük, özür dilemek, sabır...).
 
