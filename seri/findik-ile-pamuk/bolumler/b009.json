@@ -1,0 +1,213 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 9,
+ "baslik": "Öfke Bulutu",
+ "deger": "duyguları yönetmek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.9,
+   0.2
+  ],
+  "pamuk": [
+   0.9,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Fındık Neden Kızdı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Öfke Bulutu | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Oyunu kaybeden Fındık çok kızar. Pamuk ona sakinleşmek için ona kadar saymayı öğretir. Bu bölümün değeri: duyguları yönetmek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "duyguları yönetmek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Fındık ve Pamuk yarış yaptılar. Pamuk kazandı!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.9
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hıh! Kaybetmeyi hiç sevmiyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Kızgın olduğunu görüyorum. Birlikte ona kadar sayalım mı?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.2,
+      0.15
+     ],
+     "son_yon": -1.3,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "normal"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.4,
+     "kime": "pamuk"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bir, iki, üç, dört, beş, altı, yedi, sekiz, dokuz, on."
+    },
+    {
+     "kim": "findik",
+     "metin": "Oh, biraz rahatladım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "normal"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Tebrikler Pamuk! Bir daha yarışalım mı?"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kızdığımızda durup saymak, öfke bulutunu dağıtır."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.55,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.55,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

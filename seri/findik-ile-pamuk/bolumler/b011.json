@@ -1,0 +1,218 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 11,
+ "baslik": "Uyku Vakti",
+ "deger": "uyku düzeni",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.3
+  ],
+  "pamuk": [
+   1.1,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Daha Çok Oynamak İstiyorum!",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Uyku Vakti | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık geç saatte oynamak ister. Pamuk ona dinlenmenin yarın daha çok oynamak için önemli olduğunu anlatır. Bu bölümün değeri: uyku düzeni.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "uyku düzeni"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "aksam",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Akşam olmuştu ama Fındık hâlâ zıplıyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 3,
+     "son": 0.9
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "aksam",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Fındık, uyku vakti geldi."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "aksam",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ama daha çok oynamak istiyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "pamuk"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "gece",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Uyursan yarın daha çok enerjin olur. Sabah yine oynarız!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Doğru! Hadi uyuyalım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.25,
+      0.3
+     ],
+     "son_yon": -1.3,
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.8,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "gece",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "İyi bir uyku, yeni bir günün en güzel hazırlığıdır. İyi geceler!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "otur",
+     "bas": 0.05,
+     "son": 0.3
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.45,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

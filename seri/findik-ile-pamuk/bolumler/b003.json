@@ -1,0 +1,223 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 3,
+ "baslik": "Bir Özür, Bir Gülümseme",
+ "deger": "özür dilemek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.6,
+   0.2
+  ],
+  "pamuk": [
+   0.9,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Neden Kızdı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Bir Özür, Bir Gülümseme | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Koşarken Pamuk'a çarpan Fındık önce umursamaz, sonra arkadaşının üzüldüğünü görüp özür diler. Bu bölümün değeri: özür dilemek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "özür dilemek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Fındık ormanda çok hızlı koşuyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      0.45,
+      0.1
+     ],
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ay! Bana çarptın Fındık!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "otur",
+     "bas": 0.05,
+     "son": 0.4
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ama ben acele ediyordum..."
+    },
+    {
+     "kim": "findik",
+     "metin": "Hmm, Pamuk gerçekten üzüldü."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.45,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Özür dilerim Pamuk. Bir dahaki sefere dikkat edeceğim."
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Özrünü kabul ediyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "kalk",
+     "bas": 0.55,
+     "son": 0.75
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.6,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Küçük bir özür, kocaman bir gülümseme getirir."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.55
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.6,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.6,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.65,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

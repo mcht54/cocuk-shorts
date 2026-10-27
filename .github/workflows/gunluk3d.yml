@@ -1,0 +1,82 @@
+name: Günlük 3D bölüm (Fındık ile Pamuk)
+
+on:
+  # Zamanlama, YouTube izni + API onayı tamamlanınca açılacak; o zamana kadar yalnız elle.
+  # schedule:
+  #   - cron: "0 14 * * *"   # 17:00 TR
+  workflow_dispatch:
+    inputs:
+      bolum:
+        description: "Belirli bölüm (boş = sıradaki), ör. seri/findik-ile-pamuk/bolumler/b002.json"
+        required: false
+      profil:
+        description: "shorts / uzun"
+        default: "shorts"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gunluk3d
+  cancel-in-progress: false
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Sistem paketleri
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - name: Blender (önbellekli)
+        uses: actions/cache@v4
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - run: |
+          if [ ! -x blender/blender ]; then
+            curl -sL https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz | tar -xJ
+            mv blender-5.2.3-linux-x64 blender
+          fi
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - name: Üret, denetle, (izinliyse) yükle
+        env:
+          BLENDER: ${{ github.workspace }}/blender/blender
+          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'CYCLES' }}
+          RENDER_IS_PARCACIGI: "4"
+          EN_AZ_BOS_DISK_GB: "5"
+          PROFIL: ${{ inputs.profil || 'shorts' }}
+          BOLUM: ${{ inputs.bolum }}
+          YAYIN: ${{ vars.YAYIN || 'kapali' }}
+          YT_GIZLILIK: ${{ vars.YT_GIZLILIK || 'private' }}
+          YT_HERKESE_ACIK_ONAY: ${{ vars.YT_HERKESE_ACIK_ONAY || 'hayir' }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: xvfb-run -a python bulut3d.py
+      - name: Videoyu ve raporu 7 gün indirilebilir bırak
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bolum-${{ github.run_id }}
+          path: |
+            cikti3d/**/*.mp4
+            cikti3d/**/*.rapor.json
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Yayın kaydını depoya yaz
+        if: always()
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add yayin_kaydi.json seri/findik-ile-pamuk/karakter_izleri.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "yayın kaydı: $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1

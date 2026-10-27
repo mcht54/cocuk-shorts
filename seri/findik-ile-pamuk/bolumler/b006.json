@@ -1,0 +1,208 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 6,
+ "baslik": "Karanlıktan Korkma Pamuk",
+ "deger": "cesaret",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -1.2,
+   0.4
+  ],
+  "pamuk": [
+   0.8,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Neden Uyuyamadı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Karanlıktan Korkma Pamuk | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Gece olunca Pamuk biraz korkar. Fındık ona korkunun normal olduğunu ve cesaretin küçük adımlarla geldiğini anlatır. Bu bölümün değeri: cesaret.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "cesaret"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "gece",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Gece olmuştu. Pamuk bir türlü uyuyamıyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "otur",
+     "bas": 0.3,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "gece",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Karanlıkta biraz korkuyorum..."
+    }
+   ],
+   "eylemler": []
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "gece",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ben de bazen korkarım. Korkmak normaldir."
+    },
+    {
+     "kim": "findik",
+     "metin": "Hadi birlikte derin bir nefes alalım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.1,
+      0.3
+     ],
+     "son_yon": 1.3,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "gece",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Nefes aldım... Biraz daha iyiyim."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "normal"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Teşekkürler Fındık. Artık uyuyabilirim."
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Cesaret, korksak da küçük bir adım atabilmektir. İyi geceler!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "kalk",
+     "bas": 0.0,
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.1,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.1,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.5,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.5,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}
