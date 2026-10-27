@@ -131,6 +131,8 @@ def birlestir(is_dizini, cikti):
     ff = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", f"{en}x{boy}", "-r", str(fps), "-i", "-", "-i", str(is_dizini / "ses.wav"),
+         # yuv420p çift boyut ister (ör. %67 ölçek 723x1286 verir): en yakın çifte yuvarla
+         "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2",
          "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(cikti)],
         stdin=subprocess.PIPE)
