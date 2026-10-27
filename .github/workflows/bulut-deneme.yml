@@ -1,0 +1,52 @@
+name: Bulut render denemesi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        motor: [EEVEE, CYCLES]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Sistem paketleri
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - name: Blender (önbellekli)
+        uses: actions/cache@v4
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - run: |
+          if [ ! -x blender/blender ]; then
+            curl -sL https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz | tar -xJ
+            mv blender-5.2.3-linux-x64 blender
+          fi
+          blender/blender --version | head -1
+          nproc; free -g
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - name: Önizleme render (diyalogsuz test bölümü, 16 sn)
+        env:
+          BLENDER: ${{ github.workspace }}/blender/blender
+          RENDER_MOTORU: ${{ matrix.motor }}
+          EN_AZ_BOS_DISK_GB: "5"
+        run: |
+          /usr/bin/time -v xvfb-run -a python uret3d.py --bolum tests/veri/test_cevrimdisi.json \
+            --seri seri/findik-ile-pamuk --profil shorts --onizleme 2>&1 | tee deneme.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deneme-${{ matrix.motor }}
+          path: |
+            deneme.log
+            cikti3d/
+          retention-days: 3

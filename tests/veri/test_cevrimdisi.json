@@ -1,0 +1,16 @@
+{
+  "seri_id": "findik-ile-pamuk", "bolum_no": 901, "baslik": "Çevrimdışı test", "mekan": "orman",
+  "ekran_basligi": "Çevrimdışı Test",
+  "baslangic": {"findik": [-1.2, 0.2], "pamuk": [1.1, 0.2]}, "nesne_yerlesim": {"palamut": [-0.2, -0.1, 0.0]},
+  "cekimler": [
+    {"id": "o1", "tip": "genis", "hareket": "yaklas", "isik": "sabah", "hedef": ["findik"], "en_az": 5.5,
+     "satirlar": [], "eylemler": [{"kim": "findik", "eylem": "yuru", "nereye": [-0.5, -0.1], "bas": 0.05, "son": 0.6},
+                                  {"kim": "findik", "eylem": "tut", "nesne": "palamut", "bas": 0.65, "son": 0.9}]},
+    {"id": "o2", "tip": "orta", "hareket": "kaydir", "isik": "sabah", "isik_son": "ogle", "hedef": ["pamuk"], "en_az": 5.0,
+     "satirlar": [], "eylemler": [{"kim": "pamuk", "eylem": "zipla", "kez": 2, "bas": 0.1, "son": 0.7},
+                                  {"kim": "pamuk", "eylem": "ifade", "tur": "mutlu", "bas": 0.1}]},
+    {"id": "o3", "tip": "iki_kisi", "hareket": "donus", "isik": "ogle", "isik_son": "aksam", "hedef": ["findik", "pamuk"], "en_az": 5.5,
+     "satirlar": [], "eylemler": [{"kim": "findik", "eylem": "el_salla", "bas": 0.1, "son": 0.8},
+                                  {"kim": "pamuk", "eylem": "el_salla", "bas": 0.2, "son": 0.9}]}
+  ]
+}

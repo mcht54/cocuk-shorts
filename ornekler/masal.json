@@ -1,0 +1,15 @@
+{
+  "tur": "masal",
+  "baslik": "Paylaşmayı Öğrenen Sincap Fındık 🐿️ | Kısa Masal",
+  "ekran_basligi": "Fındık'ın Kocaman Palamudu",
+  "karakter_tarifi": "a small orange squirrel named Findik with a fluffy tail and big brown eyes",
+  "sahneler": [
+    {"metin": "Ormanın en minik sincabı Fındık, bir sabah kocaman, parlak bir palamut buldu!", "gorsel": "the squirrel holding a giant shiny acorn in an autumn forest, morning sun"},
+    {"metin": "Palamudu sımsıkı sardı. Bu benim, kimseye vermem, dedi.", "gorsel": "the squirrel hugging the acorn tightly, cheeky face, autumn leaves"},
+    {"metin": "Az ileride küçük tavşan Pamuk, karnı aç, üzgün üzgün oturuyordu.", "gorsel": "a little white bunny sitting sadly under a tree, autumn forest"},
+    {"metin": "Fındık bir palamuda baktı, bir de Pamuk'a. Kalbi ısındı.", "gorsel": "the squirrel looking thoughtfully at a sad white bunny, warm light"},
+    {"metin": "Palamudu ikiye böldü ve yarısını Pamuk'a uzattı.", "gorsel": "the squirrel giving half of an acorn to a white bunny, both smiling"},
+    {"metin": "Birlikte yediler, güldüler ve en iyi arkadaş oldular.", "gorsel": "squirrel and white bunny laughing together on a log, sunset forest"},
+    {"metin": "Çünkü paylaşınca mutluluk azalmaz, çoğalır! Sen bugün ne paylaştın?", "gorsel": "squirrel and bunny waving happily, colorful autumn forest, hearts in the air"}
+  ]
+}

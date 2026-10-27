@@ -1,0 +1,66 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 900,
+ "baslik": "Test orman",
+ "mekan": "orman",
+ "baslangic": {
+  "pamuk": [
+   -0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "cekimler": [
+  {
+   "id": "t1",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "isik_son": "aksam",
+   "hedef": [
+    "pamuk"
+   ],
+   "en_az": 2.5,
+   "satirlar": [],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "nereye": [
+      0.6,
+      0.0
+     ],
+     "bas": 0.05,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "tip": "genis",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "pamuk"
+   ],
+   "en_az": 2.0,
+   "satirlar": [],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "kez": 1,
+     "bas": 0.1,
+     "son": 0.7
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "giris_cekimi": false
+}

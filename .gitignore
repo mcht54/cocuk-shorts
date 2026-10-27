@@ -1,0 +1,9 @@
+venv/
+cikti/
+cikti3d/
+uretim/
+kayit/
+__pycache__/
+client_secret*.json
+.env
+*.blend1

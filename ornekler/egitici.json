@@ -1,0 +1,15 @@
+{
+  "tur": "egitici",
+  "baslik": "Renkleri Öğrenelim: Sarı! 💛 | Okul Öncesi",
+  "ekran_basligi": "Renkleri Öğrenelim: SARI",
+  "karakter_tarifi": "",
+  "sahneler": [
+    {"metin": "Merhaba minikler! Bugün çok neşeli bir rengi öğreniyoruz: Sarı!", "gorsel": "a big bright yellow paint splash with a smiling sun, white background"},
+    {"metin": "Gökyüzündeki güneş, sapsarı parlıyor. Hadi söyle: Sarı!", "gorsel": "a smiling cartoon sun shining in a blue sky"},
+    {"metin": "Bu bir muz. Muz da sarı! Mmm, çok lezzetli.", "gorsel": "a cute smiling yellow banana character"},
+    {"metin": "Vak vak! Bu minik ördek de sarı.", "gorsel": "a fluffy yellow baby duck in a pond"},
+    {"metin": "Bak, sarı bir civciv! Cik cik cik!", "gorsel": "a tiny fluffy yellow chick on green grass"},
+    {"metin": "Ayçiçeği de güneşe bakan sarı bir çiçek.", "gorsel": "a big yellow sunflower with a happy face in a field"},
+    {"metin": "Şimdi sıra sende! Etrafında sarı bir şey bulabilir misin?", "gorsel": "a happy child's room with many yellow toys, yellow ball, yellow teddy"}
+  ]
+}

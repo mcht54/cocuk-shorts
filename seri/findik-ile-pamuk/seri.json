@@ -1,0 +1,35 @@
+{
+  "seri_id": "findik-ile-pamuk",
+  "seri_adi": "Fındık ile Pamuk",
+  "aciklama": "Ormanda yaşayan meraklı sincap Fındık ile yumuşak kalpli tavşan Pamuk'un küçük günlük maceraları. Her bölüm tek bir değer işler.",
+  "hedef_yas": "3-7",
+  "karakterler": {
+    "findik": {
+      "ad": "Fındık", "tur": "sincap", "boy": 0.95,
+      "renk": {"kurk": [0.78, 0.40, 0.14], "karin": [0.98, 0.86, 0.68], "burun": [0.25, 0.12, 0.08],
+               "goz": [0.22, 0.13, 0.06], "yanak": [1.0, 0.55, 0.50]},
+      "degismez": ["turuncu kürk", "krem karın", "üç boğumlu kabarık kuyruk", "küçük sivri kulaklar", "kahverengi gözler"],
+      "kisilik": "meraklı, enerjik, cömert",
+      "ses": {"ses": "tr-TR-EmelNeural", "hiz": "+8%", "perde": "+38Hz"}
+    },
+    "pamuk": {
+      "ad": "Pamuk", "tur": "tavsan", "boy": 1.0,
+      "renk": {"kurk": [0.95, 0.95, 0.97], "karin": [1.0, 0.90, 0.93], "burun": [1.0, 0.50, 0.62],
+               "goz": [0.12, 0.10, 0.25], "yanak": [1.0, 0.62, 0.72], "kulak_ici": [1.0, 0.70, 0.78]},
+      "degismez": ["bembeyaz kürk", "pembe burun", "uzun dik kulaklar (içi pembe)", "pamuk kuyruk", "lacivert gözler"],
+      "kisilik": "yumuşak kalpli, utangaç, düşünceli",
+      "ses": {"ses": "tr-TR-EmelNeural", "hiz": "-4%", "perde": "+14Hz"}
+    },
+    "anlatici": {
+      "ad": "Anlatıcı", "tur": "ses",
+      "ses": {"ses": "tr-TR-AhmetNeural", "hiz": "-4%", "perde": "+0Hz"}
+    }
+  },
+  "mekanlar": {
+    "orman": {"tur": "orman", "tohum": 11, "aciklama": "Büyük meşe ağacının önündeki açıklık; yuvarlak taşlar, mantarlar, çiçekler"},
+    "oda": {"tur": "oda", "tohum": 5, "aciklama": "Pamuk'un ağaç kovuğundaki sıcak evi"}
+  },
+  "nesneler": {
+    "palamut": {"tur": "palamut", "olcek": 1.0}
+  }
+}

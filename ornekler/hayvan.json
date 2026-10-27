@@ -1,0 +1,15 @@
+{
+  "tur": "hayvan",
+  "baslik": "Ahtapotun 3 Kalbi Var! 🐙 | Biliyor muydun?",
+  "ekran_basligi": "Ahtapotun 3 Kalbi Var!",
+  "karakter_tarifi": "a cute friendly purple octopus with big eyes",
+  "sahneler": [
+    {"metin": "Biliyor muydun? Ahtapotun tam üç kalbi var!", "gorsel": "the octopus underwater with three little hearts floating above it"},
+    {"metin": "Sekiz kolu var ve kollarındaki vantuzlarla dokunduğu şeylerin tadını alabiliyor.", "gorsel": "the octopus touching a seashell with its tentacles, coral reef"},
+    {"metin": "Kanı kırmızı değil, mavi!", "gorsel": "the octopus surprised, glowing blue bubbles around it, deep sea"},
+    {"metin": "Tehlike olunca mürekkep püskürtür ve hızla kaçar.", "gorsel": "the octopus swimming away leaving a dark ink cloud, a fish looking confused"},
+    {"metin": "Rengini değiştirip kayaların arasında saklanabilir.", "gorsel": "the octopus camouflaged on colorful rocks, half visible, playful"},
+    {"metin": "Çok da akıllıdır, kavanoz kapağını bile açabilir!", "gorsel": "the octopus opening a glass jar lid, curious face, aquarium"},
+    {"metin": "Sen en çok hangi deniz canlısını seviyorsun?", "gorsel": "the octopus waving with friends: a turtle, a starfish and a little fish, coral reef"}
+  ]
+}
