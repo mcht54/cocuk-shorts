@@ -48,7 +48,12 @@ jobs:
       - name: Üret, denetle, (izinliyse) yükle
         env:
           BLENDER: ${{ github.workspace }}/blender/blender
-          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'CYCLES' }}
+          # ölçüm (2026-10-27): EEVEE 4 örnek 720p ≈13 sn/kare; 12 fps ile Shorts ≈1.5 saat
+          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'EEVEE' }}
+          ORNEKLEME: "4"
+          OLCEK: "67"
+          FPS: "12"
+          RENDER_SN_KARE: "40"
           RENDER_IS_PARCACIGI: "4"
           EN_AZ_BOS_DISK_GB: "5"
           PROFIL: ${{ inputs.profil || 'shorts' }}

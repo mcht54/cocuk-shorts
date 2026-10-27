@@ -55,6 +55,7 @@ def main():
     ap.add_argument("--onizleme", action="store_true")
     ap.add_argument("--prototip", action="store_true")
     ap.add_argument("--ornekleme", type=int)
+    ap.add_argument("--olcek", type=int, help="çözünürlük yüzdesi (bulut: 67 = 720p)")
     ap.add_argument("--seri", help="seri klasörü (varsayılan: bölüm dosyasının iki üstü)")
     a = ap.parse_args()
 
@@ -66,7 +67,7 @@ def main():
     cikti_dizini = KOK / "cikti3d" / bolum["seri_id"]
     is_dizini.mkdir(parents=True, exist_ok=True)
     cikti_dizini.mkdir(parents=True, exist_ok=True)
-    olcek = 50 if a.onizleme else 100
+    olcek = a.olcek or (50 if a.onizleme else 100)
     ornekleme = a.ornekleme or (8 if a.onizleme else 32)
 
     bos = shutil.disk_usage(KOK).free / 1e9
@@ -113,7 +114,8 @@ def main():
         for deneme in range(1, 3):
             ts = time.time()
             try:
-                blender("render", is_dizini, b, s, zaman_asimi=max(900, 12 * c["kare_say"]))
+                blender("render", is_dizini, b, s,
+                        zaman_asimi=max(900, int(os.environ.get("RENDER_SN_KARE", 12)) * c["kare_say"]))
                 break
             except Exception as e:
                 log(f"{c['id']}: render hatası (deneme {deneme}): {str(e)[-300:]}")

@@ -39,7 +39,8 @@ def main():
     bolum = sira[0]
     ozet(f"### {bolum.name} ({PROFIL})")
 
-    komut = [sys.executable, str(KOK / "uret3d.py"), "--bolum", str(bolum), "--profil", PROFIL]
+    komut = [sys.executable, str(KOK / "uret3d.py"), "--bolum", str(bolum), "--profil", PROFIL,
+             "--ornekleme", os.environ.get("ORNEKLEME", "4"), "--olcek", os.environ.get("OLCEK", "67")]
     if PROFIL == "uzun":
         komut.append("--prototip")
     r = subprocess.run(komut)
