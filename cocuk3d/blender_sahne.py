@@ -314,7 +314,7 @@ def kur(plan_yolu, is_dizini, ornekleme=24, olcek=100):
     if os.environ.get("RENDER_MOTORU", "EEVEE").upper() == "CYCLES":
         sc.render.engine = "CYCLES"
         sc.cycles.device = "CPU"
-        sc.cycles.samples = max(4, int(ornekleme) // 2)
+        sc.cycles.samples = int(os.environ.get("CYCLES_ORNEK", max(4, int(ornekleme) // 2)))
         sc.cycles.use_denoising = True
         sc.cycles.max_bounces = 4
     else:

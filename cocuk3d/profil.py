@@ -1,5 +1,7 @@
 """Video profilleri: Shorts (9:16) ve uzun bölüm (16:9). İkisi de aynı seri/karakter/
 dünya tanımlarını kullanır; yalnız kadraj, süre sınırı ve kurgu kuralları değişir."""
+import os
+
 
 PROFILLER = {
     "shorts": {
@@ -26,6 +28,8 @@ PROTOTIP_UZUN_EN_AZ = 20.0
 
 def profil(ad, prototip=False):
     p = dict(PROFILLER[ad], ad=ad)
+    if os.environ.get("FPS"):  # bulutta "ikişerli kare" (12 fps) gibi hafif üretim için
+        p["fps"] = int(os.environ["FPS"])
     if prototip and ad == "uzun":
         p["sure"] = [PROTOTIP_UZUN_EN_AZ, p["sure"][1]]
         p["prototip"] = True

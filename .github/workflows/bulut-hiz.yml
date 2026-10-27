@@ -1,0 +1,53 @@
+name: Bulut render hız ölçümü
+
+on:
+  workflow_dispatch:
+
+jobs:
+  olc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        ayar:
+          - {ad: eevee-s1-720, motor: EEVEE, ornek: "1", olcek: "67"}
+          - {ad: eevee-s4-720, motor: EEVEE, ornek: "4", olcek: "67"}
+          - {ad: cycles-s4-720, motor: CYCLES, ornek: "4", olcek: "67"}
+          - {ad: cycles-s8-1080, motor: CYCLES, ornek: "8", olcek: "100"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - uses: actions/cache@v4
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - run: |
+          if [ ! -x blender/blender ]; then
+            curl -sL https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz | tar -xJ
+            mv blender-5.2.3-linux-x64 blender
+          fi
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - name: 24 kare ölç
+        env:
+          RENDER_MOTORU: ${{ matrix.ayar.motor }}
+          CYCLES_ORNEK: ${{ matrix.ayar.ornek }}
+        run: |
+          D=$PWD/olc
+          python -c "from cocuk3d.planla import planla; planla('seri/findik-ile-pamuk','tests/veri/test_cevrimdisi.json','shorts','$D')"
+          xvfb-run -a blender/blender -b --factory-startup -P cocuk3d/blender_sahne.py -- kur $D/plan.json $D ${{ matrix.ayar.ornek }} ${{ matrix.ayar.olcek }} | grep KURULUM
+          B=$(date +%s)
+          xvfb-run -a blender/blender -b -t 4 -P cocuk3d/blender_sahne.py -- render $D 300 323 > /dev/null
+          S=$(( $(date +%s) - B ))
+          echo "SONUC ${{ matrix.ayar.ad }}: 24 kare $S sn = $(python -c "print(round($S/24,2))") sn/kare" | tee -a $GITHUB_STEP_SUMMARY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: olc-${{ matrix.ayar.ad }}
+          path: olc/kareler/k_0310.png
+          retention-days: 3
