@@ -12,6 +12,9 @@ on:
       profil:
         description: "shorts / uzun"
         default: "shorts"
+      yayin:
+        description: "otomatik = depo ayarına uy; hayir = yalnız üret ve denetle (deneme)"
+        default: "otomatik"
 
 permissions:
   contents: write
@@ -58,7 +61,7 @@ jobs:
           EN_AZ_BOS_DISK_GB: "5"
           PROFIL: ${{ inputs.profil || 'shorts' }}
           BOLUM: ${{ inputs.bolum }}
-          YAYIN: ${{ vars.YAYIN || 'kapali' }}
+          YAYIN: ${{ inputs.yayin == 'hayir' && 'kapali' || vars.YAYIN || 'kapali' }}
           YT_GIZLILIK: ${{ vars.YT_GIZLILIK || 'private' }}
           YT_HERKESE_ACIK_ONAY: ${{ vars.YT_HERKESE_ACIK_ONAY || 'hayir' }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -80,8 +83,14 @@ jobs:
         run: |
           git config user.name "cocuk-shorts-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add yayin_kaydi.json seri/findik-ile-pamuk/karakter_izleri.json 2>/dev/null || true
-          git diff --cached --quiet && exit 0
-          git commit -m "yayın kaydı: $(date -u +%F)"
-          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          cp yayin_kaydi.json "$RUNNER_TEMP/kayit.json" 2>/dev/null || echo "[]" > "$RUNNER_TEMP/kayit.json"
+          cp seri/findik-ile-pamuk/karakter_izleri.json "$RUNNER_TEMP/izler.json"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python kayit_birlestir.py "$RUNNER_TEMP/kayit.json" "$RUNNER_TEMP/izler.json"
+            git add yayin_kaydi.json seri/findik-ile-pamuk/karakter_izleri.json
+            git diff --cached --quiet && exit 0
+            git commit -q -m "yayın kaydı: $(date -u +%F)" && git push -q && exit 0
+            sleep $((i * 5))
+          done
           exit 1

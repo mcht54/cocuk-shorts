@@ -75,6 +75,9 @@ def kamera_yolu(cekim, pozlar, boylar, bas_kare, kare_say, en, boy):
             aci += -0.35 + 0.7 * u
         elif hareket == "kaydir":
             aci += -0.2 + 0.4 * u
+        else:  # "sabit" de tam durmasın: çok yavaş yaklaşma + yay (donuk görüntü olmasın)
+            d = d0 * (1.04 - 0.08 * u)
+            aci += 0.08 * (u - 0.5)
         mx, my = yumusak_merkez
         bakis_z = t["bakis"] * boy_en
         yol.append({

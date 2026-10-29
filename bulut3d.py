@@ -29,14 +29,28 @@ def main():
     kayitlar = json.loads(KAYIT.read_text()) if KAYIT.exists() else []
     # yalnız yüklenenler tamamlanmış sayılır: onay öncesi denemeler bölüm tüketmesin
     yapilan = {(k["bolum"], k["profil"]) for k in kayitlar if k.get("durum") == "yuklendi"}
+    # kalite kontrolünü iki kez geçemeyen bölüm sırayı kilitlemesin: atlanır (kayıtta görünür)
+    kalan = {}
+    for k in kayitlar:
+        if k.get("durum") == "kalite_kaldi" and k["profil"] == PROFIL:
+            kalan[k["bolum"]] = kalan.get(k["bolum"], 0) + 1
     bolumler = sorted(SERI.glob("bolumler/b*.json"))
-    sira = [b for b in bolumler if (str(b.relative_to(KOK)), PROFIL) not in yapilan]
+    sira = [b for b in bolumler if (str(b.relative_to(KOK)), PROFIL) not in yapilan
+            and kalan.get(str(b.relative_to(KOK)), 0) < 2]
     if os.environ.get("BOLUM"):
         sira = [KOK / os.environ["BOLUM"]]
     if not sira:
         ozet("Üretilecek yeni bölüm kalmadı. seri/findik-ile-pamuk/bolumler'e bölüm eklenmeli.")
         return 0
-    bolum = sira[0]
+    # bir bölüm kaliteyi geçemezse aynı çalıştırmada sıradakini dene (gün boş geçmesin)
+    for bolum in sira[:2]:
+        sonuc = bolum_isle(bolum, kayitlar)
+        if sonuc == 0:
+            return 0
+    return 1
+
+
+def bolum_isle(bolum, kayitlar):
     ozet(f"### {bolum.name} ({PROFIL})")
 
     komut = [sys.executable, str(KOK / "uret3d.py"), "--bolum", str(bolum), "--profil", PROFIL,
@@ -47,9 +61,14 @@ def main():
     raporlar = sorted((KOK / "cikti3d" / "findik-ile-pamuk").glob(f"{bolum.stem}-{PROFIL}-2*.rapor.json"))
     if r.returncode != 0 or not raporlar:
         ozet("Üretim ya da kalite kontrolü BAŞARISIZ; video yayımlanmadı.")
-        if raporlar:
-            for h in json.loads(raporlar[-1].read_text())["hatalar"]:
-                ozet(f"- {h}")
+        hatalar = json.loads(raporlar[-1].read_text())["hatalar"] if raporlar else ["üretim hatası"]
+        for h in hatalar:
+            ozet(f"- {h}")
+        if os.environ.get("YAYIN") == "acik":  # deneme çalıştırmaları atlama sayacına girmez
+            kayitlar.append({"tarih": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                             "bolum": str(bolum.relative_to(KOK)), "profil": PROFIL,
+                             "durum": "kalite_kaldi", "hatalar": hatalar[:5]})
+            KAYIT.write_text(json.dumps(kayitlar, ensure_ascii=False, indent=1))
         return 1
     rapor = json.loads(raporlar[-1].read_text())
     mp4 = KOK / rapor["video"]

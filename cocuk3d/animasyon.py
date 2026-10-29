@@ -209,6 +209,15 @@ def hesapla(karakterler, eylemler, sure, fps, zarflar, nesneler):
             nefes = math.sin(t * 2 * math.pi * 0.35 + _tohum(k) % 7)
             olc["govde"][2] *= 1 + 0.018 * nefes
             kem["bas"][1] += 0.05 * math.sin(t * 2 * math.pi * 0.23 + _tohum(k) % 5)
+            # beklerken de canlı dursun: kollar ve gövde hafifçe salınır (ölçüm 2026-10-30:
+            # yalnız nefesle duran orta çekimler 1.2 sn "donuk" kaldı, uzuv sapması 0.007 m)
+            if not yuruyor:
+                faz = _tohum(k) % 11
+                kem["kol.L"][2] += 0.10 * math.sin(t * 2 * math.pi * 0.5 + faz)
+                kem["kol.R"][2] -= 0.10 * math.sin(t * 2 * math.pi * 0.5 + faz + 1.3)
+                kem["kol.L"][0] += 0.06 * math.sin(t * 2 * math.pi * 0.37 + faz)
+                kem["kol.R"][0] += 0.06 * math.sin(t * 2 * math.pi * 0.41 + faz + 0.7)
+                kem["bas"][2] += 0.06 * math.sin(t * 2 * math.pi * 0.17 + faz)
             kem["kuyruk"][0] = 0.15 * math.sin(t * 2 * math.pi * (1.4 if yuruyor else 0.6))
             kem["kuyruk"][2] = 0.12 * math.sin(t * 2 * math.pi * 0.9)
 

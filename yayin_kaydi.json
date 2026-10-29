@@ -16,5 +16,24 @@
    "uploadStatus": "uploaded",
    "selfDeclaredMadeForKids": true
   }
+ },
+ {
+  "tarih": "2026-10-29T22:37:40+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b001.json",
+   "seri/findik-ile-pamuk/bolumler/b002.json",
+   "seri/findik-ile-pamuk/bolumler/b006.json"
+  ],
+  "durum": "yuklendi",
+  "video_id": "Cr4qiKeTUuE",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "kapak": "yuklenemedi (403)",
+  "not": "ilk deneme derlemesi; kayıt itme çakışmasında kaybolmuştu, elle eklendi"
  }
 ]
