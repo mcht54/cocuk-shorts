@@ -4,5 +4,17 @@
   "bolum": "seri/findik-ile-pamuk/bolumler/b001.json",
   "profil": "shorts",
   "durum": "uretildi"
+ },
+ {
+  "tarih": "2026-10-29T22:20:18+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b001.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "slOVhDnTnBA",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  }
  }
 ]
