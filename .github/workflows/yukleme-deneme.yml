@@ -1,0 +1,46 @@
+name: Yükleme denemesi (gizli)
+
+# Kanal bağlantısını sınar: 5 sn'lik deneme klibini YALNIZ "private" yükler,
+# videonun düştüğü kanalı yazdırır. Elle çalıştırılır.
+on:
+  workflow_dispatch:
+
+jobs:
+  dene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: sudo apt-get install -y -q ffmpeg && pip install requests
+      - run: |
+          ffmpeg -loglevel error -f lavfi -i testsrc=size=720x1280:rate=24 -f lavfi -i sine=frequency=440 \
+            -t 5 -c:v libx264 -pix_fmt yuv420p -c:a aac deneme.mp4
+      - name: Gizli yükle
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, requests
+          from cocuk import youtube
+          anahtar = youtube.erisim_anahtari()
+          govde = {"snippet": {"title": "[TEST] kanal bağlantı denemesi", "categoryId": "27"},
+                   "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": True}}
+          b = requests.post("https://www.googleapis.com/upload/youtube/v3/videos",
+                            params={"uploadType": "resumable", "part": "snippet,status"},
+                            headers={"Authorization": f"Bearer {anahtar}", "X-Upload-Content-Type": "video/mp4",
+                                     "X-Upload-Content-Length": str(os.path.getsize("deneme.mp4"))},
+                            json=govde, timeout=60)
+          b.raise_for_status()
+          r = requests.put(b.headers["Location"], data=open("deneme.mp4", "rb"),
+                           headers={"Content-Type": "video/mp4"}, timeout=300)
+          r.raise_for_status()
+          v = r.json()
+          print("video:", v["id"], "https://youtube.com/shorts/" + v["id"])
+          print("kanal:", v["snippet"].get("channelTitle"), v["snippet"].get("channelId"))
+          print("durum:", v.get("status"))
+          PY
