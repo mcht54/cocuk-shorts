@@ -1,9 +1,9 @@
 name: Günlük 3D bölüm (Fındık ile Pamuk)
 
 on:
-  # Zamanlama, YouTube izni + API onayı tamamlanınca açılacak; o zamana kadar yalnız elle.
-  # schedule:
-  #   - cron: "0 14 * * *"   # 17:00 TR
+  # Herkese açık günlük yayın kullanıcı onayıyla açıldı (2026-10-30), kanal: Minik Masal Evi.
+  schedule:
+    - cron: "0 14 * * *"   # 17:00 TR
   workflow_dispatch:
     inputs:
       bolum:
