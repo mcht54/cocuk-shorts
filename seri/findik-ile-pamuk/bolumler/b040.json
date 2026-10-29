@@ -1,0 +1,218 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 40,
+ "baslik": "Gölge Oyunu",
+ "deger": "gözlem yapmak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.1,
+   0.3
+  ],
+  "pamuk": [
+   1.0,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Gölgem Beni Takip Ediyor!",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Gölge Oyunu | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık arkasından gelen gölgeden korkar. Pamuk ona gölgenin güneşle oluştuğunu gösterir; birlikte gölge oyunu oynarlar. Bu bölümün değeri: gözlem yapmak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "gözlem yapmak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Biri beni takip ediyor! Kim o?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.05,
+     "nereye": [
+      -0.2,
+      0.2
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.65,
+     "yon": 2.6
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ogle",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "O senin gölgen Fındık! Güneş arkandan parlayınca oluşur."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Gölgem mi? Ben zıplayınca o da zıplar mı?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Dene bakalım!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Hoop! Zıpladı! Gölgem benimle oynuyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.35,
+     "kez": 2,
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.8
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "aksam",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Güneşli bir günde sen de gölgenle oynayabilirsin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

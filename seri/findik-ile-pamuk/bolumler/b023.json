@@ -1,0 +1,225 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 23,
+ "baslik": "Dinlemeyi Bilmek",
+ "deger": "dinlemek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.3
+  ],
+  "pamuk": [
+   0.8,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Fındık Ne Kaçırdı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Dinlemeyi Bilmek | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık heyecanla hep konuşur ve Pamuk'un önemli haberini kaçırır. Sonra dinlemenin değerini öğrenir. Bu bölümün değeri: dinlemek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "dinlemek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Fındık, sana bir şey söyleyeceğim..."
+    },
+    {
+     "kim": "findik",
+     "metin": "Dur dur! Önce ben anlatayım! Bugün zıpladım, koştum, oynadım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.55,
+     "kez": 2,
+     "son": 0.95
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ama benim haberim de önemliydi..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ah, özür dilerim. Şimdi seni dinliyorum."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "normal"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Büyük ağacın dibinde kocaman palamutlar varmış!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Vay! İyi ki dinledim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.75,
+     "kez": 1,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "İyi bir arkadaş konuşmayı da dinlemeyi de bilir."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

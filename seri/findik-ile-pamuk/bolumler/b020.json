@@ -1,0 +1,188 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 20,
+ "baslik": "Duygular Yüzümüzde",
+ "deger": "duyguları tanımak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.3
+  ],
+  "pamuk": [
+   0.8,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Şimdi Ne Hissediyor?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Duygular Yüzümüzde | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk yüz ifadesi oyunu oynar: mutlu, üzgün ve şaşkın yüzleri birlikte tanırlar. Bu bölümün değeri: duyguları tanımak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "duyguları tanımak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Yüz oyunu oynayalım mı? Ben bir yüz yapacağım, sen bil!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Bu yüz çok üzgün!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Şimdi de şaşkın! Gözlerin kocaman oldu!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ya bu?"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Mutlu! En sevdiğim yüz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Mutlu, üzgün, şaşkın... Sen şimdi nasıl hissediyorsun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

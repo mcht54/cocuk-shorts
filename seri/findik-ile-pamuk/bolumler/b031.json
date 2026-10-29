@@ -1,0 +1,219 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 31,
+ "baslik": "Saklambaç",
+ "deger": "kurallara uymak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.3
+  ],
+  "pamuk": [
+   0.4,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Fındık Gözlerini Açtı mı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Saklambaç | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Saklambaç oynarken Fındık gözlerini açmak ister. Kurallara uyunca oyunun daha eğlenceli olduğunu görür. Bu bölümün değeri: kurallara uymak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "kurallara uymak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Sen ebesin Fındık! Gözlerini kapat ve ona kadar say!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Tamam!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bir, iki, üç, dört, beş..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      1.5,
+      0.4
+     ],
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Gözümü birazcık açsam mı? Yok yok, kural kuraldır!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "normal"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "On! Önüm arkam sağım solum sobe! Geliyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.3,
+     "nereye": [
+      0.8,
+      0.3
+     ],
+     "son": 0.95
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Buldun beni!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kurallara uyunca oyun herkes için eğlenceli olur."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.45,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.45,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

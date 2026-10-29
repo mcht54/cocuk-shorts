@@ -1,0 +1,215 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 15,
+ "baslik": "Yavaş mı Hızlı mı?",
+ "deger": "zıt kavramlar",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.5,
+   0.3
+  ],
+  "pamuk": [
+   -1.1,
+   0.0
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Kim Daha Hızlı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Yavaş mı Hızlı mı? | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık hızlı koşar, Pamuk yavaş yürür. Hızlı ve yavaşın farkını oynayarak öğrenirler. Bu bölümün değeri: zıt kavramlar.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "zıt kavramlar"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bak Pamuk, ben hızlıyım! Vınnn!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      1.1,
+      0.3
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ben de yavaş yavaş yürüyorum."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.05,
+     "nereye": [
+      0.2,
+      0.0
+     ],
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hızlı koşunca rüzgâr gibi oluyorum!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Yavaş yürüyünce de çiçekleri görüyorum."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "O zaman ikisi de güzel!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.9
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Hızlı ve yavaş. Sen bugün hızlı mı koştun, yavaş mı yürüdün?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

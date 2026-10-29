@@ -197,6 +197,16 @@
     },
     {
      "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.28,
+     "nereye": [
+      0.35,
+      -0.05
+     ],
+     "son": 0.48
+    },
+    {
+     "kim": "pamuk",
      "eylem": "tut",
      "bas": 0.5,
      "nesne": "palamut",

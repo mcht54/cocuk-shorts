@@ -1,0 +1,215 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 16,
+ "baslik": "Yeni Arkadaş Olmak",
+ "deger": "kapsayıcılık",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.0,
+   0.2
+  ],
+  "pamuk": [
+   1.4,
+   0.4
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Neden Yalnız?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Yeni Arkadaş Olmak | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Pamuk oyunun kenarında yalnız durur. Fındık onu fark edip oyuna davet eder. Bu bölümün değeri: kapsayıcılık.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "kapsayıcılık"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Fındık zıplama oynuyordu. Pamuk ise kenarda tek başına duruyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ben de oynamak istiyorum ama utanıyorum..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk! Gel, birlikte oynayalım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.6,
+      0.3
+     ],
+     "son_yon": 1.3,
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.65,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Gerçekten mi? Teşekkürler Fındık!"
+    },
+    {
+     "kim": "findik",
+     "metin": "İki kişi oynamak daha eğlenceli!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 1.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.62,
+     "kez": 2,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Yalnız kalan bir arkadaşı oyuna çağırmak, onu çok mutlu eder."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 12,
+ "baslik": "Renkli Orman",
+ "deger": "renkleri tanımak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.2,
+   0.3
+  ],
+  "pamuk": [
+   1.1,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Hangi Renk Nerede?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Renkli Orman | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk ormanda renk avına çıkar: turuncu kürk, beyaz kulaklar, kırmızı mantarlar ve yeşil yapraklar. Bu bölümün değeri: renkleri tanımak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "renkleri tanımak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Bugün Fındık ile Pamuk renk avına çıktı!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      -0.5,
+      0.2
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.15,
+     "nereye": [
+      0.6,
+      0.2
+     ],
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Benim kürküm turuncu! Turuncu, portakal gibi!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Benim kulaklarım bembeyaz, bulut gibi!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.3,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bak, şu mantarlar kıpkırmızı!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Yapraklar da yemyeşil!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": -0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Turuncu, beyaz, kırmızı, yeşil... Sen etrafında hangi renkleri görüyorsun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.4,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.45,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

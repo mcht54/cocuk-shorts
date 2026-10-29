@@ -1,0 +1,205 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 39,
+ "baslik": "Arkadaşım Hasta",
+ "deger": "empati",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -1.3,
+   0.3
+  ],
+  "pamuk": [
+   0.7,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Neden Oynamıyor?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Arkadaşım Hasta | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Pamuk kendini iyi hissetmez ve oynayamaz. Fındık onu ziyaret edip moral verir. Bu bölümün değeri: empati.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "empati"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Pamuk bugün kendini biraz yorgun hissediyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "otur",
+     "bas": 0.2,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.1,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk, seni ziyarete geldim! Nasılsın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.2,
+      0.25
+     ],
+     "son_yon": 1.3,
+     "son": 0.55
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Biraz halsizim. Bugün oynayamam, üzgünüm."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "aksam",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hiç önemli değil! Yanında oturup sana masal anlatırım."
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Bu beni çok mutlu etti."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.1,
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "aksam",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Arkadaşımız kendini iyi hissetmediğinde yanında olmak, en güzel ilaçtır."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

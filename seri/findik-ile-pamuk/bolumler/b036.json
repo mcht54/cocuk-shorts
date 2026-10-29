@@ -1,0 +1,220 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 36,
+ "baslik": "Unutkan Fındık",
+ "deger": "sorumluluk",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.5,
+   0.3
+  ],
+  "pamuk": [
+   1.0,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {
+  "palamut": [
+   -0.75,
+   -0.1,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Fındık Neyi Unuttu?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Unutkan Fındık | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık, Pamuk'un ona emanet ettiği palamudu oyuna dalıp unutur. Sonra hatasını düzeltir ve sorumluluk almayı öğrenir. Bu bölümün değeri: sorumluluk.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sorumluluk"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Fındık, palamuduma göz kulak olur musun? Hemen geliyorum."
+    },
+    {
+     "kim": "findik",
+     "metin": "Tabii, bana güvenebilirsin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Ama Fındık zıplama oyununa daldı..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      0.9,
+      0.0
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.55,
+     "kez": 2,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Eyvah! Palamudu unuttum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ogle",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hemen dönüp bakmalıyım! Oh, burada!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      -0.75,
+      0.05
+     ],
+     "son": 0.55
+    },
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.6,
+     "nesne": "palamut",
+     "son": 0.85
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.75,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bir dahaki sefere sözümü unutmayacağım."
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Bize emanet edilene sahip çıkmak, sorumluluk sahibi olmaktır."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": -0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

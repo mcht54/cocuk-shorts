@@ -1,0 +1,231 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 38,
+ "baslik": "Yanlış Anlaşılma",
+ "deger": "sormak ve anlamak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.0,
+   0.3
+  ],
+  "pamuk": [
+   1.0,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Neden Kaçtı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Yanlış Anlaşılma | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Pamuk, Fındık'ın kendisine kızdığını sanıp üzülür. Sorunca aslında yanlış anladığını öğrenir. Bu bölümün değeri: sormak ve anlamak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sormak ve anlamak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Off! Hiç olmuyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.75
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Fındık bana mı kızdı? Ben ne yaptım ki?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Fındık, bana kızgın mısın?"
+    },
+    {
+     "kim": "findik",
+     "metin": "Sana mı? Hayır! Zıplayamadığım için kızgınım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.0,
+      0.25
+     ],
+     "son_yon": 3.0,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.4,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ooh, yanlış anlamışım! Sorduğum iyi oldu."
+    },
+    {
+     "kim": "findik",
+     "metin": "Hadi birlikte deneyelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.72,
+     "kez": 1,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Emin olmadığında sormak, yanlış anlaşılmaları çözer."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}

@@ -89,7 +89,8 @@ BOLUMLER = [
                 e("findik", "zipla", 0.1, 0.9, kez=3), e("pamuk", "zipla", 0.15, 0.95, kez=3)]),
              c("c5", "orta", "yaklas", "ogle", ["pamuk"],
                [("anlatici", "Ve tam o sırada... Pıt! Palamut düştü!"), ("pamuk", "Beklemeye değdi!")],
-               [e("pamuk", "ifade", 0.25, tur="saskin"), e("pamuk", "tut", 0.5, 0.8, nesne="palamut"),
+               [e("pamuk", "ifade", 0.25, tur="saskin"), e("pamuk", "yuru", 0.28, 0.48, nereye=[0.35, -0.05]),
+                e("pamuk", "tut", 0.5, 0.8, nesne="palamut"),
                 e("pamuk", "ifade", 0.8, tur="mutlu")]),
              c("c6", "iki_kisi", "donus", "aksam", ["findik", "pamuk"],
                [("anlatici", "Sabırlı olanlar, beklerken bile eğlenmeyi bilir.")],
@@ -180,7 +181,8 @@ BOLUMLER = [
                [e("findik", "yuru", 0.1, 0.75, nereye=[-0.45, 0.2], son_yon=1.3), e("pamuk", "el_salla", 0.2, 0.7)]),
              c("c2", "orta", "sabit", "ic_mekan", ["pamuk"],
                [("pamuk", "Hoş geldin Fındık! Al, bu palamut senin için.")],
-               [e("pamuk", "ifade", 0.0, tur="mutlu"), e("pamuk", "tut", 0.3, 0.6, nesne="palamut")]),
+               [e("pamuk", "ifade", 0.0, tur="mutlu"), e("pamuk", "yuru", 0.05, 0.28, nereye=[0.45, 0.05]),
+                e("pamuk", "tut", 0.3, 0.6, nesne="palamut")]),
              c("c3", "iki_kisi", "takip", "ic_mekan", ["findik", "pamuk"],
                [("anlatici", "Fındık palamudu aldı ama bir şeyi unuttu...")],
                [e("pamuk", "yuru", 0.0, 0.4, nereye=[0.05, 0.25], son_yon=-1.3),
@@ -270,8 +272,8 @@ BOLUMLER = [
 ]
 
 
-def main():
-    for b in BOLUMLER:
+def yaz(bolumler):
+    for b in bolumler:
         d = {
             "seri_id": "findik-ile-pamuk", "bolum_no": b["no"], "baslik": b["baslik"], "deger": b["deger"],
             "onceki_olaylar": [], "bu_bolumde_degisen": [], "mekan": b["mekan"],
@@ -286,4 +288,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    yaz(BOLUMLER)

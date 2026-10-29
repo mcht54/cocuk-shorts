@@ -1,0 +1,244 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 24,
+ "baslik": "Pamuk'un Odası",
+ "deger": "düzenli olmak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -1.1,
+   0.3
+  ],
+  "pamuk": [
+   0.9,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {
+  "palamut": [
+   -0.3,
+   -0.1,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Palamut Nerede Kayboldu?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Pamuk'un Odası | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Pamuk dağınık odasında palamudunu bulamaz. Fındık'la birlikte ortalığı toplarken palamut ortaya çıkar. Bu bölümün değeri: düzenli olmak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "düzenli olmak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Palamudum nerede? Hiçbir yerde bulamıyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": -1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.7,
+     "yon": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Oda biraz dağınık. Hadi önce toplayalım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.6,
+      0.1
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Birlikte topladılar, topladılar..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.1,
+      0.1
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "normal"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Buldum! Palamut buradaymış!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.35,
+      0.05
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.4,
+     "nesne": "palamut",
+     "son": 0.7
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.8,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "aksam",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Toplu oda ne güzelmiş!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Her şey yerindeyse aradığımızı kolayca buluruz."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    }
+   ]
+  }
+ ]
+}
