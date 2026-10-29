@@ -1,0 +1,214 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 50,
+ "baslik": "Yankı Oyunu",
+ "deger": "sayı saymak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "magara",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.15
+  ],
+  "pamuk": [
+   0.7,
+   0.15
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Mağara Kaça Kadar Sayar?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Yankı Oyunu | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Kristal mağarada Fındık ile Pamuk yankıyla sayı sayma oyunu oynar. Haydi sen de say! Bu bölümün değeri: sayı saymak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sayı saymak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Mağara bizimle sayı sayar mı acaba?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": 3.0
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bir!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Bir... bir..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.0,
+     "kez": 1,
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "İki!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "İki... iki..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.0,
+     "kez": 1,
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sars",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Birlikte! Üç, dört, beş!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Beş... beş..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.0,
+     "kez": 3,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.02,
+     "kez": 3,
+     "son": 0.52
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Haydi sen de say: bir, iki, üç, dört, beş! Aferin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

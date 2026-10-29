@@ -1,0 +1,265 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 45,
+ "baslik": "Hazine Avı 4: Hazine Sandığı",
+ "deger": "sabırla birlikte çalışmak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "magara",
+ "baslangic": {
+  "findik": [
+   -1.1,
+   0.35
+  ],
+  "pamuk": [
+   1.1,
+   0.35
+  ]
+ },
+ "nesne_yerlesim": {
+  "sandik": [
+   0.0,
+   -0.15,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Sandığın İçinden Ne Çıktı?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Hazine Avı 4: Hazine Sandığı | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Mağaranın sonunda kocaman bir hazine sandığı! Kapak çok ağır; Fındık ile Pamuk birlikte açmayı dener. Hazine Avı mini dizisinin 4. bölümü. Bu bölümün değeri: sabırla birlikte çalışmak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sabırla birlikte çalışmak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İşte! Hazine sandığı!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.3,
+     "nereye": [
+      -0.48,
+      -0.05
+     ],
+     "son_yon": 0.0,
+     "son": 0.9
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.32,
+     "nereye": [
+      0.48,
+      -0.05
+     ],
+     "son_yon": 0.0,
+     "son": 0.92
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sars",
+   "isik": "magara",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hıııık! Kapak çok ağır, açılmıyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Tek başına zor. Birlikte deneyelim!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Üç deyince! Bir, iki, üç!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Ve sandık yavaşça açıldı..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "ac",
+     "bas": 0.15,
+     "nesne": "sandik",
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Altın palamutlar!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Bunlarla ne yapacağız?"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Cevap yarın, son bölümde!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.5,
+     "kime": "pamuk"
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

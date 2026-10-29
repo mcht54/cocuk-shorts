@@ -283,6 +283,8 @@ def yaz(bolumler):
                         "etiketler": ETIKET + [b["deger"]]},
             "cekimler": b["cekimler"],
         }
+        if b.get("muzik"):
+            d["muzik"] = b["muzik"]
         (DIZIN / f"b{b['no']:03d}.json").write_text(json.dumps(d, ensure_ascii=False, indent=1))
         print("yazıldı:", f"b{b['no']:03d}.json", b["baslik"])
 

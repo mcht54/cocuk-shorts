@@ -1,0 +1,253 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 51,
+ "baslik": "Yeni Bir Harita!",
+ "deger": "keşfetmeyi sevmek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "dere",
+ "baslangic": {
+  "findik": [
+   -1.0,
+   0.2
+  ],
+  "pamuk": [
+   -1.3,
+   0.45
+  ]
+ },
+ "nesne_yerlesim": {
+  "harita": [
+   -0.6,
+   0.0,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Bu Harita Nereye Gidiyor?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Yeni Bir Harita! | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Dere kenarında yepyeni bir harita! Fındık ile Pamuk'u bu sefer hangi macera bekliyor? Bu bölümün değeri: keşfetmeyi sevmek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "keşfetmeyi sevmek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk, bak! Derenin kenarında bir harita daha!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.3,
+     "nereye": [
+      -0.7,
+      0.1
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.65,
+     "nesne": "harita",
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Yine mi hazine? Bu sefer nereye gidiyoruz?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.85
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Harita derenin karşısını gösteriyor. Hadi!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": -1.5
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "genis",
+   "hareket": "sars",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Hoop! Hoop! İki kahraman yine yolda!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "atla",
+     "bas": 0.05,
+     "nereye": [
+      0.0,
+      0.15
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "atla",
+     "bas": 0.38,
+     "nereye": [
+      0.75,
+      0.15
+     ],
+     "son": 0.65
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      -0.7,
+      0.25
+     ],
+     "son": 0.3
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "atla",
+     "bas": 0.4,
+     "nereye": [
+      0.0,
+      0.2
+     ],
+     "son": 0.65
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "atla",
+     "bas": 0.7,
+     "nereye": [
+      0.65,
+      0.4
+     ],
+     "son": 0.97
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Yeni macera çok yakında! Sen olsan haritayı nereye çizerdin?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.45,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.47,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

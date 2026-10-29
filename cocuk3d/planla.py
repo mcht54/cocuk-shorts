@@ -152,11 +152,18 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
             for j in range(kez):
                 ekle("zipla", e["bas"] + (j + 0.18) / kez * (e["son"] - e["bas"]))
         elif e["eylem"] in ("yuru", "kos"):
+            if e["eylem"] == "kos":
+                ekle("vin", e["bas"])
             aralik = 0.2 if e["eylem"] == "kos" else 0.3
             t = e["bas"] + 0.1
             while t < e["son"] - 0.05:
                 ekle("adim", t)
                 t += aralik
+        elif e["eylem"] == "atla":
+            ekle("vin", e["bas"] + 0.15 * (e["son"] - e["bas"]))
+            ekle("adim", e["son"] - 0.03)
+        elif e["eylem"] == "ac":
+            ekle("hazine", e["bas"] + 0.5 * (e["son"] - e["bas"]))
         elif e["eylem"] == "tut":
             ekle("pop", e["bas"] + 0.45 * (e["son"] - e["bas"]))
         elif e["eylem"] == "ver":
@@ -164,7 +171,7 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
             ekle("parilti", e["bas"] + 0.55 * (e["son"] - e["bas"]))
 
     tohum = int(hashlib.md5(bolum["baslik"].encode()).hexdigest()[:8], 16)
-    muzik = ses3d.muzik(n, tohum)
+    muzik = ses3d.muzik(n, tohum, macera=bolum.get("muzik") == "macera")
     karisim, muzik_son = ses3d.karistir(konusma, muzik, efekt_izi, maske)
     ses3d.wav_yaz(is_dizini / "ses.wav", karisim)
 

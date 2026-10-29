@@ -12,8 +12,9 @@ from cocuk.senaryo import YASAK
 from cocuk3d.animasyon import IFADELER
 from cocuk3d.kamera import ISIK, TIPLER
 
-EYLEMLER = {"yuru", "kos", "zipla", "el_salla", "tut", "ver", "ifade", "bak", "otur", "kalk"}
-HAREKETLER = {"sabit", "yaklas", "uzaklas", "donus", "kaydir", "takip"}
+EYLEMLER = {"yuru", "kos", "atla", "zipla", "el_salla", "tut", "ver", "ac", "ifade", "bak", "otur", "kalk"}
+HAREKETLER = {"sabit", "yaklas", "uzaklas", "donus", "kaydir", "takip", "sars", "hizli_yaklas"}
+ATLAYIS = 1.3        # atla: tek sıçrayışta en çok
 SAHNE_X, SAHNE_Y = (-1.8, 1.8), (-0.3, 0.6)
 UZANMA = 0.45        # tut: karakter nesneye bu kadar yakın olmalı (yoksa nesne ele ışınlanır)
 VERME = 1.2          # ver: iki karakter arası en çok
@@ -34,6 +35,8 @@ def denetle(bolum, seri):
     h = []
     karakterler = {k for k, v in seri["karakterler"].items() if v.get("tur") != "ses"}
     konusanlar = set(seri["karakterler"])
+    if bolum.get("muzik", "normal") not in ("normal", "macera"):
+        h.append(f"bilinmeyen müzik: {bolum.get('muzik')}")
     if bolum.get("mekan") not in seri["mekanlar"]:
         h.append(f"bilinmeyen mekan: {bolum.get('mekan')}")
     konum = {k: list(p) for k, p in bolum["baslangic"].items()}
@@ -79,7 +82,9 @@ def denetle(bolum, seri):
                 continue
             if not 0 <= e["bas"] <= 1 or ("son" in e and not e["bas"] < e["son"] <= 1):
                 h.append(f"{yer}: zaman 0-1 aralığında değil")
-            if ey in ("yuru", "kos"):
+            if ey == "atla" and math.dist(konum[k], e["nereye"]) > ATLAYIS:
+                h.append(f"{yer}: sıçrayış çok uzun ({math.dist(konum[k], e['nereye']):.2f} m > {ATLAYIS})")
+            if ey in ("yuru", "kos", "atla"):
                 x, y = e["nereye"]
                 if not (SAHNE_X[0] <= x <= SAHNE_X[1] and SAHNE_Y[0] <= y <= SAHNE_Y[1]):
                     h.append(f"{yer}: hedef sahne dışında {e['nereye']}")
@@ -108,11 +113,19 @@ def denetle(bolum, seri):
                 if n not in nesne:
                     h.append(f"{yer}: nesne yok: {n}")
                     continue
+                if seri["nesneler"].get(n, {}).get("tasinir") is False:
+                    h.append(f"{yer}: {n} taşınamaz")
                 if tutan[n] not in (None, k):
                     h.append(f"{yer}: {n} şu an {tutan[n]} elinde")
                 elif tutan[n] is None and math.dist(konum[k], nesne[n]) > UZANMA:
                     h.append(f"{yer}: {n} çok uzakta ({math.dist(konum[k], nesne[n]):.2f} m > {UZANMA})")
                 tutan[n] = k
+            elif ey == "ac":
+                n = e.get("nesne")
+                if seri["nesneler"].get(n, {}).get("tur") != "sandik" or n not in nesne:
+                    h.append(f"{yer}: açılacak sandık yok: {n}")
+                elif math.dist(konum[k], nesne[n]) > 0.6:
+                    h.append(f"{yer}: sandık çok uzakta ({math.dist(konum[k], nesne[n]):.2f} m)")
             elif ey == "ver":
                 n, alan = e.get("nesne"), e.get("kime")
                 if tutan.get(n) != k:

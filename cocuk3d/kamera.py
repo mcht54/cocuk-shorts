@@ -31,6 +31,10 @@ def cerceve_uzakligi(tip, hedef_genislik, hedef_yukseklik, en, boy):
     return max(yg / math.tan(yatay / 2), yy / math.tan(dikey / 2))
 
 
+def _yumusak_k(u):
+    return u * u * (3 - 2 * u)
+
+
 def kamera_yolu(cekim, pozlar, boylar, bas_kare, kare_say, en, boy):
     """Çekimin her karesi için {"konum", "hedef", "lens"} üretir."""
     tip = cekim.get("tip", "orta")
@@ -75,6 +79,11 @@ def kamera_yolu(cekim, pozlar, boylar, bas_kare, kare_say, en, boy):
             aci += -0.35 + 0.7 * u
         elif hareket == "kaydir":
             aci += -0.2 + 0.4 * u
+        elif hareket == "sars":  # aksiyon anı: hafif el kamerası titremesi + yaklaşma
+            d = d0 * (1.0 - 0.08 * u)
+            aci += 0.014 * math.sin(j * 1.9) + 0.009 * math.sin(j * 3.7)
+        elif hareket == "hizli_yaklas":  # ani yakınlaşma (şaşırma/gerilim anı)
+            d = d0 * (1.45 - 0.5 * _yumusak_k(min(1.0, u * 3)))
         else:  # "sabit" de tam durmasın: çok yavaş yaklaşma + yay (donuk görüntü olmasın)
             d = d0 * (1.04 - 0.08 * u)
             aci += 0.08 * (u - 0.5)
@@ -97,6 +106,8 @@ ISIK = {
               "gok": [0.95, 0.62, 0.55], "gok_guc": 0.7},
     "gece": {"gunes": 0.5, "renk": [0.55, 0.65, 1.0], "egim": 60, "yon": 20,
              "gok": [0.10, 0.12, 0.30], "gok_guc": 0.35},
+    "magara": {"gunes": 0.6, "renk": [0.6, 0.7, 1.0], "egim": 70, "yon": 10,
+               "gok": [0.06, 0.07, 0.14], "gok_guc": 0.4},
     "ic_mekan": {"gunes": 1.6, "renk": [1.0, 0.88, 0.72], "egim": 45, "yon": 60,
                  "gok": [0.95, 0.85, 0.75], "gok_guc": 0.8},
 }

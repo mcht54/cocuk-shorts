@@ -41,8 +41,10 @@ def _nota(f, sure, zayif=3.2):
     return np.exp(-zayif * t) * (np.sin(2 * np.pi * f * t) + 0.3 * np.sin(4 * np.pi * f * t))
 
 
-def muzik(n, tohum, sakin=False):
-    """Müzik kutusu + yumuşak bas; telifsiz, kodla."""
+def muzik(n, tohum, sakin=False, macera=False):
+    """Müzik kutusu + yumuşak bas; telifsiz, kodla. macera=True: hızlı tempo, minör akorlar, davul."""
+    if macera:
+        return _macera_muzigi(n, tohum)
     r = np.random.default_rng(tohum)
     buf = np.zeros(n, dtype=np.float32)
     kok = int(r.choice([60, 62, 65, 67]))
@@ -64,6 +66,31 @@ def muzik(n, tohum, sakin=False):
     return buf
 
 
+def _macera_muzigi(n, tohum):
+    r = np.random.default_rng(tohum)
+    buf = np.zeros(n, dtype=np.float32)
+    kok = int(r.choice([57, 60, 62]))
+    akorlar = [[0, 3, 7, 12], [-4, 0, 3, 8], [-2, 2, 5, 10], [-5, -1, 2, 7]]  # i - VI - VII - V
+    vurus = 60 / float(r.choice([126, 132, 138])) / 2
+    t, i = 0.0, 0
+    while t < n / SR:
+        b = int(t * SR)
+        akor = akorlar[(i // 8) % 4]
+        nota = kok + akor[(i * 3 + int(r.integers(0, 2))) % 4]  # arpej: ileri atılan hareket hissi
+        s = _nota(440 * 2 ** ((nota - 69) / 12), 0.5, 7) * 0.13
+        buf[b:b + len(s)] += s[:max(0, n - b)]
+        if i % 2 == 0:  # davul: alçak "tum"
+            tt = np.arange(int(0.18 * SR)) / SR
+            dv = 0.22 * np.exp(-22 * tt) * np.sin(2 * np.pi * (95 - 50 * tt / 0.18) * tt)
+            buf[b:b + len(dv)] += dv[:max(0, n - b)]
+        if i % 8 == 0:
+            s2 = _nota(440 * 2 ** ((kok + akor[0] - 12 - 69) / 12), 1.6, 1.8) * 0.12
+            buf[b:b + len(s2)] += s2[:max(0, n - b)]
+        t += vurus
+        i += 1
+    return buf
+
+
 def efekt(tur, sure=0.35):
     t = np.arange(int(sure * SR)) / SR
     if tur == "zipla":  # yükselen "boing"
@@ -75,6 +102,18 @@ def efekt(tur, sure=0.35):
     if tur == "pop":  # alma/verme
         t = t[: int(0.12 * SR)]
         return 0.28 * np.exp(-30 * t) * np.sin(2 * np.pi * (600 + 900 * t / 0.12) * t)
+    if tur == "vin":  # hızlı hareket/atlayış "vınn"ı: süzülen gürültü
+        t = t[: int(0.3 * SR)]
+        g = np.random.default_rng(3).standard_normal(len(t))
+        g = np.convolve(g, np.ones(12) / 12, mode="same")
+        return 0.25 * np.sin(np.pi * t / t[-1]) * g
+    if tur == "hazine":  # sandık açılınca: yükselen parlak akor
+        out = np.zeros(int(1.0 * SR))
+        for k, f in enumerate((523, 659, 784, 1047)):
+            s = _nota(f, 0.8, 3) * 0.09
+            b = int(k * 0.09 * SR)
+            out[b:b + len(s)] += s[: len(out) - b]
+        return out
     if tur == "parilti":
         out = np.zeros(int(0.6 * SR))
         for k, f in enumerate((1568, 2093, 2637)):

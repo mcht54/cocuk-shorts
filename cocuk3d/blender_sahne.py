@@ -211,6 +211,61 @@ def palamut_kur(ad, konum, kol):
     return bos
 
 
+def harita_kur(ad, konum, kol):
+    """Rulo hazine haritası: krem kâğıt, kırmızı kurdele."""
+    bos = bpy.data.objects.new(ad, None)
+    kol.objects.link(bos)
+    bos.location = (konum[0], konum[1], konum[2] + 0.05)
+    rulo = silindir(f"{ad}_rulo", 0.045, 0.045, 0.26, (-0.13, 0, 0), malzeme("harita", (0.95, 0.86, 0.62), 0.8), kol)
+    rulo.rotation_euler = (0, math.radians(90), 0)
+    kurdele = silindir(f"{ad}_kurdele", 0.05, 0.05, 0.03, (-0.015, 0, 0), malzeme("kurdele", (0.85, 0.15, 0.2), 0.5), kol)
+    kurdele.rotation_euler = (0, math.radians(90), 0)
+    for o in (rulo, kurdele):
+        o.parent = bos
+    return bos
+
+
+def top_kur(ad, konum, kol):
+    bos = bpy.data.objects.new(ad, None)
+    kol.objects.link(bos)
+    bos.location = (konum[0], konum[1], konum[2] + 0.11)
+    kure(f"{ad}_top", 0.11, (0, 0, 0), (1, 1, 1), malzeme("top", (0.15, 0.45, 0.95), 0.35), kol).parent = bos
+    serit = kure(f"{ad}_serit", 0.112, (0, 0, 0), (1, 1, 0.25), malzeme("top_serit", (1.0, 0.85, 0.2), 0.35), kol)
+    serit.parent = bos
+    return bos
+
+
+def sandik_kur(ad, konum, kol):
+    """Hazine sandığı; kapak menteşe boşluğu "<ad>_kapak" ile açılır (plan: tutma[...]['_ac'])."""
+    bos = bpy.data.objects.new(ad, None)
+    kol.objects.link(bos)
+    bos.location = (konum[0], konum[1], konum[2])
+    tahta = malzeme("sandik", (0.55, 0.32, 0.14), 0.7)
+    altin = malzeme("altin", (1.0, 0.75, 0.2), 0.3, isima=0.4)
+    bm = bmesh.new()
+    bmesh.ops.create_cube(bm, size=2)
+    govde = _nesne(f"{ad}_govde", bm, tahta, kol, yumusak=False)
+    govde.scale, govde.location, govde.parent = (0.26, 0.18, 0.13), (0, 0, 0.13), bos
+    for x in (-0.2, 0.2):
+        bm = bmesh.new()
+        bmesh.ops.create_cube(bm, size=2)
+        b = _nesne(f"{ad}_bant", bm, altin, kol, yumusak=False)
+        b.scale, b.location, b.parent = (0.025, 0.185, 0.135), (x, 0, 0.13), bos
+    mentese = bpy.data.objects.new(f"{ad}_kapak", None)
+    kol.objects.link(mentese)
+    mentese.parent, mentese.location = bos, (0, 0.18, 0.26)
+    kapak = kure(f"{ad}_kapak_ust", 0.26, (0, -0.18, 0.0), (1, 0.7, 0.35), tahta, kol)
+    kapak.parent = mentese
+    kure(f"{ad}_kilit", 0.035, (0, -0.19, 0.24), (1, 0.5, 1), altin, kol).parent = bos
+    # içi: parlayan altınlar (kapak açılınca görünür)
+    for i, (x, y) in enumerate(((-0.1, 0.0), (0.05, 0.04), (0.12, -0.03), (-0.02, -0.05))):
+        kure(f"{ad}_altin{i}", 0.05, (x, y, 0.25), (1, 1, 0.5), altin, kol, seg=16).parent = bos
+    return bos
+
+
+NESNE_KUR = {"palamut": palamut_kur, "harita": harita_kur, "top": top_kur, "sandik": sandik_kur}
+
+
 # ------------------------------------------------------------------ mekânlar
 def orman_kur(tohum, kol):
     r = random.Random(tohum)
@@ -274,6 +329,70 @@ def orman_kur(tohum, kol):
              malzeme("tepe", (0.36, 0.58, 0.42), 0.95), kol, ico=True)
 
 
+def dere_kur(tohum, kol):
+    """Orman açıklığını ortadan ikiye bölen dere: üstünde basamak taşları (atlayarak geçilir)."""
+    orman_kur(tohum, kol)
+    su = malzeme("su", (0.25, 0.6, 0.95), 0.08, isima=0.15)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=4, y_segments=40, size=1)
+    ob = _nesne("dere", bm, su, kol, yumusak=False)
+    ob.scale, ob.location = (0.38, 9, 1), (0, 4, 0.012)
+    kiyi = malzeme("kiyi", (0.62, 0.55, 0.42), 0.95)
+    for x in (-0.42, 0.42):
+        bm = bmesh.new()
+        bmesh.ops.create_grid(bm, x_segments=2, y_segments=40, size=1)
+        k = _nesne("kiyi", bm, kiyi, kol, yumusak=False)
+        k.scale, k.location = (0.07, 9, 1), (x, 4, 0.008)
+    tas = malzeme("dere_tasi", (0.6, 0.6, 0.64), 0.7)
+    # basamak taşı derenin tam ortasında (x=0): Shorts'ta yatay sıkıştırma x'i ölçekler, 0 sabit kalır
+    kure("dere_tasi", 0.2, (0, 0.15, 0.0), (1.3, 1.1, 0.3), tas, kol, ico=True)
+    for x, y in ((0.1, 1.3), (-0.08, 2.2), (0.06, 3.4)):
+        kure("dere_tasi", 0.15, (x, y, 0.0), (1.2, 1, 0.35), tas, kol, ico=True)
+
+
+def magara_kur(tohum, kol):
+    """Mağara içi: koyu taş kubbe, parlayan kristaller ve mantarlar (gizem/macera mekânı)."""
+    r = random.Random(tohum)
+    taban = malzeme("magara_taban", (0.22, 0.18, 0.2), 0.9)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=40, y_segments=40, size=14)
+    for v in bm.verts:
+        v.co.z = 0.04 * math.sin(v.co.x * 2.1) * math.cos(v.co.y * 1.7)
+    _nesne("zemin", bm, taban, kol)
+    kaya = malzeme("kaya", (0.2, 0.15, 0.22), 0.9)
+    for i in range(16):  # duvarı oluşturan iri kayalar (önde açık bırak)
+        a = r.uniform(0.05, math.pi - 0.05)
+        d = r.uniform(3.2, 4.2)
+        kure("kaya", r.uniform(1.2, 1.9), (math.cos(a) * d * 1.4, math.sin(a) * d + 0.8, r.uniform(0.2, 1.0)),
+             (1, 1, r.uniform(1.1, 1.6)), kaya, kol, ico=True)
+    kure("tavan", 7, (0, 1.5, 6.2), (1.4, 1, 0.35), kaya, kol, ico=True)
+    renkler = [malzeme(f"kristal_{i}", c, 0.2, isima=1.6) for i, c in
+               enumerate(((0.35, 0.65, 1.0), (0.75, 0.45, 1.0), (0.3, 1.0, 0.8)))]
+    # kristal kümeleri kayaların ÖNÜNDE (karakter alanı |x|<1.6, y<0.8 boş kalır)
+    kumeler = [(-2.3, 1.2), (-1.4, 2.0), (0.2, 2.4), (1.5, 1.9), (2.4, 1.0), (-2.6, -0.2), (2.7, -0.1)]
+    for i, (cx, cy) in enumerate(kumeler):
+        m = renkler[i % len(renkler)]
+        for j in range(r.randint(3, 5)):
+            boy = r.uniform(0.12, 0.26)
+            k = kure("kristal", boy * 0.4, (cx + r.uniform(-0.25, 0.25), cy + r.uniform(-0.15, 0.15), boy * 0.8),
+                     (0.45, 0.45, 2.2), m, kol, seg=6)
+            k.rotation_euler = (r.uniform(-0.5, 0.5), r.uniform(-0.5, 0.5), 0)
+        if i < 5:  # küme başına renkli, yumuşak ışık
+            isik = bpy.data.lights.new(f"kristal_isik{i}", "POINT")
+            isik.energy, isik.shadow_soft_size = 45, 0.4
+            isik.color = m.diffuse_color[:3]
+            ob = bpy.data.objects.new(f"kristal_isik{i}", isik)
+            kol.objects.link(ob)
+            ob.location = (cx, cy - 0.3, 0.5)
+    for x, y in ((-1.9, 0.6), (1.9, 0.5), (-0.9, 1.6), (1.0, 1.5)):  # parlayan mantarlar
+        silindir("mantar_sap", 0.04, 0.03, 0.14, (x, y, 0), malzeme("parlak_sap", (0.9, 0.95, 1.0), 0.6, isima=0.6), kol)
+        kure("mantar_sapka", 0.12, (x, y, 0.15), (1, 1, 0.5), malzeme("parlak_mantar", (0.3, 0.95, 0.85), 0.4, isima=2.5),
+             kol)
+
+
+MEKAN_KUR = {}
+
+
 def oda_kur(tohum, kol):
     zemin = malzeme("parke", (0.62, 0.42, 0.26), 0.6)
     duvar = malzeme("duvar", (0.98, 0.86, 0.74), 0.9)
@@ -302,6 +421,9 @@ def oda_kur(tohum, kol):
     ob = bpy.data.objects.new("lamba", isik)
     kol.objects.link(ob)
     ob.location = (-2.4, 2.2, 1.6)
+
+
+MEKAN_KUR.update(orman=orman_kur, oda=oda_kur, dere=dere_kur, magara=magara_kur)
 
 
 # ------------------------------------------------------------------ kurulum
@@ -344,7 +466,7 @@ def kur(plan_yolu, is_dizini, ornekleme=24, olcek=100):
     sahne_kol = bpy.data.collections.new("mekan")
     sc.collection.children.link(sahne_kol)
     tur = plan["mekan"]["tur"]
-    (orman_kur if tur == "orman" else oda_kur)(plan["mekan"].get("tohum", 1), sahne_kol)
+    MEKAN_KUR[tur](plan["mekan"].get("tohum", 1), sahne_kol)
 
     armlar, izler = {}, {}
     for k, t in plan["karakterler"].items():
@@ -352,7 +474,7 @@ def kur(plan_yolu, is_dizini, ornekleme=24, olcek=100):
         izler[k] = parmak_izi(kol)
     nesneler = {}
     for nid, t in plan["nesneler"].items():
-        nesneler[nid] = palamut_kur(nid, t["konum"], sahne_kol)
+        nesneler[nid] = NESNE_KUR[t.get("tur", "palamut")](nid, t["konum"], sahne_kol)
         for k in armlar:
             c = nesneler[nid].constraints.new("COPY_LOCATION")
             c.name = f"tut_{k}"
@@ -402,6 +524,10 @@ def kur(plan_yolu, is_dizini, ornekleme=24, olcek=100):
                 c = ob.constraints[f"tut_{k}"]
                 c.influence = etkiler.get(k, 0.0)
                 c.keyframe_insert("influence", frame=f)
+            kapak = bpy.data.objects.get(f"{nid}_kapak")
+            if kapak:
+                kapak.rotation_euler = (math.radians(-105) * etkiler.get("_ac", 0.0), 0, 0)
+                kapak.keyframe_insert("rotation_euler", frame=f)
         kp = plan["kamera"][f]
         kam.location = kp["konum"]
         kam_v.lens = kp["lens"]

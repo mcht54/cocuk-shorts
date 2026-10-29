@@ -1,0 +1,242 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 49,
+ "baslik": "Top Takımı",
+ "deger": "takım çalışması",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.9,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {
+  "top": [
+   -0.4,
+   -0.05,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Top Kimde Kalacak?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Top Takımı | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık topu kimseye vermek istemez ama tek başına oynamak sıkıcıdır. Pas vermeye başlayınca oyun coşar! Bu bölümün değeri: takım çalışması.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "takım çalışması"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bu top benim! Tek başıma oynayacağım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.3
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.55,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hmm... Tek başına top oynamak hiç eğlenceli değilmiş."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk! Benimle top oynar mısın? Pas!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Yakaladım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.0,
+      0.2
+     ],
+     "son_yon": 1.3,
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ver",
+     "bas": 0.55,
+     "nesne": "top",
+     "kime": "pamuk",
+     "son": 0.85
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.8,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sars",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Şimdi sana pas!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Yakaladım! Gol!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ver",
+     "bas": 0.1,
+     "nesne": "top",
+     "kime": "findik",
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.95
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Takım olunca oyun da sevinç de ikiye katlanır!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

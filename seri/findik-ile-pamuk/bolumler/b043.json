@@ -1,0 +1,271 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 43,
+ "baslik": "Hazine Avı 2: Dereyi Geçmek",
+ "deger": "cesaret",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "dere",
+ "baslangic": {
+  "findik": [
+   -1.3,
+   0.2
+  ],
+  "pamuk": [
+   -1.5,
+   0.45
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Dereyi Nasıl Geçecekler?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Hazine Avı 2: Dereyi Geçmek | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Harita, Fındık ile Pamuk'u bir dereye getirir. Karşıya geçmenin tek yolu taşın üstünden atlamaktır! Hazine Avı mini dizisinin 2. bölümü. Bu bölümün değeri: cesaret.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "cesaret"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Eyvah! Önümüzde bir dere var!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      -0.75,
+      0.15
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      -0.95,
+      0.4
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Harita karşıya geçmemizi söylüyor. Şu taşa atlayacağım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": -1.5
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "genis",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bir, iki, üç... Hoop! Hoop!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "atla",
+     "bas": 0.3,
+     "nereye": [
+      0.0,
+      0.15
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "atla",
+     "bas": 0.65,
+     "nereye": [
+      0.75,
+      0.15
+     ],
+     "son_yon": 3.0,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ya suya düşersem?"
+    },
+    {
+     "kim": "findik",
+     "metin": "Sen yapabilirsin! Ben buradayım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "genis",
+   "hareket": "sars",
+   "isik": "ogle",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Hoop! Hoop! Başardım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.7,
+      0.2
+     ],
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "atla",
+     "bas": 0.22,
+     "nereye": [
+      0.0,
+      0.2
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "atla",
+     "bas": 0.55,
+     "nereye": [
+      0.6,
+      0.35
+     ],
+     "son": 0.85
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.8,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Ama derenin ötesinde karanlık bir mağara bekliyordu... Yarın devam!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "saskin"
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

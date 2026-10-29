@@ -1,0 +1,227 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 47,
+ "baslik": "Büyük Yarış",
+ "deger": "sportmenlik",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.5,
+   0.15
+  ],
+  "pamuk": [
+   -1.5,
+   0.45
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Yarışı Kim Kazanacak?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Büyük Yarış | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk büyük ağaca kadar yarışır! Kazanmak da kaybetmek de oyunun parçasıdır. Bu bölümün değeri: sportmenlik.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sportmenlik"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Büyük ağaca kadar yarışalım mı?"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Hazırım! Bir, iki, üç, başla!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Fındık hızla fırladı! Pamuk da hemen arkasında!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      1.2,
+      0.15
+     ],
+     "son": 0.9
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      0.95,
+      0.45
+     ],
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Kazandım! Kazandım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.7
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ben kaybettim... Ama çok eğlendim! Tebrikler Fındık!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.45,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Teşekkürler! Bir daha yarışalım mı?"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "İyi oyuncu, kazanınca da kaybedince de güler."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.55,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.55,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

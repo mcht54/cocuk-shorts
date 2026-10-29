@@ -1,0 +1,225 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 42,
+ "baslik": "Hazine Avı 1: Gizemli Harita",
+ "deger": "merak etmek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.2,
+   0.3
+  ],
+  "pamuk": [
+   1.2,
+   0.3
+  ]
+ },
+ "nesne_yerlesim": {
+  "harita": [
+   -0.2,
+   -0.1,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Ağacın Altında Ne Var?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Hazine Avı 1: Gizemli Harita | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık büyük meşe ağacının dibinde gizemli bir harita bulur. Harita onları büyük bir maceraya çağırıyor! Hazine Avı mini dizisinin 1. bölümü. Bu bölümün değeri: merak etmek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "merak etmek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk! Çabuk gel! Ağacın dibinde bir şey parlıyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.2,
+     "nereye": [
+      -0.35,
+      0.05
+     ],
+     "son": 0.75
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Geliyorum, geliyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      0.25,
+      0.15
+     ],
+     "son_yon": 3.0,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bu bir harita! Bak, üstünde kocaman bir çarpı var!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "harita",
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Çarpı demek... hazine demek!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Hazine avına çıkıyoruz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.65,
+     "kez": 1,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "genis",
+   "hareket": "uzaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Harita onları nereye götürecek? Hazine Avı yarın devam ediyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

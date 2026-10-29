@@ -1,0 +1,252 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 48,
+ "baslik": "Taşın Üstünde Kaldı",
+ "deger": "yardımlaşma",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "dere",
+ "baslangic": {
+  "findik": [
+   0.75,
+   0.15
+  ],
+  "pamuk": [
+   0.0,
+   0.15
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pamuk Nasıl Kurtulacak?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Taşın Üstünde Kaldı | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Pamuk derenin ortasındaki taşta mahsur kalır. Fındık onu cesaretlendirip birlikte karşıya geçerler. Bu bölümün değeri: yardımlaşma.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "yardımlaşma"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Yardım edin! Taşın üstünde kaldım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.3,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Pamuk! Korkma, geliyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.1,
+     "nereye": [
+      0.6,
+      0.3
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.55,
+     "kime": "pamuk"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Su çok hızlı akıyor, atlayamıyorum..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bana bak. Derin nefes al. Üç deyince atla!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Tamam... Bir, iki, üç!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "genis",
+   "hareket": "sars",
+   "isik": "ogle",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Hoop! Yaşasın, karşıdayım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "atla",
+     "bas": 0.05,
+     "nereye": [
+      0.75,
+      0.0
+     ],
+     "son_yon": 3.0,
+     "son": 0.45
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.45,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Zor anda yanımızda olan bir arkadaş, bize güç verir."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

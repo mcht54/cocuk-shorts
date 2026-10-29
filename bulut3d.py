@@ -35,6 +35,12 @@ def main():
         if k.get("durum") == "kalite_kaldi" and k["profil"] == PROFIL:
             kalan[k["bolum"]] = kalan.get(k["bolum"], 0) + 1
     bolumler = sorted(SERI.glob("bolumler/b*.json"))
+    # yayin_sirasi.json varsa önce o sıra (ör. macera mini dizisi art arda), kalanlar numara sırasıyla
+    sira_dosyasi = SERI / "yayin_sirasi.json"
+    if sira_dosyasi.exists():
+        oncelik = [SERI / "bolumler" / f"{ad}.json" for ad in json.loads(sira_dosyasi.read_text())]
+        oncelik = [b for b in oncelik if b.exists()]
+        bolumler = oncelik + [b for b in bolumler if b not in oncelik]
     sira = [b for b in bolumler if (str(b.relative_to(KOK)), PROFIL) not in yapilan
             and kalan.get(str(b.relative_to(KOK)), 0) < 2]
     if os.environ.get("BOLUM"):

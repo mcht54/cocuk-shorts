@@ -1,0 +1,228 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 44,
+ "baslik": "Hazine Avı 3: Kristal Mağara",
+ "deger": "korkuyla başa çıkmak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "magara",
+ "baslangic": {
+  "findik": [
+   -0.9,
+   0.0
+  ],
+  "pamuk": [
+   -1.3,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Mağarada Kim Konuşuyor?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Hazine Avı 3: Kristal Mağara | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk parlayan kristallerle dolu bir mağaraya girer. İçeriden gelen sesin sırrı çok şaşırtıcı! Hazine Avı mini dizisinin 3. bölümü. Bu bölümün değeri: korkuyla başa çıkmak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "korkuyla başa çıkmak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Mağaranın içi kristallerle parlıyordu."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      -0.3,
+      0.2
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.15,
+     "nereye": [
+      -0.75,
+      0.3
+     ],
+     "son": 0.85
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Merhaba! Kimse var mı?"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Var mı... var mı... mı..."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.0,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.55,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "hizli_yaklas",
+   "isik": "magara",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Biri bize cevap veriyor! Çok korktum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": -0.9
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Dur, bu bir yankı! Kendi sesimiz geri geliyor."
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Yankı mı? O zaman ben de deneyeyim. Pamuk!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.75,
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "genis",
+   "hareket": "uzaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Pamuk... muk... Mağaranın sonunda bir şey parlıyordu. Yarın devam!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.12,
+     "kez": 1,
+     "son": 0.42
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.5,
+     "yon": 3.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.52,
+     "yon": 3.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}

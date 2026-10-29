@@ -57,6 +57,7 @@ IFADELER = {
     "mutlu": {"kas": 0.08, "kulak": -0.1, "bas": -0.08, "agiz_x": 1.35, "goz": 1.0, "agiz_z": 1.3},
     "uzgun": {"kas": 0.45, "kulak": 0.75, "bas": 0.28, "agiz_x": 0.75, "goz": 0.85, "agiz_z": 0.8},
     "saskin": {"kas": 0.22, "kulak": -0.2, "bas": -0.05, "agiz_x": 0.9, "goz": 1.25, "agiz_z": 1.6},
+    "kararli": {"kas": -0.2, "kulak": -0.25, "bas": 0.06, "agiz_x": 0.85, "goz": 0.92, "agiz_z": 0.8},
 }
 
 
@@ -96,6 +97,7 @@ def hesapla(karakterler, eylemler, sure, fps, zarflar, nesneler):
     tutan = {nid: None for nid in nesneler}  # şu an nesneyi tutan karakter
     pozlar = {k: [] for k in karakterler}
     tutma = {nid: [] for nid in nesneler}
+    acik = {nid: 0.0 for nid in nesneler}  # sandık kapağı açıklığı (0-1), "ac" eylemiyle
     eylemler = sorted(eylemler, key=lambda e: e["bas"])
     baslamis = set()
     yuru_bas = {}  # id(eylem) -> başlangıç konumu
@@ -110,7 +112,7 @@ def hesapla(karakterler, eylemler, sure, fps, zarflar, nesneler):
             if e["bas"] <= t and i not in baslamis:
                 baslamis.add(i)
                 d = durumlar[e["kim"]]
-                if e["eylem"] in ("yuru", "kos"):
+                if e["eylem"] in ("yuru", "kos", "atla"):
                     yuru_bas[i] = list(d.konum[:2])
                 elif e["eylem"] == "ifade":
                     d.onceki_ifade, d.ifade, d.ifade_gecis = d.ifade, e["tur"], 0.0
@@ -154,6 +156,32 @@ def hesapla(karakterler, eylemler, sure, fps, zarflar, nesneler):
                         d.hedef_yon = _yon_hesapla(p1[0] - p0[0], p1[1] - p0[1])
                     if u > 0.97 and not e.get("arkasi_donuk"):
                         d.hedef_yon = e.get("son_yon", 0.0)
+                elif ad == "atla":  # bir noktadan ötekine uzun sıçrayış (dere taşları, engeller)
+                    yuruyor = True
+                    p0, p1 = yuru_bas[i], e["nereye"]
+                    if u < 0.2:  # hazırlan: çömel, kollar geri
+                        c_ = math.sin(u / 0.2 * math.pi / 2)
+                        olc["govde"] = [1 + 0.1 * c_, 1 + 0.1 * c_, 1 - 0.16 * c_]
+                        z -= 0.05 * boy * c_
+                        kem["kol.L"][0] = kem["kol.R"][0] = 0.9 * c_
+                    else:
+                        v = (u - 0.2) / 0.8
+                        s = _yumusak(v)
+                        d.konum[0], d.konum[1] = p0[0] + (p1[0] - p0[0]) * s, p0[1] + (p1[1] - p0[1]) * s
+                        z += 0.5 * boy * 4 * v * (1 - v)
+                        olc["govde"] = [0.95, 0.95, 1.08]
+                        kem["kol.L"][2] = -1.9 * math.sin(v * math.pi)
+                        kem["kol.R"][2] = 1.9 * math.sin(v * math.pi)
+                        kem["bacak.L"][0] = -0.6 * math.sin(v * math.pi)
+                        kem["bacak.R"][0] = 0.5 * math.sin(v * math.pi)
+                    if math.dist(p0, p1) > 0.05:
+                        d.hedef_yon = _yon_hesapla(p1[0] - p0[0], p1[1] - p0[1])
+                    if u > 0.97:
+                        d.hedef_yon = e.get("son_yon", d.hedef_yon)
+                elif ad == "ac":  # sandık aç: iki kol öne, kapak kalkar
+                    uzan = math.sin(min(1.0, u / 0.4) * math.pi / 2)
+                    kem["kol.L"][0] = kem["kol.R"][0] = -1.2 * uzan
+                    acik[e["nesne"]] = max(acik[e["nesne"]], _yumusak(min(1.0, max(0.0, (u - 0.3) / 0.5))))
                 elif ad == "zipla":
                     kez = e.get("kez", 1)
                     uu = (u * kez) % 1.0
@@ -253,7 +281,10 @@ def hesapla(karakterler, eylemler, sure, fps, zarflar, nesneler):
                               "kemik": kem, "olcek": olc})
 
         for nid in nesneler:
-            tutma[nid].append({tutan[nid]: 1.0} if tutan[nid] else {})
+            durum_ = {tutan[nid]: 1.0} if tutan[nid] else {}
+            if acik[nid]:
+                durum_["_ac"] = round(acik[nid], 4)
+            tutma[nid].append(durum_)
 
     return pozlar, tutma
 
