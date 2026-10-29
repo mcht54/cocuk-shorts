@@ -1,0 +1,140 @@
+name: Haftalık uzun video (derleme)
+
+# Haftanın Shorts bölümleri yatay (16:9) olarak paralel işlerde ayrı ayrı çizilir, her biri kendi
+# kalite kontrolünden geçer, sonra tek uzun videoda birleştirilir.
+# Uzun video gizliliği UZUN_GIZLILIK değişkeninden gelir (varsayılan private);
+# herkese açık + pazar zamanlaması kullanıcı ilk videoyu onaylayınca açılacak.
+on:
+  # schedule:
+  #   - cron: "0 7 * * 0"   # pazar 10:00 TR
+  workflow_dispatch:
+    inputs:
+      bolumler:
+        description: "Bölüm numaraları, virgülle (ör. 1,2,3,4,5,6). Boş = yüklenmiş ama derlenmemiş Shorts'lar"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: haftalik-uzun
+  cancel-in-progress: false
+
+jobs:
+  sec:
+    runs-on: ubuntu-latest
+    outputs:
+      bolumler: ${{ steps.s.outputs.bolumler }}
+      adet: ${{ steps.s.outputs.adet }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - id: s
+        run: python derleme.py sec --bolumler "${{ inputs.bolumler }}"
+
+  uret:
+    needs: sec
+    if: needs.sec.outputs.adet != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        bolum: ${{ fromJSON(needs.sec.outputs.bolumler) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Sistem paketleri
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - name: Blender (önbellekli)
+        uses: actions/cache@v4
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - run: |
+          if [ ! -x blender/blender ]; then
+            curl -sL https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz | tar -xJ
+            mv blender-5.2.3-linux-x64 blender
+          fi
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - name: Yatay bölüm üret ve denetle
+        env:
+          BLENDER: ${{ github.workspace }}/blender/blender
+          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'EEVEE' }}
+          FPS: "12"
+          RENDER_SN_KARE: "40"
+          RENDER_IS_PARCACIGI: "4"
+          EN_AZ_BOS_DISK_GB: "5"
+        # tek bölüm ~40 sn: uzun profilin 60 sn alt sınırı derlemenin tamamına uygulanır
+        run: xvfb-run -a python uret3d.py --bolum "${{ matrix.bolum }}" --profil uzun --prototip --ornekleme 4 --olcek 67
+      - id: ad
+        if: always()
+        run: echo "ad=$(basename '${{ matrix.bolum }}' .json)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: parca-${{ steps.ad.outputs.ad }}
+          path: |
+            cikti3d/**/*-uzun-*.mp4
+            cikti3d/**/*-uzun-*.rapor.json
+            cikti3d/**/*-uzun-*.veri/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  birlestir:
+    needs: [sec, uret]
+    if: always() && needs.sec.outputs.adet != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: parca-*
+          path: parcalar
+      - name: Birleştir ve denetle
+        run: python derleme.py birlestir parcalar
+      - name: (İzinliyse) yükle
+        env:
+          YAYIN: ${{ vars.YAYIN || 'kapali' }}
+          YT_GIZLILIK: ${{ vars.UZUN_GIZLILIK || 'private' }}
+          YT_HERKESE_ACIK_ONAY: ${{ vars.YT_HERKESE_ACIK_ONAY || 'hayir' }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python derleme.py yukle
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: derleme-${{ github.run_id }}
+          path: |
+            cikti3d/derleme/*.mp4
+            cikti3d/derleme/*.jpg
+            cikti3d/derleme/*.rapor.json
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Yayın kaydını depoya yaz
+        if: always()
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add yayin_kaydi.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "yayın kaydı (derleme): $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
