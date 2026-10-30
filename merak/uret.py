@@ -17,7 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from cocuk import video  # edge-tts seslendirme + kelime zamanları
-from merak import grafik, kaynak
+from merak import grafik, kaynak, yaz
 
 KOK = Path(__file__).resolve().parent
 DEPO = KOK.parent
@@ -74,7 +74,7 @@ def hazirla(yol, en, boy, olcek=1.12):
     hedef_oran, oran = tw / th, w / h
     dikey = en < boy
     # panorama da kırpılır: tam yükseklikte geniş tuval, kamera üzerinde gezinir (ince şerit görünmez)
-    kirp_olur = (oran / hedef_oran) < (3.3 if dikey else 2.0) and (hedef_oran / oran) < 1.35
+    kirp_olur = (hedef_oran / oran) < 1.35  # yalnız çok dik görsel bulanık zemin + tam görsel
     if not kirp_olur:
         arka = im.resize((tw, th)).filter(ImageFilter.GaussianBlur(40))
         arka = Image.blend(arka, Image.new("RGB", arka.size, (10, 10, 12)), 0.35)
@@ -158,8 +158,12 @@ def uret(kid, ad, cikti_dizini=None):
     cikti = Path(cikti_dizini or KOK / "cikti")
     cikti.mkdir(parents=True, exist_ok=True)
 
+    yaz.gorsel_dengele(s, len(gorseller))  # aynı görsel parça parça tekrar etmesin
+    paket = json.loads((d_konu / "kaynak.json").read_text())
+    yaz.turkce_onar(s, paket.get("metin_tr", ""))  # ekran yazısında harfsiz Türkçe ("Dikilitaslar") düzelir
+
     # 0) görseller (yalnız kullanılanlar)
-    koordinat = json.loads((d_konu / "kaynak.json").read_text()).get("koordinat")
+    koordinat = paket.get("koordinat")
     for b in bolumler:  # çizilemeyecek grafik (ör. koordinatsız harita) görsele döner
         for p in b["parcalar"]:
             if p.get("grafik"):
@@ -322,17 +326,17 @@ def uret(kid, ad, cikti_dizini=None):
                     a = min(1, (t - b["bas"] + 0.9) / 0.5, (b["bas"] + 2.6 - t) / 0.5)
                     d.rectangle((90, 110, 100, 230), fill=(232, 168, 60, int(255 * a)))
                     d.text((125, 108), f"BÖLÜM {bi}", font=bolum_k, fill=(232, 168, 60, int(255 * a)))
-                    d.text((125, 148), b["ad"].upper(), font=bolum_f, fill=(255, 255, 255, int(255 * a)),
+                    d.text((125, 148), grafik.ust(b["ad"]), font=bolum_f, fill=(255, 255, 255, int(255 * a)),
                            stroke_width=3, stroke_fill=(0, 0, 0, int(200 * a)))
         elif t < 3.2:  # Shorts: ilk saniyelerde ekran başlığı
             a = min(1.0, (3.2 - t) / 0.4)
-            for j, sat in enumerate(satirla(d, s["ekran_basligi"].upper(), baslik_f, EN * 0.86)[:3]):
+            for j, sat in enumerate(satirla(d, grafik.ust(s["ekran_basligi"]), baslik_f, EN * 0.86)[:3]):
                 metin_kutu(d, (EN / 2, BOY * 0.16 + j * 100), sat, baslik_f, ortala=True,
                            dolgu=(255, 214, 80, int(255 * a)), kutu=(0, 0, 0, int(170 * a)), pay=22)
         for p in parcalar:
             if p.get("yazi") and not p.get("grafik") and p["bas"] + 0.2 <= t < p["bas"] + 3.4:
                 a = min(1, (t - p["bas"] - 0.2) / 0.3, (p["bas"] + 3.4 - t) / 0.4)
-                for j, sat in enumerate(satirla(d, p["yazi"].upper(), buyuk_f, EN * 0.9)[:2]):
+                for j, sat in enumerate(satirla(d, grafik.ust(p["yazi"]), buyuk_f, EN * 0.9)[:2]):
                     w = d.textlength(sat, font=buyuk_f)
                     d.text(((EN - w) / 2, BOY * (0.32 if uzun else 0.36) + j * buyuk_f.size * 1.1), sat,
                            font=buyuk_f, fill=(255, 255, 255, int(255 * a)), stroke_width=6,
@@ -389,7 +393,7 @@ def uret(kid, ad, cikti_dizini=None):
         kapak = Image.blend(kapak, Image.new("RGB", kapak.size, (0, 0, 0)), 0.25)
         d = ImageDraw.Draw(kapak)
         kf = font(96, 900)
-        satirlar = satirla(d, s["kapak_yazisi"].upper(), kf, 1150)[:3]
+        satirlar = satirla(d, grafik.ust(s["kapak_yazisi"]), kf, 1150)[:3]
         for j, st in enumerate(satirlar):
             w = d.textlength(st, font=kf)
             d.text(((1280 - w) / 2, 470 + j * 100 - 50 * (len(satirlar) - 1)), st, font=kf,

@@ -349,6 +349,137 @@ def gorsel_onar(s, gorsel_sayisi):
     return s
 
 
+def gorsel_dengele(s, gorsel_sayisi):
+    """Aynı görselin tekrarını sınırlar (Gemini bir görseli 18 parçada kullanabiliyor): her görsel en çok
+    ust kez, fazlası ve art arda tekrar en az kullanılan görsele kayar. Grafikli parçalar atlanır."""
+    parcalar = [p for p in _parcalar(s) if not p.get("grafik") and p.get("gorsel")]
+    if not parcalar or not gorsel_sayisi:
+        return s
+    ust = max(1, -(-3 * len(parcalar) // (2 * gorsel_sayisi)))
+    kullanim = {i: 0 for i in range(gorsel_sayisi)}
+    onceki = None
+    for p in parcalar:
+        yeni = []
+        for x in p["gorsel"]:
+            if kullanim.get(x, ust) >= ust or x == onceki or x in yeni:
+                x = min((k for k in kullanim if k != onceki and k not in yeni),
+                        key=lambda k: (kullanim[k], k), default=x)
+            kullanim[x] = kullanim.get(x, 0) + 1
+            yeni.append(x)
+        p["gorsel"] = yeni
+        onceki = yeni[-1]
+    return s
+
+
+TR_ASCII = str.maketrans("şçğıöüŞÇĞİÖÜ", "scgiouSCGIOU")
+
+
+def _tr_kucuk(k):
+    return k.replace("I", "ı").replace("İ", "i").lower()
+
+
+def turkce_onar(s, ek_metin=""):
+    """Başlık/ekran yazılarında Türkçe harfsiz yazılmış kelimeyi ("Dikilitaslar", "Ilk") seslendirme metnindeki
+    (ve ek_metin, ör. Türkçe Wikipedia) yazımıyla ("Dikilitaşlar", "İlk") düzeltir. Bir kelimenin birden çok
+    yazımı varsa en az %80 baskın olan seçilir; belirsizse dokunulmaz."""
+    sayim = {}
+    metin = " ".join(str(p.get("metin", "")) for p in _parcalar(s)) + " " + ek_metin
+    for k in re.findall(r"\w+", metin):
+        if not k.isupper() or len(k) == 1:  # tamamı büyük harfli kısaltmada I/İ belirsiz
+            v = sayim.setdefault(_tr_kucuk(k).translate(TR_ASCII), {})
+            v[_tr_kucuk(k)] = v.get(_tr_kucuk(k), 0) + 1
+    sozluk = {}
+    for a, v in sayim.items():
+        d, n = max(v.items(), key=lambda x: x[1])
+        if n >= 0.8 * sum(v.values()):
+            sozluk[a] = d
+
+    def kelime(m):
+        k = m.group(0)
+        if len(k) < 2 or k != k.translate(TR_ASCII):  # zaten Türkçe harfli
+            return k
+        d = sozluk.get(k.lower())
+        if not d:
+            return k
+        if k.isupper():
+            return d.replace("i", "İ").upper()
+        return (("İ" if d[0] == "i" else d[0].upper()) + d[1:]) if k[0].isupper() else d
+
+    def onar(m):
+        return re.sub(r"\w+", kelime, m) if isinstance(m, str) else m
+
+    for k in ("baslik", "ekran_basligi", "kapak_yazisi", "aciklama"):
+        if k in s:
+            s[k] = onar(s[k])
+    if isinstance(s.get("etiketler"), list):
+        s["etiketler"] = [onar(e) for e in s["etiketler"]]
+    for p in _parcalar(s):
+        if "yazi" in p:
+            p["yazi"] = onar(p["yazi"])
+        if isinstance(p.get("grafik"), dict):
+            for k in ("etiket", "aciklama", "birim"):
+                if k in p["grafik"]:
+                    p["grafik"][k] = onar(p["grafik"][k])
+    return s
+
+
+IMLA_ISTEM = """Aşağıdaki JSON'daki Türkçe metinlerde eksik Türkçe harfleri düzelt (ör. "Sifir Noktasi" -> "Sıfır
+Noktası", "Gobekli" -> "Göbekli", "Ilk" -> "İlk"). Başka HİÇBİR şeyi değiştirme: kelime ekleme, silme, çevirme,
+yeniden yazma yok; yalnız harf düzeltmesi. Aynı anahtarlarla yalnızca JSON nesnesi döndür.
+{veri}"""
+
+
+def _imla_alanlari(s):
+    """Başlık/ekran yazısı alanları: anahtar -> (okuyucu, yazıcı)."""
+    alan = {}
+    for k in ("baslik", "ekran_basligi", "kapak_yazisi", "aciklama"):
+        if isinstance(s.get(k), str):
+            alan[k] = (lambda k=k: s[k], lambda v, k=k: s.__setitem__(k, v))
+    for i, e in enumerate(s.get("etiketler") or []):
+        if isinstance(e, str):
+            alan[f"etiket{i}"] = (lambda i=i: s["etiketler"][i], lambda v, i=i: s["etiketler"].__setitem__(i, v))
+    for i, p in enumerate(_parcalar(s)):
+        if isinstance(p.get("yazi"), str) and p["yazi"]:
+            alan[f"yazi{i}"] = (lambda p=p: p["yazi"], lambda v, p=p: p.__setitem__("yazi", v))
+        g = p.get("grafik")
+        if isinstance(g, dict):
+            for k in ("etiket", "aciklama", "birim"):
+                if isinstance(g.get(k), str) and g[k]:
+                    alan[f"grafik{i}_{k}"] = (lambda g=g, k=k: g[k], lambda v, g=g, k=k: g.__setitem__(k, v))
+    return alan
+
+
+def imla_duzelt(s):
+    """Gemini'nin harfsiz yazdığı başlık/ekran yazılarını (YouTube başlığı olur) tek çağrıyla düzeltir. Yanıt
+    yalnız harf düzeltmesiyse kabul edilir (harfsiz hâli aynı kalmalı); anlam değişemez. s["imla"] = True."""
+    alan = _imla_alanlari(s)
+    if alan:
+        try:
+            v = gemini.sor(IMLA_ISTEM.format(veri=json.dumps({k: o() for k, (o, _) in alan.items()},
+                                                             ensure_ascii=False)), sicaklik=0.1)
+        except gemini.GeminiYok:
+            raise
+        except Exception as e:  # bozuk yanıt: metin olduğu gibi kalır, sonraki stok çalıştırması yeniden dener
+            print(f"    imla geçişi atlandı: {e!r}", flush=True)
+            return s
+        for k, (o, y) in alan.items():
+            yeni = v.get(k) if isinstance(v, dict) else None
+            if isinstance(yeni, str) and _tr_kucuk(yeni).translate(TR_ASCII) == _tr_kucuk(o()).translate(TR_ASCII):
+                y(yeni)
+    s["imla"] = True
+    return s
+
+
+def imla_tara():
+    """Stoktaki eski senaryolarda imla geçişi yapılmamışsa yapar (GeminiYok yukarı geçer)."""
+    for f in sorted(KONULAR.glob("*/*.json")):
+        if f.name in ("kaynak.json", "gorseller.json"):
+            continue
+        s = json.loads(f.read_text())
+        if isinstance(s, dict) and not s.get("imla"):
+            f.write_text(json.dumps(imla_duzelt(s), ensure_ascii=False, indent=1))
+
+
 def _duzenle(s):
     """Gemini'nin boş (null) ya da yanlış tipli alanlarını denetimden önce düzeltir: denetim çökmez, eksik
     alan hata olarak düzeltmeye gider. JSON nesnesi değilse None."""
@@ -838,6 +969,7 @@ def yaz(kid):
                 (d / "reddedildi").write_text(f"uzun senaryo denetimi {n} kez geçemedi\n")
             return False
         s["kaynaklar"] = paket["kaynaklar"]
+        imla_duzelt(s)
         (d / "uzun.json").write_text(json.dumps(s, ensure_ascii=False, indent=1))
     if not list(d.glob("kisa*.json")):
         print(f"  Shorts senaryoları: {kid}", flush=True)
@@ -850,6 +982,7 @@ def yaz(kid):
             if k:
                 n += 1
                 k["kaynaklar"] = paket["kaynaklar"]
+                imla_duzelt(k)
                 (d / f"kisa{n}.json").write_text(json.dumps(k, ensure_ascii=False, indent=1))
         print(f"  {n} Shorts senaryosu geçti", flush=True)
     return True

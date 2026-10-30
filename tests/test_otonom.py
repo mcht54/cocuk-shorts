@@ -188,6 +188,34 @@ class MerakBolumBolumTesti(unittest.TestCase):
         self.assertEqual(yaz.yapi_denetimi(s, 5, True, KAYNAK, sayilar), [])
 
 
+class MerakEkranYazisiTesti(unittest.TestCase):
+    def test_gorsel_tekrari_sinirlanir(self):
+        s = {"parcalar": [{"metin": "x", "gorsel": [7]} for _ in range(20)]}
+        yaz.gorsel_dengele(s, 30)
+        g = [p["gorsel"][0] for p in s["parcalar"]]
+        self.assertLessEqual(max(g.count(x) for x in g), 1)
+        self.assertTrue(all(a != b for a, b in zip(g, g[1:])))
+
+    def test_harfsiz_turkce_metinden_duzelir(self):
+        s = {"ekran_basligi": "Gizemli Dikilitaslar", "baslik": "Ilk Tapinak",
+             "parcalar": [{"metin": "Bu dikilitaşlar ilk tapınak sayılır.", "yazi": "DIKILITASLAR",
+                           "grafik": {"tur": "harita", "etiket": "Sanliurfa"}}]}
+        yaz.turkce_onar(s, "Şanlıurfa ilinde.")
+        self.assertEqual(s["ekran_basligi"], "Gizemli Dikilitaşlar")
+        self.assertEqual(s["baslik"], "İlk Tapınak")
+        self.assertEqual(s["parcalar"][0]["yazi"], "DİKİLİTAŞLAR")
+        self.assertEqual(s["parcalar"][0]["grafik"]["etiket"], "Şanlıurfa")
+
+    def test_imla_yalniz_harf_duzeltmesini_kabul_eder(self):
+        s = {"baslik": "Gobekli Tepe", "ekran_basligi": "Sifir Noktasi", "parcalar": []}
+        cevap = {"baslik": "Göbekli Tepe", "ekran_basligi": "Tamamen Başka Başlık"}
+        with mock.patch.object(yaz.gemini, "sor", return_value=cevap):
+            yaz.imla_duzelt(s)
+        self.assertEqual(s["baslik"], "Göbekli Tepe")
+        self.assertEqual(s["ekran_basligi"], "Sifir Noktasi")
+        self.assertTrue(s["imla"])
+
+
 class MerakSiraTesti(unittest.TestCase):
     def test_shorts_konular_arasinda_doner_ve_yuklenen_tekrarlanmaz(self):
         with tempfile.TemporaryDirectory() as d:

@@ -60,6 +60,7 @@ def merak():
         return len(yayinla.sira("uzun")), len(yayinla.sira("shorts"))
     uzun, kisa = say()
     ozet(f"**Merak Arşivi** bekleyen uzun: {uzun} (hedef {MERAK_UZUN_HEDEF}), Shorts: {kisa} (hedef {MERAK_KISA_HEDEF})")
+    yaz.imla_tara()  # eski senaryoların harfsiz başlıkları ("Gobekli") düzelir
     denenen = set()
     for tur in range(MERAK_TUR):
         if uzun >= MERAK_UZUN_HEDEF and kisa >= MERAK_KISA_HEDEF:
