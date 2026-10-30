@@ -43,3 +43,16 @@
 - [Göbekli Tepe Pillar.JPG](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_Pillar.JPG) — Zhengan, CC BY-SA 4.0
 - [Gobekli Tepe, enclosure D stela. Şanlıurfa Museum.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe%2C_enclosure_D_stela._%C5%9Eanl%C4%B1urfa_Museum.jpg) — Dosseman, CC BY-SA 4.0
 - [Göbekli Tepe banner.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_banner.jpg) — Davide Mauro, CC BY-SA 4.0
+
+
+# Siradisi T Bicimli Dikilitaşlar
+
+## Kaynaklar
+- https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe
+- https://tr.wikipedia.org/wiki/G%C3%B6beklitepe
+
+## Görseller
+- [The archaeological site of Göbekli Tepe - main excavation area.png](https://commons.wikimedia.org/wiki/File%3AThe_archaeological_site_of_G%C3%B6bekli_Tepe_-_main_excavation_area.png) — German Archaeological Institute, photo E. Kücük., CC BY 4.0
+- [Göbekli Tepe Pillar.JPG](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_Pillar.JPG) — Zhengan, CC BY-SA 4.0
+- [Gobekli Tepe, enclosure D stela. Şanlıurfa Museum.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe%2C_enclosure_D_stela._%C5%9Eanl%C4%B1urfa_Museum.jpg) — Dosseman, CC BY-SA 4.0
+- [Göbekli Tepe banner.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_banner.jpg) — Davide Mauro, CC BY-SA 4.0
