@@ -1,0 +1,874 @@
+{
+ "baslik": "Antik Dünyanın Akıllı Şehri: Efes'in Kayıp Mühendisliği",
+ "kapak_yazisi": "EFESİN SIRRI",
+ "kapak_gorsel": 6,
+ "aciklama": "Antik dünyanın en gelişmiş metropollerinden biri olan Efes, sıradışı mühendislik çözümleri ve gizemleriyle iz bırakmaya devam ediyor. Bu belgeselde, kentin kuruluş efsanelerinden su sistemlerine kadar bilinmeyen yönlerini adım adım inceliyoruz.",
+ "etiketler": [
+  "Efes",
+  "Antik Kent",
+  "İzmir",
+  "Selçuk",
+  "Arkeoloji",
+  "Tarih",
+  "Belgesel",
+  "Antik Yunan",
+  "Roma",
+  "Mühendislik",
+  "Celsus",
+  "Artemis"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Kuruluşu Cilalı Taş Devri'ne yani MÖ 6000 yıllarına dayanır.",
+     "gorsel": [
+      2
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "6000",
+      "birim": "yıllarına"
+     }
+    },
+    {
+     "metin": "Ateş yakarak tuttukları balıkları pişirirlerken çalıların arasından çıkan bir yaban domuzu balığı kaparak kaçar ve kehanet gerçekleşir.",
+     "gorsel": [
+      31
+     ]
+    },
+    {
+     "metin": "Şehir, antik Dünyanın Yedi Harikası'ndan biri olan Artemis Tapınağı ile ün salmış; Celsus Kütüphanesi ve büyük tiyatrosuyla da anılmıştır.",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "Şehir, Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi ve Yuhanna İncili burada yazılmış olabilir.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi",
+       "kaynak_alinti": "one of the seven churches of Asia addressed in the Book of Revelation."
+      },
+      {
+       "iddia": "Yuhanna İncili burada yazılmış olabilir",
+       "kaynak_alinti": "The Gospel of John may have been written there"
+      }
+     ]
+    },
+    {
+     "metin": "Gotlar tarafından 263 yılında yıkılan antik kent, daha sonra yeniden inşa edilmesine rağmen limanın Küçük Menderes Nehri tarafından yavaş yavaş doldurulması nedeniyle ticaret merkezi olarak önemini yitirmiştir.",
+     "gorsel": [
+      16
+     ],
+     "iddialar": [
+      {
+       "iddia": "Şehir 263 yılında Gotlar tarafından yıkıldı",
+       "kaynak_alinti": "The city was destroyed by the Goths in 263."
+      },
+      {
+       "iddia": "limanın Küçük Menderes Nehri tarafından yavaş yavaş silinmesi nedeniyle ticaret merkezi olarak önemi azaldı",
+       "kaynak_alinti": "its importance as a port and commercial centre declined as the harbour was slowly silted up by the Küçükmenderes River."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Erken Yerleşim İzleri",
+   "parcalar": [
+    {
+     "metin": "Efes'in ilk hikâyesi nerede saklı?",
+     "gorsel": [
+      2
+     ],
+     "yazi": "Erken Yerleşim"
+    },
+    {
+     "metin": "Efes'i çevreleyen alan yakındaki Arvalya ve Çukuriçi olarak bilinen yapay höyükler tarafından ortaya çıkarıldığı üzere Neolitik Çağ sırasında zaten iskân edilmişti.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "MÖ 10. yüzyılda eski Arzava başkentinin yerine Attik ve İyonyalı Yunan kolonistleri tarafından inşa edilmiştir.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Lisimahos, kenti Miletli Hippodamos'un bulduğu Izgara Plan'a göre yeniden kurar.",
+     "gorsel": [
+      22
+     ],
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "6000",
+        "metin": "Neolitik Çağ ilk yerleşim"
+       },
+       {
+        "yil": "1050",
+        "metin": "Yunanistan'dan göçmenler"
+       },
+       {
+        "yil": "560",
+        "metin": "Artemis Tapınağı taşınma"
+       },
+       {
+        "yil": "300",
+        "metin": "Lisimahos yeni şehir"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "1954 yılında St. Jean bazilikasının kalıntıları yakınında seramik kaplar içeren Miken dönemine ait bir mezarlık keşfedilmiştir.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "metin": "Yunan tarihçiler ve şair Kallinos şehrin efsanevi kuruluşunu Amazonlar kraliçesi Efoş'a atfetmiştir.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "1954 yılında St. Jean bazilikasının kalıntıları yakınında seramik kaplar içeren Miken dönemine ait bir mezarlık keşfedilmiştir.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "gorsel": [
+      1
+     ],
+     "metin": "Bu dönemde Ahhiyawa toplulukları da Küçük Asya'da yerleşmeye başlamıştır."
+    },
+    {
+     "metin": "Yunan tarihçiler ve şair Kallinos şehrin efsanevi kuruluşunu Amazonlar kraliçesi Efoş'a atfetmiştir. Bu mitolojik anlatımlarla birlikte şehir, Artemis kültü için de önemli bir merkezdi.",
+     "gorsel": [
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Dünyanın Harikası",
+   "parcalar": [
+    {
+     "metin": "Efes'in en büyük sırrı hangi anıtsal yapıda saklı?",
+     "gorsel": [
+      4
+     ],
+     "yazi": "Dünyanın Harikası"
+    },
+    {
+     "metin": "Şehir antik Dünyanın Yedi Harikası'ndan biri olan şehrin yakınındaki Artemis Tapınağı ile ünlüdür.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Artemis Tapınağı, antik dünyanın mermerden inşa edilmiş ilk tapınağı olup temelleri MÖ 7. yüzyıla kadar gitmektedir.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Tanrıça Artemis'e ithafen Lidya kralı Croesus tarafından yaptırılmış ve Yunan mimar Chersiphron tarafından tasarlanmıştır.",
+     "gorsel": [
+      4
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Artemis Tapınağı'nın uzunluğu 130 metredir.",
+     "gorsel": [
+      33
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "130",
+      "birim": "metre",
+      "metin": "Artemis Tapınağı'nın uzunluğu."
+     }
+    },
+    {
+     "metin": "Artemis Tapınağı MÖ 21 Temmuz 356'da adını ölümsüzleştirmek isteyen Herostratus adlı bir Yunan tarafından yakıldı.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Artemis Tapınağı ile ilgili kazı çalışmaları 1863 yılında British Museum'un katkılarıyla arkeolog John Turtle Wood tarafından başlatılmıştır.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Efes antik Dünyanın Yedi Harikası'ndan biri olan şehrin yakınındaki Artemis Tapınağı ile ünlüdür.",
+     "gorsel": [
+      33
+     ]
+    },
+    {
+     "gorsel": [
+      33
+     ],
+     "metin": "Artemis Tapınağı, antik dünyanın mermerden inşa edilmiş ilk tapınağı olup temelleri MÖ 7. yüzyıla kadar gitmektedir."
+    }
+   ]
+  },
+  {
+   "ad": "Roma Başkenti",
+   "parcalar": [
+    {
+     "metin": "Efes, MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçtikten sonra nasıl bir değişim yaşadı?",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Roma Başkenti"
+    },
+    {
+     "metin": "Şehir, MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçtikten sonra gelişti.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Hellenistik ve Roma çağlarında en görkemli dönemlerini yaşayan Efes, Roma İmparatoru Augustus zamanında, Asya Eyaleti'nin başkenti olmuş ve nüfusu o dönem MÖ 2-1.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    },
+    {
+     "gorsel": [
+      12
+     ],
+     "metin": "yüzyıl 200.000 kişiyi aşmıştır."
+    },
+    {
+     "metin": "Odeon 1.400 kişilik kapasiteye sahiptir ve Bouleterion olarak da adlandırılır.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Büyük Tiyatro 24.000 kişilik kapasiteyle antik dünyanın en büyük açık hava tiyatrosudur.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "24.000",
+      "birim": "kişi",
+      "metin": "Büyük Tiyatro'nun seyirci kapasitesi."
+     }
+    },
+    {
+     "metin": "İmparator Augustus zamanında Asya Eyaleti'nin başkenti olan Efes, Roma İmparatorluğu döneminde bir ticaret ve yönetim merkezi olarak büyük bir refah seviyesine ulaşmıştır.",
+     "gorsel": [
+      30
+     ]
+    },
+    {
+     "metin": "Roma döneminde hızla gelişen bu antik kentte ticaret agorası ve devlet agorası olmak üzere iki ayrı agora yer alıyordu.",
+     "gorsel": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bilgi Depoları",
+   "parcalar": [
+    {
+     "metin": "Efes'in en görkemli yapılarından biri olan Celsus Kütüphanesi hangi amaçla inşa edildi?",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "Roma dönemi yapılarının en güzellerinden birisi olan yapı hem kütüphane, hem de mezar anıtı görevini üstlenmiştir.",
+     "gorsel": [
+      17
+     ]
+    },
+    {
+     "metin": "106 yılında Efes valisi olan Celsius ölünce oğlu kütüphaneyi babasının adına mezar anıtı olarak yaptırmıştır.",
+     "gorsel": [
+      19
+     ]
+    },
+    {
+     "metin": "Celsius'un lahdi kütüphanenin batı duvarı altındadır.",
+     "gorsel": [
+      48
+     ]
+    },
+    {
+     "metin": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu.",
+     "gorsel": [
+      50
+     ]
+    },
+    {
+     "metin": "Yapının cephesi 1970-1980 yılları arasında restore edilmiştir.",
+     "gorsel": [
+      51
+     ]
+    },
+    {
+     "metin": "Celsius'un lahdi kütüphanenin batı duvarı altındadır.",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu.",
+     "gorsel": [
+      48
+     ]
+    },
+    {
+     "metin": "Celsus Kütüphanesi'nin iç kısmı yaklaşık 180 metrekaredir. Kütüphanenin cephesi 1970 ile 1978 yılları arasında restore edilmiştir.",
+     "gorsel": [
+      48
+     ]
+    },
+    {
+     "metin": "Tarihi yapının giriş kısmı, büyüklüğünün olduğundan daha büyük algılanması için abartılı tasarlanmıştır. MS 400 yılına gelindiğinde kütüphane artık kullanılmıyordu.",
+     "gorsel": [
+      17
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "400",
+      "birim": "yılına"
+     }
+    }
+   ]
+  },
+  {
+   "ad": "Kayıp Liman",
+   "parcalar": [
+    {
+     "metin": "Efes'in ticaret kalbi nasıl sessizliğe büründü?",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Kayıp Liman"
+    },
+    {
+     "metin": "MS 4. yüzyılda limanın dolmasıyla Efes'te ticaret geriler.",
+     "gorsel": [
+      39
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İmparator Hadrianus, limanı birkaç kez temizletir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Liman kuzeyden gelen Marnas Çayı ve Küçük Menderes nehrinin getirdiği alüvyonlarla dolar ve Efes denizden uzaklaşır.",
+     "gorsel": [
+      26
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Liman Caddesi Büyük Tiyatro'dan, bugün tamamen dolmuş olan Antik Liman'a uzanan, iki yanı sütunlu ve mermer döşeli 600 metre uzunluktaki caddedir.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "600",
+      "birim": "metre",
+      "metin": "Liman Caddesi'nin uzunluğu."
+     }
+    },
+    {
+     "metin": "Şehir 263 yılında Gotlar tarafından yıkıldı ve MS 614'teki bir depremde kısmen tahrip oldu.",
+     "gorsel": [
+      23
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İmparator Hadrianus limanı birkaç kez temizletmiştir. Şehir MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçmiştir.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "Şehir 263 yılında Gotlar tarafından yıkılmıştır. MS 614'teki bir depremde kısmen tahrip olmuştur.",
+     "gorsel": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kutsal Merkez",
+   "parcalar": [
+    {
+     "metin": "Efes hangi büyük inancın kutsal merkeziydi?",
+     "gorsel": [
+      10
+     ],
+     "yazi": "Kutsal Merkez"
+    },
+    {
+     "metin": "Şehir, Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yuhanna İncili burada yazılmış olabilir.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Şehir 5. yüzyıl birkaç Hristiyan konsilinin yeriydi.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bülbüldağı'nda İsa'nın annesi Meryem'in son yıllarını Yuhanna ile birlikte geçirdiğine inanılan kilisedir.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Meryem Kilisesi 431 Konsül Toplantısı'nın yapıldığı yer olan ve Meryem adına inşa edilmiş ilk kilisedir.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Şehir, Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi.",
+     "gorsel": [
+      12
+     ],
+     "iddialar": [
+      {
+       "iddia": "Efes Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi",
+       "kaynak_alinti": "one of the seven churches of Asia addressed in the Book of Revelation"
+      }
+     ]
+    },
+    {
+     "metin": "Yuhanna İncili burada yazılmış olabilir.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Yuhanna İncili burada yazılmış olabilir",
+       "kaynak_alinti": "The Gospel of John may have been written there"
+      }
+     ]
+    },
+    {
+     "metin": "Şehir beşinci yüzyılda birkaç Hristiyan konsilinin yeriydi.",
+     "gorsel": [
+      10
+     ],
+     "iddialar": [
+      {
+       "iddia": "Şehir 5. yüzyıl birkaç Hristiyan konsilinin yeriydi",
+       "kaynak_alinti": "it was the site of several 5th-century Christian Councils"
+      }
+     ]
+    },
+    {
+     "metin": "Efes şehri Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi ve Yuhanna İncili burada yazılmış olabilir.",
+     "gorsel": [
+      12
+     ],
+     "iddialar": [
+      {
+       "iddia": "Efes şehri Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi ve Yuhanna İncili burada yazılmış olabilir.",
+       "kaynak_alinti": "Ephesus was a recipient city of one of the Pauline epistles and one of the seven churches of Asia addressed in the Book of Revelation. The Gospel of John may have been written there"
+      }
+     ]
+    },
+    {
+     "metin": "Şehir beşinci yüzyılda birkaç Hristiyan konsilinin yeriydi ve Meryem Kilisesi 431 Konsül Toplantısı'nın yapıldığı yer oldu.",
+     "gorsel": [
+      10
+     ],
+     "iddialar": [
+      {
+       "iddia": "Şehir beşinci yüzyılda birkaç Hristiyan konsilinin yeriydi ve Meryem Kilisesi 431 Konsül Toplantısı'nın yapıldığı yer oldu.",
+       "kaynak_alinti": "it was the site of several 5th-century Christian Councils (Council of Ephesus)"
+      },
+      {
+       "iddia": "Meryem Kilisesi 431 Konsül Toplantısı'nın yapıldığı yer oldu",
+       "kaynak_alinti": "The Church of Mary near the harbour of Ephesus was the setting for the Third Ecumenical Council in 431"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bugünün Mirası",
+   "parcalar": [
+    {
+     "metin": "Efes'in bugünkü mirası nasıl şekillendi?",
+     "gorsel": [
+      30
+     ],
+     "yazi": "Bugünün Mirası"
+    },
+    {
+     "metin": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, 1330 yılında Türkler tarafından alınmıştır.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1994'te UNESCO tarafından Dünya Mirası Geçici Listesi'ne dâhil edilen Efes 2015'te ise Dünya Mirası olarak tescil edildi.",
+     "gorsel": [
+      36
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2022 yılındaki kazı çalışmalarında MS 7. yüzyıla denk gelen Erken Bizans Dönemi'nden kalma dükkânlara ve bir mahalleye ulaşıldı.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Efes harabeleri Adnan Menderes Havalimanı'ndan 65,7 km, Kuşadası Limanı'ndan ise 17,9 km uzaklıktadır.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Ayasuluk Tepesi, Artemision, Efes ve Selçuk olarak dört ana bölgedeki harabeler yılda ortalama 1,5 milyon turist tarafından ziyaret edilmektedir.",
+     "gorsel": [
+      44
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, Aydınoğullarının merkezi olmuştur.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "1996 yılı içinde Selçuk, Aydın ve Efes yol üçgeninin yaklaşık 100 m kadar güney batısında Çukuriçi Höyüğü saptanmıştır.",
+     "gorsel": [
+      2
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Efes, Anadolu'nun batı kıyısında, bugünkü İzmir ilinin Selçuk ilçesinin üç kilometre güneybatısında yer alan antik bir Luvi şehriydi.",
+   "kaynak_alinti": "Efes (Hititçe: 𒀀𒉺𒊭 Apaša, Eski Yunanca: Ἔφεσος Ephesos), Anadolu'nun batı kıyısında, bugünkü İzmir ilinin Selçuk ilçesinin üç kilometre güneybatısında yer alan antik bir Luvi şehriydi."
+  },
+  {
+   "iddia": "Kuruluşu Cilalı Taş Devri'ne yani MÖ 6000 yıllarına dayanır.",
+   "kaynak_alinti": "Kuruluşu Cilalı Taş Devri'ne yani MÖ 6000 yıllarına dayanır."
+  },
+  {
+   "iddia": "Efes ören yeri 2 milyon 634 bin 355 kişi ile 2024 yılında Türkiye'den en çok ziyaret edilen müze olmuştur.",
+   "kaynak_alinti": "Efes ören yeri 2 milyon 634 bin 355 kişi ile 2024 yılında Türkiye'den en çok ziyaret edilen müze olmuştur."
+  },
+  {
+   "iddia": "Hadrianus Tapınağı girişindeki frizde Efes'in 3 bin yıllık kuruluş efsanesi yer alır.",
+   "kaynak_alinti": "Efes ören yerinde, Hadrianus Tapınağı girişindeki frizde Efes'in 3 bin yıllık kuruluş efsanesi yer alır."
+  },
+  {
+   "iddia": "Ateş yakarak tuttukları balıkları pişirirlerken çalıların arasından çıkan bir yaban domuzu, balığı kaparak kaçar ve kehanet gerçekleşir.",
+   "kaynak_alinti": "Ateş yakarak tuttukları balıkları pişirirlerken çalıların arasından çıkan bir yaban domuzu, balığı kaparak kaçar ve kehanet gerçekleşir."
+  },
+  {
+   "iddia": "Klasik Yunan döneminde İyonya'nın on iki şehrinden biriydi",
+   "kaynak_alinti": "During the Classical Greek era, it was one of twelve cities that were members of the Ionian League."
+  },
+  {
+   "iddia": "MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçtikten sonra gelişti",
+   "kaynak_alinti": "The city came under the control of the Roman Republic in 129 BC."
+  },
+  {
+   "iddia": "Artemis Tapınağı antik Dünyanın Yedi Harikası'ndan biriydi",
+   "kaynak_alinti": "Temple of Artemis... which has been designated one of the Seven Wonders of the Ancient World."
+  },
+  {
+   "iddia": "Celsus Kütüphanesi ve büyük tiyatro gibi anıtsal yapılara sahipti",
+   "kaynak_alinti": "Its many monumental buildings included the Library of Celsus and a theatre capable of holding 24,000 spectators."
+  },
+  {
+   "iddia": "Efes'i çevreleyen alan Neolitik Çağ'da iskân edilmiştir",
+   "kaynak_alinti": "Humans had begun inhabiting the area surrounding Ephesus by the Neolithic Age (about 6000 BC), as shown by evidence from excavations at the nearby höyük (artificial mounds known as tells) of Arvalya and Cukurici."
+  },
+  {
+   "iddia": "MÖ 10. yüzyılda Arzava başkentinin yerine kolonistler inşa etmiştir",
+   "kaynak_alinti": "It was built in the 10th century BC on the site of Apasa, a city-state that was also the capital of Arzawa, by Attic and Ionian Greek colonists."
+  },
+  {
+   "iddia": "Yunanistan'dan göçmenler gelmiş ve şehir Artemis Tapınağı çevresine taşınmıştır",
+   "kaynak_alinti": "MÖ 1050 yıllarında Yunanistan'dan gelen göçmenlerin de yaşamaya başladığı liman kenti Efes, MÖ 560 yılında Artemis Tapınağı çevresine taşınmıştır."
+  },
+  {
+   "iddia": "Bugün gezilen Efes MÖ 300 yıllarında Lisimahos tarafından kurulmuştur",
+   "kaynak_alinti": "Bugün gezilen Efes ise Büyük İskender'in generallerinden Lisimahos tarafından MÖ 300 yıllarında kurulmuştur."
+  },
+  {
+   "iddia": "Lisimahos kenti Izgara Plan'a göre kurmuştur",
+   "kaynak_alinti": "Lisimahos, kenti Miletli Hippodamos'un bulduğu \"Izgara Plan\"a göre yeniden kurar."
+  },
+  {
+   "iddia": "1954 yılında St. Jean bazilikasının kalıntıları yakınında seramik kaplar içeren Miken dönemine ait bir mezarlık keşfedilmiştir.",
+   "kaynak_alinti": "In 1954, a burial ground from the Mycenaean era (1500–1400 BC), which contained ceramic pots, was discovered close to the ruins of the basilica of St. John."
+  },
+  {
+   "iddia": "Yunan tarihçiler ve şair Kallinos şehrin efsanevi kuruluşunu Amazonlar kraliçesi Efoş'a atfetmiştir.",
+   "kaynak_alinti": "Later, Greek historians such as Pausanias, Strabo, and Herodotos and the poet Kallinos reassigned the city's mythological foundation to Ephos, queen of the Amazons."
+  },
+  {
+   "iddia": "Miken dönemine ait mezarlık St. Jean bazilikası yakınında keşfedilmiştir.",
+   "kaynak_alinti": "In 1954, a burial ground from the Mycenaean era (1500–1400 BC), which contained ceramic pots, was discovered close to the ruins of the basilica of St. John."
+  },
+  {
+   "iddia": "Ahhiyawa toplulukları Küçük Asya'da yerleşmeye başlamıştır.",
+   "kaynak_alinti": "This was the period of the Mycenaean expansion, when the Ahhiyawa began settling in Asia Minor"
+  },
+  {
+   "iddia": "Yunan tarihçiler ve şair Kallinos şehrin efsanevi kuruluşunu Amazonlar kraliçesi Efoş'a atfetmiştir.",
+   "kaynak_alinti": "Later, Greek historians such as Pausanias, Strabo, and Herodotos and the poet Kallinos reassigned the city's mythological foundation to Ephos, queen of the Amazons."
+  },
+  {
+   "iddia": "Şehir Artemis Tapınağı ile ünlüdür",
+   "kaynak_alinti": "The city was famous in its day for the nearby Temple of Artemis"
+  },
+  {
+   "iddia": "Mermerden inşa edilmiş ilk tapınaktır",
+   "kaynak_alinti": "antik dünyanın mermerden inşa edilmiş ilk tapınağı olup temelleri MÖ 7. yüzyıla kadar gitmektedir."
+  },
+  {
+   "iddia": "Croesus tarafından yaptırılmıştır",
+   "kaynak_alinti": "Tanrıça Artemis'e ithafen Lidya kralı Croesus tarafından yaptırılmış ve Yunan mimar Chersiphron tarafından tasarlanmıştır."
+  },
+  {
+   "iddia": "Tapınağın uzunluğu 130 metredir",
+   "kaynak_alinti": "Büyüklüğü 130 x 68 metre"
+  },
+  {
+   "iddia": "Herostratus tarafından yakılmıştır",
+   "kaynak_alinti": "In 356 BC the temple of Artemis was burnt down, according to legend, by a lunatic called Herostratus."
+  },
+  {
+   "iddia": "Kazılar John Turtle Wood tarafından başlatılmıştır",
+   "kaynak_alinti": "The history of archaeological research in Ephesus stretches back to 1863, when British architect John Turtle Wood, sponsored by the British Museum, began to search for the Artemision."
+  },
+  {
+   "iddia": "Artemis Tapınağı antik dünyanın mermerden inşa edilmiş ilk tapınağıdır ve temelleri MÖ 7. yüzyıla kadar gitmektedir.",
+   "kaynak_alinti": "antik dünyanın mermerden inşa edilmiş ilk tapınağı olup temelleri MÖ 7. yüzyıla kadar gitmektedir"
+  },
+  {
+   "iddia": "Şehir, MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçtikten sonra gelişti.",
+   "kaynak_alinti": "The city came under the control of the Roman Republic in 129 BC."
+  },
+  {
+   "iddia": "Hellenistik ve Roma çağlarında en görkemli dönemlerini yaşayan Efes, Roma İmparatoru Augustus zamanında, Asya Eyaleti'nin başkenti olmuş ve nüfusu o dönem MÖ 2-1. yüzyıl 200.000 kişiyi aşmıştır.",
+   "kaynak_alinti": "Roma İmparatoru Augustus zamanında, Asya Eyaleti'nin başkenti olmuş ve nüfusu o dönem (MÖ 2-1. yüzyıl) 200.000 kişiyi aşmıştır."
+  },
+  {
+   "iddia": "Tümüyle mermerden yapılmış ilk kent olan Efes'teki başlıca yapılar mermer anıtlarla donatılmıştır.",
+   "kaynak_alinti": "Tümüyle mermerden yapılmış ilk kent olan Efes'teki başlıca yapılar ve eserler aşağıda açıklanmıştır:"
+  },
+  {
+   "iddia": "Odeon 1.400 kişilik kapasiteye sahiptir ve Bouleterion olarak da adlandırılır.",
+   "kaynak_alinti": "1.400 kişilik kapasiteye sahiptir. Bu nedenle yapı Bouleterion olarak da adlandırılır."
+  },
+  {
+   "iddia": "Büyük Tiyatro 24.000 kişilik kapasiteyle antik dünyanın en büyük açık hava tiyatrosudur.",
+   "kaynak_alinti": "Büyük Tiyatro, 24.000 kişilik kapasiteyle, antik dünyanın en büyük açık hava tiyatrosudur."
+  },
+  {
+   "iddia": "İmparator Augustus zamanında Asya Eyaleti'nin başkenti olan Efes, Roma İmparatorluğu döneminde bir ticaret ve yönetim merkezi olarak büyük bir refah seviyesine ulaşmıştır.",
+   "kaynak_alinti": "When Augustus became emperor in 27 BC, the most important change was when he made Ephesus the capital of proconsular Asia (which covered western Asia Minor) instead of Pergamum. Ephesus then entered an era of prosperity, becoming both the seat of the governor and a major centre of commerce."
+  },
+  {
+   "iddia": "Roma döneminde hızla gelişen bu antik kentte ticaret agorası ve devlet agorası olmak üzere iki ayrı agora yer alıyordu.",
+   "gorsel": [
+    20
+   ],
+   "kaynak_alinti": "There were two agoras, one for commercial and one for state business."
+  },
+  {
+   "iddia": "Celsus Kütüphanesi hem kütüphane hem mezar anıtıdır",
+   "kaynak_alinti": "Roma dönemi yapılarının en güzellerinden birisi olan yapı hem kütüphane, hem de mezar anıtı görevini üstlenmiştir."
+  },
+  {
+   "iddia": "106 yılında vali olan Celsus'un ölümüyle oğlu kütüphaneyi yaptırdı",
+   "kaynak_alinti": "106 yılında Efes valisi olan Celsius ölünce oğlu kütüphaneyi babasının adına mezar anıtı olarak yaptırmıştır."
+  },
+  {
+   "iddia": "Celsus'un lahdi batı duvarı altındadır",
+   "kaynak_alinti": "Celsius'un lahdi kütüphanenin batı duvarı altındadır."
+  },
+  {
+   "iddia": "Kitap ruloları duvarlardaki nişlerde saklanıyordu",
+   "kaynak_alinti": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu."
+  },
+  {
+   "iddia": "Cephe 1970 ile 1980 arasında restore edildi",
+   "kaynak_alinti": "Cephesi 1970-1980 yılları arasında restore edilmiştir."
+  },
+  {
+   "iddia": "Celsius'un lahdi kütüphanenin batı duvarı altındadır.",
+   "kaynak_alinti": "Celsius'un lahdi kütüphanenin batı duvarı altındadır."
+  },
+  {
+   "iddia": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu.",
+   "kaynak_alinti": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu."
+  },
+  {
+   "iddia": "Celsus Kütüphanesi'nin iç kısmı yaklaşık 180 metrekaredir.",
+   "kaynak_alinti": "The interior of the library measured roughly 180 square metres"
+  },
+  {
+   "iddia": "Kütüphanenin cephesi 1970 ile 1978 yılları arasında restore edilmiştir.",
+   "kaynak_alinti": "The facade was reconstructed during 1970 to 1978"
+  },
+  {
+   "iddia": "Giriş kısmı, algılanan boyutu artırmak için abartılı tasarlanmıştır.",
+   "kaynak_alinti": "Designed with an exaggerated entrance — so as to enhance its perceived size"
+  },
+  {
+   "iddia": "MS 400 yılına gelindiğinde kütüphane artık kullanılmıyordu.",
+   "kaynak_alinti": "By the year 400 A.D. the library was no longer in use"
+  },
+  {
+   "iddia": "MS 4. yüzyılda limanın dolmasıyla Efes'te ticaret geriler.",
+   "kaynak_alinti": "MS 4. yüzyılda limanın dolmasıyla Efes'te ticaret geriler."
+  },
+  {
+   "iddia": "İmparator Hadrianus, limanı birkaç kez temizletir.",
+   "kaynak_alinti": "İmparator Hadrianus, limanı birkaç kez temizletir."
+  },
+  {
+   "iddia": "Liman kuzeyden gelen Marnas Çayı ve Küçük Menderes nehrinin getirdiği alüvyonlarla dolar ve Efes denizden uzaklaşır.",
+   "kaynak_alinti": "Liman kuzeyden gelen Marnas Çayı ve Küçük Menderes nehrinin getirdiği alüvyonlarla dolar. Efes denizden uzaklaşır."
+  },
+  {
+   "iddia": "Liman Caddesi Büyük Tiyatro'dan, bugün tamamen dolmuş olan Antik Liman'a uzanan, iki yanı sütunlu ve mermer döşeli 600 metre uzunluktaki caddedir.",
+   "kaynak_alinti": "Liman Caddesi Büyük Tiyatro'dan, bugün tamamen dolmuş olan Antik Liman'a uzanan, iki yanı sütunlu ve mermer döşeli Liman Caddesi (Arcadiane Caddesi), Efes'in en uzun caddesidir. 600 metre uzunluktaki cadde"
+  },
+  {
+   "iddia": "Şehir 263 yılında Gotlar tarafından yıkıldı ve MS 614'teki bir depremde kısmen tahrip oldu.",
+   "kaynak_alinti": "Şehir 263 yılında Gotlar tarafından yıkıldı ve yeniden inşa edilmesine rağmen limanın Küçük Menderes Nehri tarafından yavaş yavaş silinmesi nedeniyle şehrin ticaret merkezi olarak önemi azaldı. MS 614'teki bir depremde kısmen tahrip oldu."
+  },
+  {
+   "iddia": "İmparator Hadrianus limanı birkaç kez temizletmiştir.",
+   "kaynak_alinti": "Emperor Hadrianus, limanı birkaç kez temizletir."
+  },
+  {
+   "iddia": "Şehir MÖ 129'da Roma Cumhuriyeti'nin kontrolüne geçmiştir.",
+   "kaynak_alinti": "The city came under the control of the Roman Republic in 129 BC."
+  },
+  {
+   "iddia": "Şehir 263 yılında Gotlar tarafından yıkılmıştır.",
+   "kaynak_alinti": "The city was destroyed by the Goths in 263."
+  },
+  {
+   "iddia": "MS 614'teki bir depremde kısmen tahrip olmuştur.",
+   "kaynak_alinti": "In 614, it was partially destroyed by an earthquake."
+  },
+  {
+   "iddia": "Efes, Vahiy Kitabı'nda adı geçen Asya'nın yedi kilisesinden biriydi.",
+   "kaynak_alinti": "Ephesus was a recipient city of one of the Pauline epistles and one of the seven churches of Asia addressed in the Book of Revelation."
+  },
+  {
+   "iddia": "Yuhanna İncili burada yazılmış olabilir.",
+   "kaynak_alinti": "The Gospel of John may have been written there"
+  },
+  {
+   "iddia": "Şehir 5. yüzyıl birkaç Hristiyan konsilinin yeriydi.",
+   "kaynak_alinti": "it was the site of several 5th-century Christian Councils"
+  },
+  {
+   "iddia": "Bülbüldağı'nda İsa'nın annesi Meryem'in son yıllarını Yuhanna ile birlikte geçirdiğine inanılan kilisedir.",
+   "kaynak_alinti": "Mary, the mother of Jesus, may have spent the last years of her life in Ephesus. The Ephesians derived the argument from John's presence in the city, and Jesus's instructions to the \"disciple whom he loved\" to take care of his mother, Mary, after his death."
+  },
+  {
+   "iddia": "Meryem Kilisesi 431 Konsül Toplantısı'nın yapıldığı yer olan ve Meryem adına inşa edilmiş ilk kilisedir.",
+   "kaynak_alinti": "The Church of Mary near the harbour of Ephesus was the setting for the Third Ecumenical Council in 431"
+  },
+  {
+   "iddia": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, 1330 yılında Türkler tarafından alınmıştır.",
+   "kaynak_alinti": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, 1330 yılında Türkler tarafından alınır."
+  },
+  {
+   "iddia": "1994'te UNESCO tarafından Dünya Mirası Geçici Listesi'ne dâhil edilen Efes 2015'te ise Dünya Mirası olarak tescil edildi.",
+   "kaynak_alinti": "1994'te UNESCO tarafından Dünya Mirası Geçici Listesi'ne dâhil edilen Efes 2015'te ise Dünya Mirası olarak tescil edildi."
+  },
+  {
+   "iddia": "2022 yılındaki kazı çalışmalarında MS 7. yüzyıla denk gelen Erken Bizans Dönemi'nden kalma dükkânlara ve bir mahalleye ulaşıldı.",
+   "kaynak_alinti": "2022 yılındaki kazı çalışmalarında MS 7. yüzyıla denk gelen Erken Bizans Dönemi'nden kalma dükkânlara ve bir mahalleye ulaşıldı."
+  },
+  {
+   "iddia": "Efes harabeleri Adnan Menderes Havalimanı'ndan 65,7 km, Kuşadası Limanı'ndan ise 17,9 km uzaklıktadır.",
+   "kaynak_alinti": "Efes harabeleri Adnan Menderes Havalimanı'ndan 65,7 km, Kuşadası Limanı'ndan ise 17,9 km uzaklıktadır."
+  },
+  {
+   "iddia": "Ayasuluk Tepesi, Artemision, Efes ve Selçuk olarak dört ana bölgedeki harabeler yılda ortalama 1,5 milyon turist tarafından ziyaret edilmektedir.",
+   "kaynak_alinti": "Ayasuluk Tepesi, Artemision, Efes ve Selçuk olarak dört ana bölgedeki harabeler yılda ortalama 1,5 milyon turist tarafından ziyaret edilmektedir."
+  },
+  {
+   "iddia": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, Aydınoğullarının merkezi olmuştur.",
+   "kaynak_alinti": "Bizans döneminde tekrar yer değiştiren ve ilk kez kurulduğu Selçuk'taki Ayasuluk Tepesi'ne gelen Efes, 1330 yılında Türkler tarafından alınır. Aydınoğullarının merkezi olan Ayasuluk"
+  },
+  {
+   "iddia": "1996 yılı içinde Selçuk, Aydın ve Efes yol üçgeninin yaklaşık 100 m kadar güney batısında Çukuriçi Höyüğü saptanmıştır.",
+   "kaynak_alinti": "1996 yılı içinde Selçuk, Aydın ve Efes yol üçgeninin yaklaşık 100 m kadar güney batısında, mandalina bahçeleri arasında Derbent Çayı'nın kıyısında Çukuriçi Höyüğü saptanmıştır."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Ephesus",
+  "https://tr.wikipedia.org/wiki/Efes"
+ ],
+ "imla": true
+}
