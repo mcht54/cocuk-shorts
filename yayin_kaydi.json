@@ -53,5 +53,19 @@
   ],
   "durum": "uretildi",
   "sure": 110.42
+ },
+ {
+  "tarih": "2026-10-30T01:49:04+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b042.json",
+   "seri/findik-ile-pamuk/bolumler/b043.json",
+   "seri/findik-ile-pamuk/bolumler/b044.json",
+   "seri/findik-ile-pamuk/bolumler/b045.json",
+   "seri/findik-ile-pamuk/bolumler/b046.json"
+  ],
+  "durum": "uretildi",
+  "sure": 205.87
  }
 ]
