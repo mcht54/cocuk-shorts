@@ -44,11 +44,7 @@ jobs:
         with:
           path: blender
           key: blender-5.2.3-linux
-      - run: |
-          if [ ! -x blender/blender ]; then
-            curl -sL https://download.blender.org/release/Blender5.2/blender-5.2.3-linux-x64.tar.xz | tar -xJ
-            mv blender-5.2.3-linux-x64 blender
-          fi
+      - run: bash otonom/blender_kur.sh
       - run: pip install -r requirements.txt -r requirements-3d.txt
       - name: Üret, denetle, (izinliyse) yükle
         env:

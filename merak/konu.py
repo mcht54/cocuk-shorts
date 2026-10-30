@@ -67,7 +67,7 @@ def _paket(aday):
         return None, f"görsel az ({len(gorseller)})"
     okunma = kaynak.goruntulenme(en["baslik"])
     paket = {"kimlik": kid, "wiki": en["baslik"], "calisma_basligi": aday.get("calisma_basligi", ""),
-             "okunma_60g": okunma, "kaynaklar": [en["url"]] + ([tr["url"]] if tr else []),
+             "okunma_60g": okunma, "koordinat": kaynak.koordinat(en["baslik"]), "kaynaklar": [en["url"]] + ([tr["url"]] if tr else []),
              "metin_en": en["metin"][:40000], "metin_tr": (tr["metin"][:20000] if tr else ""),
              "tarih": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     # ilgi (okunma) + görsel zenginliği; Türkçe makalesi olan konulara küçük öncelik

@@ -29,7 +29,14 @@
    "metin": "Bu tünel, yerin yaklaşık 85 metre altına inen dev bir şehre açılıyordu.",
    "gorsel": [
     33
-   ]
+   ],
+   "grafik": {
+    "tur": "karsilastirma",
+    "deger": 85,
+    "birim": "m",
+    "etiket": "Derinkuyu derinliği",
+    "referans": "ozgurluk_aniti"
+   }
   },
   {
    "metin": "Burası, Türkiye'de kazılarak ortaya çıkarılmış en büyük yeraltı şehri: Derinkuyu.",
@@ -41,7 +48,13 @@
    "metin": "Tahminlere göre 20.000 kişi, hayvanları ve yiyecekleriyle birlikte burada saklanabiliyordu.",
    "gorsel": [
     27
-   ]
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "20.000",
+    "birim": "kişi",
+    "metin": "hayvanları ve yiyecekleriyle"
+   }
   },
   {
    "metin": "Havayı yukarıdan alt katlara taşıyan dikey bacalar sayesinde, derinlerde bile nefes alınabiliyordu.",

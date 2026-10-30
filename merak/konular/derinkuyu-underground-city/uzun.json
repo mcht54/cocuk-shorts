@@ -23,7 +23,11 @@
      "gorsel": [
       61,
       60
-     ]
+     ],
+     "grafik": {
+      "tur": "harita",
+      "etiket": "Derinkuyu"
+     }
     },
     {
      "metin": "Duvarın arkasından küçük, gizli bir oda çıkıyor. Odanın içinde ise karanlığa doğru inen bir tünel.",
@@ -45,7 +49,13 @@
      "gorsel": [
       27
      ],
-     "yazi": "≈ 20.000 KİŞİ"
+     "yazi": "≈ 20.000 KİŞİ",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "20.000",
+      "birim": "kişi",
+      "metin": "hayvanları ve yiyecekleriyle birlikte"
+     }
     },
     {
      "metin": "Peki bu şehri kim, neden ve nasıl kazdı? Bugün bu sorunun peşine düşüyoruz.",
@@ -101,7 +111,13 @@
      "metin": "Yaklaşık seksen beş metre derinliğe iniyor. Bu, kabaca yirmi beş katlı bir apartmanın yüksekliği kadar.",
      "gorsel": [
       33
-     ]
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "85",
+      "birim": "metre",
+      "metin": "yerin altına iniyor"
+     }
     },
     {
      "metin": "Bugün ziyaretçilere sekiz katı açık ve bu katlar yaklaşık elli metre derinliğe kadar iniyor. Geri kalan kısımlar hâlâ tam olarak kazılmış değil.",
@@ -117,7 +133,13 @@
       44,
       21
      ],
-     "yazi": "600+ GİRİŞ"
+     "yazi": "600+ GİRİŞ",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "600",
+      "birim": "giriş",
+      "metin": "şimdiye kadar bulunan giriş sayısı (fazlası)"
+     }
     },
     {
      "metin": "Yani yerin üstündeki kasaba ile yerin altındaki şehir, yüzyıllar boyunca iç içe yaşamış.",
@@ -157,7 +179,14 @@
       28,
       48
      ],
-     "yazi": "DERİN KUYU"
+     "yazi": "DERİN KUYU",
+     "grafik": {
+      "tur": "karsilastirma",
+      "deger": 55,
+      "birim": "m",
+      "etiket": "Kuyu bacası",
+      "referans": "galata"
+     }
     },
     {
      "metin": "Aşağıda ahırlar, kilerler, yemekhaneler, tandır fırınlı mutfaklar, şarap ve yağ presleri vardı.",
@@ -230,7 +259,32 @@
      "gorsel": [
       45,
       46
-     ]
+     ],
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "MÖ 8.-7. yüzyıl",
+        "metin": "İlk tüneller Frigler tarafından kazılmış olabilir"
+       },
+       {
+        "yil": "Geç Roma",
+        "metin": "Hristiyan halk şehri genişletir"
+       },
+       {
+        "yil": "780-1180",
+        "metin": "Arap-Bizans savaşları: şehir büyük ölçüde genişletilir"
+       },
+       {
+        "yil": "1923",
+        "metin": "Bölge halkı göç eder, şehir terk edilir"
+       },
+       {
+        "yil": "1963",
+        "metin": "Bir bodrum duvarının ardında yeniden bulunur"
+       }
+      ]
+     }
     },
     {
      "metin": "Kesin olan, şehrin yüzyıllar boyunca genişletildiği. Roma'nın son dönemlerinde ve Bizans çağında burada yaşayanlar, şehri çok katlı bir yapıya dönüştürdü ve şapeller ekledi.",

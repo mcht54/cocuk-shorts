@@ -17,7 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from cocuk import video  # edge-tts seslendirme + kelime zamanları
-from merak import kaynak
+from merak import grafik, kaynak
 
 KOK = Path(__file__).resolve().parent
 DEPO = KOK.parent
@@ -150,7 +150,15 @@ def uret(kid, ad, cikti_dizini=None):
     cikti.mkdir(parents=True, exist_ok=True)
 
     # 0) görseller (yalnız kullanılanlar)
-    kullanilan = sorted({gi for b in bolumler for p in b["parcalar"] for gi in p["gorsel"]}
+    koordinat = json.loads((d_konu / "kaynak.json").read_text()).get("koordinat")
+    for b in bolumler:  # çizilemeyecek grafik (ör. koordinatsız harita) görsele döner
+        for p in b["parcalar"]:
+            if p.get("grafik"):
+                try:
+                    grafik.ciz(p["grafik"], 0.5, 320, 180, koordinat)
+                except Exception:
+                    p.pop("grafik")
+    kullanilan = sorted({gi for b in bolumler for p in b["parcalar"] if not p.get("grafik") for gi in p["gorsel"]}
                         | ({s["kapak_gorsel"]} if uzun else set()))
     dosya = {}
     for gi in kullanilan:
@@ -166,7 +174,8 @@ def uret(kid, ad, cikti_dizini=None):
     yedek = list(dosya)
     for b in bolumler:  # indirilemeyen görselin yerine aynı konudan başka biri
         for i, p in enumerate(b["parcalar"]):
-            p["gorsel"] = [g if g in dosya else yedek[(g + i) % len(yedek)] for g in p["gorsel"]]
+            if not p.get("grafik"):
+                p["gorsel"] = [g if g in dosya else yedek[(g + i) % len(yedek)] for g in p["gorsel"]]
 
     # 1) seslendirme ve zaman çizelgesi
     parcalar, t = [], 0.6 if not uzun else 1.0
@@ -210,9 +219,12 @@ def uret(kid, ad, cikti_dizini=None):
     # 3) görsel planı: her parçanın süresi görselleri arasında bölünür
     sahneler = []
     for p in parcalar:
-        g = p["gorsel"]
+        g = p.get("gorsel") or [0]
         bas = 0.0 if p is parcalar[0] else p["bas"] - PARCA_ARASI / 2
         son = p["bas"] + p["sure"] + PARCA_ARASI / 2
+        if p.get("grafik"):  # özgün grafik parçanın tamamını kaplar
+            sahneler.append({"grafik": p["grafik"], "bas": bas, "son": son})
+            continue
         for i, gi in enumerate(g):
             sahneler.append({"gorsel": gi, "bas": bas + (son - bas) * i / len(g), "son": bas + (son - bas) * (i + 1) / len(g)})
     sahneler[-1]["son"] = toplam
@@ -227,14 +239,18 @@ def uret(kid, ad, cikti_dizini=None):
                 onbellek.pop(next(iter(onbellek)))
         return onbellek[gi]
 
-    def kredi(gi):
-        g = gorseller[gi]
+    def kredi(sc):
+        if "grafik" in sc:
+            return grafik.kredi(sc["grafik"])
+        g = gorseller[sc["gorsel"]]
         return f"Görsel: {temiz(g['yazar'])[:38]} · {g['lisans']} · Wikimedia Commons"
 
     def kare_al(si, t):
         sc = sahneler[si]
-        im = tuval(sc["gorsel"])
         u = max(0.0, min(1.0, (t - sc["bas"]) / max(0.01, sc["son"] - sc["bas"])))
+        if "grafik" in sc:
+            return grafik.ciz(sc["grafik"], u, EN, BOY, koordinat)
+        im = tuval(sc["gorsel"])
         yon = si % 4
         z = 1.0 + 0.10 * (u if yon in (0, 2) else 1 - u)
         ch = im.height / z
@@ -305,7 +321,7 @@ def uret(kid, ad, cikti_dizini=None):
                 metin_kutu(d, (EN / 2, BOY * 0.16 + j * 100), sat, baslik_f, ortala=True,
                            dolgu=(255, 214, 80, int(255 * a)), kutu=(0, 0, 0, int(170 * a)), pay=22)
         for p in parcalar:
-            if p.get("yazi") and p["bas"] + 0.2 <= t < p["bas"] + 3.4:
+            if p.get("yazi") and not p.get("grafik") and p["bas"] + 0.2 <= t < p["bas"] + 3.4:
                 a = min(1, (t - p["bas"] - 0.2) / 0.3, (p["bas"] + 3.4 - t) / 0.4)
                 for j, sat in enumerate(satirla(d, p["yazi"].upper(), buyuk_f, EN * 0.9)[:2]):
                     w = d.textlength(sat, font=buyuk_f)
@@ -319,7 +335,7 @@ def uret(kid, ad, cikti_dizini=None):
             metin = " ".join(w_[2] for w_ in g)
             for j, sat in enumerate(satirla(d, metin, alt_f, alt_gen)[-2:]):
                 metin_kutu(d, (EN / 2, alt_y + j * alt_f.size * 1.35), sat, alt_f, ortala=True, kutu=(0, 0, 0, 140))
-        kr = kredi(sahneler[si]["gorsel"])
+        kr = kredi(sahneler[si])
         d.text((EN - 30 * olc - d.textlength(kr, font=kredi_f), BOY - (40 if uzun else 70)), kr,
                font=kredi_f, fill=(255, 255, 255, 170))
         ff.stdin.write(kare.tobytes())
@@ -330,7 +346,7 @@ def uret(kid, ad, cikti_dizini=None):
         raise RuntimeError("ffmpeg hatası")
 
     # 4) açıklama: giriş + bölüm zamanları + kaynaklar + görsel lisansları (5000 karakter sınırı)
-    kullanilan = sorted({sc["gorsel"] for sc in sahneler})
+    kullanilan = sorted({sc["gorsel"] for sc in sahneler if "gorsel" in sc})
     sat = [s.get("aciklama", "").strip(), ""]
     if uzun:
         sat += ["Bölümler:", "0:00 Giriş"] + [f"{zs(b['bas'] - 0.9)} {b['ad']}" for b in bolumler[1:]] + [""]

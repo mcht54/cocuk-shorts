@@ -263,7 +263,29 @@ def sandik_kur(ad, konum, kol):
     return bos
 
 
-NESNE_KUR = {"palamut": palamut_kur, "harita": harita_kur, "top": top_kur, "sandik": sandik_kur}
+def elma_kur(ad, konum, kol):
+    bos = bpy.data.objects.new(ad, None)
+    kol.objects.link(bos)
+    bos.location = (konum[0], konum[1], konum[2] + 0.08)
+    kure(f"{ad}_govde", 0.08, (0, 0, 0), (1, 1, 0.92), malzeme("elma", (0.85, 0.12, 0.12), 0.35), kol).parent = bos
+    silindir(f"{ad}_sap", 0.008, 0.006, 0.05, (0, 0, 0.06), malzeme("elma_sap", (0.35, 0.22, 0.1)), kol).parent = bos
+    yaprak = kure(f"{ad}_yaprak", 0.03, (0.03, 0, 0.1), (1.6, 0.6, 0.2), malzeme("elma_yaprak", (0.3, 0.65, 0.2)), kol)
+    yaprak.parent = bos
+    return bos
+
+
+def kova_kur(ad, konum, kol):
+    """Renkli oyuncak kova (sahilde kum, bahçede su taşımak için)."""
+    bos = bpy.data.objects.new(ad, None)
+    kol.objects.link(bos)
+    bos.location = (konum[0], konum[1], konum[2])
+    silindir(f"{ad}_govde", 0.08, 0.1, 0.16, (0, 0, 0), malzeme("kova", (1.0, 0.55, 0.1), 0.4), kol).parent = bos
+    silindir(f"{ad}_agiz", 0.103, 0.103, 0.015, (0, 0, 0.155), malzeme("kova_agiz", (0.2, 0.6, 1.0), 0.4), kol).parent = bos
+    return bos
+
+
+NESNE_KUR = {"palamut": palamut_kur, "harita": harita_kur, "top": top_kur, "sandik": sandik_kur,
+             "elma": elma_kur, "kova": kova_kur}
 
 
 # ------------------------------------------------------------------ mekânlar
@@ -423,7 +445,127 @@ def oda_kur(tohum, kol):
     ob.location = (-2.4, 2.2, 1.6)
 
 
-MEKAN_KUR.update(orman=orman_kur, oda=oda_kur, dere=dere_kur, magara=magara_kur)
+def kis_kur(tohum, kol):
+    """Karlı çam ormanı: kar zemin, karlı çamlar, kardan adam, uzakta karlı tepeler."""
+    r = random.Random(tohum)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=60, y_segments=60, size=22)
+    for v in bm.verts:
+        d = math.hypot(v.co.x, v.co.y)
+        v.co.z = 0.0 if d < 3 else 0.15 * math.sin(v.co.x * 0.6) * math.cos(v.co.y * 0.5) * min(1, (d - 3) / 3)
+    _nesne("zemin", bm, malzeme("kar", (0.80, 0.84, 0.92), 0.85), kol)
+    govde_m = malzeme("cam_govde", (0.34, 0.22, 0.13), 0.85)
+    yesil = malzeme("cam_yaprak", (0.12, 0.36, 0.22), 0.8)
+    kar = malzeme("kar_ust", (0.86, 0.89, 0.95), 0.7)
+
+    def cam(x, y, o):
+        silindir("cam", 0.12 * o, 0.1 * o, 0.6 * o, (x, y, 0), govde_m, kol, seg=10)
+        for k in range(3):
+            z = (0.5 + k * 0.55) * o
+            rr = (0.9 - k * 0.25) * o
+            silindir("cam_kat", rr, 0.02, 0.9 * o, (x, y, z), yesil, kol, seg=14)
+            silindir("cam_kar", rr * 0.55, 0.02, 0.35 * o, (x, y, z + 0.45 * o), kar, kol, seg=14)
+
+    cam(0.5, 3.4, 1.5)
+    for i in range(20):
+        a = r.uniform(-0.15, math.pi + 0.15)
+        d = r.uniform(4.2, 11)
+        cam(math.cos(a) * d * 1.3, math.sin(a) * d + 1.0, r.uniform(0.9, 1.5))
+    for i in range(8):  # kar yığınları
+        a = r.uniform(0, math.pi)
+        d = r.uniform(2.6, 5)
+        kure("kar_yigin", r.uniform(0.25, 0.5), (math.cos(a) * d * 1.2, math.sin(a) * d + 0.6, 0.0),
+             (1.4, 1, 0.5), kar, kol, ico=True)
+    # kardan adam (karakter alanının dışında, sağ arkada)
+    beyaz = malzeme("kardan_adam", (0.88, 0.9, 0.95), 0.6)
+    kure("ka_alt", 0.32, (2.3, 1.8, 0.28), (1, 1, 0.95), beyaz, kol)
+    kure("ka_ust", 0.22, (2.3, 1.8, 0.75), (1, 1, 1), beyaz, kol)
+    kure("ka_burun", 0.035, (2.3, 1.58, 0.76), (1, 3, 1), malzeme("havuc", (1.0, 0.45, 0.05), 0.5), kol)
+    kure("ka_atki", 0.2, (2.3, 1.8, 0.56), (1.1, 1.1, 0.25), malzeme("atki", (0.85, 0.15, 0.2), 0.8), kol)
+    for i in range(4):
+        kure("tepe", 9, (-24 + i * 16, 30 + r.uniform(-3, 3), -5.5), (1.6, 1, 0.8),
+             malzeme("karli_tepe", (0.88, 0.92, 0.98), 0.9), kol, ico=True)
+
+
+def sahil_kur(tohum, kol):
+    """Kumsal: kum zemin, arkada deniz, şemsiye, kumdan kale, deniz kabukları."""
+    r = random.Random(tohum)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=40, y_segments=40, size=22)
+    _nesne("zemin", bm, malzeme("kum", (0.86, 0.74, 0.5), 0.95), kol)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=4, y_segments=4, size=1)
+    deniz = _nesne("deniz", bm, malzeme("deniz", (0.12, 0.5, 0.85), 0.1, isima=0.12), kol, yumusak=False)
+    deniz.scale, deniz.location = (40, 14, 1), (0, 19, 0.03)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=4, y_segments=4, size=1)
+    kopuk = _nesne("kopuk", bm, malzeme("kopuk", (0.97, 0.98, 1.0), 0.6), kol, yumusak=False)
+    kopuk.scale, kopuk.location = (40, 0.25, 1), (0, 5.05, 0.035)
+    # şemsiye (sol arka)
+    silindir("semsiye_sap", 0.03, 0.03, 1.6, (-2.5, 2.2, 0), malzeme("semsiye_sap", (0.95, 0.95, 0.95)), kol)
+    for i, renk in enumerate(((0.95, 0.25, 0.3), (1, 1, 1))):
+        silindir(f"semsiye_{i}", 1.0 - i * 0.02, 0.02, 0.45, (-2.5, 2.2, 1.45 + i * 0.01),
+                 malzeme(f"semsiye_{i}", renk, 0.6), kol, seg=8 if i == 0 else 16)
+    # kumdan kale (sağ arka)
+    kum_k = malzeme("kum_kale", (0.85, 0.72, 0.48), 0.95)
+    silindir("kale", 0.35, 0.35, 0.3, (2.4, 2.0, 0), kum_k, kol, seg=16)
+    for dx in (-0.25, 0.25):
+        silindir("kule", 0.12, 0.1, 0.35, (2.4 + dx, 2.0, 0.3), kum_k, kol, seg=10)
+    silindir("bayrak_sap", 0.01, 0.01, 0.3, (2.4, 2.0, 0.3), malzeme("bayrak_sap", (0.4, 0.3, 0.2)), kol)
+    kure("bayrak", 0.06, (2.45, 2.0, 0.55), (1, 0.15, 0.6), malzeme("bayrak", (0.95, 0.2, 0.25)), kol)
+    renkler = [malzeme(f"kabuk_{i}", c, 0.5) for i, c in enumerate(((1, 0.75, 0.75), (1, 0.9, 0.7), (0.95, 0.6, 0.4)))]
+    for i in range(14):
+        a = r.uniform(0, math.pi)
+        d = r.uniform(2.2, 4.5)
+        x, y = math.cos(a) * d * 1.2, math.sin(a) * d + 0.3
+        kure("kabuk", 0.06, (x, y, 0.0), (1.3, 1, 0.4), r.choice(renkler), kol, seg=12)
+
+
+def bahce_kur(tohum, kol):
+    """Sebze bahçesi: çimen, tahta çit, havuç ve domates sıraları, ayçiçekleri."""
+    r = random.Random(tohum)
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=40, y_segments=40, size=22)
+    _nesne("zemin", bm, malzeme("cimen", (0.30, 0.56, 0.20), 0.9), kol)
+    toprak = malzeme("toprak", (0.42, 0.28, 0.16), 0.95)
+    tahta = malzeme("cit", (0.78, 0.6, 0.4), 0.8)
+    for x in [i * 0.6 - 6 for i in range(21)]:  # çit (arkada)
+        silindir("cit_direk", 0.05, 0.05, 0.8, (x, 3.6, 0), tahta, kol, seg=6, yumusak=False)
+    for z in (0.3, 0.6):
+        bm = bmesh.new()
+        bmesh.ops.create_cube(bm, size=2)
+        ob = _nesne("cit_tahta", bm, tahta, kol, yumusak=False)
+        ob.scale, ob.location = (6, 0.03, 0.05), (0, 3.6, z)
+    yaprak = malzeme("sebze_yaprak", (0.2, 0.55, 0.18), 0.8)
+    turuncu = malzeme("havuc", (1.0, 0.45, 0.05), 0.5)
+    kirmizi = malzeme("domates", (0.9, 0.12, 0.1), 0.35)
+    for sira, y in enumerate((1.6, 2.5)):
+        bm = bmesh.new()
+        bmesh.ops.create_cube(bm, size=2)
+        ob = _nesne("tarh", bm, toprak, kol, yumusak=False)
+        ob.scale, ob.location = (3.4, 0.25, 0.04), (0, y, 0.0)
+        for i in range(10):
+            x = -3.0 + i * 0.66
+            if sira == 0:
+                kure("havuc_ust", 0.08, (x, y, 0.09), (1, 1, 0.5), turuncu, kol, seg=12)
+                kure("havuc_yaprak", 0.1, (x, y, 0.2), (0.6, 0.6, 1.4), yaprak, kol, ico=True)
+            else:
+                kure("domates_dal", 0.22, (x, y, 0.25), (1, 1, 1.1), yaprak, kol, ico=True)
+                for j in range(2):
+                    kure("domates", 0.06, (x + r.uniform(-0.12, 0.12), y - 0.16, 0.2 + j * 0.12), (1, 1, 0.9),
+                         kirmizi, kol, seg=12)
+    sari = malzeme("aycicek", (1.0, 0.82, 0.1), 0.5)
+    for x in (-3.2, 3.3):  # ayçiçekleri
+        silindir("aycicek_sap", 0.03, 0.03, 1.4, (x, 3.2, 0), yaprak, kol, seg=8)
+        kure("aycicek", 0.3, (x, 3.1, 1.45), (1, 0.3, 1), sari, kol)
+        kure("aycicek_ic", 0.14, (x, 2.99, 1.45), (1, 0.3, 1), malzeme("aycicek_ic", (0.35, 0.2, 0.08), 0.8), kol)
+    for i in range(4):
+        kure("tepe", 9, (-24 + i * 16, 30 + r.uniform(-3, 3), -5.5), (1.6, 1, 0.8),
+             malzeme("tepe", (0.36, 0.58, 0.42), 0.95), kol, ico=True)
+
+
+MEKAN_KUR.update(orman=orman_kur, oda=oda_kur, dere=dere_kur, magara=magara_kur,
+                 kis=kis_kur, sahil=sahil_kur, bahce=bahce_kur)
 
 
 # ------------------------------------------------------------------ kurulum

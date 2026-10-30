@@ -7,6 +7,7 @@ Denetimi geçemeyen bölüm hatalarıyla birlikte Gemini'ye düzelttirilir; DENE
 import json
 import random
 import re
+from datetime import date, timedelta
 from pathlib import Path
 
 from cocuk.senaryo import DENETIM_ISTEMI
@@ -17,6 +18,13 @@ DEPO = Path(__file__).resolve().parent.parent
 SERI = DEPO / "seri" / "findik-ile-pamuk"
 DENEME = 4
 ORNEKLER = ["b047", "b045", "b043", "b001"]
+# mevsime bağlı mekânlar: yalnız bu aylarda (yayın tarihine göre) yazılır
+MEVSIM = {"kis": (12, 1, 2), "sahil": (6, 7, 8, 9)}
+
+
+def uygun_mekanlar(seri, gun=None):
+    ay = (gun or date.today() + timedelta(days=21)).month  # stok ~3 hafta sonra yayınlanır
+    return {k: v for k, v in seri["mekanlar"].items() if ay in MEVSIM.get(k, range(1, 13))}
 DEGERLER = [
     "paylaşmak", "dürüstlük", "cesaret", "yardımlaşma", "sabır", "özür dilemek", "takım çalışması", "azim",
     "empati", "sorumluluk", "doğayı korumak", "merak etmek", "kendine güvenmek", "sıra beklemek", "teşekkür etmek",
@@ -109,6 +117,8 @@ def _denetle(b, seri, basliklar):
         h.append("başlık boş ya da önceki bir bölümle aynı")
     if not b["ekran_basligi"]:
         h.append("ekran_basligi boş")
+    if b.get("mekan") in seri["mekanlar"] and b["mekan"] not in uygun_mekanlar(seri):
+        h.append(f"{b['mekan']} mekânı bu mevsimde kullanılmaz; şunlardan seç: {', '.join(uygun_mekanlar(seri))}")
     if set(b.get("baslangic", {})) != {"findik", "pamuk"}:
         h.append("baslangic iki karakteri de içermeli")
     return h
@@ -128,7 +138,7 @@ def yaz_bir(no):
     istem = ISTEM.format(
         seri_aciklama=seri["aciklama"], tur=tur, deger=deger,
         gecmis="\n".join(f"- {b['baslik']} | {b['deger']}" for b in onceki[-60:]),
-        mekanlar=", ".join(f"{k} ({v['aciklama']})" for k, v in seri["mekanlar"].items()),
+        mekanlar=", ".join(f"{k} ({v['aciklama']})" for k, v in uygun_mekanlar(seri).items()),
         nesneler=", ".join(seri["nesneler"]), tipler=", ".join(bolum_denetle.TIPLER),
         hareketler=", ".join(sorted(bolum_denetle.HAREKETLER)), isiklar=", ".join(bolum_denetle.ISIK),
         ifadeler="/".join(bolum_denetle.IFADELER), sx=bolum_denetle.SAHNE_X, sy=bolum_denetle.SAHNE_Y,

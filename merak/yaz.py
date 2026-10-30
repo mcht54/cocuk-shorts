@@ -7,9 +7,11 @@ Yanlış bilgiye karşı üç kat:
 Hatalar düzeltme için Gemini'ye geri verilir; DENEME kez geçemeyen senaryo yazılmaz.
 """
 import json
+import random
 import re
 from pathlib import Path
 
+from merak.grafik import REFERANSLAR
 from ortak import gemini
 
 KOK = Path(__file__).resolve().parent
@@ -27,7 +29,15 @@ ORTAK_KURALLAR = """KESİN KURALLAR:
 - Doğru, akıcı, konuşma diliyle Türkçe; seslendirilecek. Kısaltma, parantez, dipnot, emoji yok.
 - Seyirciye hitap edebilirsin ama "abone ol/beğen" deme. Abartılı, yanıltıcı ifade ya da uydurma gizem yok.
 - "gorsel": parçanın anlattığına en uygun görsellerin numaraları (aşağıdaki GÖRSEL LİSTESİ'nden).
-- "iddialar": senaryodaki her somut bilgi için kaynaktan BİREBİR kopyalanmış kısa alıntı (kaynak_alinti)."""
+- "iddialar": senaryodaki her somut bilgi için kaynaktan BİREBİR kopyalanmış kısa alıntı (kaynak_alinti).
+
+ÖZGÜN GRAFİKLER (kanalın kendi görselleri; bir parçaya "grafik" eklenirse o parça boyunca fotoğraf yerine grafik görünür):
+- {{"tur": "sayi", "deger": "20.000", "birim": "kişi", "metin": "en çok 8 kelimelik açıklama"}}  -> çarpıcı tek sayı
+- {{"tur": "zaman", "olaylar": [{{"yil": "1963", "metin": "en çok 8 kelime"}}]}}  -> 3-5 olaylı zaman çizelgesi
+- {{"tur": "karsilastirma", "deger": 85, "birim": "m", "etiket": "kısa ad", "referans": "<anahtar>"}}  -> boy/uzunluk
+  karşılaştırması; referans YALNIZ şunlardan, değere yakın olanı seç: {referanslar}
+{harita}- Grafikteki her sayı ve yıl da kaynakta birebir geçmeli; grafiği anlatan parçanın metni aynı bilgiyi söylemeli.
+- Grafikli parçada da "gorsel" yaz (grafik çizilemezse yedek)."""
 
 UZUN_ISTEM = """Türkçe YouTube belgesel kanalı "Merak Arşivi" için {kelime_alt}-{kelime_ust} kelimelik bir anlatım senaryosu yaz.
 Konu: {konu} (çalışma başlığı: {calisma})
@@ -37,6 +47,8 @@ Yapı:
 - Her bölümün 2-4 kelimelik merak uyandıran bir "ad"ı olsun. Son bölüm konuyu bugüne bağlayıp düşündürücü bir cümleyle kapansın.
 - Her bölümde 3-7 "parca"; her parça 1-2 cümle, en çok 40 kelime.
 - 5-8 parçada "yazi": ekranda büyük görünecek 1-3 kelimelik vurgu (ör. "85 METRE", "MÖ 8. YÜZYIL").
+- EN AZ 6 parçada "grafik" (türleri karıştır; bir zaman çizelgesi mutlaka olsun). Grafikler bölümlere yayılsın.
+- Anlatım tarzı: {tarz}
 - "baslik": YouTube başlığı, en çok 85 karakter, merak uyandırıcı ama dürüst.
 - "kapak_yazisi": kapak resmi için en çok 4 kelime, BÜYÜK HARF. "kapak_gorsel": kapak için en çarpıcı görselin numarası.
 - "aciklama": YouTube açıklamasının ilk paragrafı, 2-3 cümle. "etiketler": 10-15 Türkçe etiket.
@@ -51,7 +63,7 @@ KAYNAK METİN:
 
 Yalnızca şu JSON'u döndür:
 {{"baslik": "", "kapak_yazisi": "", "kapak_gorsel": 0, "aciklama": "", "etiketler": [],
- "bolumler": [{{"ad": "Giriş", "parcalar": [{{"metin": "", "gorsel": [0], "yazi": ""}}]}}],
+ "bolumler": [{{"ad": "Giriş", "parcalar": [{{"metin": "", "gorsel": [0], "yazi": "", "grafik": null}}]}}],
  "iddialar": [{{"iddia": "", "kaynak_alinti": ""}}]}}"""
 
 KISA_ISTEM = """Türkçe YouTube kanalı "Merak Arşivi" için {adet} AYRI dikey Shorts senaryosu yaz. Konu: {konu}
@@ -61,6 +73,7 @@ Her Shorts için:
 - {kelime_alt}-{kelime_ust} kelime, 5-8 parça; her parça tek cümle, en çok 22 kelime.
 - İlk parça ilk 2 saniyede merak uyandıran bir kanca (soru ya da çarpıcı bilgi).
 - Son parça kısa bir kapanış; "tüm hikâye kanalda" gibi bir cümle olabilir.
+- 1-2 parçada "grafik" (en çarpıcı sayı ya da karşılaştırma).
 - "ekran_basligi": ilk saniyelerde ekranda yazacak en çok 5 kelime.
 - "baslik": en çok 80 karakter. "aciklama": 1-2 cümle. "etiketler": 6-10 Türkçe etiket.
 
@@ -74,7 +87,15 @@ KAYNAK METİN:
 
 Yalnızca şu JSON'u döndür:
 {{"kisalar": [{{"baslik": "", "ekran_basligi": "", "aciklama": "", "etiketler": [],
-  "parcalar": [{{"metin": "", "gorsel": [0]}}], "iddialar": [{{"iddia": "", "kaynak_alinti": ""}}]}}]}}"""
+  "parcalar": [{{"metin": "", "gorsel": [0], "grafik": null}}], "iddialar": [{{"iddia": "", "kaynak_alinti": ""}}]}}]}}"""
+
+TARZLAR = [
+    "dedektif gibi: bir soruyla aç, ipuçlarını sırayla ortaya koy, sonunda bilinenle bilinmeyeni ayır",
+    "zaman yolculuğu: izleyiciyi o döneme götür ('Yıl ...'), olayları kronolojik anlat",
+    "büyük resimden ayrıntıya: önce ölçeği ve önemini göster, sonra parça parça aç",
+    "efsane ve gerçek: anlatılanları ve kanıtların söylediğini karşılaştır",
+    "bir keşfin hikâyesi: konuyu kimin, nasıl bulduğu/incelediği üzerinden anlat",
+]
 
 DUZELT_ISTEM = """Aşağıdaki senaryo JSON'unda şu sorunlar bulundu:
 {hatalar}
@@ -143,7 +164,7 @@ def _parcalar(s):
     return s.get("parcalar", [])
 
 
-def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari):
+def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=None):
     h = []
     parcalar = _parcalar(s)
     if not parcalar:
@@ -177,6 +198,29 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari):
             h.append(f"parça {i}: gorsel numaraları geçersiz {g}")
         if re.search(r"[()\[\]*#]|https?:", p.get("metin", "")):
             h.append(f"parça {i}: seslendirilemeyecek işaret/bağlantı var")
+    grafikler = [p["grafik"] for p in parcalar if isinstance(p.get("grafik"), dict)]
+    if len(grafikler) < (6 if uzun else 1):
+        h.append(f"{len(grafikler)} grafik; {'en az 6' if uzun else 'en az 1'} olmalı")
+    if uzun and not any(g.get("tur") == "zaman" for g in grafikler):
+        h.append("zaman çizelgesi grafiği yok")
+    grafik_metni = []
+    for g in grafikler:
+        tur = g.get("tur")
+        if tur not in ("sayi", "zaman", "karsilastirma", "harita"):
+            h.append(f"bilinmeyen grafik türü: {tur}")
+        elif tur == "harita" and not koordinat:
+            h.append("bu konuda harita grafiği kullanılamaz (konum yok)")
+        elif tur == "karsilastirma" and (g.get("referans") not in REFERANSLAR
+                                         or not re.fullmatch(r"\d+([.,]\d+)?", str(g.get("deger", "")))):
+            h.append(f"karşılaştırma referansı/değeri geçersiz: {g.get('referans')} {g.get('deger')}")
+        elif tur == "zaman" and not 3 <= len(g.get("olaylar", [])) <= 5:
+            h.append("zaman çizelgesi 3-5 olay olmalı")
+        elif tur == "sayi" and not str(g.get("deger", "")).strip():
+            h.append("sayı grafiğinde değer yok")
+        grafik_metni.append(json.dumps(g, ensure_ascii=False))
+    eksik_g = sayi_denetimi(" ".join(grafik_metni), kaynak_sayilari)
+    if eksik_g:
+        h.append(f"grafiklerde kaynakta geçmeyen sayılar: {', '.join(sorted(eksik_g))}")
     if YASAK.search(metin + " " + s.get("baslik", "")):
         h.append("yasaklı ifade")
     eksik = sayi_denetimi(metin + " " + " ".join(p.get("yazi", "") for p in parcalar), kaynak_sayilari)
@@ -204,10 +248,10 @@ def _ai_denetim(s, kaynak):
             if isinstance(x, dict)]
 
 
-def _dogrula_duzelt(s, gorseller, uzun, kaynak, kaynak_sayilari):
+def _dogrula_duzelt(s, gorseller, uzun, kaynak, kaynak_sayilari, koordinat=None):
     """Yapı + sayı + yapay zekâ denetimi; hata varsa Gemini'ye düzelttir. Geçen senaryo ya da None."""
     for tur in range(DENEME):
-        h = yapi_denetimi(s, len(gorseller), uzun, kaynak, kaynak_sayilari)
+        h = yapi_denetimi(s, len(gorseller), uzun, kaynak, kaynak_sayilari, koordinat)
         if not h:
             h = _ai_denetim(s, kaynak)
         if not h:
@@ -227,13 +271,18 @@ def yaz(kid):
     gorseller = json.loads((d / "gorseller.json").read_text())
     kaynak = kaynak_metni(paket)
     kaynak_sayilari = sayilar(kaynak)
-    ortak = dict(konu=paket["wiki"], calisma=paket.get("calisma_basligi", ""), kurallar=ORTAK_KURALLAR,
+    koordinat = paket.get("koordinat")
+    kurallar = ORTAK_KURALLAR.format(
+        referanslar=", ".join(f"{k} ({ad} {v:g} m)" for k, (ad, v) in REFERANSLAR.items()),
+        harita=('- {"tur": "harita", "etiket": "yer adı"}  -> dünyadan konuma yakınlaşan harita (giriş bölümünde kullan)\n'
+                if koordinat else ""))
+    ortak = dict(konu=paket["wiki"], calisma=paket.get("calisma_basligi", ""), kurallar=kurallar,
                  gorseller=gorsel_listesi(gorseller), kaynak=kaynak[:60000])
     if not (d / "uzun.json").exists():
         print(f"  uzun senaryo: {kid}", flush=True)
         s = gemini.sor(UZUN_ISTEM.format(kelime_alt=UZUN_KELIME[0] + 50, kelime_ust=UZUN_KELIME[1] - 50,
-                                         **ortak), sicaklik=0.8)
-        s = _dogrula_duzelt(s, gorseller, True, kaynak, kaynak_sayilari)
+                                         tarz=random.choice(TARZLAR), **ortak), sicaklik=0.8)
+        s = _dogrula_duzelt(s, gorseller, True, kaynak, kaynak_sayilari, koordinat)
         if not s:
             (d / "reddedildi").write_text("uzun senaryo denetimi geçemedi\n")
             return False
@@ -246,7 +295,7 @@ def yaz(kid):
         kisalar = v.get("kisalar", []) if isinstance(v, dict) else v
         n = 0
         for k in kisalar[:KISA_ADET]:
-            k = _dogrula_duzelt(k, gorseller, False, kaynak, kaynak_sayilari)
+            k = _dogrula_duzelt(k, gorseller, False, kaynak, kaynak_sayilari, koordinat)
             if k:
                 n += 1
                 k["kaynaklar"] = paket["kaynaklar"]

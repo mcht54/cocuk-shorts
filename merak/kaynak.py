@@ -88,6 +88,11 @@ def _imageinfo(sayfalar):
         if GORSEL_DISI.search(s["title"]):
             continue
         yazar = temiz(meta.get("Artist", {}).get("value", "")) or temiz(meta.get("Credit", {}).get("value", ""))
+        if not yazar and not re.search(r"cc0|public domain|pd", lisans, re.I):
+            continue  # CC BY/BY-SA yazar adı ister; adı bilinmeyen görsel kullanılmaz
+        aciklama = temiz(meta.get("ImageDescription", {}).get("value", ""))
+        if GORSEL_DISI.search(yazar) or re.match(r"(map|plan|diagram)\b", aciklama, re.I):
+            continue
         out.append({
             "baslik": s["title"], "url": ii.get("thumburl") or ii["url"], "w": ii["width"], "h": ii["height"],
             "lisans": lisans, "yazar": (yazar or "Wikimedia Commons")[:80],
@@ -145,3 +150,20 @@ def indir(g, hedef):
         except requests.RequestException:
             time.sleep(5 * (i + 1))
     return False
+
+
+def koordinat(baslik, dil="en"):
+    """Wikidata P625 (enlem, boylam) ya da None — harita grafiği için."""
+    try:
+        v = _get(f"https://{dil}.wikipedia.org/w/api.php", {
+            "action": "query", "format": "json", "formatversion": 2, "redirects": 1, "titles": baslik,
+            "prop": "pageprops", "ppprop": "wikibase_item"})
+        qid = (v.get("query", {}).get("pages") or [{}])[0].get("pageprops", {}).get("wikibase_item")
+        if not qid:
+            return None
+        w = _get("https://www.wikidata.org/w/api.php", {"action": "wbgetclaims", "format": "json",
+                                                          "entity": qid, "property": "P625"})
+        d = w["claims"]["P625"][0]["mainsnak"]["datavalue"]["value"]
+        return [round(d["latitude"], 4), round(d["longitude"], 4)]
+    except Exception:
+        return None

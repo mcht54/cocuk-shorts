@@ -22,7 +22,8 @@ def kisa(metin_ek="", gorsel=0):
              "Peki bunu kim kazdı?", "Tüm hikâye kanalda."]
     dolgu = " ".join(["Karanlık koridorlar sessizce uzanıyordu."] * 14)
     return {"baslik": "Yeraltı şehri", "ekran_basligi": "85 metre derinde",
-            "parcalar": [{"metin": m, "gorsel": [gorsel]} for m in parca] + [{"metin": dolgu[:150], "gorsel": [1]}],
+            "parcalar": [{"metin": m, "gorsel": [gorsel]} for m in parca] + [{"metin": dolgu[:150], "gorsel": [1],
+                                                                      "grafik": {"tur": "sayi", "deger": "85", "birim": "m"}}],
             "iddialar": [{"iddia": "x", "kaynak_alinti": "discovered in 1963"},
                          {"iddia": "y", "kaynak_alinti": "approximately 85 m"},
                          {"iddia": "z", "kaynak_alinti": "20,000 people"}]}
@@ -48,6 +49,13 @@ class MerakDenetimTesti(unittest.TestCase):
         h = yaz.yapi_denetimi(kisa("Tam 3000 yıl önce.", gorsel=9), 5, False, KAYNAK, self.sayilar)
         self.assertTrue(any("3000" in x for x in h))
         self.assertTrue(any("gorsel" in x for x in h))
+
+    def test_grafiksiz_ya_da_uydurma_grafik_reddedilir(self):
+        s = kisa()
+        s["parcalar"][-1].pop("grafik")
+        self.assertTrue(any("grafik" in x for x in yaz.yapi_denetimi(s, 5, False, KAYNAK, self.sayilar)))
+        s["parcalar"][-1]["grafik"] = {"tur": "karsilastirma", "deger": 85, "birim": "m", "referans": "ay"}
+        self.assertTrue(any("referans" in x for x in yaz.yapi_denetimi(s, 5, False, KAYNAK, self.sayilar)))
 
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()

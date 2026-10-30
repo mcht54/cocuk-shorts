@@ -129,6 +129,21 @@
       "tur": "magara",
       "tohum": 7,
       "aciklama": "Parlayan kristallerle dolu gizemli mağara"
+    },
+    "kis": {
+      "tur": "kis",
+      "tohum": 17,
+      "aciklama": "Karlı çam ormanı; kar yığınları ve kırmızı atkılı bir kardan adam"
+    },
+    "sahil": {
+      "tur": "sahil",
+      "tohum": 29,
+      "aciklama": "Deniz kenarında kumsal; kırmızı-beyaz şemsiye, kumdan kale, deniz kabukları"
+    },
+    "bahce": {
+      "tur": "bahce",
+      "tohum": 31,
+      "aciklama": "Tahta çitli sebze bahçesi; havuç ve domates sıraları, ayçiçekleri"
     }
   },
   "nesneler": {
@@ -147,6 +162,14 @@
     },
     "top": {
       "tur": "top",
+      "olcek": 1.0
+    },
+    "elma": {
+      "tur": "elma",
+      "olcek": 1.0
+    },
+    "kova": {
+      "tur": "kova",
       "olcek": 1.0
     }
   }
