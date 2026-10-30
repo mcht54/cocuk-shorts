@@ -1,0 +1,94 @@
+{
+ "baslik": "Klaus Schmidt ve Kesif",
+ "ekran_basligi": "Klaus Schmidt",
+ "aciklama": "Kazı tarihçesi ve Klaus Schmidt.",
+ "etiketler": [
+  "KlausSchmidt",
+  "Kazı",
+  "Tarih",
+  "Kesif",
+  "Gobeklitepe",
+  "Muzere"
+ ],
+ "parcalar": [
+  {
+   "metin": "Arkeolojik site 1963 yılındaki yüzey araştırmalarında tespit edilmiştir.",
+   "gorsel": [
+    40
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Klaus Schmidt"
+   }
+  },
+  {
+   "metin": "Alman arkeolog Klaus Schmidt 1994 yılında bölgede inceleme yapmistir.",
+   "gorsel": [
+    8
+   ]
+  },
+  {
+   "metin": "Schmidt sitin önemini 1994'te fark etmiş, kazıları ise ertesi yıl başlatmıştır.",
+   "gorsel": [
+    43
+   ]
+  },
+  {
+   "metin": "Kazılarda çıkartılan bazı heykel ve taşlar Şanlıurfa Arkeoloji Müzesi'nde sergilenmektedir.",
+   "gorsel": [
+    1
+   ]
+  },
+  {
+   "metin": "Tüm hikâye kanalda.",
+   "gorsel": [
+    45
+   ]
+  },
+  {
+   "metin": "Göbeklitepe MÖ 9600-9500 civarına tarihlenmektedir.",
+   "gorsel": [
+    10
+   ]
+  },
+  {
+   "metin": "Yapı dünyanın bilinen en eski megalitleri olan taş sütunlardan oluşmaktadır.",
+   "gorsel": [
+    11
+   ]
+  },
+  {
+   "metin": "T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiştir.",
+   "gorsel": [
+    12
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Alman arkeolog Klaus Schmidt 1994 yılında bölgeyi incelemiştir.",
+   "kaynak_alinti": "German archaeologist Klaus Schmidt recognised its significance in 1994 and began excavations there the following year."
+  },
+  {
+   "iddia": "Arkeolojik site 1963 yılındaki yüzey araştırmalarında tespit edilmiştir.",
+   "kaynak_alinti": "The site was first noted in a 1963 archaeological survey."
+  },
+  {
+   "iddia": "Kazılarda çıkartılan bazı heykel ve taşlar Şanlıurfa Arkeoloji Müzesi'nde sergilenmektedir.",
+   "kaynak_alinti": "Bölgede yapılan kazılarda çıkartılan bazı heykel ve taşlar, günümüzde Şanlıurfa Arkeoloji Müzesi'nde sergilenmektedir."
+  },
+  {
+   "iddia": "Göbeklitepe MÖ 9600-9500 civarına tarihlenmektedir.",
+   "kaynak_alinti": "MÖ 9600-9500 civarına tarihlenen Göbeklitepe, dünyanın şu ana kadar bilinen en eski tarihî yapısıdır."
+  },
+  {
+   "iddia": "Klaus Schmidt 2014 yılında vefat etmiştir.",
+   "kaynak_alinti": "After he died in 2014, work continued as a joint project"
+  }
+ ],
+ "sure": 15,
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}

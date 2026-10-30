@@ -1,0 +1,73 @@
+{
+ "baslik": "Gokteki Ilk Tapinak Gobekli Tepe",
+ "ekran_basligi": "Tarihin Sifir Noktasi",
+ "aciklama": "Gobekli Tepe'nin kesif ve yapilis hikayesi.",
+ "etiketler": [
+  "Gobeklitepe",
+  "Sanliurfa",
+  "Tarih",
+  "Arkeoloji",
+  "UNESCO",
+  "Medeniyet",
+  "TasTepeler"
+ ],
+ "parcalar": [
+  {
+   "metin": "Gobekli Tepe, Sanliurfa yakinlarinda yer alan Neolitik bir arkeolojik sit alanidir.",
+   "gorsel": [
+    9
+   ]
+  },
+  {
+   "metin": "MÖ 9600 ile 9500 civarina tarihlenen bu yapi, bilinen en eski tarihli yapidir.",
+   "gorsel": [
+    10
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "9600",
+    "birim": "ile"
+   }
+  },
+  {
+   "metin": "Bazi popüler kaynaklarda tarihin sifir noktasi olarak da anilmaktadir.",
+   "gorsel": [
+    13
+   ]
+  },
+  {
+   "metin": "Bu anıtsal mimari, UNESCO tarafından 2018 yılında Dünya Mirası kalıcı listesine girdi.",
+   "gorsel": [
+    22
+   ]
+  },
+  {
+   "metin": "Tüm bu gizemli hikâyenin detayları ve dahası şimdi kanalda seni bekliyor.",
+   "gorsel": [
+    24
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Göbeklitepe, Türkiye'nin Güneydoğu Anadolu Bölgesi'ndeki Şanlıurfa ilinin 18 km kuzeydoğusunda, Haliliye ilçesine bağlı Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır.",
+   "kaynak_alinti": "Göbeklitepe veya Göbekli Tepe, Türkiye'nin Güneydoğu Anadolu Bölgesi'ndeki Şanlıurfa ilinin 18 km kuzeydoğusunda, Haliliye ilçesine bağlı Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır."
+  },
+  {
+   "iddia": "MÖ 9600-9500 civarına tarihlenen Göbeklitepe, dünyanın şu ana kadar bilinen en eski tarihî yapısıdır.",
+   "kaynak_alinti": "MÖ 9600-9500 civarına tarihlenen Göbeklitepe, dünyanın şu ana kadar bilinen en eski tarihî yapısıdır."
+  },
+  {
+   "iddia": "Bazı popüler kaynaklarda \"tarihin sıfır noktası\" nitelendirmesiyle de anılmaktadır.",
+   "kaynak_alinti": "Bazı popüler kaynaklarda \"tarihin sıfır noktası\" nitelendirmesiyle de anılmaktadır."
+  },
+  {
+   "iddia": "Göbekli Tepe, UNESCO tarafından 2018 yılında Dünya Mirası kalıcı listesine girdi.",
+   "kaynak_alinti": "UNESCO tarafından 2011 yılında Dünya Mirası geçici listesine alındı ve 2018'de kalıcı listeye girdi."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}

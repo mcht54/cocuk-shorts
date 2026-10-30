@@ -1,0 +1,783 @@
+{
+ "baslik": "Tarihin Akışını Değiştiren Gizem: Dünyanın En Eski Tapınağı Göbekli Tepe",
+ "kapak_yazisi": "DÜNYANIN İLK TAPINAĞI",
+ "kapak_gorsel": 7,
+ "aciklama": "İnsanlık tarihinin bilinen en eski anıtsal yapısı Göbekli Tepe'nin sırlarını keşfedin. Bu belgeselde, avcı-toplayıcı grupların inşa ettiği bu devasa tapınağın ve Taş Tepeler'in ardındaki büyük resmi inceliyoruz.",
+ "etiketler": [
+  "göbekli tepe",
+  "arkeoloji",
+  "tarih",
+  "tapınak",
+  "urfa",
+  "taş tepeler",
+  "neolitik",
+  "klaus schmidt",
+  "dünyanın en eski",
+  "tarih öncesi",
+  "anadolu",
+  "kazı",
+  "unesco"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Göbekli Tepe, Şanlıurfa ilinin 18 km kuzeydoğusunda, Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır.",
+     "gorsel": [
+      9
+     ],
+     "yazi": "TARİHİN SIFIR NOKTASI",
+     "grafik": {
+      "tur": "harita",
+      "etiket": "Şanlıurfa"
+     }
+    },
+    {
+     "metin": "Bölgede kesilmiş ama işlenmemiş dikilitaşlar bulunmakta olup çevredeki kayalık platolarda, ne amaçla yapıldığı anlaşılamayan bir takım oyuklar ve kazıntılar vardır.",
+     "gorsel": [
+      15,
+      46
+     ]
+    },
+    {
+     "metin": "Tepenin bulunduğu bölgede tarih boyunca çok sayıda kazı gerçekleştirilmiştir; ilk olarak 1963 yılındaki yüzey araştırmalarında sit alanı fark edilmiştir.",
+     "gorsel": [
+      9,
+      13
+     ]
+    },
+    {
+     "gorsel": [
+      9,
+      13
+     ],
+     "metin": "Yapılan incelemelerde yüzeyde binlerce kırık çakmak taşı ve anıtsal karakterde kalıntılar tespit edilmiştir."
+    },
+    {
+     "metin": "Almanya'dan gelen arkeolog Klaus Schmidt, 1994 yılında bölgeyi yeniden inceleyerek sit alanının önemini anlamıştır.",
+     "gorsel": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Coğrafi Konum",
+   "parcalar": [
+    {
+     "metin": "Tepede ziyaret edilen bir yatır bulunması dolayısıyla Göbekli Tepe Ziyareti olarak bilinen bu yükselti, yaklaşık 1 km uzunluğundaki kireç taşı plato üzerinde yer alır.",
+     "gorsel": [
+      9
+     ],
+     "yazi": "Coğrafi Konum"
+    },
+    {
+     "metin": "Bu yapı, 300x300 metrelik alanı kaplayan 15 metre yükseklikte bir tepedir.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Tepe üzerinden kuzey ve doğuya bakıldığında Toros Dağları ve Karaca Dağ etekleri görülmektedir.",
+     "gorsel": [
+      41
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Batıya bakıldığında Şanlıurfa platosu ile Fırat ovasını ayıran dağ silsilesi yer alır.",
+     "gorsel": [
+      14
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Güneye bakıldığında ise Suriye sınırına kadar Harran Ovası görülmektedir.",
+     "gorsel": [
+      22
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu konumuyla Göbeklitepe çok geniş bir bölgeyi görebildiği gibi, kendisi de çok geniş bir bölgeden görülebilmektedir.",
+     "gorsel": [
+      39
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Gerçekte Göbeklitepe'de kullanılan kireç taşı, her yerde bulunmayan oldukça sert bir taştır.",
+     "gorsel": [
+      46
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu taş, bugün bile bölgedeki en kaliteli kireç taşı olarak kabul edilmektedir.",
+     "gorsel": [
+      47
+     ],
+     "yazi": ""
+    }
+   ]
+  },
+  {
+   "ad": "Keşif ve Araştırma",
+   "parcalar": [
+    {
+     "metin": "Göbeklitepe ilk kez 1963 yılında yüzey araştırmalarında tespit edilmiştir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "1963 Keşfi"
+    },
+    {
+     "metin": "Bölgeden ilk kez 1980 yılında Peter Benedict'in makalesinde söz edilmiştir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1994 yılında Heidelberg Üniversitesi'nden Klaus Schmidt bölgede bir araştırma yapmıştır.",
+     "gorsel": [
+      8
+     ],
+     "yazi": "Klaus Schmidt"
+    },
+    {
+     "metin": "1995 yılında kazı çalışmaları resmi olarak başlatılmıştır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1963",
+        "metin": "Yüzey araştırmalarında tespit edildi"
+       },
+       {
+        "yil": "1994",
+        "metin": "Klaus Schmidt bölgede araştırma yaptı"
+       },
+       {
+        "yil": "1995",
+        "metin": "Kazı çalışmaları resmi olarak başladı"
+       },
+       {
+        "yil": "2018",
+        "metin": "UNESCO kalıcı listesine girdi"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "2007 yılından itibaren kazılar Bakanlar Kurulu kararlı kazı statüsüyle sürmüştür.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1994 yılında Heidelberg Üniversitesi'nden Klaus Schmidt bölgeyi yeniden incelemiştir. Sitenin anıtsal karakteri ve arkeolojik değeri ancak bu araştırmayla dikkat çekmiştir.",
+     "gorsel": [
+      8
+     ]
+    },
+    {
+     "metin": "Kazı çalışmalarından hemen önce Şanlıurfa Müzesi başkanlığında yüzey araştırmaları yapılmıştır. Projeye ilerleyen süreçte Alman Heidelberg Üniversitesi Tarihöncesi Enstitüsü de dahil olmuştur.",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "1963 yılındaki yüzey araştırmaları sırasında toplanan buluntular, buranın bölgenin önemli yerleşimlerinden biri olabileceğini düşündürmüştür.",
+     "gorsel": [
+      9
+     ]
+    },
+    {
+     "metin": "Kazı çalışmalarından hemen önce Şanlıurfa Müzesi başkanlığında ve Harald Hauptmann bilimsel danışmanlığında yüzey araştırması yapılmıştır.",
+     "gorsel": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Anıtsal Mimari",
+   "parcalar": [
+    {
+     "metin": "Bunun yerine çok sayıda anıtsal kült yapı ortaya çıkarılmıştır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "En önemli buluntuları veren III. Tabakada A, B, C ve D olarak adlandırılan dört yapı ortaya çıkarılmıştır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Jeomanyetik ölçümler, bu şekilde en az yirmi anıtsal yapının bulunduğunu göstermektedir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yapıların ana gövdesi büyük boyutlu 10-12 dikilitaşın belirli araklılarla dairesel planda dikilmesiyle oluşturulmuştur.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Ortaya çıkarılan yapılardan C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir.",
+     "gorsel": [
+      12
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "karsilastirma",
+      "deger": 30,
+      "birim": "m",
+      "etiket": "en buyuk yapi capi",
+      "referans": "bina_10_kat"
+     }
+    },
+    {
+     "metin": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "III. Tabakada ortaya çıkarılan A, B, C ve D yapılarından C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir.",
+     "gorsel": [
+      7
+     ]
+    },
+    {
+     "metin": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır.",
+     "gorsel": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Gizemli Kabartmalar",
+   "parcalar": [
+    {
+     "metin": "Göbekli Tepe yapıları, yalnızca mimari anıtsallıklarıyla değil, üzerlerindeki yoğun ve gizemli kabartmalarla da dikkat çeker.",
+     "gorsel": [
+      4
+     ],
+     "iddialar": [
+      {
+       "iddia": "Söz konusu motifler, yer yer bir süsleme olmayacak kadar yoğun olarak kullanılmış ve bir öykü, anlatım veya mesaj ifade ettiği düşünülmüştür.",
+       "kaynak_alinti": "Söz konusu motifler, yer yer bir süsleme olmayacak kadar yoğun olarak kullanılmıştır. Bu kompozisyonun bir öykü, bir anlatım veya bir mesaj ifade ettiği düşünülmektedir."
+      }
+     ]
+    },
+    {
+     "metin": "Bu motiflerde bölgenin faunasına ait yaban hayatı unsurları ve çeşitli canlılar ön plana çıkmaktadır.",
+     "gorsel": [
+      4
+     ],
+     "iddialar": [
+      {
+       "iddia": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan, yaban ördeği ve akbaba en sık görülen motiflerdir.",
+       "kaynak_alinti": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan, yaban ördeği ve akbaba en sık görülen motiflerdir."
+      }
+     ]
+    },
+    {
+     "metin": "A Yapısı'ndaki dikilitaşlarda yılan motifleri oldukça belirgindir ve ağırlıklı olarak yer alır.",
+     "gorsel": [
+      4
+     ],
+     "iddialar": [
+      {
+       "iddia": "A Yapısı'nda dikilitaşlar üzerindeki kabartmalarda yılan ağırlıklı olarak yer almaktadır.",
+       "kaynak_alinti": "A Yapısı'nda dikilitaşlar üzerindeki kabartmalarda yılan ağırlıklı olarak yer almaktadır."
+      }
+     ]
+    },
+    {
+     "metin": "B Yapısı'nı incelediğimizde ise tilki kabartmaları karşımıza çıkar; merkezdeki iki dikilitaşın ön yüzünde yer alan iki tilki dikkat çekicidir.",
+     "gorsel": [
+      5
+     ],
+     "iddialar": [
+      {
+       "iddia": "B Yapısı'nda tilki kabartmaları, özellikle merkezdeki iki dikilitaşın ön yüzünde yer alan iki tilki dikkat çekicidir.",
+       "kaynak_alinti": "B Yapısı'nda ise tilki kabartmaları, özellikle merkezdeki iki dikilitaşın ön yüzünde yer alan iki tilki dikkat çekicidir."
+      }
+     ]
+    },
+    {
+     "metin": "C Yapısı ise yaban domuzlarına ağırlık verilen yapıdır.",
+     "gorsel": [
+      17
+     ],
+     "iddialar": [
+      {
+       "iddia": "C Yapısı ise yaban domuzlarına ağırlık verilen yapıdır.",
+       "kaynak_alinti": "C Yapısı ise yaban domuzlarına ağırlık verilen yapıdır."
+      }
+     ]
+    },
+    {
+     "metin": "Bu durum yalnızca dikilitaşlardaki kabartmalarla sınırlı kalmayıp taştan oyulmuş heykellerde de açıkça görülmektedir.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Sadece dikilitaşlardaki kabartmalarda değil taştan oyulmuş heykellerde de bu durum vardır.",
+       "kaynak_alinti": "sadece dikilitaşlardaki kabartmalarda değil, taştan oyulmuş heykellerde de bu durum vardır"
+      }
+     ]
+    },
+    {
+     "metin": "D Yapısı'nda yaban domuzları, yabani öküzler, ceylanlar, yaban eşekleri, turnalar, leylekler, ibis, ördek ve kedigiller gibi geniş bir figür çeşitliliği bulunmaktadır.",
+     "gorsel": [
+      12
+     ]
+    },
+    {
+     "metin": "Öte yandan kazı başkanı Klaus Schmidt'e göre merkezdeki iki dikilitaşın, mitolojide yaygın bir tema olması dolayısıyla ikiz veya kardeş olması mümkündür.",
+     "gorsel": [
+      8
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "İnsansı Sütunlar",
+   "parcalar": [
+    {
+     "metin": "Göbekli Tepe dikilitaşlarının arası çoğunlukla yontularak işlenmiş taşlarla duvar olarak örülmüştür. Bu dikilitaşların stilize insan heykelleri olduğu anlaşılmaktadır.",
+     "gorsel": [
+      2
+     ],
+     "yazi": "İnsansı Sütunlar"
+    },
+    {
+     "metin": "Özellikle D Yapısı dikilitaşları üzerindeki insansı kol ve el kabartmaları, yatay parça başı, dikey parça ise vücudu temsil etmektedir.",
+     "gorsel": [
+      19
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Jeofizik araştırmaları, bugüne kadar gün yüzüne çıkarılanlar da dahil olmak üzere Göbekli Tepe'deki yapılarda toplam 300'e yakın dikilitaş kullanılmış olduğunu göstermektedir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "300",
+      "birim": ""
+     }
+    },
+    {
+     "metin": "D Yapısı merkez dikilitaşlarında kolların altında kemer olduğu açık kabartmalar vardır ve kemer tokaları da işlenmiştir.",
+     "gorsel": [
+      34
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu kemerler üzerinde aşağıya doğru tilki postundan bir peştamali temsil eden işlemeler görülmektedir.",
+     "gorsel": [
+      18
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Merkez sütunların temsil ettiği kişilerin bu ritüellerde önemli bir rol üstlenmiş olmaları gerektiği ileri sürülmektedir.",
+     "gorsel": [
+      8
+     ],
+     "yazi": ""
+    }
+   ]
+  },
+  {
+   "ad": "Tapınağın Örtülmesi",
+   "parcalar": [
+    {
+     "metin": "Bütün bu yapı grubu, Neolitik Çağ içinde bilinçli olarak ve hızla, bir yığınla örtülmüştür.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu yığın, çoğunluğu yumruktan küçük çapta kireç taşı parçalarından oluşmaktadır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yığma dolgu içinde insan kemiklerine de rastlanmış olup, bunlar da hayvan kemikleri gibi kırılmış küçük parçalar halindedir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Ölü gömme uygulaması olma ihtimali yakın görünmektedir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İnsan vücudunun ölümden sonra bazı özel işlemlere tabi tutulması Çanak Çömleksiz Neolitik Çağ'ın Yakın Doğu'sunda bilinen bir gelenektir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "C yapısındaki çukurun çapı 10 metre kadardır.",
+     "gorsel": [
+      11
+     ],
+     "yazi": "10 METRE ÇAP",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "10",
+      "birim": "m",
+      "metin": "C yapısındaki çukurun çapı"
+     }
+    },
+    {
+     "metin": "Bu yığma dolgu sayesinde buradaki yapılar bugüne kadar tahribata uğramadan kalabilmiştir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yığma dolgunun gevşek malzemesi kazı çalışmaları sırasında ek zorluklar yaratmıştır. Esas zorluk ise radyokarbon tarihlendirmesi sonuçlarının yanıltıcı olabileceği endişesidir.",
+     "gorsel": [
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tarihin Yeniden Yazılışı",
+   "parcalar": [
+    {
+     "metin": "Göbeklitepe’nin, bugüne kadar incelenen, bilinen en eski ve ilk tapınak olduğu iddia edilmektedir.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "İLK TAPINAK"
+    },
+    {
+     "metin": "Yaklaşık olarak bilinen örneklerden en az 5 bin yıl daha geriye uzanan bu megalitik yapı, dinî inançların uygarlıkların oluşumu ve gelişimi üzerindeki belirleyici rolünü açık biçimde ortaya koymaktadır.",
+     "gorsel": [
+      10
+     ]
+    },
+    {
+     "metin": "Uzun yıllar boyunca kazı çalışmalarını yöneten Klaus Schmidt’in Önce tapınak yapıldı, ardından şehir kuruldu sözü, insanın inanma gereksiniminin önemini vurgulamaktadır.",
+     "gorsel": [
+      8
+     ]
+    },
+    {
+     "metin": "Bölgede benzer nitelikte başka arkeolojik sit alanlarının bulunmasından sonra 2021'de Göbeklitepe'nin de dahil edildiği bu arkeolojik sit topluluğuna Taş Tepeler adı verilmiştir.",
+     "gorsel": [
+      9
+     ]
+    },
+    {
+     "metin": "Göbeklitepe, eşsiz ve özel yapısı kılınarak 2018 yılında UNESCO Dünya Mirası kalıcı listesine girmiştir.",
+     "gorsel": [
+      21
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Göbekli Tepe, Türkiye'nin Güneydoğu Anadolu Bölgesi'ndeki Şanlıurfa ilinin 18 km kuzeydoğusunda, Haliliye ilçesine bağlı Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır.",
+   "kaynak_alinti": "Göbeklitepe veya Göbekli Tepe, Türkiye'nin Güneydoğu Anadolu Bölgesi'ndeki Şanlıurfa ilinin 18 km kuzeydoğusunda, Haliliye ilçesine bağlı Örencik köyü yakınlarında yer alan Neolitik bir arkeolojik sit alanıdır."
+  },
+  {
+   "iddia": "MÖ 9600-9500 civarına tarihlenen Göbeklitepe, dünyanın bilinen en eski tarihî yapısıdır.",
+   "kaynak_alinti": "MÖ 9600-9500 civarına tarihlenen Göbeklitepe, dünyanın şu ana kadar bilinen en eski tarihî yapısıdır."
+  },
+  {
+   "iddia": "Bazı popüler kaynaklarda tarihin sıfır noktası nitelendirmesiyle de anılmaktadır.",
+   "kaynak_alinti": "Bazı popüler kaynaklarda \"tarihin sıfır noktası\" nitelendirmesiyle de anılmaktadır."
+  },
+  {
+   "iddia": "Göbeklitepe'de konut mimarisi bulunamamış, anıtsal kült yapılar ortaya çıkarılmıştır.",
+   "kaynak_alinti": "Göbekli Tepe'de yapılan kazılarda konut olabilecek herhangi bir mimari kalıntıya ulaşılamamıştır. Bunun yerine çok sayıda anıtsal kült yapı ortaya çıkarılmıştır."
+  },
+  {
+   "iddia": "İşlenmemiş dikilitaşlar ve kayalıklarda ne amaçla yapıldığı anlaşılamayan oyuklar bulunmaktadır.",
+   "kaynak_alinti": "Bölgede kesilmiş ama işlenmemiş dikilitaşlar bulunmakta olup çevredeki kayalık platolarda, ne amaçla yapıldığı anlaşılamayan bir takım oyuklar ve kazıntılar vardır."
+  },
+  {
+   "iddia": "1963 yılındaki yüzey araştırmalarında sit alanı fark edilmiştir.",
+   "kaynak_alinti": "The site was first noted in a 1963 archaeological survey."
+  },
+  {
+   "iddia": "1994 yılında bölgeyi yeniden inceleyen Schmidt önemini anlamıştır.",
+   "kaynak_alinti": "German archaeologist Klaus Schmidt recognised its significance in 1994"
+  },
+  {
+   "iddia": "Ertesi yıl kazılar başlatılmıştır.",
+   "kaynak_alinti": "and began excavations there the following year."
+  },
+  {
+   "iddia": "Tepede ziyaret edilen bir yatır bulunması dolayısıyla yerel olarak Göbekli Tepe Ziyareti olarak bilinmektedir.",
+   "kaynak_alinti": "Tepede ziyaret edilen bir yatır bulunması dolayısıyla yerel olarak \"Göbekli Tepe Ziyareti\" olarak bilinen yükselti"
+  },
+  {
+   "iddia": "Yaklaşık 1 km uzunluğundaki kireç taşı plato üzerinde 300x300 metrelik alanı kaplayan 15 metre yükseklikte bir tepedir.",
+   "kaynak_alinti": "yaklaşık 1 km uzunluğundaki bir kireç taşı plato üzerinde, 300x300 metrelik bir alanı kaplayan 15 metre yükseklikte bir tepedir."
+  },
+  {
+   "iddia": "Kuzey ve doğuda Toros Dağları ve Karaca Dağ etekleri görülür.",
+   "kaynak_alinti": "Tepe üzerinden kuzey ve doğuya bakıldığında Toros Dağları ve Karaca Dağ etekleri"
+  },
+  {
+   "iddia": "Batıda Şanlıurfa platosu ile Fırat ovasını ayıran dağ silsilesi vardır.",
+   "kaynak_alinti": "batıya bakıldığında Şanlıurfa platosu ile Fırat ovasını ayıran dağ silsilesi"
+  },
+  {
+   "iddia": "Güneye bakıldığında Suriye sınırına kadar Harran Ovası görülür.",
+   "kaynak_alinti": "güneye bakıldığında ise Suriye sınırına kadar Harran Ovası görülmektedir."
+  },
+  {
+   "iddia": "Çok geniş bir bölgeyi görebildiği gibi kendisi de çok geniş bir bölgeden görülebilmektedir.",
+   "kaynak_alinti": "Bu konumuyla Göbeklitepe'nin çok geniş bir bölgeyi görebildiği gibi, kendisi de çok geniş bir bölgeden görülebilmektedir."
+  },
+  {
+   "iddia": "Kullanılan kireç taşı her yerde bulunmayan oldukça sert bir taştır.",
+   "kaynak_alinti": "Gerçekte Göbeklitepe'de kullanılan kireç taşı, her yerde bulunmayan oldukça sert bir taştır"
+  },
+  {
+   "iddia": "Bugün bile bölgedeki en kaliteli kireç taşı olarak kabul edilmektedir.",
+   "kaynak_alinti": "ve bugün bile bölgedeki en kaliteli kireç taşı olarak kabul edilmektedir."
+  },
+  {
+   "iddia": "Göbeklitepe 1963 yılında yüzey araştırmalarında tespit edilmiştir.",
+   "kaynak_alinti": "Göbeklitepe, 1963 yılında İstanbul Üniversitesi ve Chicago Üniversitesi'nin yürüttüğü “Güneydoğu Anadolu Tarihöncesi Araştırmaları Projesi” (Prehistoric Research in Southeastern Anatolia) yüzey araştırmalarında tespit edilmiştir."
+  },
+  {
+   "iddia": "Bölgeden ilk kez 1980 yılında yayımlanan Peter Benedict'in makalesinde söz edilmiştir.",
+   "kaynak_alinti": "Bölgeden ilk kez, 1980 yılında yayımlanan Peter Benedict'in \"Survey Work in Southeastern Anatolia\" adlı makalesinde söz edilmiştir."
+  },
+  {
+   "iddia": "1994 yılında Klaus Schmidt bölgede bir araştırma yapmıştır.",
+   "kaynak_alinti": "Daha sonra 1994 yılında Heidelberg Üniversitesi'nden Klaus Schmidt tarafından bölgede bir araştırma daha yapılmıştır."
+  },
+  {
+   "iddia": "Kazı çalışmaları 1995 yılında başlatılmıştır.",
+   "kaynak_alinti": "Kazı çalışmaları ise 1995 yılında Şanlıurfa Müzesi başkanlığında ve İstanbul Alman Arkeoloji Enstitüsü'nden (DAI) Harald Hauptmann bilimsel danışmanlığında yapılan yüzey araştırmasından sonra başlatılmıştır."
+  },
+  {
+   "iddia": "2007 yılından itibaren kazılar Bakanlar Kurulu kararlı kazı statüsüyle devam etmiştir.",
+   "kaynak_alinti": "2007 yılından itibaren ise kazı çalışmaları Bakanlar Kurulu kararlı kazı statüsüyle ve yine Alman Arkeoloji Enstitüsü'nden Prof. Dr. Klaus Schmidt'in başkanlığında devam ettirilmiştir."
+  },
+  {
+   "iddia": "1994 yılında Heidelberg Üniversitesi'nden Klaus Schmidt bölgede bir araştırma yapmıştır.",
+   "kaynak_alinti": "Daha sonra 1994 yılında Heidelberg Üniversitesi'nden Klaus Schmidt tarafından bölgede bir araştırma daha yapılmıştır."
+  },
+  {
+   "iddia": "Sitenin anıtsal karakteristiği ve değeri bu araştırma sayesinde dikkat çekmiştir.",
+   "kaynak_alinti": "Sitenin anıtsal karakteristiği ve buna bağlı olarak arkeolojik değeri ancak o zaman dikkat çekmiştir."
+  },
+  {
+   "iddia": "Kazı çalışmaları Şanlıurfa Müzesi başkanlığında yüzey araştırmasının ardından başlatılmıştır.",
+   "kaynak_alinti": "Kazı çalışmaları ise 1995 yılında Şanlıurfa Müzesi başkanlığında ve İstanbul Alman Arkeoloji Enstitüsü'nden (DAI) Harald Hauptmann bilimsel danışmanlığında yapılan yüzey araştırmasından sonra başlatılmıştır."
+  },
+  {
+   "iddia": "Projeye Alman Heidelberg Üniversitesi Tarihöncesi Enstitüsü de katılmıştır.",
+   "kaynak_alinti": "Projeye Alman Heidelberg Üniversitesi Tarihöncesi Enstitüsü de katılmıştır."
+  },
+  {
+   "iddia": "1963 yılındaki yüzey araştırmalarında toplanan buluntularla buranın önemli bir yerleşim olabileceği düşünülmüştür.",
+   "kaynak_alinti": "Yapılan yüzey araştırmaları sırasında höyüğün yüzeyinden toplanan buluntulara dayanılarak buranın Biris Mezarlığı (Epipaleolitik) ve Söğüt Tarlası 1 (Paleolitik ve Epipaleolitik), Söğüt Tarlası 2 (Çanak Çömleksiz Neolitik) gibi bölgenin önemli yerleşimlerinden biri olabileceği sonucuna varılmış"
+  },
+  {
+   "iddia": "Kazılardan hemen önce Şanlıurfa Müzesi başkanlığında ve Harald Hauptmann bilimsel danışmanlığında yüzey araştırması yapılmıştır.",
+   "kaynak_alinti": "Kazı çalışmaları ise 1995 yılında Şanlıurfa Müzesi başkanlığında ve İstanbul Alman Arkeoloji Enstitüsü'nden (DAI) Harald Hauptmann bilimsel danışmanlığında yapılan yüzey araştırmasından sonra başlatılmıştır."
+  },
+  {
+   "iddia": "Göbekli Tepe'de yapılan kazılarda konut olabilecek herhangi bir mimari kalıntıya ulaşılamamıştır.",
+   "kaynak_alinti": "Göbekli Tepe'de yapılan kazılarda konut olabilecek herhangi bir mimari kalıntıya ulaşılamamıştır."
+  },
+  {
+   "iddia": "Bunun yerine çok sayıda anıtsal kült yapı ortaya çıkarılmıştır.",
+   "kaynak_alinti": "bunun yerine çok sayıda anıtsal kült yapı ortaya çıkarılmıştır."
+  },
+  {
+   "iddia": "En önemli buluntuları veren III. Tabakada A, B, C ve D olarak adlandırılan dört yapı ortaya çıkarılmıştır.",
+   "kaynak_alinti": "En önemli buluntuları veren III. Tabakada, kazıların ilk yılında dört yapı ortaya çıkarılmış ve A, B, C ve D olarak adlandırılmıştır."
+  },
+  {
+   "iddia": "Jeomanyetik ölçümler, bu şekilde en az yirmi anıtsal yapının bulunduğunu göstermektedir.",
+   "kaynak_alinti": "Jeomanyetik ölçümler, bu şekilde en az yirmi anıtsal yapının bulunduğunu göstermektedir."
+  },
+  {
+   "iddia": "Yapıların ana gövdesi büyük boyutlu 10-12 dikilitaşın belirli araklılarla dairesel planda dikilmesiyle oluşturulmuştur.",
+   "kaynak_alinti": "Yapıların ana gövdesi büyük boyutlu 10-12 dikilitaşın belirli araklılarla dairesel planda dikilmesiyle oluşturulmuştur."
+  },
+  {
+   "iddia": "Ortaya çıkarılan yapılardan C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir.",
+   "kaynak_alinti": "Ortaya çıkarılan yapılardan C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir."
+  },
+  {
+   "iddia": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır.",
+   "kaynak_alinti": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır."
+  },
+  {
+   "iddia": "C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir.",
+   "kaynak_alinti": "Ortaya çıkarılan yapılardan C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir."
+  },
+  {
+   "iddia": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır.",
+   "kaynak_alinti": "Merkezlerdeki iki dikilitaş, F yapısı dışındaki diğer yapılarda güneydoğu yönündedir, F yapısında ise yön güneybatıdır."
+  },
+  {
+   "iddia": "Söz konusu motifler, yer yer bir süsleme olmayacak kadar yoğun olarak kullanılmış ve bir öykü, anlatım veya mesaj ifade ettiği düşünülmüştür.",
+   "kaynak_alinti": "Söz konusu motifler, yer yer bir süsleme olmayacak kadar yoğun olarak kullanılmıştır. Bu kompozisyonun bir öykü, bir anlatım veya bir mesaj ifade ettiği düşünülmüştür."
+  },
+  {
+   "iddia": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan, yaban ördeği ve akbaba en sık görülen motiflerdir.",
+   "kaynak_alinti": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan, yaban ördeği ve akbaba en sık görülen motiflerdir."
+  },
+  {
+   "iddia": "A Yapısı'nda dikilitaşlar üzerindeki kabartmalarda yılan ağırlıklı olarak yer almaktadır.",
+   "kaynak_alinti": "A Yapısı'nda dikilitaşlar üzerindeki kabartmalarda yılan ağırlıklı olarak yer almaktadır."
+  },
+  {
+   "iddia": "A Yapısı'ndaki betimlemelerde yer alan hayvan türü 17 tanedir.",
+   "kaynak_alinti": "A Yapısı'ndaki betimlemelerde yer alan 17 hayvan türü içinde en çok kullanılanıdır."
+  },
+  {
+   "iddia": "B Yapısı'nda tilki kabartmaları, özellikle merkezdeki iki dikilitaşın ön yüzünde yer alan iki tilki dikkat çekicidir.",
+   "kaynak_alinti": "B Yapısı'nda ise tilki kabartmaları, özellikle merkezdeki iki dikilitaşın ön yüzünde yer alan iki tilki dikkat çekicidir."
+  },
+  {
+   "iddia": "C Yapısı ise yaban domuzlarına ağırlık verilen yapıdır.",
+   "kaynak_alinti": "C Yapısı ise yaban domuzlarına ağırlık verilen yapıdır."
+  },
+  {
+   "iddia": "Sadece dikilitaşlardaki kabartmalarda değil taştan oyulmuş heykellerde de bu durum vardır.",
+   "kaynak_alinti": "sadece dikilitaşlardaki kabartmalarda değil, taştan oyulmuş heykellerde de bu durum vardır"
+  },
+  {
+   "iddia": "D Yapısı'nda yaban domuzları, yabani öküzler, ceylanlar, yaban eşekleri, turnalar, leylekler, ibis, ördek ve bir kedigil gibi geniş bir figür çeşitliliği yer alır.",
+   "kaynak_alinti": "D Yapısı'nda ise yaban domuzları, yabani öküzler, ceylanlar, yaban eşekleri, turnalar, leylekler, ibis, ördek ve bir kedigil gibi geniş bir figür çeşitliliği olmakla birlikte yılan ve tilki ağırlıktadır."
+  },
+  {
+   "iddia": "Merkezdeki iki dikilitaşın, mitolojideki yaygın temalar nedeniyle ikiz veya kardeş olması muhtemeldir.",
+   "kaynak_alinti": "Kazı başkanı Klaus Schmidt'e göre merkezdeki iki dikilitaşın, mitolojide yaygın bir tema olması dolayısıyla ikiz veya en azından kardeş olması mümkündür."
+  },
+  {
+   "iddia": "Dikilitaşların arası yontulmuş taşlarla duvar olarak örülmüştür ve stilize insan heykelleridir.",
+   "kaynak_alinti": "Dikilitaşların arası çoğunlukla yontularak işlenmiş taşlarla duvar olarak örülmüştür. Dikilitaşların stilize insan heykelleri olduğundan hareketle"
+  },
+  {
+   "iddia": "D Yapısı dikilitaşlarındaki insansı kol ve el kabartmaları vücudu temsil eder.",
+   "kaynak_alinti": "D Yapısı dikilitaşları üzerindeki insansı kol ve el kabartmaları, bu dikilitaşların insan vücudunu temsil ettiği şeklinde yorumlanmaktadır. Yatay parça başı; dikey parça ise vücudu temsil etmektedir."
+  },
+  {
+   "iddia": "Toplamda 300'e yakın dikilitaş bulunmaktadır.",
+   "kaynak_alinti": "toplam 300'e yakın dikilitaş kullanılmış olduğunu göstermektedir"
+  },
+  {
+   "iddia": "Merkez dikilitaşlarda kemer tokaları ve peştamal vardır.",
+   "kaynak_alinti": "D Yapısı merkez dikilitaşlarında... kolların altında kemer olduğu açık kabartmalar vardır. Kemer tokaları da işlenmiştir. Ayrıca bu kemerler üzerinde aşağıya doğru tilki postundan bir \"peştamal\"i temsil eden işlemeler görülmektedir."
+  },
+  {
+   "iddia": "Merkez sütunların temsil ettiği kişilerin ritüellerde önemli rolü vardır.",
+   "kaynak_alinti": "merkez sütunlarının temsil ettiği kişilerin bu ritülellerde önemli bir rol üstlenmiş olmaları gerektiği ileri sürülmektedir"
+  },
+  {
+   "iddia": "Bütün bu yapı grubu, Neolitik Çağ içinde bilinçli olarak ve hızla, bir yığınla örtülmüştür.",
+   "kaynak_alinti": "Bütün bu yapı grubu, Neolitik Çağ içinde bilinçli olarak ve hızla, bir yığınla örtülmüştür."
+  },
+  {
+   "iddia": "Bu yığın, çoğunluğu yumruktan küçük çapta kireç taşı parçalarından oluşmaktadır.",
+   "kaynak_alinti": "Bu yığın, çoğunluğu yumruktan küçük çapta kireç taşı parçalarıdır."
+  },
+  {
+   "iddia": "Yığma dolgu içinde insan kemiklerine de rastlanmış olup, bunlar da hayvan kemikleri gibi kırılmış küçük parçalar halindedir.",
+   "kaynak_alinti": "Asıl ilginç olanı ise bu dolgu içinde hayvan kemiklerinin yanı sıra insan kemiklerine de rastlanmasıdır. Bunlar da aynı hayvan kemikleri gibi kırılmış küçük parçalar halindedir."
+  },
+  {
+   "iddia": "Ölü gömme uygulaması olma ihtimali yakın görünmektedir.",
+   "kaynak_alinti": "her ne kadar ilk akla gelen yamyamlıksa da, bir ölü gömme uygulaması olma ihtimali daha yakın görünmektedir."
+  },
+  {
+   "iddia": "İnsan vücudunun ölümden sonra bazı özel işlemlere tabi tutulması Çanak Çömleksiz Neolitik Çağ'ın Yakın Doğu'sunda bilinen bir gelenektir.",
+   "kaynak_alinti": "İnsan vücudunun ölümden sonra bazı özel işlemlere tabi tutulması, Çanak Çömleksiz Neolitik Çağ'ın Yakın Doğu'sunda birçok kez tespit edilmiş bir gelenektir."
+  },
+  {
+   "iddia": "C yapısındaki çukurun çapı 10 metredir.",
+   "kaynak_alinti": "C yapısındaki yaklaşık 10 metre çapında bir çukur, kazıların başlangıcından beri bilinmektedir."
+  },
+  {
+   "iddia": "Bu yığma dolgu sayesinde buradaki yapılar bugüne kadar tahribata uğramadan kalabilmiştir.",
+   "kaynak_alinti": "Diğer taraftan buradaki yapılar bu yığma dolgu sayesinde günümüze kadar tahribata uğramadan kalabilmiştir."
+  },
+  {
+   "iddia": "Yığma dolgunun gevşek malzemesi kazı sırasında zorluk yaratmıştır.",
+   "kaynak_alinti": "Yığma dolgunun gevşek malzemesi, kazı çalışmaları sırasında ek zorluklar yaratmıştır."
+  },
+  {
+   "iddia": "Radyokarbon tarihlendirmesi sonuçlarının yanıltıcı olabileceği endişesi vardır.",
+   "kaynak_alinti": "Esas zorluk ise radyokarbon tarihlendirmesi sonuçlarının yanıltıcı olabileceği endişesidir."
+  },
+  {
+   "iddia": "Göbeklitepe'nin bilinen en eski ve ilk tapınak olduğu iddiası",
+   "kaynak_alinti": "The megalithic structures, which have been popularly described as the \"world's first temple[s]\""
+  },
+  {
+   "iddia": "Megalitik yapının bilinen örneklerden en az 5 bin yıl daha geriye uzandığı",
+   "kaynak_alinti": "Among the world's oldest known megaliths"
+  },
+  {
+   "iddia": "Klaus Schmidt'in sözü",
+   "kaynak_alinti": "Schmidt maintained that the work of quarrying, transporting, and erecting tons of heavy, monolithic, and almost universally well-prepared limestone pillars [...] was not within the capability of a few people"
+  },
+  {
+   "iddia": "2021'de Taş Tepeler adı verilmesi",
+   "kaynak_alinti": "in the Taş Tepeler ('Stone Hills')"
+  },
+  {
+   "iddia": "2018 yılında UNESCO Dünya Mirası kalıcı listesine girmesi",
+   "kaynak_alinti": "Göbekli Tepe was designated a UNESCO World Heritage Site in 2018"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}

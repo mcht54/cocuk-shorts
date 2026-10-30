@@ -1,0 +1,71 @@
+{
+ "baslik": "Siradisi T Bicimli Dikilitaslar",
+ "ekran_basligi": "Gizemli Dikilitaslar",
+ "aciklama": "Megaltik sutunlar ve dikililitaslar hakkinda.",
+ "etiketler": [
+  "Dikilitaş",
+  "Megalit",
+  "Tarih",
+  "Heykel",
+  "Gobeklitepe",
+  "Kult"
+ ],
+ "parcalar": [
+  {
+   "metin": "Dünyanın bilinen en eski megalitleri olan taş sütunlar bu alanda yer almaktadır.",
+   "gorsel": [
+    6
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Gizemli Dikilitaslar"
+   }
+  },
+  {
+   "metin": "T biçimindeki dikilitaşlar yuvarlak planda dizilmiş, araları taş duvarlarla örülmüştür.",
+   "gorsel": [
+    7
+   ]
+  },
+  {
+   "metin": "Yapının merkezinde daha yüksek boyda olan iki dikilitaş karşılıklı yerleştirilmiştir.",
+   "gorsel": [
+    15
+   ]
+  },
+  {
+   "metin": "Bu dikilitaşlar stilize insan heykelleri olarak yorumlanmaktadır.",
+   "gorsel": [
+    19
+   ]
+  },
+  {
+   "metin": "Daha fazla bilgi için tüm hikâye şimdi kanalda.",
+   "gorsel": [
+    21
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Dünyanın bilinen en eski megalitleri olan taş sütunlar bu alanda yer almaktadır.",
+   "kaynak_alinti": "It is known for its large circular structures that contain large stone pillars – among the world's oldest known megaliths."
+  },
+  {
+   "iddia": "T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiş, araları ise taş duvarlarla örülmüştür.",
+   "kaynak_alinti": "T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiş, araları ise taş duvarlarla örülmüştür."
+  },
+  {
+   "iddia": "Yapının merkezinde daha yüksek boyda olan iki dikilitaş karşılıklı yerleştirilmiştir.",
+   "kaynak_alinti": "Yapının merkezinde daha yüksek boyda olan iki dikilitaş, karşılıklı olarak yerleştirilmiştir."
+  },
+  {
+   "iddia": "Bu dikilitaşlar stilize insan heykelleri olarak yorumlanmaktadır.",
+   "kaynak_alinti": "Söz konusu dikilitaşlar, stilize insan heykelleri olarak yorumlanmaktadır."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}

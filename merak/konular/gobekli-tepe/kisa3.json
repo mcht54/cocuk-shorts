@@ -1,0 +1,71 @@
+{
+ "baslik": "Aslan ve Yilan Kabartmalari",
+ "ekran_basligi": "Yabani Hayvanlar",
+ "aciklama": "Gobekli Tepe'deki hayvan kabartmalari.",
+ "etiketler": [
+  "Kabartma",
+  "Aslan",
+  "Yilan",
+  "Arkeoloji",
+  "Gobeklitepe",
+  "Sanliurfa"
+ ],
+ "parcalar": [
+  {
+   "metin": "Dikilitaşların çoğu üzerinde insan ve çesitli hayvan kabartmaları betimlenmiştir.",
+   "gorsel": [
+    4
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Yabani Hayvanlar"
+   }
+  },
+  {
+   "metin": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan ve akbaba sık görülmektedir.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Aslanlı Yapı adı verilen odada iki dikilitaş üzerinde aslan kabartması vardir.",
+   "gorsel": [
+    12
+   ]
+  },
+  {
+   "metin": "Söz konusu motiflerin bir öykü veya mesaj ifade ettiği düşünülmektedir.",
+   "gorsel": [
+    17
+   ]
+  },
+  {
+   "metin": "Tüm bu gizemli detaylar kanalda seni bekliyor.",
+   "gorsel": [
+    34
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Aslanlı Yapı iki dikilitaş üzerinde aslan kabartması içerir.",
+   "kaynak_alinti": "A pair decorated with fierce-looking lions is the rationale for the name \"lion pillar building\" by which their enclosure is known."
+  },
+  {
+   "iddia": "Dikilitaşların çoğu üzerinde insan ve çeşitli hayvan kabartmaları betimlenmiştir.",
+   "kaynak_alinti": "Many of these pillars are decorated with anthropomorphic details, clothing, and sculptural reliefs of wild animals"
+  },
+  {
+   "iddia": "Hayvan motiflerinde boğa, yaban domuzu, tilki, yılan ve akbaba sık görülmektedir.",
+   "kaynak_alinti": "The reliefs depict mammals such as lions, bulls, boars, foxes, gazelle, and donkeys; snakes and other reptiles; arthropods such as insects and arachnids; and birds, particularly vultures."
+  },
+  {
+   "iddia": "Söz konusu motiflerin bir öykü veya mesaj ifade ettiği düşünülmektedir.",
+   "kaynak_alinti": "Söz konusu motifler, yer yer bir süsleme olmayacak kadar yoğun olarak kullanılmıştır. Bu kompozisyonun bir öykü, bir anlatım veya bir mesaj ifade ettiği düşünülmektedir."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}
