@@ -30,3 +30,35 @@
 - [Göbekli Tepe - 100525.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_-_100525.jpg) — Rolf Cosar, CC BY-SA 4.0
 - [Gobekli Tepe Under temporary roof in 2014 3140.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe_Under_temporary_roof_in_2014_3140.jpg) — Dosseman, CC BY-SA 4.0
 - [Göbekli Tepe Fields.JPG](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_Fields.JPG) — Yozer1, CC BY-SA 4.0
+
+
+# Tarihin Akışını Değiştiren Gizem: Dünyanın En Eski Tapınağı Göbekli Tepe
+
+## Kaynaklar
+- https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe
+- https://tr.wikipedia.org/wiki/G%C3%B6beklitepe
+
+## Görseller
+- [Urfa museum Göbeklitepe Human statue Neolithic Age in 2024 7338.jpg](https://commons.wikimedia.org/wiki/File%3AUrfa_museum_G%C3%B6beklitepe_Human_statue_Neolithic_Age_in_2024_7338.jpg) — Dosseman, CC BY-SA 4.0
+- [Urfa museum Boar statue sept 2019 4766.jpg](https://commons.wikimedia.org/wiki/File%3AUrfa_museum_Boar_statue_sept_2019_4766.jpg) — Dosseman, CC BY-SA 4.0
+- [Urfa museum Animal relief sept 2019 4772.jpg](https://commons.wikimedia.org/wiki/File%3AUrfa_museum_Animal_relief_sept_2019_4772.jpg) — Dosseman, CC BY-SA 4.0
+- [Urfa Göbeklitepe Building B 5326.jpg](https://commons.wikimedia.org/wiki/File%3AUrfa_G%C3%B6beklitepe_Building_B_5326.jpg) — Dosseman, CC BY-SA 4.0
+- [UrfaMuseumGöbekli.jpg](https://commons.wikimedia.org/wiki/File%3AUrfaMuseumG%C3%B6bekli.jpg) — Klaus-Peter Simon, CC BY-SA 3.0
+- [The archaeological site of Göbekli Tepe - main excavation area.png](https://commons.wikimedia.org/wiki/File%3AThe_archaeological_site_of_G%C3%B6bekli_Tepe_-_main_excavation_area.png) — German Archaeological Institute, photo E. Kücük., CC BY 4.0
+- [Klaus Schmidt Monumento 2014 5.jpg](https://commons.wikimedia.org/wiki/File%3AKlaus_Schmidt_Monumento_2014_5.jpg) — Ordercrazy, CC0
+- [Göbeklitepe Şanlıurfa.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6beklitepe_%C5%9Eanl%C4%B1urfa.jpg) — Beytullah eles, CC BY-SA 4.0
+- [Göbeklitepe Ören Yeri 2023.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6beklitepe_%C3%96ren_Yeri_2023.jpg) — Bjelica, CC BY 4.0
+- [Göbeklitepe Building C 5372 (cropped).jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6beklitepe_Building_C_5372_%28cropped%29.jpg) — Dosseman, CC BY-SA 4.0
+- [Göbeklitepe.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6beklitepe.jpg) — Beytullah eles, CC BY-SA 4.0
+- [Göbekli Tepe surrounding area.JPG](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_surrounding_area.JPG) — Zhengan, CC BY-SA 4.0
+- [Göbekli Tepe Pillar.JPG](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_Pillar.JPG) — Zhengan, CC BY-SA 4.0
+- [Göbekli2012-27.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli2012-27.jpg) — Klaus-Peter Simon, CC BY-SA 3.0
+- [Gobekli Tepe ithyphallic statuette. Şanlıurfa - Archeology Museum, July 2025 (frontal).jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe_ithyphallic_statuette._%C5%9Eanl%C4%B1urfa_-_Archeology_Museum%2C_July_2025_%28frontal%29.jpg) — Marco Restano, CC BY-SA 4.0
+- [Gobekli Tepe, enclosure D stela. Şanlıurfa Museum.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe%2C_enclosure_D_stela._%C5%9Eanl%C4%B1urfa_Museum.jpg) — Dosseman, CC BY-SA 4.0
+- [Göbekli Tepe banner.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe_banner.jpg) — Davide Mauro, CC BY-SA 4.0
+- [Göbekli Tepe.jpg](https://commons.wikimedia.org/wiki/File%3AG%C3%B6bekli_Tepe.jpg) — Creator:Rolfcosar, CC BY-SA 3.0
+- [Gobekli Tepe statue. Şanlıurfa - Archeology Museum, July 2025.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe_statue._%C5%9Eanl%C4%B1urfa_-_Archeology_Museum%2C_July_2025.jpg) — Marco Restano, CC BY-SA 4.0
+- [Gobekli Tepe Surroundings 2014 3190.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe_Surroundings_2014_3190.jpg) — Dosseman, CC BY-SA 4.0
+- [View from near Gobekli Tepe.jpg](https://commons.wikimedia.org/wiki/File%3AView_from_near_Gobekli_Tepe.jpg) — Immanuelle, CC BY-SA 4.0
+- [Pillar-gobeklitepe-6.jpg](https://commons.wikimedia.org/wiki/File%3APillar-gobeklitepe-6.jpg) — Pouazity3, CC BY-SA 4.0
+- [Gobekli Tepe Surroundings in 2014 3220.jpg](https://commons.wikimedia.org/wiki/File%3AGobekli_Tepe_Surroundings_in_2014_3220.jpg) — Dosseman, CC BY-SA 4.0
