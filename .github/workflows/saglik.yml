@@ -6,7 +6,7 @@ name: Sağlık denetimi
 # Nabız commit'i depoyu aktif tutar (GitHub 60 gün hareketsiz depoda zamanlanmış işleri kapatır).
 on:
   schedule:
-    - cron: "0 6 * * *"   # 09:00 TR
+    - cron: "23 6 * * *"   # 09:23 TR
   workflow_dispatch:
 
 permissions:

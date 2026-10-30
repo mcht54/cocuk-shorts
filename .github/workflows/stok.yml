@@ -4,7 +4,7 @@ name: Stok doldurma (iki kanal)
 # Merak Arşivi konu/senaryoları yazılır, denetimden geçenler depoya eklenir.
 on:
   schedule:
-    - cron: "30 0 * * *"   # 03:30 TR
+    - cron: "37 0,12 * * *"   # 03:37 ve 15:37 TR (biri atlanırsa diğeri)
   workflow_dispatch:
     inputs:
       kanal:

@@ -1,0 +1,31 @@
+name: Testler
+
+# Her push'ta, buluttaki işlerle aynı temiz ortamda: bağımlılıklar kurulur, bulutta çalışan her modül
+# içe aktarılır (eksik paket burada yakalanır, gece yayın işinde değil), tüm testler çalışır.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["**.md", "otonom/nabiz.json", "yayin_kaydi.json", "merak/kayit.json"]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Bulut modülleri içe aktarılabiliyor
+        run: |
+          for m in otonom.saglik otonom.stok otonom.masal_yaz otonom.haftalik_onay otonom.takvim \
+                   merak.uret merak.yayinla merak.konu merak.yaz merak.grafik derleme bulut3d; do
+            python -c "import $m" || { echo "::error::$m içe aktarılamadı"; exit 1; }
+          done
+      - name: İş akışı dosyaları geçerli YAML
+        run: pip install -q pyyaml && python -c "import glob, yaml; [yaml.safe_load(open(f)) for f in glob.glob('.github/workflows/*.yml')]"
+      - run: python -m unittest discover -s tests -v

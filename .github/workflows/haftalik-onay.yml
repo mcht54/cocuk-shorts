@@ -3,7 +3,7 @@ name: Haftalık onay listesi
 # Her pazar: önümüzdeki haftanın zamanlanmış videoları issue olarak gelir (e-posta). Önceki hafta kapanır.
 on:
   schedule:
-    - cron: "0 6 * * 0"   # pazar 09:00 TR
+    - cron: "11 6 * * 0"   # pazar 09:11 TR
   workflow_dispatch:
 
 permissions:

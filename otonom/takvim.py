@@ -52,3 +52,13 @@ def yukleme_zamani(slot, simdi=None):
     if slot - simdi < HEMEN:
         return None, simdi
     return slot, slot
+
+
+if __name__ == "__main__":
+    # iş akışlarının ön denetimi: `python -m otonom.takvim <hat> <kayit.json>` boş slot sayısını yazar
+    import json
+    import sys
+    from pathlib import Path
+
+    hat, yol = sys.argv[1], Path(sys.argv[2])
+    print(len(bos_slotlar(hat, json.loads(yol.read_text()) if yol.exists() else [])))

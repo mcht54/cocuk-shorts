@@ -3,9 +3,10 @@ name: Günlük 3D bölüm (Fındık ile Pamuk)
 on:
   # Herkese açık günlük yayın kullanıcı onayıyla açıldı (2026-10-30), kanal: Minik Masal Evi.
   # 2026-10-30: takvim 1 hafta önceden dolar (haftalık onay); her çalıştırma en çok 2 boş saati doldurur.
+  # GitHub zamanlanmış işleri yoğunlukta geciktirir/atlar (2026-10-30: 05:00 işi hiç başlamadı): 4 saatte
+  # bir, saat başı olmayan dakikada denenir; takvim doluysa iş Blender kurmadan 1 dakikada biter.
   schedule:
-    - cron: "0 2 * * *"    # 05:00 TR
-    - cron: "0 13 * * *"   # 16:00 TR
+    - cron: "17 1,5,9,13,17,21 * * *"
   workflow_dispatch:
     inputs:
       bolum:
@@ -26,7 +27,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  kontrol:
+    runs-on: ubuntu-latest
+    outputs:
+      atla: ${{ steps.k.outputs.atla }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: k
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ vars.YAYIN }}" = "acik" ]; then
+            n=$(python3 -m otonom.takvim masal_shorts yayin_kaydi.json)
+            echo "boş yayın saati: $n"
+            if [ "$n" = "0" ]; then echo "atla=1" >> "$GITHUB_OUTPUT"; fi
+          fi
+
   uret:
+    needs: kontrol
+    if: needs.kontrol.outputs.atla != '1'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
