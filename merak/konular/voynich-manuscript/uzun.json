@@ -1,0 +1,860 @@
+{
+ "baslik": "Voynich El Yazması: Kimsenin Okuyamadığı 600 Yıllık Şifreli Kitap",
+ "kapak_yazisi": "600 YILLIK SIR",
+ "kapak_gorsel": 19,
+ "aciklama": "Yüzyıllardır çözülemeyen Voynich El Yazması'nın gizemli dünyasına doğru zaman yolculuğuna çıkıyoruz. 15. yüzyıldan bugüne uzanan bu şifreli kitabın ardındaki gerçekleri keşfedin.",
+ "etiketler": [
+  "Voynich",
+  "Voynich El Yazması",
+  "şifreli kitap",
+  "tarih",
+  "belgesel",
+  "gizem",
+  "Orta Çağ",
+  "kriptografi",
+  "bilim",
+  "Merak Arşivi",
+  "eski kitaplar",
+  "çözülemeyen sırlar"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesi, eserin kökenini erken 15. yüzyıla götürür.",
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Parşömen 1404-1438 yılları arasındadır.",
+       "kaynak_alinti": "The vellum on which it is written has been carbon-dated to the early 15th century (1404–1438)."
+      }
+     ]
+    },
+    {
+     "metin": "Stilistik analizler, kitabın İtalyan Rönesansı sırasında İtalya'da oluşturulmuş olabileceğini gösterir.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Eser İtalya'da Rönesans döneminde yapılmıştır.",
+       "kaynak_alinti": "Stylistic analysis has indicated the manuscript may have been composed in Italy during the Italian Renaissance."
+      }
+     ]
+    },
+    {
+     "metin": "El yazması yaklaşık 240 sayfadan oluşur ve gizemli Voynich el yazması toplam sayfa sayısı bu kadardır.",
+     "gorsel": [
+      2
+     ],
+     "iddia_deger": "240",
+     "iddia_birim": "sayfa",
+     "iddia_metin": "gizemli Voynich el yazması toplam sayfa sayısı",
+     "iddialar": [
+      {
+       "iddia": "Toplam sayfa sayısı yaklaşık 240'tır.",
+       "kaynak_alinti": "The manuscript consists of around 240 pages"
+      }
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "240",
+      "birim": "sayfa",
+      "metin": "gizemli Voynich el yazması toplam sayfa sayısı"
+     }
+    },
+    {
+     "metin": "Tahminlere göre kitabın kökeni İtalyan Rönesansı sırasında İtalya'ya dayanmaktadır. El yazmasının kökenleri, yazarlığı ve amacı hâlâ tartışılmaktadır.",
+     "gorsel": [
+      0,
+      1
+     ]
+    },
+    {
+     "metin": "El yazması buzağı derisinden yapılan parşömenler üzerine oluşturulmuştur. Kitap üzerinde yapılan incelemeler, parşömenin daha önceden başka bir yazı için kullanılmadığını göstermektedir.",
+     "gorsel": [
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Fiziksel Yapı",
+   "parcalar": [
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra eserin fiziksel boyutları şekillenir.",
+     "gorsel": [
+      16
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "karsilastirma",
+      "deger": 23.5,
+      "birim": "cm",
+      "etiket": "Voynich Boyu",
+      "referans": "otobus"
+     }
+    },
+    {
+     "metin": "El yazması 23,5 by 16.2 by 5 cm ölçülerindedir ve bu boyutlar eserin fiziksel yapısını inceleyen araştırmacılar tarafından detaylıca ele alınmıştır.",
+     "gorsel": [
+      17
+     ],
+     "yazi": "23,5 cm"
+    },
+    {
+     "metin": "Yüzlerce vellum sayfa 18 kağıt tabakasında toplanmıştır.",
+     "gorsel": [
+      18
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2014 yılında yapılan protein testi, parşömenin buzağı derisinden yapıldığını ortaya koydu.",
+     "gorsel": [
+      19
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Multispektral analiz, el yazmasının oluşturulmasından önce yazılmadığını gösterdi.",
+     "gorsel": [
+      20
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Parşömen en az on dört veya on beş tam dana derisinden hazırlanmıştır.",
+     "gorsel": [
+      21
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Orta Çağ uzmanı Lisa Fagin Davis parşömeni soft olarak tanımladı.",
+     "gorsel": [
+      22
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bazı folyolar normal parşömen kalınlığından daha kalındır ve keçi derisi ciltleri kitabın orijinali değildir.",
+     "gorsel": [
+      16,
+      18
+     ],
+     "iddialar": [
+      {
+       "iddia": "Bazı folyolar normal parşömen kalınlığından daha kalındır",
+       "kaynak_alinti": "Bazı folyolar, (42 ve 47 folyoları gibi) normal parşömen kalınlığından daha kalındır."
+      },
+      {
+       "iddia": "Keçi derisi ciltleri kitabın orijinali değildir",
+       "kaynak_alinti": "Keçi derisi ciltleri ve kapakları kitabın orijinali değil"
+      }
+     ]
+    },
+    {
+     "metin": "El yazmasının ilk ve son yapraklarında böcek delikleri mevcuttur ve kapak iç kenarlarındaki renk değişiklikleri tabaklanmış deriye işaret eder.",
+     "gorsel": [
+      19,
+      41
+     ],
+     "iddialar": [
+      {
+       "iddia": "El yazmasının ilk ve son yapraklarında böcek delikleri mevcuttur",
+       "kaynak_alinti": "El yazmasının şu anki yaprak sıralamasında ilk ve son yapraklarına böcek delikleri mevcuttur"
+      },
+      {
+       "iddia": "Kapak iç kenarlarındaki renk değişiklikleri tabaklanmış deriye işaret eder",
+       "kaynak_alinti": "kapak iç kenarlarlarındaki renk değişikliği tabaklanmış deriye işaret eder."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Mürekkep ve Boya",
+   "parcalar": [
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra eserin mürekkep ve boya detayları incelenir.",
+     "gorsel": [
+      4
+     ],
+     "yazi": "Mürekkep ve Boya"
+    },
+    {
+     "metin": "Polarize ışık mikroskobu kullanılarak yapılan modern analize dayanarak metin ve figür anahatları için bir tüy kalem ve demir mazı mürekkebinin kullanıldığı belirlenmiştir.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Çizimler, metin, sayfa ve tabaka numaralarındaki mürekkep benzer mikroskopik özelliklere sahiptir.",
+     "gorsel": [
+      6
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2009 yılında yapılan enerji dağıtıcı X-ışını spektroskopisi, mürekkeplerin önemli miktarda demir, kükürt, potasyum, kalsiyum, karbon, eser miktarda bakır ve bazen de çinko içerdiğini ortaya çıkarmıştır.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Mavi boya, az miktarda bakır oksit cuprite ile öğütülmüş azurit olduğunu kanıtladı.",
+     "gorsel": [
+      8
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Beyaz boya muhtemelen yumurta beyazı ve kalsiyum karbonatın bir karışımıdır.",
+     "gorsel": [
+      15
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yeşil boya ise bakır ve bakır-klorür reçine ile karakterize edilir ve kristal malzeme atasamit veya başka bir bakır-klorür bileşiği olabilir.",
+     "gorsel": [
+      16
+     ],
+     "yazi": ""
+    }
+   ]
+  },
+  {
+   "ad": "Gizemli Metin",
+   "parcalar": [
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra eserin metin yapısı incelenir. El yazmasındaki yaklaşık kelime sayısı dikkat çekicidir.",
+     "gorsel": [
+      0
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "38.000",
+      "birim": "kelime",
+      "metin": "el yazmasındaki yaklaşık kelime sayısı"
+     }
+    },
+    {
+     "metin": "El yazmasındaki her sayfa çoğunlukla tanımlanamayan bir dilde metin içerir, ancak bazılarında Latin alfabesinde yabancı yazılar bulunur.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "metin": "240 sayfalık el yazmasındaki metnin büyük kısmı, soldan sağa doğru bilinmeyen bir el yazısıyla yazılmıştır.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Belirli harflerin farklı olup olmadığı konusunda anlaşmazlıklar vardır, ancak 20-25 Harflik bir el yazısı neredeyse tüm metni açıklar.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "İstisnalar, yalnızca bir veya iki kez oluşan birkaç düzine karakterdir.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Metnin çoğu, sayfanın gövdesindeki tek bir sütunda, hafifçe düzensiz sağ kenar boşluğu ve paragraf bölümleriyle, bazense sol kenar boşluğunda yıldızlar ile yazılmıştır.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "Jorge Stolfi, metnin ve çizimlerin bazı kısımlarının daha koyu mürekkep kullanılarak rötuşlandığını belirtmiştir.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "gorsel": [
+      1
+     ],
+     "metin": "El yazısı darbeleri akıcı bir şekilde yazılmıştır ve sembollerin şifrelenmediği izlenimini verir."
+    }
+   ]
+  },
+  {
+   "ad": "İllüstrasyonlar",
+   "parcalar": [
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra eserin illüstrasyonları incelenir. Bitkisel kısım 126 sayfadan oluşur.",
+     "gorsel": [
+      0
+     ],
+     "yazi": "İllüstrasyonlar"
+    },
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra her sayfa bir veya iki bitki ve birkaç paragraf metin içerir.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "gorsel": [
+      1
+     ],
+     "metin": "Bu biçim dönemin Avrupa bitkisel kitaplarına özgüdür."
+    },
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra astronomik kısım 17 sayfadan oluşur. Bu kısım astronomi veya astrolojiyi düşündüren dairesel diyagramlar içerir.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra bazı diyagramlarda güneş, ay ve yıldızlar yer alır. Balneolojik kısım 20 sayfadan oluşur.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "Yıl 1404 ile 1438 arasını gösteren karbon tarihlemesinden sonra bu bölümde çizimlerle serpiştirilmiş yoğun ve sürekli bir metin bulunur.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "gorsel": [
+      4
+     ],
+     "metin": "Çizimlerin çoğu havuzlarda banyo yapan küçük çıplak kadınları gösterir."
+    }
+   ]
+  },
+  {
+   "ad": "Kayıp Yüzyıllar",
+   "parcalar": [
+    {
+     "metin": "Yıl 1639 olduğunda, eserin ilk teyit edilmiş sahibi olarak Georg Baresch adında Praglı bir simyacı karşımıza çıkar.",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Georg Baresch"
+    },
+    {
+     "metin": "Baresch, el yazmasından söz eden bugüne kadar bulunmuş en eski tarihli kayıt olan mektubu Kircher'e gönderdi.",
+     "gorsel": [
+      12
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1639",
+        "metin": "Georg Baresch'in mektubu"
+       },
+       {
+        "yil": "1665",
+        "metin": "Marci'nin mektubu"
+       },
+       {
+        "yil": "1870",
+        "metin": "Roma'nın ele geçirilmesi"
+       },
+       {
+        "yil": "1912",
+        "metin": "Wilfrid Voynich'in satın alması"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Yıl 1639, 1665, 1870 ve 1912 yılları arasında uzanan süreçte eserin izleri kayıp yüzyıllar boyunca şekillenir.",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Kayıp Yüzyıllar"
+    },
+    {
+     "metin": "Baresch'in ölümü üzerine el yazması, Charles Üniversitesi'nin rektörü olan arkadaşı Jan Marek Marci'ye geçti.",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Jan Marek Marci"
+    },
+    {
+     "metin": "Yıl 1665 veya 1666 tarihlerinde Marci, kitabı Roma'daki dostu Athanasius Kircher'e gönderdi.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bohemya dilinde öğretmen olan Dr. Raphael, eserin İmparator Rudolf'a ait olduğunu ve 600 dukat ödendiğini anlattı.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "İmparator Rudolf"
+    },
+    {
+     "metin": "İlk sayfada, İmparator Rudolf'un botanik bahçelerinin başı olan Jacobus Horcicky de Tepenecz'in silik bir imzası yer alır.",
+     "gorsel": [
+      14,
+      19
+     ]
+    },
+    {
+     "metin": "Sonraki 200 yıl boyunca kitaba ait hiçbir kayda rastlanmaz; eser muhtemelen Collegio Romano kütüphanesinde saklanmıştır.",
+     "gorsel": [
+      16,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Modern Dönem",
+   "parcalar": [
+    {
+     "metin": "Yıl 1912 olduğunda eserin izleri, eseri satın alan Polonyalı sahaf Wilfrid Voynich ile anılmaya başlar.",
+     "gorsel": [
+      11
+     ],
+     "yazi": "Modern Dönem",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1912",
+        "metin": "Wilfrid Voynich keşfi"
+       },
+       {
+        "yil": "1930",
+        "metin": "Ethel Voynich'e miras"
+       },
+       {
+        "yil": "1969",
+        "metin": "Yale Üniversitesi'ne bağış"
+       },
+       {
+        "yil": "2020",
+        "metin": "Dijital kütüphanede yayınlanması"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Yıl 1930 olduğunda Wilfrid'in ölümünden sonra el yazması, The Gadfly romanının yazarı ve matematikçi George Boole'un kızı olan eşi Ethel Voynich'e miras kaldı.",
+     "gorsel": [
+      12
+     ]
+    },
+    {
+     "metin": "Yıl 1961 olduğunda Anne Nill kitabı antika kitap satıcısı Hans P. Kraus'a sattı.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Yıl 1969 olduğunda eser, Yale Üniversitesi'nin Beinecke Nadir Kitap ve El Yazmaları Kütüphanesi'ne taşındı ve burada muhafaza edilmeye başlandı.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "Yıl 2020 olduğunda Yale Üniversitesi, el yazmasının tamamını dijital kütüphanesinde çevrimiçi olarak yayınladı.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Yıl 1903 olduğunda para sıkıntısı çeken Cizvit tarikatı Collegio Romano bazı koleksiyonlarını gizlice satmaya karar verdi ve bu satış 1912 yılında gerçekleşti.",
+     "gorsel": [
+      11
+     ]
+    },
+    {
+     "metin": "1960 yılında Ethel Voynich hayata veda etti ve el yazmasını yakın arkadaşı olan Anne Nill'e bıraktı.",
+     "gorsel": [
+      11
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Sonuç ve Miras",
+   "parcalar": [
+    {
+     "metin": "Voynich el yazması, hem I. Dünya Savaşı hem de II.",
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Voynich el yazması hem profesyonel hem de amatör kriptograflar tarafından incelenmiştir.",
+       "kaynak_alinti": "The Voynich manuscript has been studied by both professional and amateur cryptographers, including American and British codebreakers from both World War I and World War II."
+      }
+     ]
+    },
+    {
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Voynich el yazması hem profesyonel hem de amatör kriptograflar tarafından incelenmiştir.",
+       "kaynak_alinti": "The Voynich manuscript has been studied by both professional and amateur cryptographers, including American and British codebreakers from both World War I and World War II."
+      }
+     ],
+     "metin": "Dünya Savaşı'ndan Amerikan ve İngiliz kod kırıcılar da dahil olmak üzere birçok profesyonel ve amatör kriptograf tarafından incelenmiştir."
+    },
+    {
+     "metin": "Codebreakers Prescott Currier, William Friedman, Elizebeth Friedman, ve John Tiltman were unsuccessful.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Prescott Currier, William Friedman, Elizebeth Friedman ve John Tiltman başarılı olamamıştır.",
+       "kaynak_alinti": "Codebreakers Prescott Currier, William Friedman, Elizebeth Friedman, and John Tiltman were unsuccessful."
+      }
+     ]
+    },
+    {
+     "metin": "El yazması hiçbir zaman belirgin bir şekilde deşifre edilmedi, son yüz yılda önerilen hipotezlerin hiçbiri bağımsız olarak doğrulanmamıştır.",
+     "gorsel": [
+      2
+     ],
+     "iddialar": [
+      {
+       "iddia": "El yazması asla kanıtlanabilir şekilde deşifre edilmemiştir.",
+       "kaynak_alinti": "The manuscript has never been demonstrably deciphered, and none of the proposed hypotheses have been independently verified."
+      }
+     ]
+    },
+    {
+     "metin": "Yıl 1969 olduğunda eser, Yale Üniversitesi'nin Beinecke Nadir Kitap ve El Yazmaları Kütüphanesi'ne taşındı ve burada muhafaza edilmeye başlandı.",
+     "gorsel": [
+      3
+     ],
+     "grafik_veri": {
+      "tur": "sayi",
+      "deger": "1969",
+      "birim": "yıl",
+      "metin": "Yale Üniversitesine bağışlandığı yıl"
+     },
+     "iddialar": [
+      {
+       "iddia": "1969 yılından beri Yale Üniversitesi'nde tutulmaktadır.",
+       "kaynak_alinti": "Since 1969, it has been held in Yale University's Beinecke Rare Book and Manuscript Library."
+      }
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "1969",
+      "birim": "yıl",
+      "metin": "Yale Üniversitesine bağışlandığı yıl"
+     }
+    },
+    {
+     "metin": "Anlam ve kökeninin gizemi, popüler hayal gücünü heyecanlandırdı, roman ve spekülasyonların öznesi haline geldi.",
+     "gorsel": [
+      4
+     ],
+     "iddialar": [
+      {
+       "iddia": "Anlam ve kökeninin gizemi spekülasyonları tetiklemiştir.",
+       "kaynak_alinti": "The mystery of its meaning and origin has excited speculation and provoked study."
+      }
+     ]
+    },
+    {
+     "metin": "2004 yılında, Beinecke Nadir Kitap ve El Yazması Kütüphanesi yüksek çözünürlüklü dijital taramaları çevrimiçi olarak halka açık hale getirdi ve birkaç basılı kopyası çıktı.",
+     "gorsel": [
+      16
+     ],
+     "iddialar": [
+      {
+       "iddia": "2004 yılında kütüphane dijital taramaları çevrimiçi yaptı.",
+       "kaynak_alinti": "2004 yılında, Beinecke Nadir Kitap ve El Yazması Kütüphanesi yüksek çözünürlüklü dijital taramaları çevrimiçi olarak halka açık hale getirdi"
+      }
+     ]
+    },
+    {
+     "metin": "El yazması hakkındaki bu araştırmalar, birçok farklı çalışmaya ilham kaynağı olmuştur.",
+     "gorsel": [
+      19
+     ],
+     "iddialar": [
+      {
+       "iddia": "El yazması birçok çalışmaya ilham kaynağı olmuştur.",
+       "kaynak_alinti": "El yazması birçok çalışmaya ilham kaynağı olmuştur"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Parşömen 1404-1438 yılları arasındadır.",
+   "kaynak_alinti": "The vellum on which it is written has been carbon-dated to the early 15th century (1404–1438)."
+  },
+  {
+   "iddia": "Eser İtalya'da Rönesans döneminde yapılmıştır.",
+   "kaynak_alinti": "Stylistic analysis has indicated the manuscript may have been composed in Italy during the Italian Renaissance."
+  },
+  {
+   "iddia": "Toplam sayfa sayısı yaklaşık 240'tır.",
+   "kaynak_alinti": "The manuscript consists of around 240 pages"
+  },
+  {
+   "iddia": "Kitabın İtalyan Rönesansı sırasında İtalya'da oluşturulmuş olabileceği",
+   "kaynak_alinti": "Stylistic analysis has indicated the manuscript may have been composed in Italy during the Italian Renaissance."
+  },
+  {
+   "iddia": "Kökenlerinin, yazarlığının ve amacının hâlâ tartışıldığı",
+   "kaynak_alinti": "The origins, authorship, and purpose of the manuscript are still debated"
+  },
+  {
+   "iddia": "Parşömenin buzağı derisinden yapıldığı",
+   "kaynak_alinti": "Protein testing in 2014 revealed that the parchment was made from calfskin"
+  },
+  {
+   "iddia": "Parşömenin daha önce yazılmamış olduğu",
+   "kaynak_alinti": "multispectral analysis showed that it had not been written on before the manuscript was created"
+  },
+  {
+   "iddia": "El yazmasının ölçüleri 23.5 by 16.2 by 5 cm'dir",
+   "kaynak_alinti": "The manuscript measures 23.5 by 16.2 by 5 cm"
+  },
+  {
+   "iddia": "Yüzlerce sayfa 18 kağıt tabakasında toplanmıştır",
+   "kaynak_alinti": "hundreds of vellum pages collected into 18 quires of uneven size"
+  },
+  {
+   "iddia": "Protein testi parşömenin buzağı derisinden yapıldığını göstermiştir",
+   "kaynak_alinti": "Protein testing in 2014 revealed that the parchment was made from calfskin"
+  },
+  {
+   "iddia": "Parşömenin daha önceden yazılmamış olduğu görülmüştür",
+   "kaynak_alinti": "multispectral analysis showed that it had not been written on before the manuscript was created"
+  },
+  {
+   "iddia": "Parşömen en az 14 veya 15 tam dana derisinden yapılmıştır",
+   "kaynak_alinti": "The parchment is made from \"at least fourteen or fifteen entire calfskins\""
+  },
+  {
+   "iddia": "Lisa Fagin Davis parşömenin yumuşak dokulu olduğunu belirtmiştir",
+   "kaynak_alinti": "Medievalist Lisa Fagin Davis describes the parchment as soft"
+  },
+  {
+   "iddia": "Metin ve figür anahatları için tüy kalem ve demir mazı mürekkebi kullanılmıştır.",
+   "kaynak_alinti": "Based on modern analysis using polarised light microscopy (PLM), it has been determined that a quill pen and iron gall ink were used for the text and figure outlines."
+  },
+  {
+   "iddia": "Mürekkepler karbon, demir, kükürt, potasyum, kalsiyum ile eser miktarda bakır ve çinko içerir.",
+   "kaynak_alinti": "energy-dispersive X-ray spectroscopy (EDS), revealed that the inks contained major amounts of carbon, iron, sulphur, potassium and calcium with trace amounts of copper and occasionally zinc."
+  },
+  {
+   "iddia": "Mavi boya ground azurite ve cuprite içerir.",
+   "kaynak_alinti": "The blue paint proved to be ground azurite with minor traces of the copper oxide cuprite."
+  },
+  {
+   "iddia": "Beyaz boya yumurta beyazı ve kalsiyum karbonat karışımıdır.",
+   "kaynak_alinti": "The white paint is likely a mixture of egg-white and calcium carbonate."
+  },
+  {
+   "iddia": "Yeşil boya bakır ve bakır-klorür resinate ile karakterize edilir.",
+   "kaynak_alinti": "The green paint is tentatively characterised by copper and copper-chlorine resinate; the crystalline material might be atacamite or some other copper-chlorine compound."
+  },
+  {
+   "iddia": "El yazmasında yaklaşık 38.000 kelime bulunmaktadır.",
+   "kaynak_alinti": "The manuscript has roughly 38,000 words, of which 9,000 are unique."
+  },
+  {
+   "iddia": "Her sayfada çoğunlukla tanımlanamayan dilde metin ve bazı Latin harfli yazılar vardır.",
+   "kaynak_alinti": "Every page in the manuscript contains text, mostly in an unidentified language, but some have extraneous writing in Latin script."
+  },
+  {
+   "iddia": "240 sayfalık metnin büyük kısmı soldan sağa bilinmeyen bir yazıyla yazılmıştır.",
+   "kaynak_alinti": "The bulk of the text in the 240-page manuscript is written in an unknown script, running left to right."
+  },
+  {
+   "iddia": "20 ila 25 karakterlik bir yazı metnin neredeyse tamamını karşılar.",
+   "kaynak_alinti": "a script of 20–25 characters would account for virtually all of the text"
+  },
+  {
+   "iddia": "Yalnızca bir veya iki kez oluşan birkaç düzine nadir karakter istisnadır.",
+   "kaynak_alinti": "the exceptions are a few dozen rarer characters that occur only once or twice each."
+  },
+  {
+   "iddia": "Metnin çoğu tek bir sütunda ve sol kenar boşluğunda yıldızlarla yazılmıştır.",
+   "kaynak_alinti": "Metnin çoğu, sayfanın gövdesindeki tek bir sütunda, hafifçe düzensiz sağ kenar boşluğu ve paragraf bölümleriyle, bazense sol kenar boşluğunda yıldızlar ile yazılmıştır."
+  },
+  {
+   "iddia": "Metnin ve çizimlerin bazı kısımları daha koyu mürekkep kullanılarak rötuşlanmıştır ve el yazısı akıcıdır.",
+   "kaynak_alinti": "Computer scientist Jorge Stolfi of the University of Campinas highlighted that parts of the text and drawings have been modified, using darker ink over a fainter, earlier script."
+  },
+  {
+   "iddia": "Herbal, 126 pages",
+   "kaynak_alinti": "Herbal, 126 pages"
+  },
+  {
+   "iddia": "Each page displays one or two plants and a few paragraphs of text",
+   "kaynak_alinti": "Each page displays one or two plants and a few paragraphs of text"
+  },
+  {
+   "iddia": "a format typical of European herbals of the time",
+   "kaynak_alinti": "a format typical of European herbals of the time"
+  },
+  {
+   "iddia": "Astronomical, 17 pages",
+   "kaynak_alinti": "Astronomical, 17 pages"
+  },
+  {
+   "iddia": "Contains circular diagrams suggestive of astronomy or astrology",
+   "kaynak_alinti": "Contains circular diagrams suggestive of astronomy or astrology"
+  },
+  {
+   "iddia": "some of them with suns, moons, and stars",
+   "kaynak_alinti": "some of them with suns, moons, and stars"
+  },
+  {
+   "iddia": "Balneological, 20 pages",
+   "kaynak_alinti": "Balneological, 20 pages"
+  },
+  {
+   "iddia": "A dense, continuous text interspersed with drawings",
+   "kaynak_alinti": "A dense, continuous text interspersed with drawings"
+  },
+  {
+   "iddia": "mostly showing small nude women, some wearing crowns",
+   "kaynak_alinti": "mostly showing small nude women, some wearing crowns"
+  },
+  {
+   "iddia": "bathing in pools or tubs connected by an elaborate network of pipes",
+   "kaynak_alinti": "bathing in pools or tubs connected by an elaborate network of pipes"
+  },
+  {
+   "iddia": "Cosmological, 14 pages",
+   "kaynak_alinti": "Cosmological, 14 pages"
+  },
+  {
+   "iddia": "More circular diagrams, but they are of an obscure nature",
+   "kaynak_alinti": "More circular diagrams, but they are of an obscure nature"
+  },
+  {
+   "iddia": "Pharmaceutical, 16 pages",
+   "kaynak_alinti": "Pharmaceutical, 16 pages"
+  },
+  {
+   "iddia": "Many labelled drawings of isolated plant parts",
+   "kaynak_alinti": "Many labelled drawings of isolated plant parts"
+  },
+  {
+   "iddia": "objects resembling apothecary jars",
+   "kaynak_alinti": "objects resembling apothecary jars"
+  },
+  {
+   "iddia": "ranging in style from the mundane to the fantastical",
+   "kaynak_alinti": "ranging in style from the mundane to the fantastical"
+  },
+  {
+   "iddia": "and a few text paragraphs",
+   "kaynak_alinti": "and a few text paragraphs"
+  },
+  {
+   "iddia": "İlk teyit edilmiş sahibi Georg Baresch'tir.",
+   "kaynak_alinti": "The first confirmed owner was Georg Baresch, a 17th-century alchemist from Prague."
+  },
+  {
+   "iddia": "1639 yılındaki mektup en eski kaynaktır.",
+   "kaynak_alinti": "The 1639 letter from Baresch to Kircher is the earliest known mention of the manuscript to have been confirmed."
+  },
+  {
+   "iddia": "Baresch'in ölümüyle kitap Marci'ye geçmiştir.",
+   "kaynak_alinti": "Upon Baresch's death, the manuscript passed to his friend Jan Marek Marci (also known as Johannes Marcus Marci), then rector of Charles University in Prague."
+  },
+  {
+   "iddia": "Dr. Raphael kitaba 600 dukat ödendiğini söylemiştir.",
+   "kaynak_alinti": "Dr. Raphael, a tutor in the Bohemian language to Ferdinand III, then King of Bohemia, told me the said book belonged to the Emperor Rudolf and that he presented to the bearer who brought him the book 600 ducats."
+  },
+  {
+   "iddia": "İlk sayfada Jacobus Horcicky de Tepenecz'in neredeyse görünmez imzası yer alır.",
+   "kaynak_alinti": "kitabın ilk sayfasında, Rudolph'un Prag'daki botanik bahçelerinin başı olan Jacobus Horcicky de Tepenecz'in neredeyse görünmez adı veya imzasıdır."
+  },
+  {
+   "iddia": "Sonraki 200 yıl boyunca kitaba ait hiçbir kayıt yoktur ve eser muhtemelen Collegio Romano kütüphanesinde kalmıştır.",
+   "kaynak_alinti": "Sonraki 200 yıl boyunca kitaba ait herhangi bir kayda rastlanmıyor. Ama kitap muhtemelen, II. Vittorio Emanuele'in birliklerinin şehri 1870'te ele geçirip Papalık Devletleri ilhak etmesine kadar Collegio Romano'nun kütüphanesinde kaldı."
+  },
+  {
+   "iddia": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912.",
+   "kaynak_alinti": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912."
+  },
+  {
+   "iddia": "In 1930, the manuscript was inherited after Wilfrid's death by his widow Ethel Voynich, author of the novel The Gadfly and daughter of mathematician George Boole.",
+   "kaynak_alinti": "In 1930, the manuscript was inherited after Wilfrid's death by his widow Ethel Voynich, author of the novel The Gadfly and daughter of mathematician George Boole."
+  },
+  {
+   "iddia": "In 1961, Nill sold the book to antique book dealer Hans P. Kraus.",
+   "kaynak_alinti": "In 1961, Nill sold the book to antique book dealer Hans P. Kraus."
+  },
+  {
+   "iddia": "Since 1969, it has been held in Yale University's Beinecke Rare Book and Manuscript Library.",
+   "kaynak_alinti": "Since 1969, it has been held in Yale University's Beinecke Rare Book and Manuscript Library."
+  },
+  {
+   "iddia": "In 2020, Yale University published the entire manuscript online in its digital library.",
+   "kaynak_alinti": "In 2020, Yale University published the entire manuscript online in its digital library."
+  },
+  {
+   "iddia": "1903 yılında Collegio Romano para sıkıntısı nedeniyle bazı koleksiyonlarını satmaya karar verdi ve satış 1912'de yapıldı",
+   "kaynak_alinti": "In 1903, the Society of Jesus (Collegio Romano) was short of money and decided to sell some of its holdings discreetly to the Vatican Library. The sale took place in 1912"
+  },
+  {
+   "iddia": "Ethel Voynich 1960'ta öldü ve el yazmasını Anne Nill'e bıraktı",
+   "kaynak_alinti": "She died in 1960 and left the manuscript to her close friend Anne Nill."
+  },
+  {
+   "iddia": "Voynich el yazması hem profesyonel hem de amatör kriptograflar tarafından incelenmiştir.",
+   "kaynak_alinti": "The Voynich manuscript has been studied by both professional and amateur cryptographers, including American and British codebreakers from both World War I and World War II."
+  },
+  {
+   "iddia": "Prescott Currier, William Friedman, Elizebeth Friedman ve John Tiltman başarılı olamamıştır.",
+   "kaynak_alinti": "Codebreakers Prescott Currier, William Friedman, Elizebeth Friedman, and John Tiltman were unsuccessful."
+  },
+  {
+   "iddia": "El yazması asla kanıtlanabilir şekilde deşifre edilmemiştir.",
+   "kaynak_alinti": "The manuscript has never been demonstrably deciphered, and none of the proposed hypotheses have been independently verified."
+  },
+  {
+   "iddia": "1969 yılından beri Yale Üniversitesi'nde tutulmaktadır.",
+   "kaynak_alinti": "Since 1969, it has been held in Yale University's Beinecke Rare Book and Manuscript Library."
+  },
+  {
+   "iddia": "Anlam ve kökeninin gizemi spekülasyonları tetiklemiştir.",
+   "kaynak_alinti": "The mystery of its meaning and origin has excited speculation and provoked study."
+  },
+  {
+   "iddia": "2004 yılında kütüphane dijital taramaları çevrimiçi yaptı.",
+   "kaynak_alinti": "2004 yılında, Beinecke Nadir Kitap ve El Yazması Kütüphanesi yüksek çözünürlüklü dijital taramaları çevrimiçi olarak halka açık hale getirdi"
+  },
+  {
+   "iddia": "El yazması birçok çalışmaya ilham kaynağı olmuştur.",
+   "kaynak_alinti": "El yazması birçok çalışmaya ilham kaynağı olmuştur"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Voynich_manuscript",
+  "https://tr.wikipedia.org/wiki/Voynich_el_yazmas%C4%B1"
+ ]
+}
