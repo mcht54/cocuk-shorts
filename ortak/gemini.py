@@ -12,7 +12,7 @@ import time
 import requests
 
 MODELLER = [m for m in os.environ.get("GEMINI_MODELLER", "").split(",") if m] or [
-    "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash"]
+    "gemini-flash-latest", "gemini-flash-lite-latest"]
 ARA_BEKLEME = float(os.environ.get("GEMINI_ARA_BEKLEME", "7"))
 SINIR = int(os.environ.get("GEMINI_CAGRI_SINIRI", "100"))  # bir çalıştırmada en çok çağrı
 CAGRI = 0
@@ -28,6 +28,13 @@ def _json_ayikla(metin):
     if metin.startswith("```"):
         metin = re.sub(r"^```(json)?|```$", "", metin, flags=re.M).strip()
     return json.loads(metin)
+
+
+def _ozet(metin):
+    try:
+        return json.loads(metin)["error"]["message"][:160]
+    except (ValueError, KeyError, TypeError):
+        return metin[:160]
 
 
 def sor(istem, sicaklik=0.9, json_cikti=True):
@@ -66,8 +73,11 @@ def sor(istem, sicaklik=0.9, json_cikti=True):
                     son_hata = f"{model}: yanıt ayrıştırılamadı ({e})"
                     continue
             son_hata = f"{model}: {r.status_code} {r.text[:200]}"
+            print(f"    [gemini] {model} {r.status_code}: {_ozet(r.text)}", flush=True)
             if r.status_code == 404:  # model kaldırılmış: sıradakine geç
                 break
+            if r.status_code == 429 and re.search(r"per ?day|PerDay|daily", r.text, re.I):
+                break  # günlük ücretsiz kota bitti: beklemek işe yaramaz, sıradaki model
             if r.status_code in (429, 500, 502, 503, 504):
                 time.sleep(30 * (deneme + 1))
                 continue

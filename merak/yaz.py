@@ -176,8 +176,23 @@ def kaynak_metni(paket):
     return (paket["metin_en"] + "\n\n" + paket.get("metin_tr", "")).strip()
 
 
-def _boslukla(m):
-    return re.sub(r"\s+", " ", m).strip().lower()
+def _kelimeler(m):
+    return re.findall(r"\w+", m.lower())
+
+
+def alinti_var(alinti, kaynak_dortluler):
+    """Alıntı kaynakta geçiyor mu: kelime dörtlülerinin en az %60'ı kaynakta (noktalama/ufak farklara dayanıklı)."""
+    kumesi, duz = kaynak_dortluler
+    k = _kelimeler(alinti)
+    if len(k) < 4:  # çok kısa alıntı: kelime sınırlarıyla birebir aranır
+        return bool(k) and f" {' '.join(k)} " in duz
+    d = [tuple(k[i:i + 4]) for i in range(len(k) - 3)]
+    return sum(x in kumesi for x in d) >= 0.6 * len(d)
+
+
+def dortluler(kaynak):
+    k = _kelimeler(kaynak)
+    return {tuple(k[i:i + 4]) for i in range(len(k) - 3)}, f" {' '.join(k)} "
 
 
 def sayi_denetimi(metin, kaynak_sayilari):
@@ -361,9 +376,9 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
     eksik = sayi_denetimi(metin + " " + " ".join(p.get("yazi", "") for p in parcalar), kaynak_sayilari)
     if eksik:
         h.append(f"kaynakta geçmeyen sayılar: {', '.join(sorted(eksik))} (kaynaktaki değeri kullan ya da çıkar)")
-    kaynak_b = _boslukla(kaynak)
-    iddialar = [i for i in s.get("iddialar", []) if isinstance(i, dict) and i.get("kaynak_alinti")]
-    tutan = [i for i in iddialar if _boslukla(i["kaynak_alinti"])[:120] in kaynak_b]
+    kaynak_d = dortluler(kaynak)
+    iddialar = [i for i in s.get("iddialar", []) if isinstance(i, dict) and isinstance(i.get("kaynak_alinti"), str)]
+    tutan = [i for i in iddialar if alinti_var(i["kaynak_alinti"], kaynak_d)]
     if len(iddialar) < (8 if uzun else 3):
         h.append("iddialar listesi yetersiz (her somut bilgi için kaynaktan alıntı)")
     elif len(tutan) < 0.8 * len(iddialar):
@@ -468,12 +483,12 @@ def bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari):
             h.append(f"parça {i}: seslendirilemeyecek işaret/bağlantı var")
         if len(p["metin"].split()) > 40:
             h.append(f"parça {i}: cümle çok uzun (en çok 24 kelimelik cümleler yaz)")
-    kaynak_b = _boslukla(kaynak)
-    iddialar = [i for i in b.get("iddialar", []) if isinstance(i, dict) and isinstance(i.get("kaynak_alinti"), str)]
-    if not iddialar:
-        h.append("iddialar listesi boş (her somut bilgi için kaynaktan birebir alıntı)")
-    elif sum(_boslukla(i["kaynak_alinti"])[:120] in kaynak_b for i in iddialar) < 0.8 * len(iddialar):
-        h.append("iddiaların alıntıları kaynakta birebir bulunamadı; kaynaktan kelimesi kelimesine kopyala")
+    # kaynakta bulunmayan alıntılar atılır (doğruluk asıl sayı + yapay zekâ denetimiyle); en az biri tutmalı
+    kaynak_d = dortluler(kaynak)
+    b["iddialar"] = [i for i in b.get("iddialar", []) if isinstance(i, dict)
+                     and isinstance(i.get("kaynak_alinti"), str) and alinti_var(i["kaynak_alinti"], kaynak_d)]
+    if not b["iddialar"]:
+        h.append("iddialar: kaynaktan kelimesi kelimesine kopyalanmış alıntı yok (İngilizce kaynaktan birebir kopyala)")
     return h
 
 
@@ -503,6 +518,36 @@ def _bolum_hazirla(ham, gorsel_sayisi):
     return gorsel_onar(b, gorsel_sayisi)
 
 
+EK_ISTEM = """Belgeselin "{ad}" bölümü {eksik} kelime kısa. Bu bölüme, KAYNAK METİN'den henüz anlatılmamış bilgilerle
+yaklaşık {eksik} kelimelik 2-3 YENİ parça yaz (her parça 1-2 kısa cümle). Mevcut parçaları TEKRARLAMA.
+Mevcut bölüm: {mevcut}
+
+{kurallar}
+
+GÖRSEL LİSTESİ (numara: açıklama):
+{gorseller}
+
+KAYNAK METİN:
+{kaynak}
+
+Yalnızca YENİ parçaları döndür: {{"parcalar": [{{"metin": "", "gorsel": [0]}}],
+ "iddialar": [{{"iddia": "", "kaynak_alinti": "kaynaktan birebir kısa alıntı"}}]}}"""
+
+
+def _kelime(b):
+    return len(" ".join(p["metin"] for p in b["parcalar"]).split())
+
+
+def kirp(b, ust):
+    """Uzun bölümü kodla kısaltır: sondan (ilk ve grafikli parça hariç) parça atar. Gemini'ye gitmez."""
+    while _kelime(b) > ust:
+        adaylar = [i for i in range(len(b["parcalar"]) - 1, 0, -1) if not b["parcalar"][i].get("grafik")]
+        if not adaylar or _kelime(b) - len(b["parcalar"][adaylar[0]]["metin"].split()) < 0.85 * ust:
+            break
+        b["parcalar"].pop(adaylar[0])
+    return b
+
+
 def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki):
     pb = plan["bolumler"][no]
     alt, ust = bolum_araligi(len(plan["bolumler"]), no)
@@ -522,6 +567,19 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
             h = ["JSON yapısı şemaya uymuyor; parcalar listesi boş ya da hatalı"]
         else:
             _grafik_yerlestir(b, grafik)
+            kirp(b, ust)
+            if _kelime(b) < alt:  # kısa: yalnız yeni parça iste, mevcutlara ekle
+                ek = gemini.sor(EK_ISTEM.format(ad=pb["ad"], eksik=(alt + ust) // 2 - _kelime(b),
+                                                mevcut=" ".join(p["metin"] for p in b["parcalar"]),
+                                                kurallar=ortak["kurallar"], gorseller=ortak["gorseller"],
+                                                kaynak=ortak["kaynak"]), sicaklik=0.7)
+                ek = _bolum_hazirla(ek, len(gorseller))
+                if ek:
+                    for p in ek["parcalar"]:
+                        p.pop("grafik", None)
+                    b["parcalar"] += ek["parcalar"]
+                    b["iddialar"] += ek["iddialar"]
+                    kirp(b, ust)
             h = bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari)
             if not h:
                 h = _ai_denetim(b, kaynak)
@@ -530,9 +588,11 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
         print(f"    bölüm {no + 1} düzeltme {tur + 1}: {h[:3]}", flush=True)
         if tur == DENEME - 1:
             break
+        mevcut = ({"parcalar": [dict(p, grafik=True) if p.get("grafik") else p for p in b["parcalar"]],
+                   "iddialar": b["iddialar"]} if b else ham)
         ham = gemini.sor(BOLUM_DUZELT_ISTEM.format(ad=pb["ad"], hatalar="\n".join("- " + x for x in h), alt=alt,
                                                    ust=ust, kaynak=ortak["kaynak"],
-                                                   bolum=json.dumps(ham, ensure_ascii=False)), sicaklik=0.3)
+                                                   bolum=json.dumps(mevcut, ensure_ascii=False)), sicaklik=0.3)
     return None
 
 

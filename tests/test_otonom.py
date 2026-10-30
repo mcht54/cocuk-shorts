@@ -80,6 +80,12 @@ class MerakDenetimTesti(unittest.TestCase):
         self.assertTrue(all(x["gorsel"] == [2] and len(x["metin"].split()) <= yaz.PARCA_KELIME for x in parcalar))
         self.assertEqual([("grafik" in x) for x in parcalar], [True] + [False] * (len(parcalar) - 1))
 
+    def test_alinti_noktalama_farkina_dayanikli(self):
+        d = yaz.dortluler(KAYNAK)
+        self.assertTrue(yaz.alinti_var("could shelter 20,000 people, with their livestock", d))
+        self.assertTrue(yaz.alinti_var("in 1963", d))
+        self.assertFalse(yaz.alinti_var("it was built by aliens from another galaxy", d))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:
@@ -101,8 +107,16 @@ class MerakBolumBolumTesti(unittest.TestCase):
             return {"baslik": "Yeraltı şehri", "kapak_yazisi": "YERİN ALTINDA", "kapak_gorsel": 99, "aciklama": "a",
                     "etiketler": ["x"], "bolumler": [{"ad": f"Bölüm {i}", "anlatilacak": ["x"], "grafik": g}
                                                      for i, g in enumerate(grafikler)]}
+        if "kelime kısa" in istem:
+            self.ek_istendi += 1
+            eksik = int(re.search(r"(\d+) kelime kısa", istem).group(1))
+            cumle = "Araştırmacılar yıllarca bu tünellerin gizemini çözmeye çalıştı."
+            return {"parcalar": [{"metin": cumle, "gorsel": [3]}] * (eksik // 8 + 1),
+                    "iddialar": [{"iddia": "y", "kaynak_alinti": "It extends to a depth of approximately 85 m"}]}
         if "bölümünü yaz" in istem:
             hedef = int(re.search(r"yaklaşık (\d+) kelime hedefle", istem).group(1))
+            no = int(re.search(r"\) (\d+)\. bölümünü", istem).group(1))
+            hedef = {2: hedef // 2, 3: int(hedef * 1.6)}.get(no, hedef)  # 2. bölüm kısa, 3. uzun gelir
             cumle = "Karanlık koridorlar yerin altında sessizce uzanıyordu ve kimse sonunu bilmiyordu."
             n = hedef // len(cumle.split())
             uzun = " ".join([cumle] * 3)  # 3 cümlelik uzun parça: kodla bölünmeli
@@ -115,9 +129,11 @@ class MerakBolumBolumTesti(unittest.TestCase):
     def test_plan_ve_bolumler_birlesince_denetimden_gecer(self):
         sayilar = yaz.sayilar(KAYNAK)
         ortak = dict(konu="Derinkuyu", calisma="", kurallar="", gorseller="", kaynak=KAYNAK)
+        self.ek_istendi = 0
         with mock.patch.object(yaz.gemini, "sor", side_effect=self.sahte_gemini):
             s = yaz.uzun_yaz(ortak, [{}] * 5, KAYNAK, sayilar, None)
         self.assertIsNotNone(s)
+        self.assertEqual(self.ek_istendi, 1)  # kısa bölüm ek parçayla tamamlandı; uzun bölüm kodla kırpıldı
         self.assertEqual(len(s["bolumler"]), 8)
         grafikler = [p["grafik"] for b in s["bolumler"] for p in b["parcalar"] if p.get("grafik")]
         self.assertEqual(len(grafikler), 6)  # kaynakta olmayan 4321 kodla atıldı
