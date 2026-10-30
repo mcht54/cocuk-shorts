@@ -2,6 +2,7 @@ name: Sağlık denetimi
 
 # Her gün: iki kanal yayın yapıyor mu, stok ve YouTube yetkileri yerinde mi. Sorun varsa "Otomasyon
 # uyarısı" issue'su açılır/güncellenir (GitHub sahibine e-posta gönderir), düzelince kapatılır.
+# Tek e-posta için iş yeşil biter; iş ancak denetimin kendisi bozulursa (issue yazılamazsa) kırmızı olur.
 # Nabız commit'i depoyu aktif tutar (GitHub 60 gün hareketsiz depoda zamanlanmış işleri kapatır).
 on:
   schedule:
@@ -64,6 +65,3 @@ jobs:
             git pull -q --rebase origin main && git push -q && exit 0
             sleep $((i * 5))
           done
-      - name: Sorun varsa iş başarısız görünsün
-        if: steps.d.outputs.kod != '0'
-        run: exit 1
