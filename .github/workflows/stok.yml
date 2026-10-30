@@ -1,0 +1,51 @@
+name: Stok doldurma (iki kanal)
+
+# Her gece: bekleyen içerik hedefin altındaysa Gemini ile yeni Fındık ile Pamuk bölümleri ve
+# Merak Arşivi konu/senaryoları yazılır, denetimden geçenler depoya eklenir.
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 03:30 TR
+  workflow_dispatch:
+    inputs:
+      kanal:
+        description: "masal / merak / hepsi"
+        default: "hepsi"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stok
+  cancel-in-progress: false
+
+jobs:
+  yaz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Stok doldur
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m otonom.stok --kanal "${{ inputs.kanal || 'hepsi' }}"
+      - name: Bölüm denetimi (tüm seri)
+        if: always()
+        run: python -m cocuk3d.bolum_denetle seri/findik-ile-pamuk
+      - name: Yeni içeriği depoya yaz
+        if: always()
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add seri/findik-ile-pamuk/bolumler merak/konular
+          git diff --cached --quiet && exit 0
+          git commit -q -m "stok: yeni içerik $(date -u +%F)"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

@@ -1,0 +1,86 @@
+name: Merak Arşivi yayın
+
+# Her gün 1 Shorts (19:00 TR), salı ve cuma 1 uzun belgesel (18:00 TR).
+# Kanal anahtarı MERAK_YT_REFRESH_TOKEN; yayın anahtarı MERAK_YAYIN (acik olmadıkça yalnız üretir).
+on:
+  schedule:
+    - cron: "0 16 * * *"     # Shorts
+    - cron: "0 15 * * 2,5"   # uzun belgesel
+  workflow_dispatch:
+    inputs:
+      profil:
+        description: "shorts / uzun"
+        default: "shorts"
+      konu:
+        description: "Belirli konu kimliği (boş = sıradaki), ör. derinkuyu-underground-city"
+        required: false
+      senaryo:
+        description: "Belirli senaryo (uzun, kisa1...)"
+        required: false
+      yayin:
+        description: "otomatik = depo ayarına uy; hayir = yalnız üret ve denetle (deneme)"
+        default: "otomatik"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merak
+  cancel-in-progress: false
+
+jobs:
+  yayin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Üret, denetle, (izinliyse) yükle
+        env:
+          YAYIN: ${{ inputs.yayin == 'hayir' && 'kapali' || vars.MERAK_YAYIN || 'kapali' }}
+          MERAK_GIZLILIK: ${{ vars.MERAK_GIZLILIK || 'private' }}
+          YT_HERKESE_ACIK_ONAY: ${{ vars.YT_HERKESE_ACIK_ONAY || 'hayir' }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.MERAK_YT_REFRESH_TOKEN }}
+        run: |
+          PROFIL="${{ inputs.profil }}"
+          if [ -z "$PROFIL" ]; then
+            if [ "${{ github.event.schedule }}" = "0 15 * * 2,5" ]; then PROFIL=uzun; else PROFIL=shorts; fi
+          fi
+          ARG=""
+          if [ -n "${{ inputs.konu }}" ]; then ARG="--konu ${{ inputs.konu }} --senaryo ${{ inputs.senaryo || 'uzun' }}"; fi
+          python -m merak.yayinla --profil "$PROFIL" $ARG
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: merak-${{ github.run_id }}
+          path: |
+            merak/cikti/*.mp4
+            merak/cikti/*.jpg
+            merak/cikti/*.txt
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Kaydı depoya yaz
+        if: always()
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          cp merak/kayit.json "$RUNNER_TEMP/kayit.json" 2>/dev/null || echo "[]" > "$RUNNER_TEMP/kayit.json"
+          mkdir -p "$RUNNER_TEMP/kaynaklar"
+          for f in merak/konular/*/KAYNAKLAR.md; do [ -f "$f" ] && mkdir -p "$RUNNER_TEMP/kaynaklar/$(dirname $f)" && cp "$f" "$RUNNER_TEMP/kaynaklar/$f"; done
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python -m ortak.kayit merak/kayit.json "$RUNNER_TEMP/kayit.json"
+            cp -r "$RUNNER_TEMP/kaynaklar/merak" . 2>/dev/null || true
+            git add merak/kayit.json merak/konular
+            git diff --cached --quiet && exit 0
+            git commit -q -m "merak kayıt: $(date -u +%F)" && git push -q && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

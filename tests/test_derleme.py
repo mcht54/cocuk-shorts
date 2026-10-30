@@ -18,9 +18,18 @@ class SecimTesti(unittest.TestCase):
         b = [f"seri/findik-ile-pamuk/bolumler/b{n:03d}.json" for n in range(1, 6)]
         kayitlar = [{"bolum": b[0], "profil": "shorts", "durum": "uretildi"}]
         kayitlar += [{"bolum": x, "profil": "shorts", "durum": "yuklendi"} for x in b]
-        kayitlar.append({"bolum": "derleme", "profil": "derleme", "durum": "yuklendi", "parcalar": [b[0]]})
+        kayitlar.append({"bolum": "derleme", "profil": "derleme", "durum": "yuklendi", "parcalar": [b[0]],
+                         "youtube": {"privacyStatus": "public"}})
         with self._kayit(kayitlar):
             self.assertEqual(derleme.sec(), b[1:])
+
+    def test_gizli_deneme_derlemesi_bolum_tuketmez(self):
+        b = [f"seri/findik-ile-pamuk/bolumler/b{n:03d}.json" for n in range(1, 4)]
+        kayitlar = [{"bolum": x, "profil": "shorts", "durum": "yuklendi"} for x in b]
+        kayitlar.append({"bolum": "derleme", "profil": "derleme", "durum": "yuklendi", "parcalar": b,
+                         "youtube": {"privacyStatus": "private"}})
+        with self._kayit(kayitlar):
+            self.assertEqual(derleme.sec(), b)
 
     def test_yetersiz_bolumde_derleme_yok(self):
         with self._kayit([{"bolum": "seri/findik-ile-pamuk/bolumler/b001.json", "profil": "shorts",

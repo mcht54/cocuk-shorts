@@ -48,8 +48,9 @@ def sec(bolum_nolari=None):
         secilen = [f"seri/findik-ile-pamuk/bolumler/b{int(n):03d}.json" for n in bolum_nolari]
     else:
         k = kayitlar()
+        # gizli deneme derlemeleri sayılmaz: bölümleri herkese açık derlemeye yine girer
         derlenen = {b for x in k if x.get("profil") == "derleme" and x.get("durum") == "yuklendi"
-                    for b in x.get("parcalar", [])}
+                    and (x.get("youtube") or {}).get("privacyStatus") == "public" for b in x.get("parcalar", [])}
         secilen = []
         for x in k:
             if (x.get("profil") == "shorts" and x.get("durum") == "yuklendi"

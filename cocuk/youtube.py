@@ -22,7 +22,8 @@ class OnaySiz(PermissionError):
     """Herkese açık/liste dışı yükleme açık kullanıcı onayı olmadan istendi."""
 
 
-def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=True, sentetik=True):
+def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=True, sentetik=True,
+          cocuklar=True, kategori="27", hazir_aciklama=False):
     """Videoyu yükler; (video_id, YouTube'un döndürdüğü gerçek status) verir.
 
     gizlilik her zaman açıkça gönderilir (varsayılana güvenilmez). private dışı her değer
@@ -37,18 +38,20 @@ def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=T
         baslik = (baslik + " #shorts")[:100]
     aciklama = (senaryo.get("aciklama", "") + "\n\n"
                 + " ".join("#" + e.replace(" ", "") for e in senaryo.get("etiketler", [])[:5]))
+    if hazir_aciklama:  # açıklama zaten tam (bölüm zamanları, kaynaklar): olduğu gibi gönder
+        aciklama = senaryo["aciklama"]
     govde = {
         "snippet": {
             "title": baslik,
             "description": aciklama[:4900],
             "tags": senaryo.get("etiketler", [])[:15],
-            "categoryId": "27",  # Eğitim
+            "categoryId": kategori,  # 27 = Eğitim
             "defaultLanguage": "tr",
             "defaultAudioLanguage": "tr",
         },
         "status": {
             "privacyStatus": gizlilik,
-            "selfDeclaredMadeForKids": True,  # içerik 3-7 yaş çocuklara yönelik (COPPA)
+            "selfDeclaredMadeForKids": cocuklar,  # Minik Masal Evi: 3-7 yaş (COPPA); Merak Arşivi: hayır
             "containsSyntheticMedia": sentetik,
             "embeddable": True,
         },

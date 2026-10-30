@@ -1,0 +1,85 @@
+{
+ "baslik": "Evinin duvarını yıktı, altından bir şehir çıktı",
+ "ekran_basligi": "Duvarın arkasında ne vardı?",
+ "aciklama": "1963'te Kapadokya'da evini yenileyen bir adam, yerin 85 metre altına inen Derinkuyu yeraltı şehrini buldu.",
+ "etiketler": [
+  "Derinkuyu",
+  "yeraltı şehri",
+  "Kapadokya",
+  "tarih",
+  "gizem",
+  "ilginç bilgiler",
+  "Nevşehir",
+  "shorts"
+ ],
+ "parcalar": [
+  {
+   "metin": "1963 yılında Kapadokya'da bir adam evini yeniliyordu.",
+   "gorsel": [
+    61
+   ]
+  },
+  {
+   "metin": "Bodrumundaki duvarı yıktığında, arkasında gizli bir tünel buldu.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Bu tünel, yerin yaklaşık 85 metre altına inen dev bir şehre açılıyordu.",
+   "gorsel": [
+    33
+   ]
+  },
+  {
+   "metin": "Burası, Türkiye'de kazılarak ortaya çıkarılmış en büyük yeraltı şehri: Derinkuyu.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Tahminlere göre 20.000 kişi, hayvanları ve yiyecekleriyle birlikte burada saklanabiliyordu.",
+   "gorsel": [
+    27
+   ]
+  },
+  {
+   "metin": "Havayı yukarıdan alt katlara taşıyan dikey bacalar sayesinde, derinlerde bile nefes alınabiliyordu.",
+   "gorsel": [
+    42
+   ]
+  },
+  {
+   "metin": "Peki bu şehri kim, ne zaman kazdı? Tüm hikâye kanalımızda.",
+   "gorsel": [
+    7
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "1963'te keşif",
+   "kaynak_alinti": "Knowledge of the city faded until 1963, when it was rediscovered after a resident of the area, while renovating his home"
+  },
+  {
+   "iddia": "85 m",
+   "kaynak_alinti": "extending to a depth of approximately 85 metres"
+  },
+  {
+   "iddia": "20.000 kişi",
+   "kaynak_alinti": "large enough to have sheltered as many as 20,000 people together with their livestock and food stores"
+  },
+  {
+   "iddia": "en büyük",
+   "kaynak_alinti": "It is the largest excavated underground city"
+  },
+  {
+   "iddia": "havalandırma",
+   "kaynak_alinti": "The complex possesses a large amount of vertical ventilation shafts"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Derinkuyu_underground_city",
+  "https://tr.wikipedia.org/wiki/Derinkuyu_Yeralt%C4%B1_%C5%9Eehri"
+ ]
+}

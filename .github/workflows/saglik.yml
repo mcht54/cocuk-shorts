@@ -1,0 +1,69 @@
+name: Sağlık denetimi
+
+# Her gün: iki kanal yayın yapıyor mu, stok ve YouTube yetkileri yerinde mi. Sorun varsa "Otomasyon
+# uyarısı" issue'su açılır/güncellenir (GitHub sahibine e-posta gönderir), düzelince kapatılır.
+# Nabız commit'i depoyu aktif tutar (GitHub 60 gün hareketsiz depoda zamanlanmış işleri kapatır).
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 09:00 TR
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  denetle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - id: d
+        env:
+          YAYIN: ${{ vars.YAYIN }}
+          MERAK_BASLANGIC: ${{ vars.MERAK_BASLANGIC }}
+          DERLEME_BASLANGIC: ${{ vars.DERLEME_BASLANGIC }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          MERAK_YT_REFRESH_TOKEN: ${{ secrets.MERAK_YT_REFRESH_TOKEN }}
+        run: |
+          set +e
+          python -m otonom.saglik
+          echo "kod=$?" >> "$GITHUB_OUTPUT"
+      - name: Uyarı issue'su
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NO=$(gh issue list --label otomasyon-uyarisi --state open --json number --jq '.[0].number')
+          if [ "${{ steps.d.outputs.kod }}" != "0" ]; then
+            gh label create otomasyon-uyarisi --color d93f0b 2>/dev/null || true
+            if [ -n "$NO" ]; then
+              gh issue comment "$NO" --body-file "$RUNNER_TEMP/saglik.md"
+            else
+              gh issue create --title "Otomasyon uyarısı: kanallarda sorun var" --label otomasyon-uyarisi \
+                --assignee "${{ github.repository_owner }}" --body-file "$RUNNER_TEMP/saglik.md"
+            fi
+          elif [ -n "$NO" ]; then
+            gh issue close "$NO" --comment "Sorunlar giderildi, sağlık denetimi temiz."
+          fi
+      - name: Nabız
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add otonom/nabiz.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "nabız: $(date -u +%F)"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep $((i * 5))
+          done
+      - name: Sorun varsa iş başarısız görünsün
+        if: steps.d.outputs.kod != '0'
+        run: exit 1
