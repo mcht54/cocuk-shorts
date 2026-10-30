@@ -456,7 +456,9 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
     kaynak_d = dortluler(kaynak)
     iddialar = [i for i in s.get("iddialar", []) if isinstance(i, dict) and isinstance(i.get("kaynak_alinti"), str)]
     tutan = [i for i in iddialar if alinti_var(i["kaynak_alinti"], kaynak_d)]
-    if len(iddialar) < (8 if uzun else 3):
+    if uzun:
+        pass  # uzun belgeselde her bölüm cümle cümle yapay zekâ denetiminden geçti; alıntı yalnız yardımcı
+    elif len(iddialar) < 3:
         h.append("iddialar listesi yetersiz (her somut bilgi için kaynaktan alıntı)")
     elif len(tutan) < 0.8 * len(iddialar):
         h.append("iddiaların alıntıları kaynakta birebir bulunamadı: "
@@ -576,8 +578,6 @@ def bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari):
     kaynak_d = dortluler(kaynak)
     b["iddialar"] = [i for i in b.get("iddialar", []) if isinstance(i, dict)
                      and isinstance(i.get("kaynak_alinti"), str) and alinti_var(i["kaynak_alinti"], kaynak_d)]
-    if not b["iddialar"]:
-        h.append("iddialar: kaynaktan kelimesi kelimesine kopyalanmış alıntı yok (İngilizce kaynaktan birebir kopyala)")
     return h
 
 
@@ -652,7 +652,83 @@ def kirp(b, ust):
     return b
 
 
+def parca_hatasi(p, kaynak_sayilari):
+    """Tek parçanın mekanik hatası (yoksa None): kod bu parçayı atar, Gemini'ye düzelttirilmez."""
+    metin = p["metin"] + " " + p.get("yazi", "")
+    if not p["metin"].strip():
+        return "boş"
+    if sayi_denetimi(metin, kaynak_sayilari):
+        return "kaynakta olmayan sayı"
+    if ingilizce_var(metin):
+        return "İngilizce"
+    if SAYI_KELIME.search(metin):
+        return "yazıyla sayı"
+    if YASAK.search(metin) or re.search(r"[()\[\]*#]|https?:", p["metin"]):
+        return "yasaklı ifade/işaret"
+    if len(p["metin"].split()) > 40:
+        return "çok uzun"
+    return None
+
+
+def _parca_at(b, i, kaynak_sayilari):
+    p = b["parcalar"].pop(i)
+    if p.get("grafik"):  # grafik kaybolmasın: kalan metindeki kaynak sayısından yeniden kurulur
+        otomatik_grafik(b, kaynak_sayilari)
+
+
+def ayikla(b, kaynak_sayilari):
+    """Mekanik hatalı parçaları atar; atılanların listesini döner."""
+    atilan = []
+    for i in range(len(b["parcalar"]) - 1, -1, -1):
+        h = parca_hatasi(b["parcalar"][i], kaynak_sayilari)
+        if h:
+            atilan.append(f"{h}: {b['parcalar'][i]['metin'][:50]}")
+            _parca_at(b, i, kaynak_sayilari)
+    return atilan
+
+
+def _sorunlu_cumleler(b, kaynak):
+    metin = "\n".join(p["metin"] for p in b["parcalar"])
+    sonuc = gemini.sor(DENETIM_ISTEM.format(kaynak=kaynak[:60000], metin=metin), sicaklik=0.1)
+    sorunlar = sonuc.get("sorunlar", []) if isinstance(sonuc, dict) else []
+    return [str(x.get("cumle") or "") for x in sorunlar if isinstance(x, dict) and x.get("cumle")]
+
+
+def cumleleri_at(b, cumleler, kaynak_sayilari):
+    """Doğruluk denetiminin işaretlediği cümlenin parçası atılır (en çok kelime örtüşen parça).
+    Eşleşmeyen işaret varsa False (bölüm güvenilir sayılmaz)."""
+    hepsi = True
+    for c in cumleler:
+        ck = set(_kelimeler(c))
+        if not ck or not b["parcalar"]:
+            continue
+        puan = [len(ck & set(_kelimeler(p["metin"]))) / len(ck) for p in b["parcalar"]]
+        i = max(range(len(puan)), key=puan.__getitem__)
+        if puan[i] >= 0.5:
+            _parca_at(b, i, kaynak_sayilari)
+        else:
+            hepsi = False
+    return hepsi
+
+
+def _ek_iste(b, pb, eksik, ortak, gorseller):
+    ek = _bolum_hazirla(gemini.sor(EK_ISTEM.format(
+        ad=pb["ad"], eksik=eksik, mevcut=" ".join(p["metin"] for p in b["parcalar"]), kurallar=ortak["kurallar"],
+        gorseller=ortak["gorseller"], kaynak=ortak["kaynak"]), sicaklik=0.7), len(gorseller))
+    if ek:
+        for p in ek["parcalar"]:
+            p.pop("grafik", None)
+        b["parcalar"] += ek["parcalar"]
+        b["iddialar"] += ek["iddialar"]
+
+
+BOLUM_TUR = 8
+
+
 def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki):
+    """Bölümü yazar ve yalnız İLERİ doğru onarır: hatalı parça kodla atılır, eksik uzunluğa yalnız yeni parça
+    eklenir (yeni parçalar da aynı denetimden geçer). Gemini'ye bölüm yeniden yazdırılmaz; bu, düzeltme
+    turlarında bölümün kısalıp bozulmasını engeller."""
     pb = plan["bolumler"][no]
     alt, ust = bolum_araligi(len(plan["bolumler"]), no)
     grafik = pb.get("grafik")
@@ -664,40 +740,34 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
                                plan=" | ".join(f"{i + 1}. {x['ad']}" for i, x in enumerate(plan["bolumler"])),
                                onceki=onceki[-6000:] or "(ilk bölüm)", kurallar=ortak["kurallar"],
                                gorseller=ortak["gorseller"], kaynak=ortak["kaynak"])
-    ham = gemini.sor(istem, sicaklik=0.8)
-    for tur in range(DENEME):
-        b = _bolum_hazirla(ham, len(gorseller))
-        if b is None:
-            h = ["JSON yapısı şemaya uymuyor; parcalar listesi boş ya da hatalı"]
-        else:
-            _grafik_yerlestir(b, grafik)
-            _anlatilmayan_grafik(b, kaynak_sayilari)
-            kirp(b, ust)
-            if _kelime(b) < alt:  # kısa: yalnız yeni parça iste, mevcutlara ekle
-                ek = gemini.sor(EK_ISTEM.format(ad=pb["ad"], eksik=(alt + ust) // 2 - _kelime(b),
-                                                mevcut=" ".join(p["metin"] for p in b["parcalar"]),
-                                                kurallar=ortak["kurallar"], gorseller=ortak["gorseller"],
-                                                kaynak=ortak["kaynak"]), sicaklik=0.7)
-                ek = _bolum_hazirla(ek, len(gorseller))
-                if ek:
-                    for p in ek["parcalar"]:
-                        p.pop("grafik", None)
-                    b["parcalar"] += ek["parcalar"]
-                    b["iddialar"] += ek["iddialar"]
-                    kirp(b, ust)
-            h = bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari)
-            if not h:
-                h = _ai_denetim(b, kaynak)
-            if not h:
-                return {"ad": pb["ad"], "parcalar": b["parcalar"], "iddialar": b["iddialar"]}
-        print(f"    bölüm {no + 1} düzeltme {tur + 1}: {h[:3]}", flush=True)
-        if tur == DENEME - 1:
+    b = None
+    for _ in range(3):
+        b = _bolum_hazirla(gemini.sor(istem, sicaklik=0.8), len(gorseller))
+        if b:
             break
-        mevcut = ({"parcalar": [dict(p, grafik=True) if p.get("grafik") else p for p in b["parcalar"]],
-                   "iddialar": b["iddialar"]} if b else ham)
-        ham = gemini.sor(BOLUM_DUZELT_ISTEM.format(ad=pb["ad"], hatalar="\n".join("- " + x for x in h), alt=alt,
-                                                   ust=ust, kaynak=ortak["kaynak"],
-                                                   bolum=json.dumps(mevcut, ensure_ascii=False)), sicaklik=0.3)
+    if not b:
+        return None
+    _grafik_yerlestir(b, grafik)
+    for tur in range(BOLUM_TUR):
+        atilan = ayikla(b, kaynak_sayilari)
+        _anlatilmayan_grafik(b, kaynak_sayilari)
+        kirp(b, ust)
+        if atilan:
+            print(f"    bölüm {no + 1}: {len(atilan)} parça atıldı {atilan[:2]}", flush=True)
+        if _kelime(b) < alt * BOLUM_TOLERANS:
+            print(f"    bölüm {no + 1}: {_kelime(b)} kelime, ek parça isteniyor", flush=True)
+            _ek_iste(b, pb, (alt + ust) // 2 - _kelime(b), ortak, gorseller)
+            continue
+        sorunlu = _sorunlu_cumleler(b, kaynak)
+        if not sorunlu:
+            gorsel_onar(b, len(gorseller))
+            return {"ad": pb["ad"], "parcalar": b["parcalar"], "iddialar": b["iddialar"]}
+        print(f"    bölüm {no + 1}: doğruluk denetimi {len(sorunlu)} cümle attı {[c[:50] for c in sorunlu[:2]]}",
+              flush=True)
+        if not cumleleri_at(b, sorunlu, kaynak_sayilari):
+            print(f"    bölüm {no + 1}: işaretli cümle bulunamadı, bölüm yeniden yazılıyor", flush=True)
+            b = _bolum_hazirla(gemini.sor(istem, sicaklik=0.8), len(gorseller)) or b
+            _grafik_yerlestir(b, grafik)
     return None
 
 

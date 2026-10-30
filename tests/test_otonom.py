@@ -118,6 +118,16 @@ class MerakDenetimTesti(unittest.TestCase):
         yaz._anlatilmayan_grafik(b, self.sayilar)
         self.assertEqual(b["parcalar"][0]["grafik"]["deger"], "20.000")
 
+    def test_hatali_parca_ve_isaretli_cumle_kodla_atilir(self):
+        b = {"parcalar": [{"metin": "Burada 20.000 kişi saklanabiliyordu.", "gorsel": [0]},
+                          {"metin": "Tam 4321 yıl önce yapıldı.", "gorsel": [0]},
+                          {"metin": "This city was very deep.", "gorsel": [0]},
+                          {"metin": "Uzaylılar şehri bir gecede kazdı.", "gorsel": [0]}], "iddialar": []}
+        self.assertEqual(len(yaz.ayikla(b, self.sayilar)), 2)
+        self.assertTrue(yaz.cumleleri_at(b, ["Uzaylılar şehri bir gecede kazdı"], self.sayilar))
+        self.assertEqual([p["metin"] for p in b["parcalar"]], ["Burada 20.000 kişi saklanabiliyordu."])
+        self.assertFalse(yaz.cumleleri_at(b, ["Tamamen başka bir cümle"], self.sayilar))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:
@@ -167,7 +177,7 @@ class MerakBolumBolumTesti(unittest.TestCase):
         with mock.patch.object(yaz.gemini, "sor", side_effect=self.sahte_gemini):
             s = yaz.uzun_yaz(ortak, [{}] * 5, KAYNAK, sayilar, None)
         self.assertIsNotNone(s)
-        self.assertGreaterEqual(self.ek_istendi, 2)  # kısa bölüm + toplam tamamlama; uzun bölüm kodla kırpıldı
+        self.assertGreaterEqual(self.ek_istendi, 1)  # kısa bölüm ek parçayla tamamlandı; uzun bölüm kodla kırpıldı
         self.assertGreaterEqual(sum(len(p["metin"].split()) for b in s["bolumler"] for p in b["parcalar"]),
                                 yaz.UZUN_KELIME[0])
         self.assertEqual(len(s["bolumler"]), 8)
