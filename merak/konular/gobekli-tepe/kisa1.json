@@ -1,15 +1,15 @@
 {
- "baslik": "Gokteki Ilk Tapinak Gobekli Tepe",
- "ekran_basligi": "Tarihin Sifir Noktasi",
- "aciklama": "Gobekli Tepe'nin kesif ve yapilis hikayesi.",
+ "baslik": "Gökteki İlk Tapınak Göbekli Tepe",
+ "ekran_basligi": "Tarihin Sıfır Noktası",
+ "aciklama": "Göbekli Tepe'nin keşif ve yapılış hikayesi.",
  "etiketler": [
-  "Gobeklitepe",
-  "Sanliurfa",
+  "Göbeklitepe",
+  "Şanlıurfa",
   "Tarih",
   "Arkeoloji",
   "UNESCO",
   "Medeniyet",
-  "TasTepeler"
+  "TaşTepeler"
  ],
  "parcalar": [
   {
@@ -69,5 +69,6 @@
  "kaynaklar": [
   "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
   "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
- ]
+ ],
+ "imla": true
 }

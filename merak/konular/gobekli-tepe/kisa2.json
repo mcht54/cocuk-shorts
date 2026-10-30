@@ -1,14 +1,14 @@
 {
- "baslik": "Siradisi T Bicimli Dikilitaslar",
- "ekran_basligi": "Gizemli Dikilitaslar",
+ "baslik": "Sıradışı T Biçimli Dikilitaşlar",
+ "ekran_basligi": "Gizemli Dikilitaşlar",
  "aciklama": "Megaltik sutunlar ve dikililitaslar hakkinda.",
  "etiketler": [
   "Dikilitaş",
   "Megalit",
   "Tarih",
   "Heykel",
-  "Gobeklitepe",
-  "Kult"
+  "Göbeklitepe",
+  "Kült"
  ],
  "parcalar": [
   {
@@ -18,7 +18,7 @@
    ],
    "grafik": {
     "tur": "harita",
-    "etiket": "Gizemli Dikilitaslar"
+    "etiket": "Gizemli Dikilitaşlar"
    }
   },
   {
@@ -67,5 +67,6 @@
  "kaynaklar": [
   "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
   "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
- ]
+ ],
+ "imla": true
 }

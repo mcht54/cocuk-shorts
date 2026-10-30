@@ -1,14 +1,14 @@
 {
- "baslik": "Aslan ve Yilan Kabartmalari",
+ "baslik": "Aslan ve Yılan Kabartmaları",
  "ekran_basligi": "Yabani Hayvanlar",
- "aciklama": "Gobekli Tepe'deki hayvan kabartmalari.",
+ "aciklama": "Göbekli Tepe'deki hayvan kabartmaları.",
  "etiketler": [
   "Kabartma",
   "Aslan",
-  "Yilan",
+  "Yılan",
   "Arkeoloji",
-  "Gobeklitepe",
-  "Sanliurfa"
+  "Göbeklitepe",
+  "Şanlıurfa"
  ],
  "parcalar": [
   {
@@ -67,5 +67,6 @@
  "kaynaklar": [
   "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
   "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
- ]
+ ],
+ "imla": true
 }

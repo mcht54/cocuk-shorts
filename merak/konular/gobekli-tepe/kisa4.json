@@ -1,14 +1,14 @@
 {
- "baslik": "Klaus Schmidt ve Kesif",
+ "baslik": "Klaus Schmidt ve Keşif",
  "ekran_basligi": "Klaus Schmidt",
  "aciklama": "Kazı tarihçesi ve Klaus Schmidt.",
  "etiketler": [
   "KlausSchmidt",
   "Kazı",
   "Tarih",
-  "Kesif",
-  "Gobeklitepe",
-  "Muzere"
+  "Keşif",
+  "Göbeklitepe",
+  "Müzere"
  ],
  "parcalar": [
   {
@@ -90,5 +90,6 @@
  "kaynaklar": [
   "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
   "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
- ]
+ ],
+ "imla": true
 }
