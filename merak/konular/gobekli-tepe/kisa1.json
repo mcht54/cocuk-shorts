@@ -1,0 +1,98 @@
+{
+ "baslik": "Göbekli Tepe'nin Mimari Sırları",
+ "ekran_basligi": "Dev Sütunların Sırrı",
+ "aciklama": "Göbekli Tepe'nin anıtsal dairesel yapıları ve dev sütunları.",
+ "etiketler": [
+  "Göbekli Tepe",
+  "Mimari",
+  "Megalit",
+  "Dikilitaş",
+  "Şanlıurfa",
+  "Tarih",
+  "Arkeoloji",
+  "Kültür"
+ ],
+ "parcalar": [
+  {
+   "metin": "Şanlıurfa yakınlarındaki Göbekli Tepe dev taş sütunlar ve büyük dairesel yapılardan oluşur.",
+   "gorsel": [
+    7
+   ]
+  },
+  {
+   "metin": "T biçimindeki 10 ila 12 dikilitaş yuvarlak planda dizilmiştir ve araları taş duvarlarla örülmüştür.",
+   "gorsel": [
+    5
+   ]
+  },
+  {
+   "metin": "Merkezdeki iki dikilitaş yaklaşık 5,5 metre yüksekliktedir.",
+   "gorsel": [
+    15
+   ],
+   "grafik": {
+    "tur": "karsilastirma",
+    "deger": 5,
+    "birim": "m",
+    "etiket": "Merkez Sütun",
+    "referans": "insan"
+   }
+  },
+  {
+   "metin": "Jeofizik araştırmaları toplam 300'e yakın dikilitaş bulunduğunu göstermektedir.",
+   "gorsel": [
+    43
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "300",
+    "birim": "dikilitaş",
+    "metin": "Toplam 300'e yakın dikilitaş tespit edilmiştir."
+   }
+  },
+  {
+   "metin": "C ve D yapılarının çapları 30 metredir.",
+   "gorsel": [
+    12
+   ]
+  },
+  {
+   "metin": "B yapısının çapı ise 15 metre olarak ölçülmüştür.",
+   "gorsel": [
+    5
+   ]
+  },
+  {
+   "metin": "Bütün bu yapıların gizemli hikâyesi YouTube kanalımızda seni bekliyor.",
+   "gorsel": [
+    26
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Yapıt, dünyanın bilinen en eski megalitleri olan taş sütunlarla, bir dizi büyük dairesel yapıdan oluşmaktadır.",
+   "kaynak_alinti": "Yapıt, dünyanın bilinen en eski megalitleri olan taş sütunlarla, bir dizi büyük dairesel yapıdan oluşmaktadır."
+  },
+  {
+   "iddia": "Çanak Çömleksiz Neolitik Çağ'a ait olduğu düşünülen bu yapıda T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiş, araları ise taş duvarlarla örülmüştür.",
+   "kaynak_alinti": "Çanak Çömleksiz Neolitik Çağ'a ait olduğu düşünülen bu yapıda T biçimindeki 10-12 dikilitaş yuvarlak planda dizilmiş, araları ise taş duvarlarla örülmüştür."
+  },
+  {
+   "iddia": "D Yapısı'nın merkez dikilitaşları yaklaşık 5,5 metre yüksekliktedir.",
+   "kaynak_alinti": "D Yapısı'nın merkez dikilitaşları yaklaşık 5,5 metre yüksekliktedir."
+  },
+  {
+   "iddia": "Jeofizik araştırmaları, bugüne kadar gün yüzüne çıkarılanlar da dahil olmak üzere Göbekli Tepe'deki yapılarda toplam 300'e yakın dikilitaş kullanılmış olduğunu göstermektedir.",
+   "kaynak_alinti": "Jeofizik araştırmaları, bugüne kadar gün yüzüne çıkarılanlar da dahil olmak üzere Göbekli Tepe'deki yapılarda toplam 300'e yakın dikilitaş kullanılmış olduğunu göstermektedir."
+  },
+  {
+   "iddia": "C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir.",
+   "kaynak_alinti": "C ve D yapılarının çapları 30 metre, B yapısının çapı ise 15 metredir."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
+  "https://tr.wikipedia.org/wiki/G%C3%B6beklitepe"
+ ]
+}
