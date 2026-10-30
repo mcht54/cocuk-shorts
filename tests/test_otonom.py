@@ -100,6 +100,13 @@ class MerakDenetimTesti(unittest.TestCase):
         self.assertEqual([o["yil"] for o in g["olaylar"]], ["1963", "MÖ 8. yüzyıl", "bugün"])
         self.assertIsNone(yaz.grafik_hatasi(g, None, self.sayilar))
 
+    def test_ingilizce_ve_anlatilmayan_grafik_yakalanir(self):
+        self.assertEqual(yaz.ingilizce_var("As of 2021, alanın yüzde 10'u kazıldı."), ["as", "of"])
+        self.assertEqual(yaz.ingilizce_var("Bu iş İstanbul'da başladı; değirmen taşını andıran kapılar."), [])
+        self.assertFalse(yaz.grafik_anlatimda_mi({"tur": "sayi", "deger": "17"}, "En çok hayvan figürü var."))
+        self.assertTrue(yaz.grafik_anlatimda_mi({"tur": "sayi", "deger": "20.000"}, "20.000 kişi saklanırdı."))
+        self.assertIn("çarpıcı değil", yaz.grafik_hatasi({"tur": "sayi", "deger": "2"}))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:
@@ -135,7 +142,7 @@ class MerakBolumBolumTesti(unittest.TestCase):
             hedef = {2: hedef // 2, 3: int(hedef * 1.6)}.get(no, int(hedef * 0.85) if no >= 4 else hedef)
             cumle = "Karanlık koridorlar yerin altında sessizce uzanıyordu ve kimse sonunu bilmiyordu."
             n = hedef // len(cumle.split())
-            uzun = " ".join([cumle] * 3)  # 3 cümlelik uzun parça: kodla bölünmeli
+            uzun = " ".join(["Derinlik 85 metre, nüfus 20.000 kişi, keşif 1963 yılındaydı."] + [cumle] * 2)  # bölünmeli
             parcalar = [{"metin": uzun, "gorsel": None, "grafik": True}] + [{"metin": cumle, "gorsel": [1]}] * (n - 3)
             return {"parcalar": parcalar, "iddialar": [{"iddia": "x", "kaynak_alinti": "discovered in 1963"}]}
         if "titizlikle denetle" in istem:

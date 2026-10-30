@@ -57,6 +57,14 @@ def noktala(metin, kelimeler):
     return out
 
 
+def kisa_yazar(yazar, sinir=38):
+    """Ekrandaki kredi için yazar adı: "from Athens, Greece" / parantez atılır, kelime ortasından kesilmez."""
+    y = re.sub(r"\s*\(.*?\)|\s+from\s+.*$", "", temiz(yazar)).strip() or temiz(yazar)
+    if len(y) <= sinir:
+        return y
+    return y[:sinir].rsplit(" ", 1)[0].rstrip(",;-") + "…"
+
+
 def hazirla(yol, en, boy, olcek=1.12):
     """Görseli en x boy'u olcek kadar aşan tuvale yerleştir. Dikey tuvalde yatay görsel tam yükseklikte
     ve geniş tutulur (kamera üzerinde yatay gezinir). Oran çok farklıysa bulanık arka plan + tam görsel."""
@@ -65,7 +73,8 @@ def hazirla(yol, en, boy, olcek=1.12):
     w, h = im.size
     hedef_oran, oran = tw / th, w / h
     dikey = en < boy
-    kirp_olur = (oran / hedef_oran) < (3.3 if dikey else 1.35) and (hedef_oran / oran) < 1.35
+    # panorama da kırpılır: tam yükseklikte geniş tuval, kamera üzerinde gezinir (ince şerit görünmez)
+    kirp_olur = (oran / hedef_oran) < (3.3 if dikey else 2.0) and (hedef_oran / oran) < 1.35
     if not kirp_olur:
         arka = im.resize((tw, th)).filter(ImageFilter.GaussianBlur(40))
         arka = Image.blend(arka, Image.new("RGB", arka.size, (10, 10, 12)), 0.35)
@@ -75,7 +84,7 @@ def hazirla(yol, en, boy, olcek=1.12):
         return arka
     o = max(tw / w, th / h)
     im = im.resize((int(w * o + 1), int(h * o + 1)), Image.LANCZOS)
-    gen = min(im.width, int(tw * 2.2)) if dikey else tw  # dikeyde gezinme payı
+    gen = min(im.width, int(tw * (2.2 if dikey else 1.8)))  # geniş görselde gezinme payı
     x, y = (im.width - gen) // 2, (im.height - th) // 2
     return im.crop((x, y, x + gen, y + th))
 
@@ -243,7 +252,7 @@ def uret(kid, ad, cikti_dizini=None):
         if "grafik" in sc:
             return grafik.kredi(sc["grafik"])
         g = gorseller[sc["gorsel"]]
-        return f"Görsel: {temiz(g['yazar'])[:38]} · {g['lisans']} · Wikimedia Commons"
+        return f"Görsel: {kisa_yazar(g['yazar'])} · {g['lisans']} · Wikimedia Commons"
 
     def kare_al(si, t):
         sc = sahneler[si]
@@ -353,7 +362,7 @@ def uret(kid, ad, cikti_dizini=None):
     sat += ["Kaynaklar:"] + s.get("kaynaklar", []) + ["", "Görseller (Wikimedia Commons, özgün lisanslarıyla):"]
     sayac = {}
     for gi in kullanilan:  # aynı yazar+lisans tek satır
-        anahtar = (temiz(gorseller[gi]["yazar"])[:40], gorseller[gi]["lisans"])
+        anahtar = (kisa_yazar(gorseller[gi]["yazar"], 60), gorseller[gi]["lisans"])
         sayac[anahtar] = sayac.get(anahtar, 0) + 1
     for (yazar, lisans), adet in sayac.items():
         sat.append(f"- {yazar} ({lisans})" + (f" · {adet} görsel" if adet > 1 else ""))

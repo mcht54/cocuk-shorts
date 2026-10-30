@@ -237,6 +237,22 @@ def _bol(p):
             for i, g in enumerate(gruplar)]
 
 
+INGILIZCE = {"the", "of", "and", "as", "was", "were", "with", "which", "from", "that", "this", "is", "are", "has",
+             "have", "been", "its", "their", "by"}
+
+
+def ingilizce_var(metin):
+    """Seslendirmeye kaçmış İngilizce ifade (kaynak İngilizce olduğu için olur): bulunan kelimeler."""
+    return sorted({k for k in re.findall(r"\w+", metin.lower()) if k in INGILIZCE})
+
+
+def grafik_anlatimda_mi(g, metin):
+    """Sayı/karşılaştırma grafiğinin değeri anlatımda da geçmeli (ekranda anlatılmayan sayı çıkmasın)."""
+    if not isinstance(g, dict) or g.get("tur") not in ("sayi", "karsilastirma"):
+        return True
+    return bool(sayilar(str(g.get("deger", ""))) & sayilar(metin))
+
+
 def grafik_hatasi(g, koordinat=None, kaynak_sayilari=None):
     """Tek grafik tanımının hatası (yoksa None). kaynak_sayilari verilirse sayılar da kaynağa karşı denetlenir."""
     if not isinstance(g, dict):
@@ -253,6 +269,12 @@ def grafik_hatasi(g, koordinat=None, kaynak_sayilari=None):
         return "zaman çizelgesi 3-5 olay olmalı"
     if tur == "sayi" and not str(g.get("deger", "")).strip():
         return "sayı grafiğinde değer yok"
+    if tur == "sayi":
+        try:
+            if float(_sayi_norm(re.sub(r"[^\d.,]", "", str(g["deger"])) or "0")) < 10:
+                return f"sayı grafiği çarpıcı değil ({g['deger']}); 10 ve üzeri, kaynakta geçen bir sayı seç"
+        except ValueError:
+            pass
     if kaynak_sayilari is not None:
         eksik = sayi_denetimi(json.dumps(g, ensure_ascii=False), kaynak_sayilari)
         if eksik:
@@ -410,6 +432,12 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
         h.append(f"grafiklerde kaynakta geçmeyen sayılar: {', '.join(sorted(eksik_g))}")
     if YASAK.search(metin + " " + s.get("baslik", "")):
         h.append("yasaklı ifade")
+    ing = ingilizce_var(metin + " " + s.get("baslik", ""))
+    if ing:
+        h.append(f"İngilizce ifade var ({', '.join(ing)}); her cümle tamamen Türkçe olmalı")
+    for g in grafikler:
+        if not grafik_anlatimda_mi(g, metin):
+            h.append(f"grafikteki sayı ({g.get('deger')}) metinde geçmiyor; grafiğin olduğu parçada bu bilgiyi anlat")
     eksik = sayi_denetimi(metin + " " + " ".join(p.get("yazi", "") for p in parcalar), kaynak_sayilari)
     if eksik:
         h.append(f"kaynakta geçmeyen sayılar: {', '.join(sorted(eksik))} (kaynaktaki değeri kullan ya da çıkar)")
@@ -521,6 +549,13 @@ def bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari):
         h.append(f"kaynakta geçmeyen sayılar: {', '.join(sorted(eksik))} (kaynaktaki değeri kullan ya da çıkar)")
     if YASAK.search(metin):
         h.append("yasaklı ifade")
+    ing = ingilizce_var(metin)
+    if ing:
+        h.append(f"İngilizce ifade var ({', '.join(ing)}); her cümle tamamen Türkçe olmalı")
+    for p in b["parcalar"]:
+        if p.get("grafik") and not grafik_anlatimda_mi(p["grafik"], metin):
+            h.append(f"grafikteki sayı ({p['grafik'].get('deger')}) bölüm metninde geçmiyor; "
+                     "grafiğin olduğu parçada bu bilgiyi anlat")
     for i, p in enumerate(b["parcalar"]):
         if re.search(r"[()\[\]*#]|https?:", p["metin"]):
             h.append(f"parça {i}: seslendirilemeyecek işaret/bağlantı var")
