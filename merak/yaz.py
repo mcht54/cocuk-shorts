@@ -128,7 +128,7 @@ TARZLAR = [
     "dedektif gibi: bir soruyla aç, ipuçlarını sırayla ortaya koy, sonunda bilinenle bilinmeyeni ayır",
     "zaman yolculuğu: izleyiciyi o döneme götür ('Yıl ...'), olayları kronolojik anlat",
     "büyük resimden ayrıntıya: önce ölçeği ve önemini göster, sonra parça parça aç",
-    "efsane ve gerçek: anlatılanları ve kanıtların söylediğini karşılaştır",
+    # "efsane ve gerçek" tarzı kaldırıldı (2026-10-30): kaynakta olmayan "efsanelere göre" iddiaları üretiyordu
     "bir keşfin hikâyesi: konuyu kimin, nasıl bulduğu/incelediği üzerinden anlat",
 ]
 
