@@ -1,6 +1,7 @@
 """Merak Arşivi günlük yayın: sıradaki senaryo -> üret -> kalite kontrolü -> (izinliyse) yükle -> kayıt.
 
-Kullanım: python -m merak.yayinla --profil shorts|uzun [--konu KİMLİK --senaryo kisa1] [--yayin hayir]
+Kullanım: python -m merak.yayinla                 -> takvimdeki boş saatleri doldurur (1 hafta önceden, zamanlanmış)
+          python -m merak.yayinla --profil uzun --konu KİMLİK --senaryo uzun [--yayin hayir]  -> tek video
 Ortam: YAYIN=acik ise yükler. Gizlilik MERAK_GIZLILIK (varsayılan private); private dışı için
 YT_HERKESE_ACIK_ONAY=evet. Kimlik: YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN (Merak Arşivi kanalının).
 Kayıt merak/kayit.json; aynı senaryo iki kez yüklenmez, iki kez kalite kalan atlanır. Çıkış 0 = başarı.
@@ -15,6 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from merak import uret
+from otonom import takvim
 
 KOK = Path(__file__).resolve().parent
 KONULAR = KOK / "konular"
@@ -106,7 +108,7 @@ def denetle(mp4, profil):
     return hatalar, {"sure": round(sure, 1), "cozunurluk": f"{cozunurluk[0]}x{cozunurluk[1]}", "ses_db": ortalama}
 
 
-def isle(kid, ad, profil, yayin):
+def isle(kid, ad, profil, yayin, slot=None):
     ozet(f"### {kid} / {ad} ({profil})")
     kayit = {"tarih": datetime.now(timezone.utc).isoformat(timespec="seconds"), "konu": kid, "senaryo": ad,
              "profil": profil}
@@ -129,38 +131,63 @@ def isle(kid, ad, profil, yayin):
         gizlilik = os.environ.get("MERAK_GIZLILIK", "private")
         anahtar = youtube.erisim_anahtari()
         meta = {"baslik": s["baslik"], "aciklama": sonuc["aciklama"], "etiketler": s.get("etiketler", [])}
+        publish, zaman = takvim.yukleme_zamani(slot) if slot else (None, datetime.now(timezone.utc))
         vid, durum = youtube.yukle(sonuc["video"], meta, anahtar, gizlilik=gizlilik,
                                    acik_onay=os.environ.get("YT_HERKESE_ACIK_ONAY") == "evet",
                                    shorts=profil == "shorts", sentetik=False, cocuklar=False,
-                                   hazir_aciklama=True)
-        kayit.update(durum="yuklendi", video_id=vid, youtube=durum)
-        ozet(f"YouTube: https://youtube.com/watch?v={vid} — {durum}")
+                                   hazir_aciklama=True, yayin_zamani=publish)
+        kayit.update(durum="yuklendi", video_id=vid, youtube=durum, yayin_zamani=zaman.isoformat(timespec="seconds"))
+        ozet(f"YouTube: https://youtube.com/watch?v={vid} — {durum}"
+             + (f" — yayın {zaman:%Y-%m-%d %H:%M} UTC" if publish else ""))
         if sonuc.get("kapak"):
             kod, metin = kapak_yukle(vid, sonuc["kapak"], anahtar)
             kayit["kapak"] = "yuklendi" if kod == 200 else f"yuklenemedi ({kod})"
             ozet("Kapak yüklendi." if kod == 200 else f"Kapak yüklenemedi ({kod}): {metin}")
     else:
         ozet("Yayın kapalı: video yalnız üretildi (Actions 'Artifacts').")
-    kaydet(kayit) if yayin else None
+    if yayin:
+        kaydet(kayit)
     return 0
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--profil", choices=["shorts", "uzun"], required=True)
+    ap.add_argument("--profil", choices=["shorts", "uzun"])
     ap.add_argument("--konu")
     ap.add_argument("--senaryo")
     ap.add_argument("--yayin", default="otomatik")
+    ap.add_argument("--en-cok", type=int, default=int(os.environ.get("EN_COK_SLOT", "3")))
     a = ap.parse_args()
     yayin = a.yayin != "hayir" and os.environ.get("YAYIN") == "acik"
-    adaylar = [(a.konu, a.senaryo or "uzun")] if a.konu else sira(a.profil)
-    if not adaylar:
-        ozet(f"Yayınlanacak {a.profil} kalmadı: stok doldurma işi (stok.yml) yeni konu yazmalı.")
-        return 1
-    for kid, ad in adaylar[:2]:  # biri kalırsa aynı gün sıradakini dene
-        if isle(kid, ad, a.profil, yayin) == 0:
-            return 0
-    return 1
+    if a.konu:  # elle tek video
+        return isle(a.konu, a.senaryo or "uzun", a.profil or ("uzun" if (a.senaryo or "uzun") == "uzun" else "shorts"),
+                    yayin)
+    if not yayin:  # deneme: her profilden sıradakini üret, yükleme yok
+        sonuc = 0
+        for profil in ([a.profil] if a.profil else ["uzun", "shorts"]):
+            aday = sira(profil)
+            sonuc |= isle(*aday[0], profil, False) if aday else 1
+        return sonuc
+    # takvim: en yakın boş saatten başlayarak (uzun ve Shorts karışık) en çok --en-cok video
+    bos = sorted([(s, "uzun") for s in takvim.bos_slotlar("merak_uzun", kayitlar())]
+                 + [(s, "shorts") for s in takvim.bos_slotlar("merak_shorts", kayitlar())])
+    if not bos:
+        ozet("Takvim dolu: önümüzdeki hafta için tüm videolar zamanlanmış.")
+        return 0
+    basari = hata = 0
+    for slot, profil in bos[:a.en_cok]:
+        adaylar = sira(profil)
+        if not adaylar:
+            ozet(f"Yayınlanacak {profil} kalmadı: stok doldurma işi (stok.yml) yeni konu yazmalı.")
+            hata += 1
+            continue
+        for kid, ad in adaylar[:2]:  # biri kalırsa aynı slot için sıradakini dene
+            if isle(kid, ad, profil, True, slot) == 0:
+                basari += 1
+                break
+        else:
+            hata += 1
+    return 0 if basari and not hata else 1
 
 
 if __name__ == "__main__":

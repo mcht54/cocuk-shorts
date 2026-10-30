@@ -1,0 +1,28 @@
+name: Haftalık onay listesi
+
+# Her pazar: önümüzdeki haftanın zamanlanmış videoları issue olarak gelir (e-posta). Önceki hafta kapanır.
+on:
+  schedule:
+    - cron: "0 6 * * 0"   # pazar 09:00 TR
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  liste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m otonom.haftalik_onay
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create haftalik-onay --color 0e8a16 2>/dev/null || true
+          for n in $(gh issue list --label haftalik-onay --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Yeni haftanın listesi açıldı."
+          done
+          gh issue create --title "Haftalık onay: $(date -u +%d.%m.%Y) haftasının videoları" \
+            --label haftalik-onay --assignee "${{ github.repository_owner }}" --body-file "$RUNNER_TEMP/onay.md"

@@ -23,16 +23,20 @@ class OnaySiz(PermissionError):
 
 
 def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=True, sentetik=True,
-          cocuklar=True, kategori="27", hazir_aciklama=False):
+          cocuklar=True, kategori="27", hazir_aciklama=False, yayin_zamani=None):
     """Videoyu yükler; (video_id, YouTube'un döndürdüğü gerçek status) verir.
 
     gizlilik her zaman açıkça gönderilir (varsayılana güvenilmez). private dışı her değer
-    acik_onay=True ister; zamanlanmış herkese açık yayın (publishAt) hiç desteklenmez.
+    acik_onay=True ister. yayin_zamani (datetime) verilirse video private yüklenir ve o saatte
+    YouTube tarafından herkese açılır (publishAt); bu da herkese açık yayın sayılır, acik_onay ister.
+    Kullanıcı onayı 2026-10-30: haftalık onay penceresi için zamanlanmış yükleme.
     """
     if gizlilik not in GIZLILIKLER:
         raise ValueError(f"geçersiz gizlilik: {gizlilik}")
     if gizlilik != "private" and not acik_onay:
         raise OnaySiz(f"'{gizlilik}' yükleme için ayrı, açık kullanıcı onayı gerekli")
+    if yayin_zamani and not acik_onay:
+        raise OnaySiz("zamanlanmış herkese açık yayın için açık kullanıcı onayı gerekli")
     baslik = senaryo["baslik"][:90]
     if shorts and "#shorts" not in baslik.lower():
         baslik = (baslik + " #shorts")[:100]
@@ -56,6 +60,9 @@ def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=T
             "embeddable": True,
         },
     }
+    if yayin_zamani:
+        govde["status"]["privacyStatus"] = "private"
+        govde["status"]["publishAt"] = yayin_zamani.strftime("%Y-%m-%dT%H:%M:%S.000Z")
     basla = requests.post(
         "https://www.googleapis.com/upload/youtube/v3/videos",
         params={"uploadType": "resumable", "part": "snippet,status"},
@@ -70,7 +77,8 @@ def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=T
     r.raise_for_status()
     v = r.json()
     st = v.get("status", {})
-    return v["id"], {k: st.get(k) for k in ("privacyStatus", "uploadStatus", "selfDeclaredMadeForKids")}
+    return v["id"], {k: st.get(k) for k in ("privacyStatus", "uploadStatus", "selfDeclaredMadeForKids", "publishAt")
+                     if st.get(k) is not None}
 
 
 def durum(video_id, anahtar):

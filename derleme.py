@@ -52,7 +52,11 @@ def sec(bolum_nolari=None):
         derlenen = {b for x in k if x.get("profil") == "derleme" and x.get("durum") == "yuklendi"
                     and (x.get("youtube") or {}).get("privacyStatus") == "public" for b in x.get("parcalar", [])}
         secilen = []
+        simdi = datetime.now(timezone.utc)
         for x in k:
+            # zamanlanmış ama henüz yayınlanmamış (onay penceresindeki) Shorts derlemeye girmez
+            if x.get("yayin_zamani") and datetime.fromisoformat(x["yayin_zamani"]) > simdi:
+                continue
             if (x.get("profil") == "shorts" and x.get("durum") == "yuklendi"
                     and x["bolum"] not in derlenen and x["bolum"] not in secilen):
                 secilen.append(x["bolum"])

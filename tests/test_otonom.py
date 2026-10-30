@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest import mock
 
 from merak import yaz, yayinla
-from otonom import masal_yaz, saglik
+from otonom import masal_yaz, saglik, takvim
 
 DEPO = Path(__file__).resolve().parent.parent
 SERI = DEPO / "seri" / "findik-ile-pamuk"
@@ -115,6 +115,23 @@ class SaglikTesti(unittest.TestCase):
             saglik.main()
             metin = (Path(tempfile.gettempdir()) / "saglik.md").read_text()
         self.assertNotIn("Merak Arşivi Shorts:", metin.split("Sorunlar")[-1] if "Sorunlar" in metin else "")
+
+
+class TakvimTesti(unittest.TestCase):
+    def test_bos_slotlar_dolu_olanlari_atlar(self):
+        simdi = datetime(2026, 11, 2, 10, 0, tzinfo=timezone.utc)  # pazartesi
+        bos = takvim.bos_slotlar("merak_uzun", [], simdi)
+        self.assertEqual([s.weekday() for s in bos], [1, 4])  # salı, cuma
+        kayit = [{"durum": "yuklendi", "yayin_zamani": bos[0].isoformat()}]
+        self.assertEqual(takvim.bos_slotlar("merak_uzun", kayit, simdi), bos[1:])
+        self.assertEqual(len(takvim.bos_slotlar("masal_shorts", [], simdi)), 7)
+
+    def test_gecmek_uzere_olan_slot_hemen_yayinlanir(self):
+        simdi = datetime(2026, 11, 2, 13, 50, tzinfo=timezone.utc)
+        slot = datetime(2026, 11, 2, 14, 0, tzinfo=timezone.utc)
+        self.assertEqual(takvim.yukleme_zamani(slot, simdi), (None, simdi))
+        sonra = slot + timedelta(days=3)
+        self.assertEqual(takvim.yukleme_zamani(sonra, simdi), (sonra, sonra))
 
 
 if __name__ == "__main__":

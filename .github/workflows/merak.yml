@@ -1,16 +1,16 @@
 name: Merak Arşivi yayın
 
-# Her gün 1 Shorts (19:00 TR), salı ve cuma 1 uzun belgesel (18:00 TR).
+# Takvim (otonom/takvim.py): salı+cuma 18:00 uzun belgesel, pzt/çar/per/cmt 19:00 Shorts (TR).
+# Her gün çalışır, önümüzdeki 7 günün boş saatlerini zamanlanmış yüklemeyle doldurur (haftalık onay penceresi).
 # Kanal anahtarı MERAK_YT_REFRESH_TOKEN; yayın anahtarı MERAK_YAYIN (acik olmadıkça yalnız üretir).
 on:
   schedule:
-    - cron: "0 16 * * *"     # Shorts
-    - cron: "0 15 * * 2,5"   # uzun belgesel
+    - cron: "0 10 * * *"     # 13:00 TR
   workflow_dispatch:
     inputs:
       profil:
-        description: "shorts / uzun"
-        default: "shorts"
+        description: "Elle tek video için: shorts / uzun (boş = takvimi doldur)"
+        required: false
       konu:
         description: "Belirli konu kimliği (boş = sıradaki), ör. derinkuyu-underground-city"
         required: false
@@ -31,7 +31,7 @@ concurrency:
 jobs:
   yayin:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -49,13 +49,14 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.MERAK_YT_REFRESH_TOKEN }}
         run: |
-          PROFIL="${{ inputs.profil }}"
-          if [ -z "$PROFIL" ]; then
-            if [ "${{ github.event.schedule }}" = "0 15 * * 2,5" ]; then PROFIL=uzun; else PROFIL=shorts; fi
+          if [ -n "${{ inputs.konu }}" ]; then
+            python -m merak.yayinla --profil "${{ inputs.profil || 'uzun' }}" --konu "${{ inputs.konu }}" \
+              --senaryo "${{ inputs.senaryo || 'uzun' }}" --yayin "${{ inputs.yayin || 'otomatik' }}"
+          elif [ -n "${{ inputs.profil }}" ]; then
+            python -m merak.yayinla --profil "${{ inputs.profil }}" --yayin "${{ inputs.yayin || 'otomatik' }}"
+          else
+            python -m merak.yayinla --yayin "${{ inputs.yayin || 'otomatik' }}"
           fi
-          ARG=""
-          if [ -n "${{ inputs.konu }}" ]; then ARG="--konu ${{ inputs.konu }} --senaryo ${{ inputs.senaryo || 'uzun' }}"; fi
-          python -m merak.yayinla --profil "$PROFIL" $ARG
       - uses: actions/upload-artifact@v4
         if: always()
         with:

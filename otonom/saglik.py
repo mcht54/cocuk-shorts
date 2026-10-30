@@ -11,15 +11,18 @@ from pathlib import Path
 
 import requests
 
+from otonom import takvim
+
 DEPO = Path(__file__).resolve().parent.parent
 SIMDI = datetime.now(timezone.utc)
-# (ad, kayıt dosyası, süzgeç, en çok kaç saat sessiz kalabilir)
+# (ad, kayıt dosyası, süzgeç, takvim hattı ya da en çok kaç saat sessiz kalabilir)
 BEKLENEN = [
-    ("Minik Masal Evi Shorts", "yayin_kaydi.json", lambda k: k.get("profil") == "shorts", 50),
+    ("Minik Masal Evi Shorts", "yayin_kaydi.json", lambda k: k.get("profil") == "shorts", "masal_shorts"),
     ("Minik Masal Evi haftalık uzun", "yayin_kaydi.json", lambda k: k.get("profil") == "derleme", 8 * 24 + 12),
-    ("Merak Arşivi Shorts", "merak/kayit.json", lambda k: k.get("profil") == "shorts", 50),
-    ("Merak Arşivi uzun belgesel", "merak/kayit.json", lambda k: k.get("profil") == "uzun", 5 * 24),
+    ("Merak Arşivi Shorts", "merak/kayit.json", lambda k: k.get("profil") == "shorts", "merak_shorts"),
+    ("Merak Arşivi uzun belgesel", "merak/kayit.json", lambda k: k.get("profil") == "uzun", "merak_uzun"),
 ]
+YAKIN = timedelta(hours=48)  # bu kadar içindeki yayın saatleri boşsa sorun (onay penceresi 7 gün)
 
 
 def son_yukleme(dosya, suzgec):
@@ -46,16 +49,24 @@ def main():
     acik = os.environ.get("YAYIN") == "acik"
     baslangic = {"Merak Arşivi": os.environ.get("MERAK_BASLANGIC", ""),
                  "Minik Masal Evi haftalık": os.environ.get("DERLEME_BASLANGIC", "")}
-    for ad, dosya, suzgec, saat in BEKLENEN:
+    for ad, dosya, suzgec, olcut in BEKLENEN:
         son = son_yukleme(dosya, suzgec)
         rapor.append(f"- {ad}: son yükleme {son:%Y-%m-%d %H:%M} UTC" if son else f"- {ad}: henüz yükleme yok")
         # henüz başlamamış hat (başlangıç tarihi gelmemiş/girilmemiş) sorun sayılmaz
         bas = next((v for k, v in baslangic.items() if ad.startswith(k)), None)
-        if bas is not None and (not bas or SIMDI < datetime.fromisoformat(bas) + timedelta(hours=saat)):
+        if bas is not None and (not bas or SIMDI < datetime.fromisoformat(bas)):
             continue
-        if acik and (not son or SIMDI - son > timedelta(hours=saat)):
-            sorunlar.append(f"{ad}: {saat} saattir yükleme yok (son: {son or 'hiç'}). Actions sekmesindeki son "
-                            "çalıştırmanın günlüğüne bakın.")
+        if not acik:
+            continue
+        if isinstance(olcut, str):  # takvimli hat: yakın saatler zamanlanmış olmalı
+            yol = DEPO / dosya
+            kayit = [k for k in (json.loads(yol.read_text()) if yol.exists() else []) if suzgec(k)]
+            bos = [s for s in takvim.bos_slotlar(olcut, kayit, SIMDI) if s <= SIMDI + YAKIN]
+            if bos:
+                sorunlar.append(f"{ad}: {len(bos)} yakın yayın saati boş (ilki {bos[0]:%Y-%m-%d %H:%M} UTC). "
+                                "Actions sekmesindeki son çalıştırmanın günlüğüne bakın.")
+        elif not son or SIMDI - son > timedelta(hours=olcut):
+            sorunlar.append(f"{ad}: {olcut} saattir yükleme yok (son: {son or 'hiç'}).")
     for ad, anahtar in (("Minik Masal Evi", "YT_REFRESH_TOKEN"), ("Merak Arşivi", "MERAK_YT_REFRESH_TOKEN")):
         if ad == "Merak Arşivi" and not os.environ.get("MERAK_BASLANGIC"):
             continue

@@ -2,8 +2,10 @@ name: Günlük 3D bölüm (Fındık ile Pamuk)
 
 on:
   # Herkese açık günlük yayın kullanıcı onayıyla açıldı (2026-10-30), kanal: Minik Masal Evi.
+  # 2026-10-30: takvim 1 hafta önceden dolar (haftalık onay); her çalıştırma en çok 2 boş saati doldurur.
   schedule:
-    - cron: "0 14 * * *"   # 17:00 TR
+    - cron: "0 2 * * *"    # 05:00 TR
+    - cron: "0 13 * * *"   # 16:00 TR
   workflow_dispatch:
     inputs:
       bolum:

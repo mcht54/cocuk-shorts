@@ -11,6 +11,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from otonom import takvim
+
 KOK = Path(__file__).resolve().parent
 SERI = KOK / "seri" / "findik-ile-pamuk"
 KAYIT = KOK / "yayin_kaydi.json"
@@ -47,16 +49,31 @@ def main():
         sira = [KOK / os.environ["BOLUM"]]
     if not sira:
         ozet("Üretilecek yeni bölüm kalmadı. seri/findik-ile-pamuk/bolumler'e bölüm eklenmeli.")
-        return 0
-    # bir bölüm kaliteyi geçemezse aynı çalıştırmada sıradakini dene (gün boş geçmesin)
-    for bolum in sira[:2]:
-        sonuc = bolum_isle(bolum, kayitlar)
-        if sonuc == 0:
+        return 1
+    # yayın açıksa takvimdeki boş saatler doldurulur (1 hafta önceden, zamanlanmış); kapalıysa tek deneme
+    if os.environ.get("YAYIN") == "acik" and PROFIL == "shorts" and not os.environ.get("BOLUM"):
+        bos = takvim.bos_slotlar("masal_shorts", kayitlar)
+        if not bos:
+            ozet("Takvim dolu: önümüzdeki hafta için tüm Shorts zamanlanmış.")
             return 0
-    return 1
+        bos = bos[:int(os.environ.get("EN_COK_SLOT", "2"))]
+    else:
+        bos = [None]
+    basari = 0
+    for slot in bos:
+        # bir bölüm kaliteyi geçemezse aynı slot için sıradakini dene (gün boş geçmesin)
+        for bolum in sira[:2]:
+            if bolum_isle(bolum, kayitlar, slot) == 0:
+                sira.remove(bolum)
+                basari += 1
+                break
+            sira.remove(bolum)
+        if not sira:
+            break
+    return 0 if basari else 1
 
 
-def bolum_isle(bolum, kayitlar):
+def bolum_isle(bolum, kayitlar, slot=None):
     ozet(f"### {bolum.name} ({PROFIL})")
 
     komut = [sys.executable, str(KOK / "uret3d.py"), "--bolum", str(bolum), "--profil", PROFIL,
@@ -87,12 +104,14 @@ def bolum_isle(bolum, kayitlar):
         from cocuk import youtube
         gizlilik = os.environ.get("YT_GIZLILIK", "private")
         meta = json.loads(bolum.read_text())["youtube"]
+        publish, zaman = takvim.yukleme_zamani(slot) if slot else (None, datetime.now(timezone.utc))
         vid, durum = youtube.yukle(mp4, meta, youtube.erisim_anahtari(), gizlilik=gizlilik,
                                    acik_onay=os.environ.get("YT_HERKESE_ACIK_ONAY") == "evet",
-                                   shorts=PROFIL == "shorts", sentetik=False)
-        kayit.update(durum="yuklendi", video_id=vid, youtube=durum)
-        ozet(f"YouTube: https://youtube.com/shorts/{vid} — {durum}")
-        if durum.get("privacyStatus") != gizlilik:
+                                   shorts=PROFIL == "shorts", sentetik=False, yayin_zamani=publish)
+        kayit.update(durum="yuklendi", video_id=vid, youtube=durum, yayin_zamani=zaman.isoformat(timespec="seconds"))
+        ozet(f"YouTube: https://youtube.com/shorts/{vid} — {durum}"
+             + (f" — yayın {zaman:%Y-%m-%d %H:%M} UTC" if publish else ""))
+        if not publish and durum.get("privacyStatus") != gizlilik:
             ozet(f"UYARI: YouTube durumu '{durum.get('privacyStatus')}' (istenen '{gizlilik}'). "
                  "API denetimi onaylanmamış olabilir.")
     else:
