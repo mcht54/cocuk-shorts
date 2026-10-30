@@ -1,6 +1,7 @@
 """Otonom döngünün ağsız parçaları: senaryo denetimleri, sıra seçimi, bölüm tamamlama, sağlık denetimi."""
 import json
 import os
+import re
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
@@ -84,6 +85,45 @@ class MerakDenetimTesti(unittest.TestCase):
         for i in s["iddialar"]:
             i["kaynak_alinti"] = "built by aliens in 1963"
         self.assertTrue(any("alıntı" in x for x in yaz.yapi_denetimi(s, 5, False, KAYNAK, self.sayilar)))
+
+
+class MerakBolumBolumTesti(unittest.TestCase):
+    """Gemini taklidiyle: plan + 8 bölüm -> tam senaryo kelime/grafik/iddia denetiminden geçer."""
+
+    def sahte_gemini(self, istem, **_):
+        if "PLANINI" in istem:
+            grafikler = [{"tur": "sayi", "deger": "85", "birim": "m"}, {"tur": "sayi", "deger": "20.000", "birim": "kişi"},
+                         {"tur": "zaman", "olaylar": [{"yil": "1963", "metin": "keşif"}, {"yil": "MÖ 8. yüzyıl", "metin": "yapım"},
+                                                      {"yil": "bugün", "metin": "müze"}]},
+                         {"tur": "karsilastirma", "deger": 85, "birim": "m", "referans": "galata"},
+                         {"tur": "sayi", "deger": "1963", "birim": ""}, {"tur": "sayi", "deger": "4321", "birim": "x"},
+                         {"tur": "sayi", "deger": "85", "birim": "m"}, None]
+            return {"baslik": "Yeraltı şehri", "kapak_yazisi": "YERİN ALTINDA", "kapak_gorsel": 99, "aciklama": "a",
+                    "etiketler": ["x"], "bolumler": [{"ad": f"Bölüm {i}", "anlatilacak": ["x"], "grafik": g}
+                                                     for i, g in enumerate(grafikler)]}
+        if "bölümünü yaz" in istem:
+            hedef = int(re.search(r"yaklaşık (\d+) kelime hedefle", istem).group(1))
+            cumle = "Karanlık koridorlar yerin altında sessizce uzanıyordu ve kimse sonunu bilmiyordu."
+            n = hedef // len(cumle.split())
+            uzun = " ".join([cumle] * 3)  # 3 cümlelik uzun parça: kodla bölünmeli
+            parcalar = [{"metin": uzun, "gorsel": None, "grafik": True}] + [{"metin": cumle, "gorsel": [1]}] * (n - 3)
+            return {"parcalar": parcalar, "iddialar": [{"iddia": "x", "kaynak_alinti": "discovered in 1963"}]}
+        if "titizlikle denetle" in istem:
+            return {"sorunlar": []}
+        raise AssertionError(istem[:80])
+
+    def test_plan_ve_bolumler_birlesince_denetimden_gecer(self):
+        sayilar = yaz.sayilar(KAYNAK)
+        ortak = dict(konu="Derinkuyu", calisma="", kurallar="", gorseller="", kaynak=KAYNAK)
+        with mock.patch.object(yaz.gemini, "sor", side_effect=self.sahte_gemini):
+            s = yaz.uzun_yaz(ortak, [{}] * 5, KAYNAK, sayilar, None)
+        self.assertIsNotNone(s)
+        self.assertEqual(len(s["bolumler"]), 8)
+        grafikler = [p["grafik"] for b in s["bolumler"] for p in b["parcalar"] if p.get("grafik")]
+        self.assertEqual(len(grafikler), 6)  # kaynakta olmayan 4321 kodla atıldı
+        self.assertEqual(s["kapak_gorsel"], 0)
+        self.assertTrue(all(p["gorsel"] for b in s["bolumler"] for p in b["parcalar"]))
+        self.assertEqual(yaz.yapi_denetimi(s, 5, True, KAYNAK, sayilar), [])
 
 
 class MerakSiraTesti(unittest.TestCase):

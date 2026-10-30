@@ -14,7 +14,7 @@ import requests
 MODELLER = [m for m in os.environ.get("GEMINI_MODELLER", "").split(",") if m] or [
     "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash"]
 ARA_BEKLEME = float(os.environ.get("GEMINI_ARA_BEKLEME", "7"))
-SINIR = int(os.environ.get("GEMINI_CAGRI_SINIRI", "60"))  # bir çalıştırmada en çok çağrı
+SINIR = int(os.environ.get("GEMINI_CAGRI_SINIRI", "100"))  # bir çalıştırmada en çok çağrı
 CAGRI = 0
 _son = 0.0
 
