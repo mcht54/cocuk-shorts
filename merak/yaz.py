@@ -428,8 +428,6 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
     grafikler = [p["grafik"] for p in parcalar if isinstance(p.get("grafik"), dict)]
     if len(grafikler) < (UZUN_GRAFIK if uzun else 1):
         h.append(f"{len(grafikler)} grafik; {f'en az {UZUN_GRAFIK}' if uzun else 'en az 1'} olmalı")
-    if uzun and not any(g.get("tur") == "zaman" for g in grafikler):
-        h.append("zaman çizelgesi grafiği yok")
     grafik_metni = []
     for g in grafikler:
         hata = grafik_hatasi(g, koordinat)
@@ -534,8 +532,6 @@ def plan_denetimi(plan, gorsel_sayisi, koordinat, kaynak_sayilari):
     grafikler = [b["grafik"] for b in bolumler if b.get("grafik")]
     if len(grafikler) < 6:
         h.append(f"{len(grafikler)} geçerli grafik; en az 6 bölümde geçerli grafik olmalı (sayılar kaynakta birebir)")
-    if not any(g.get("tur") == "zaman" for g in grafikler):
-        h.append("zaman çizelgesi grafiği yok (3-5 olay, yıllar kaynakta birebir)")
     for k, ust in (("baslik", 85), ("kapak_yazisi", 40)):
         if not isinstance(plan.get(k), str) or not plan[k].strip() or len(plan[k]) > ust:
             h.append(f"{k} boş ya da çok uzun")
