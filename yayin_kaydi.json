@@ -67,5 +67,33 @@
   ],
   "durum": "uretildi",
   "sure": 205.87
+ },
+ {
+  "tarih": "2026-10-30T08:14:05+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b002.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "15_bywZDXDA",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-10-30T14:00:00Z"
+  },
+  "yayin_zamani": "2026-10-30T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-10-30T08:43:23+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b042.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "0xf99p5jN3E",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-10-31T14:00:00Z"
+  },
+  "yayin_zamani": "2026-10-31T14:00:00+00:00"
  }
 ]
