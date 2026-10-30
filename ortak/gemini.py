@@ -13,7 +13,7 @@ import requests
 
 MODELLER = [m for m in os.environ.get("GEMINI_MODELLER", "").split(",") if m] or [
     "gemini-flash-latest", "gemini-flash-lite-latest"]
-ARA_BEKLEME = float(os.environ.get("GEMINI_ARA_BEKLEME", "7"))
+ARA_BEKLEME = float(os.environ.get("GEMINI_ARA_BEKLEME", "13"))
 SINIR = int(os.environ.get("GEMINI_CAGRI_SINIRI", "100"))  # bir çalıştırmada en çok çağrı
 CAGRI = 0
 _son = 0.0
@@ -78,8 +78,8 @@ def sor(istem, sicaklik=0.9, json_cikti=True):
                 break
             if r.status_code == 429 and re.search(r"per ?day|PerDay|daily", r.text, re.I):
                 break  # günlük ücretsiz kota bitti: beklemek işe yaramaz, sıradaki model
-            if r.status_code in (429, 500, 502, 503, 504):
-                time.sleep(30 * (deneme + 1))
+            if r.status_code in (429, 500, 502, 503, 504):  # dakikalık sınır 60 sn'de açılır
+                time.sleep(65 if r.status_code == 429 else 30 * (deneme + 1))
                 continue
             if r.status_code in (400, 401, 403):
                 raise GeminiYok(son_hata)

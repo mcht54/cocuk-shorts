@@ -116,7 +116,9 @@ class MerakBolumBolumTesti(unittest.TestCase):
         if "bölümünü yaz" in istem:
             hedef = int(re.search(r"yaklaşık (\d+) kelime hedefle", istem).group(1))
             no = int(re.search(r"\) (\d+)\. bölümünü", istem).group(1))
-            hedef = {2: hedef // 2, 3: int(hedef * 1.6)}.get(no, hedef)  # 2. bölüm kısa, 3. uzun gelir
+            # 2. bölüm çok kısa (ek parça istenir), 3. uzun (kodla kırpılır), 4-8 toleransın içinde ama kısa
+            # (toplam 800'ün altına düşer, sonda en kısa bölüme ek parça)
+            hedef = {2: hedef // 2, 3: int(hedef * 1.6)}.get(no, int(hedef * 0.85) if no >= 4 else hedef)
             cumle = "Karanlık koridorlar yerin altında sessizce uzanıyordu ve kimse sonunu bilmiyordu."
             n = hedef // len(cumle.split())
             uzun = " ".join([cumle] * 3)  # 3 cümlelik uzun parça: kodla bölünmeli
@@ -133,7 +135,9 @@ class MerakBolumBolumTesti(unittest.TestCase):
         with mock.patch.object(yaz.gemini, "sor", side_effect=self.sahte_gemini):
             s = yaz.uzun_yaz(ortak, [{}] * 5, KAYNAK, sayilar, None)
         self.assertIsNotNone(s)
-        self.assertEqual(self.ek_istendi, 1)  # kısa bölüm ek parçayla tamamlandı; uzun bölüm kodla kırpıldı
+        self.assertGreaterEqual(self.ek_istendi, 2)  # kısa bölüm + toplam tamamlama; uzun bölüm kodla kırpıldı
+        self.assertGreaterEqual(sum(len(p["metin"].split()) for b in s["bolumler"] for p in b["parcalar"]),
+                                yaz.UZUN_KELIME[0])
         self.assertEqual(len(s["bolumler"]), 8)
         grafikler = [p["grafik"] for b in s["bolumler"] for p in b["parcalar"] if p.get("grafik")]
         self.assertEqual(len(grafikler), 6)  # kaynakta olmayan 4321 kodla atıldı

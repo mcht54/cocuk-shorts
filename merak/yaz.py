@@ -464,10 +464,13 @@ def plan_denetimi(plan, gorsel_sayisi, koordinat, kaynak_sayilari):
     return h
 
 
+BOLUM_TOLERANS = 0.9   # bölüm alt sınırın %90'ına kadar kabul; toplam kısa kalırsa sonda tamamlanır
+
+
 def bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari):
     h = []
     kelime = len(" ".join(p["metin"] for p in b["parcalar"]).split())
-    if kelime < alt:
+    if kelime < alt * BOLUM_TOLERANS:
         h.append(f"{kelime} kelime; {alt}-{ust} olmalı: yaklaşık {(alt + ust) // 2 - kelime} kelime EKLE "
                  "(kaynaktaki bu bölüme ait başka bilgilerle yeni kısa parçalar)")
     elif kelime > ust:
@@ -508,6 +511,11 @@ def _grafik_yerlestir(b, grafik):
 
 def _bolum_hazirla(ham, gorsel_sayisi):
     """Gemini bölüm yanıtını temizler: grafik işareti korunur (uzun parça bölünse de ilk parçada kalır)."""
+    if isinstance(ham, list):  # bazı modeller yalnız parça listesini döndürür
+        ham = {"parcalar": ham}
+    if isinstance(ham, dict) and not isinstance(ham.get("parcalar"), list):  # {"bolum": {...}} sarmalı
+        ic = [v for v in ham.values() if isinstance(v, dict) and isinstance(v.get("parcalar"), list)]
+        ham = ic[0] if ic else ham
     if not isinstance(ham, dict) or not isinstance(ham.get("parcalar"), list):
         return None
     parcalar = [dict(p, grafik=dict(ISARET)) if isinstance(p, dict) and p.get("grafik") is True else p
@@ -618,6 +626,20 @@ def uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat):
             return None
         bolumler.append(b)
         onceki += f"\n[{b['ad']}] " + " ".join(p["metin"] for p in b["parcalar"])
+    for _ in range(3):  # bölüm toleransı yüzünden toplam kısa kaldıysa en kısa bölüme denetimli ek parça
+        toplam = sum(_kelime(b) for b in bolumler)
+        if toplam >= UZUN_KELIME[0]:
+            break
+        b = min(bolumler[1:], key=_kelime)
+        ek = _bolum_hazirla(gemini.sor(EK_ISTEM.format(
+            ad=b["ad"], eksik=UZUN_KELIME[0] + 40 - toplam, mevcut=" ".join(p["metin"] for p in b["parcalar"]),
+            kurallar=ortak["kurallar"], gorseller=ortak["gorseller"], kaynak=ortak["kaynak"]), sicaklik=0.7),
+            len(gorseller))
+        if ek and not bolum_denetimi(ek, 0, 10 ** 6, kaynak, kaynak_sayilari) and not _ai_denetim(ek, kaynak):
+            for p in ek["parcalar"]:
+                p.pop("grafik", None)
+            b["parcalar"] += ek["parcalar"]
+            b["iddialar"] += ek["iddialar"]
     s = {k: plan.get(k) for k in ("baslik", "kapak_yazisi", "kapak_gorsel", "aciklama", "etiketler")}
     s["bolumler"] = [{"ad": b["ad"], "parcalar": b["parcalar"]} for b in bolumler]
     s["iddialar"] = [i for b in bolumler for i in b["iddialar"]]
