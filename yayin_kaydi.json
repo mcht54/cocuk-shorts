@@ -123,5 +123,33 @@
    "publishAt": "2026-11-02T14:00:00Z"
   },
   "yayin_zamani": "2026-11-02T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-10-30T22:31:08+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b045.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "X5Ez4yQtEOk",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-03T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-03T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-10-30T23:03:38+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b046.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "QX3qwIV2YQc",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-04T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-04T14:00:00+00:00"
  }
 ]
