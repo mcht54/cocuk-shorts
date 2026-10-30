@@ -2,7 +2,7 @@
 
 Hedefler ~3 hafta: Gemini bir süre çalışmasa da yayın durmaz. Bir çalıştırma en çok MASAL_TUR bölüm ve
 MERAK_TUR konu yazar (ücretsiz katmanın günlük sınırına takılmamak için); açık her gün kapanır.
-Kullanım: python -m otonom.stok [--kanal masal|merak|hepsi]   Çıkış 1 = stok kritik ve yazılamadı.
+Kullanım: python -m otonom.stok [--kanal masal|merak|hepsi]   Çıkış 1 = beklenmeyen kod hatası (düşük stok sağlık denetiminde raporlanır).
 """
 import argparse
 import json
@@ -104,7 +104,8 @@ def main():
         ozet(f"⚠️ KRİTİK: {k}")
     for h in HATALAR:
         ozet(f"❌ HATA: {h}")
-    return 1 if kritik or HATALAR else 0
+    # düşük stok sağlık denetiminin işidir (tek e-posta); stok işi yalnız kod hatasında kırmızı biter
+    return 1 if HATALAR else 0
 
 
 if __name__ == "__main__":

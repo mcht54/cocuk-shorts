@@ -16,7 +16,7 @@ from ortak import gemini
 
 KOK = Path(__file__).resolve().parent
 KONULAR = KOK / "konular"
-DENEME = 3
+DENEME = 5
 KISA_ADET = 4
 UZUN_KELIME = (800, 1050)   # ölçüm (Derinkuyu): 0.62 sn/kelime -> ~8.3-10.9 dk
 KISA_KELIME = (60, 110)     # Shorts hızında ~0.6 sn/kelime -> ~36-66 sn
@@ -164,6 +164,29 @@ def _parcalar(s):
     return s.get("parcalar", [])
 
 
+PARCA_KELIME = 24   # bundan uzun parça cümle sınırlarından bölünür (denetim sınırı uzunda 45, kısada 26)
+
+
+def _bol(p):
+    """Uzun parçayı cümlelerinden bölerek yeni parçalara ayırır; görseller korunur, grafik ilk parçada kalır.
+    Kelime ve bilgi değişmez, yalnız "cümle çok uzun" hatası Gemini'ye gitmeden giderilir."""
+    if len(p["metin"].split()) <= PARCA_KELIME:
+        return [p]
+    cumleler = [c for c in re.split(r"(?<=[.!?…])\s+", p["metin"].strip()) if c]
+    gruplar, simdiki = [], []
+    for c in cumleler:
+        if simdiki and len(" ".join(simdiki + [c]).split()) > PARCA_KELIME:
+            gruplar.append(simdiki)
+            simdiki = []
+        simdiki.append(c)
+    gruplar.append(simdiki)
+    if len(gruplar) == 1:
+        return [p]
+    return [dict(p, metin=" ".join(g)) if i == 0 else
+            {k: v for k, v in p.items() if k not in ("grafik", "yazi", "metin")} | {"metin": " ".join(g)}
+            for i, g in enumerate(gruplar)]
+
+
 def _duzenle(s):
     """Gemini'nin boş (null) ya da yanlış tipli alanlarını denetimden önce düzeltir: denetim çökmez, eksik
     alan hata olarak düzeltmeye gider. JSON nesnesi değilse None."""
@@ -184,7 +207,7 @@ def _duzenle(s):
                 p.pop("yazi", None)
             if not isinstance(p.get("grafik"), dict):
                 p.pop("grafik", None)
-            temiz.append(p)
+            temiz.extend(_bol(p))
         return temiz
 
     if "bolumler" in s:
@@ -209,7 +232,13 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
     kelime = len(metin.split())
     alt, ust = UZUN_KELIME if uzun else KISA_KELIME
     if not alt <= kelime <= ust:
-        h.append(f"toplam {kelime} kelime; {alt}-{ust} olmalı")
+        hedef = (alt + ust) // 2
+        if kelime < alt:
+            h.append(f"toplam {kelime} kelime; {alt}-{ust} olmalı: yaklaşık {hedef - kelime} kelime EKLE "
+                     "(kaynaktaki başka bilgilerle yeni kısa parçalar ekle; mevcut parçaları uzatma)")
+        else:
+            h.append(f"toplam {kelime} kelime; {alt}-{ust} olmalı: yaklaşık {kelime - hedef} kelime ÇIKAR "
+                     "(en az önemli parçaları sil)")
     if uzun:
         if not 6 <= len(s.get("bolumler", [])) <= 10:
             h.append(f"{len(s.get('bolumler', []))} bölüm; 7-9 olmalı")

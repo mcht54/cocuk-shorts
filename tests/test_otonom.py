@@ -70,6 +70,15 @@ class MerakDenetimTesti(unittest.TestCase):
         u = {"baslik": "x", "bolumler": [None, {"ad": None, "parcalar": [None, {"metin": None, "gorsel": [0]}]}]}
         self.assertTrue(yaz.yapi_denetimi(yaz._duzenle(u), 5, True, KAYNAK, self.sayilar))
 
+    def test_uzun_parca_cumlelerden_bolunur(self):
+        uzun = " ".join([f"Bu {i}. cümle tam olarak sekiz kelimeden oluşuyor burada." for i in range(5)])
+        p = {"metin": uzun, "gorsel": [2], "grafik": {"tur": "sayi", "deger": "85"}}
+        parcalar = yaz._bol(p)
+        self.assertGreater(len(parcalar), 1)
+        self.assertEqual(" ".join(x["metin"] for x in parcalar), uzun)
+        self.assertTrue(all(x["gorsel"] == [2] and len(x["metin"].split()) <= yaz.PARCA_KELIME for x in parcalar))
+        self.assertEqual([("grafik" in x) for x in parcalar], [True] + [False] * (len(parcalar) - 1))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:
