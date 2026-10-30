@@ -63,9 +63,10 @@ def merak():
     for tur in range(MERAK_TUR):
         if uzun >= MERAK_UZUN_HEDEF and kisa >= MERAK_KISA_HEDEF:
             break
-        # yarım kalmış konu (kaynak var, senaryo yok) önce tamamlanır
-        yarim = [d.name for d in konu.KONULAR.glob("*") if (d / "kaynak.json").exists()
-                 and not (d / "reddedildi").exists() and not (d / "uzun.json").exists()]
+        # yarım kalmış konu (kaynak var; uzun ya da Shorts senaryosu yok, ör. çağrı sınırı doldu) önce tamamlanır
+        yarim = sorted(d.name for d in konu.KONULAR.glob("*") if (d / "kaynak.json").exists()
+                       and not (d / "reddedildi").exists()
+                       and not ((d / "uzun.json").exists() and list(d.glob("kisa*.json"))))
         kid = yarim[0] if yarim else konu.yeni_konu(tur)
         if not kid:
             ozet("- uygun konu bulunamadı (bu tur)")

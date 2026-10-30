@@ -86,6 +86,20 @@ class MerakDenetimTesti(unittest.TestCase):
         self.assertTrue(yaz.alinti_var("in 1963", d))
         self.assertFalse(yaz.alinti_var("it was built by aliens from another galaxy", d))
 
+    def test_grafiksiz_shorts_kaynak_sayisindan_grafik_alir(self):
+        s = kisa()
+        s["parcalar"][-1].pop("grafik")
+        yaz.otomatik_grafik(s, self.sayilar)
+        self.assertEqual([p["grafik"] for p in s["parcalar"] if p.get("grafik")],
+                         [{"tur": "sayi", "deger": "20.000", "birim": "kişi"}])  # 1963 yıl, 85 küçük olan
+
+    def test_zaman_cizelgesinden_uydurma_yil_atilir(self):
+        g = {"tur": "zaman", "olaylar": [{"yil": "1963", "metin": "a"}, {"yil": "1850", "metin": "b"},
+                                         {"yil": "MÖ 8. yüzyıl", "metin": "c"}, {"yil": "bugün", "metin": "d"}]}
+        yaz.grafik_onar(g, self.sayilar)
+        self.assertEqual([o["yil"] for o in g["olaylar"]], ["1963", "MÖ 8. yüzyıl", "bugün"])
+        self.assertIsNone(yaz.grafik_hatasi(g, None, self.sayilar))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:

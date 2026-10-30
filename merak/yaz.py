@@ -22,7 +22,7 @@ KONULAR = KOK / "konular"
 DENEME = 5
 KISA_ADET = 4
 UZUN_KELIME = (800, 1050)   # ölçüm (Derinkuyu): 0.62 sn/kelime -> ~8.3-10.9 dk
-KISA_KELIME = (60, 110)     # Shorts hızında ~0.6 sn/kelime -> ~36-66 sn
+KISA_KELIME = (45, 110)     # Shorts hızında ~0.6 sn/kelime -> ~27-66 sn
 YASAK = re.compile(r"\b(intihar|tecavüz|katliam|vahşet|kafa kes|işkence|abone ol|beğen(meyi)? unutma)", re.I)
 
 ORTAK_KURALLAR = """KESİN KURALLAR:
@@ -260,6 +260,43 @@ def grafik_hatasi(g, koordinat=None, kaynak_sayilari=None):
     return None
 
 
+def grafik_onar(g, kaynak_sayilari):
+    """Onarılabilir grafik hatası kodla düzeltilir: zaman çizelgesinden kaynakta olmayan yıllı olaylar atılır, 5'e kırpılır."""
+    if isinstance(g, dict) and g.get("tur") == "zaman" and isinstance(g.get("olaylar"), list):
+        g["olaylar"] = [o for o in g["olaylar"] if isinstance(o, dict)
+                        and not sayi_denetimi(json.dumps(o, ensure_ascii=False), kaynak_sayilari)][:5]
+    return g
+
+
+def otomatik_grafik(s, kaynak_sayilari, koordinat=None):
+    """Shorts'ta geçerli grafik yoksa metindeki kaynakta geçen en büyük sayıdan sayaç grafiği kurar (Gemini'siz).
+    Sayı yoksa ve konum biliniyorsa ilk parçaya harita konur."""
+    parcalar = _parcalar(s)
+    for p in parcalar:
+        if p.get("grafik") is not None:
+            grafik_onar(p["grafik"], kaynak_sayilari)
+            if grafik_hatasi(p["grafik"], koordinat, kaynak_sayilari):
+                p.pop("grafik")
+    if any(p.get("grafik") for p in parcalar):
+        return s
+    adaylar = []
+    for p in parcalar:
+        for m in re.finditer(r"(\d[\d.,]*\d|\d+)\s*([^\W\d_]+)?", p["metin"]):
+            n = _sayi_norm(m.group(1))
+            try:
+                deger = float(n)
+            except ValueError:
+                continue
+            if deger > 12 and n in kaynak_sayilari and not 1000 <= deger <= 2100:  # yıl değil, miktar
+                adaylar.append((deger, p, m.group(1).strip(".,"), m.group(2) or ""))
+    if adaylar:
+        _, p, yazim, birim = max(adaylar, key=lambda x: x[0])
+        p["grafik"] = {"tur": "sayi", "deger": yazim, "birim": birim}
+    elif koordinat and parcalar:
+        parcalar[0]["grafik"] = {"tur": "harita", "etiket": s.get("ekran_basligi", "")[:30]}
+    return s
+
+
 def gorsel_onar(s, gorsel_sayisi):
     """Eksik/geçersiz görsel numaralarını kodla tamamlar (en az kullanılan görsel); Gemini'ye gitmez."""
     parcalar = _parcalar(s)
@@ -406,6 +443,8 @@ def _dogrula_duzelt(s, gorseller, uzun, kaynak, kaynak_sayilari, koordinat=None)
         if s is None:
             return None
         gorsel_onar(s, len(gorseller))
+        if not uzun:
+            otomatik_grafik(s, kaynak_sayilari, koordinat)
         try:
             h = yapi_denetimi(s, len(gorseller), uzun, kaynak, kaynak_sayilari, koordinat)
         except (TypeError, AttributeError, KeyError, ValueError) as e:
@@ -447,7 +486,8 @@ def plan_denetimi(plan, gorsel_sayisi, koordinat, kaynak_sayilari):
             h.append("bölüm adı boş ya da 32 karakterden uzun")
         if not isinstance(b.get("anlatilacak"), list) or not b["anlatilacak"]:
             h.append(f"'{b.get('ad')}' bölümünde anlatilacak listesi yok")
-        if b.get("grafik") is not None and grafik_hatasi(b["grafik"], koordinat, kaynak_sayilari):
+        if b.get("grafik") is not None and grafik_hatasi(grafik_onar(b["grafik"], kaynak_sayilari), koordinat,
+                                                         kaynak_sayilari):
             b["grafik"] = None
     grafikler = [b["grafik"] for b in bolumler if b.get("grafik")]
     if len(grafikler) < 6:
