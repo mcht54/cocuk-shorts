@@ -2,16 +2,32 @@
 
 Her şey GitHub Actions'ta çalışır, bilgisayarın açık olması gerekmez. Ücretli servis yoktur.
 
-## Takvim (Türkiye saati)
+## Takvim (Türkiye saati) ve haftalık onay
 
-| Ne | Ne zaman | İş akışı |
+Videolar **1 hafta önceden** üretilip YouTube'a **zamanlanmış** yüklenir (`otonom/takvim.py`).
+Her pazar 09:00 "Haftalık onay" e-postası gelir: önümüzdeki haftanın videoları, izle/Studio bağlantılarıyla.
+Beğenmediğinizi YouTube Studio'da silin ya da Gizli yapın; dokunmadığınız saatinde yayınlanır (sistem durmaz).
+
+| Yayın | Ne zaman |
+|---|---|
+| Minik Masal Evi Shorts | her gün 17:00 |
+| Minik Masal Evi uzun derleme | pazar 10:00 (yalnız yayınlanmış Shorts'lardan, hemen yayınlanır) |
+| Merak Arşivi belgesel | salı ve cuma 18:00 |
+| Merak Arşivi Shorts | pazartesi, çarşamba, perşembe, cumartesi 19:00 |
+
+| İş | Ne zaman | İş akışı |
 |---|---|---|
-| Stok doldurma (iki kanal, Gemini) | her gece 03:30 | `stok.yml` |
-| Sağlık denetimi + nabız | her gün 09:00 | `saglik.yml` |
-| Minik Masal Evi Shorts | her gün 17:00 | `gunluk3d.yml` |
-| Minik Masal Evi uzun derleme | pazar 10:00 | `haftalik-uzun.yml` |
-| Merak Arşivi uzun belgesel | salı ve cuma 18:00 | `merak.yml` |
-| Merak Arşivi Shorts | her gün 19:00 | `merak.yml` |
+| Stok doldurma (Gemini) | her gece 03:30 | `stok.yml` |
+| Masal üretim + zamanlama | 05:00 ve 16:00 | `gunluk3d.yml` |
+| Merak üretim + zamanlama | 13:00 | `merak.yml` |
+| Sağlık denetimi + nabız | 09:00 | `saglik.yml` |
+| Haftalık onay listesi | pazar 09:00 | `haftalik-onay.yml` |
+
+## Özgünlük (YouTube "özgün olmayan içerik" kuralına karşı)
+
+- Merak: her belgeselde en az 6, her Shorts'ta en az 1 kodla çizilmiş özgün grafik (harita, zaman
+  çizelgesi, sayaç, karşılaştırma); 5 farklı anlatım tarzı dönüşümlü.
+- Masal: özgün karakterler; 7 mekân (kış Ara-Şub, sahil Haz-Eyl), 6 nesne; çoğu bölüm macera.
 
 ## İçerik nereden gelir
 
