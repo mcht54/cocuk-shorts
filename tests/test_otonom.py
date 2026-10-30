@@ -57,6 +57,19 @@ class MerakDenetimTesti(unittest.TestCase):
         s["parcalar"][-1]["grafik"] = {"tur": "karsilastirma", "deger": 85, "birim": "m", "referans": "ay"}
         self.assertTrue(any("referans" in x for x in yaz.yapi_denetimi(s, 5, False, KAYNAK, self.sayilar)))
 
+    def test_bos_alanli_yanit_cokmez_hataya_doner(self):
+        s = kisa()
+        s["parcalar"][0]["yazi"] = None
+        s["parcalar"][1]["metin"] = None
+        s["parcalar"][2]["grafik"] = None
+        s["baslik"] = None
+        s["iddialar"] = None
+        h = yaz.yapi_denetimi(yaz._duzenle(s), 5, False, KAYNAK, self.sayilar)
+        self.assertTrue(any("başlık" in x for x in h))
+        self.assertIsNone(yaz._duzenle(["liste"]))
+        u = {"baslik": "x", "bolumler": [None, {"ad": None, "parcalar": [None, {"metin": None, "gorsel": [0]}]}]}
+        self.assertTrue(yaz.yapi_denetimi(yaz._duzenle(u), 5, True, KAYNAK, self.sayilar))
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:

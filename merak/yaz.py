@@ -164,6 +164,42 @@ def _parcalar(s):
     return s.get("parcalar", [])
 
 
+def _duzenle(s):
+    """Gemini'nin boş (null) ya da yanlış tipli alanlarını denetimden önce düzeltir: denetim çökmez, eksik
+    alan hata olarak düzeltmeye gider. JSON nesnesi değilse None."""
+    if not isinstance(s, dict):
+        return None
+    for k in ("baslik", "ekran_basligi", "kapak_yazisi", "aciklama"):
+        if k in s and not isinstance(s[k], str):
+            s[k] = "" if s[k] is None else str(s[k])
+
+    def parcalar(liste):
+        temiz = []
+        for p in liste if isinstance(liste, list) else []:
+            if not isinstance(p, dict):
+                continue
+            if not isinstance(p.get("metin"), str):
+                p["metin"] = ""
+            if not isinstance(p.get("yazi"), str):
+                p.pop("yazi", None)
+            if not isinstance(p.get("grafik"), dict):
+                p.pop("grafik", None)
+            temiz.append(p)
+        return temiz
+
+    if "bolumler" in s:
+        s["bolumler"] = [b for b in s["bolumler"] if isinstance(b, dict)] if isinstance(s["bolumler"], list) else []
+        for b in s["bolumler"]:
+            if not isinstance(b.get("ad"), str):
+                b["ad"] = ""
+            b["parcalar"] = parcalar(b.get("parcalar"))
+    else:
+        s["parcalar"] = parcalar(s.get("parcalar"))
+    if not isinstance(s.get("iddialar"), list):
+        s["iddialar"] = []
+    return s
+
+
 def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=None):
     h = []
     parcalar = _parcalar(s)
@@ -244,14 +280,21 @@ def gorsel_listesi(gorseller):
 def _ai_denetim(s, kaynak):
     metin = "\n".join(p["metin"] for p in _parcalar(s))
     sonuc = gemini.sor(DENETIM_ISTEM.format(kaynak=kaynak[:60000], metin=metin), sicaklik=0.1)
-    return [f"'{x.get('cumle', '')[:90]}': {x.get('neden', '')}" for x in sonuc.get("sorunlar", [])
+    sorunlar = sonuc.get("sorunlar", []) if isinstance(sonuc, dict) else []
+    return [f"'{str(x.get('cumle') or '')[:90]}': {x.get('neden') or ''}" for x in sorunlar
             if isinstance(x, dict)]
 
 
 def _dogrula_duzelt(s, gorseller, uzun, kaynak, kaynak_sayilari, koordinat=None):
     """Yapı + sayı + yapay zekâ denetimi; hata varsa Gemini'ye düzelttir. Geçen senaryo ya da None."""
     for tur in range(DENEME):
-        h = yapi_denetimi(s, len(gorseller), uzun, kaynak, kaynak_sayilari, koordinat)
+        s = _duzenle(s)
+        if s is None:
+            return None
+        try:
+            h = yapi_denetimi(s, len(gorseller), uzun, kaynak, kaynak_sayilari, koordinat)
+        except (TypeError, AttributeError, KeyError, ValueError) as e:
+            h = [f"JSON yapısı şemaya uymuyor ({e}); şemadaki alanları eksiksiz ve doğru tipte doldur"]
         if not h:
             h = _ai_denetim(s, kaynak)
         if not h:

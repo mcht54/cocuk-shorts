@@ -38,6 +38,9 @@ def masal_stogu():
                if str(p.relative_to(DEPO)) not in yapilan and kalan.get(str(p.relative_to(DEPO)), 0) < 2)
 
 
+HATALAR = []
+
+
 def masal():
     from otonom import masal_yaz
     stok = masal_stogu()
@@ -67,7 +70,14 @@ def merak():
         if not kid:
             ozet("- uygun konu bulunamadı (bu tur)")
             continue
-        ok = yaz.yaz(kid)
+        try:
+            ok = yaz.yaz(kid)
+        except gemini.GeminiYok:
+            raise
+        except Exception as e:  # kod hatası: konu bırakılır (her gün aynı yerde takılmasın), iş kırmızı biter
+            (konu.KONULAR / kid / "reddedildi").write_text(f"beklenmeyen hata: {e!r}\n")
+            HATALAR.append(f"merak {kid}: {e!r}")
+            ok = False
         ozet(f"- {kid}: {'senaryolar yazıldı' if ok else 'senaryo denetimi geçemedi, konu bırakıldı'}")
         uzun, kisa = say()
     return uzun, kisa
@@ -92,7 +102,9 @@ def main():
             kritik.append(f"Merak Arşivi Shorts stoku {sonuc[1]}")
     for k in kritik:
         ozet(f"⚠️ KRİTİK: {k}")
-    return 1 if kritik else 0
+    for h in HATALAR:
+        ozet(f"❌ HATA: {h}")
+    return 1 if kritik or HATALAR else 0
 
 
 if __name__ == "__main__":
