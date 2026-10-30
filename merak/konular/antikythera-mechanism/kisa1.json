@@ -1,0 +1,81 @@
+{
+ "baslik": "Antik Dünyanın Bilgisayarı",
+ "ekran_basligi": "Antik Bilgisayar",
+ "aciklama": "Antikitera düzeneğinin bilinen en eski analog bilgisayar olması anlatılıyor.",
+ "etiketler": [
+  "Antikitera",
+  "Antik Bilgisayar",
+  "Tarih",
+  "Arkeoloji",
+  "Bilim Tarihi",
+  "Antik Yunan"
+ ],
+ "parcalar": [
+  {
+   "metin": "Antikitera düzeneği bilinen en eski analog bilgisayardır.",
+   "gorsel": [
+    14
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Antik Bilgisayar"
+   }
+  },
+  {
+   "metin": "Bu eser 1901 yılında Yunan adası yakınlarındaki bir batıkta keşfedilmiştir.",
+   "gorsel": [
+    42
+   ]
+  },
+  {
+   "metin": "Düzenek gök cisimlerinin konumlarını ve tutulmaları on yıllar öncesinden tahmin edebiliyordu.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Cihazın içinde otuz adet bronz çark bulunduğu bilinmektedir.",
+   "gorsel": [
+    14
+   ]
+  },
+  {
+   "metin": "Bu eşsiz buluntu Atina Ulusal Arkeoloji Müzesi'nde sergilenmektedir.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Tüm bu gizemli hikâye kanalda seni bekliyor.",
+   "gorsel": [
+    20
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Antikitera düzeneği bilinen en eski analog bilgisayardır.",
+   "kaynak_alinti": "It is the oldest known example of an analogue computer."
+  },
+  {
+   "iddia": "1901 yılında Yunan adası yakınlarındaki bir batıkta keşfedilmiştir.",
+   "kaynak_alinti": "The artefact was among wreckage retrieved from a shipwreck off the coast of the Greek island Antikythera in 1901."
+  },
+  {
+   "iddia": "Gök cisimlerinin konumlarını ve tutulmaları on yıllar öncesinden tahmin edebiliyordu.",
+   "kaynak_alinti": "It could be used to predict astronomical positions and eclipses decades in advance."
+  },
+  {
+   "iddia": "Cihazın içinde otuz adet bronz çark bulunduğu bilinmektedir.",
+   "kaynak_alinti": "enabling it to follow the movements of the Moon and the Sun through the zodiac, to predict eclipses and to model the irregular orbit of the Moon... mechanism had 35 meshing bronze gears, 30 of which are still visible"
+  },
+  {
+   "iddia": "Atina Ulusal Arkeoloji Müzesi'nde sergilenmektedir.",
+   "kaynak_alinti": "All these fragments of the mechanism are kept at the National Archaeological Museum"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+  "https://tr.wikipedia.org/wiki/Antikitera_d%C3%BCzene%C4%9Fi"
+ ]
+}

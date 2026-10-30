@@ -1,0 +1,67 @@
+{
+ "baslik": "Bin Yıllık Kayıp Teknoloji",
+ "ekran_basligi": "Kayıp Teknoloji",
+ "aciklama": "Antikitera düzeneğiyle benzer karmaşıklıkta makinelerin yüzyıllar sonra ortaya çıkışı.",
+ "etiketler": [
+  "Antikitera",
+  "Teknoloji",
+  "Orta Çağ",
+  "Bilim",
+  "Mühendislik",
+  "Antik Çağ"
+ ],
+ "parcalar": [
+  {
+   "metin": "Antikitera düzeneği gibi karmaşık makineler yüzyıllarca bir daha görülmedi.",
+   "gorsel": [
+    3
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Kayıp Teknoloji"
+   }
+  },
+  {
+   "metin": "Benzer karmaşıklıkta makineler ilk kez ondördüncü yüzyılda Batı Avrupa'da ortaya çıktı.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Bu durum antik dönem mühendisliğinin ulaştığı seviyeyi gözler önüne seriyor.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Cihazın yapımında dönemin gelişmiş astronomi ve matematik teorileri kullanılmıştır.",
+   "gorsel": [
+    14
+   ]
+  },
+  {
+   "metin": "Bu eşsiz keşfin tüm hikâyesi kanalda.",
+   "gorsel": [
+    20
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Benzer karmaşıklıkta makineler ilk kez ondördüncü yüzyılda Batı Avrupa'da ortaya çıktı.",
+   "kaynak_alinti": "Machines with similar complexity did not appear again until the 14th century in western Europe."
+  },
+  {
+   "iddia": "Antik dönem mühendisliğinin ulaştığı seviyeyi gözler önüne seriyor.",
+   "kaynak_alinti": "The quality and complexity of the mechanism's manufacture suggests it must have had undiscovered predecessors during the Hellenistic period."
+  },
+  {
+   "iddia": "Cihazın yapımında dönemin gelişmiş astronomi ve matematik teorileri kullanılmıştır.",
+   "kaynak_alinti": "Its construction relied on theories of astronomy and mathematics developed by Greek astronomers during the second century BC"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+  "https://tr.wikipedia.org/wiki/Antikitera_d%C3%BCzene%C4%9Fi"
+ ]
+}
