@@ -21,6 +21,8 @@ KOK = Path(__file__).resolve().parent
 KONULAR = KOK / "konular"
 DENEME = 5
 KISA_ADET = 4
+KONU_DENEME = 3             # konu ancak 3 ayrı çalıştırmada geçemezse bırakılır
+UZUN_GRAFIK = 5             # plan 6+ ister; anlatılmayan grafik atılınca 5'e kadar düşmesine izin
 UZUN_KELIME = (800, 1050)   # ölçüm (Derinkuyu): 0.62 sn/kelime -> ~8.3-10.9 dk
 KISA_KELIME = (45, 110)     # Shorts hızında ~0.6 sn/kelime -> ~27-66 sn
 YASAK = re.compile(r"\b(intihar|tecavüz|katliam|vahşet|kafa kes|işkence|abone ol|beğen(meyi)? unutma)", re.I)
@@ -30,6 +32,8 @@ ORTAK_KURALLAR = """KESİN KURALLAR:
 - Sayıları RAKAMLA ve kaynakta geçtiği değerle yaz (ör. 1963, 85, 20.000). Birim dönüştürme, yuvarlama yapma.
   Kaynakta tartışmalı/tahmini olan bilgiyi "tahminlere göre", "bazı araştırmacılara göre" diye ver.
 - Doğru, akıcı, konuşma diliyle Türkçe; seslendirilecek. Kısaltma, parantez, dipnot, emoji yok.
+- Kaynak metin büyük ölçüde İngilizce: bilgiyi TÜRKÇEYE ÇEVİREREK anlat; senaryoda tek bir İngilizce kelime ya da
+  cümle olmasın (yalnız "iddialar" içindeki kaynak_alinti İngilizce kalabilir).
 - Seyirciye hitap edebilirsin ama "abone ol/beğen" deme. Abartılı, yanıltıcı ifade ya da uydurma gizem yok.
 - "gorsel": parçanın anlattığına en uygun görsellerin numaraları (aşağıdaki GÖRSEL LİSTESİ'nden).
 - "iddialar": senaryodaki her somut bilgi için kaynaktan BİREBİR kopyalanmış kısa alıntı (kaynak_alinti).
@@ -241,6 +245,11 @@ INGILIZCE = {"the", "of", "and", "as", "was", "were", "with", "which", "from", "
              "have", "been", "its", "their", "by"}
 
 
+SAYI_KELIME = re.compile(r"\b(bir|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|yirmi|otuz|kırk|elli|altmış|yetmiş|seksen|"
+                         r"doksan|yüz|bin|milyon)\s+(yüz|bin|milyon|iki|üç|dört|beş|altı|yedi|sekiz|dokuz|on|yirmi|"
+                         r"otuz|kırk|elli|altmış|yetmiş|seksen|doksan)\b", re.I)
+
+
 def ingilizce_var(metin):
     """Seslendirmeye kaçmış İngilizce ifade (kaynak İngilizce olduğu için olur): bulunan kelimeler."""
     return sorted({k for k in re.findall(r"\w+", metin.lower()) if k in INGILIZCE})
@@ -417,8 +426,8 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
         if re.search(r"[()\[\]*#]|https?:", p.get("metin", "")):
             h.append(f"parça {i}: seslendirilemeyecek işaret/bağlantı var")
     grafikler = [p["grafik"] for p in parcalar if isinstance(p.get("grafik"), dict)]
-    if len(grafikler) < (6 if uzun else 1):
-        h.append(f"{len(grafikler)} grafik; {'en az 6' if uzun else 'en az 1'} olmalı")
+    if len(grafikler) < (UZUN_GRAFIK if uzun else 1):
+        h.append(f"{len(grafikler)} grafik; {f'en az {UZUN_GRAFIK}' if uzun else 'en az 1'} olmalı")
     if uzun and not any(g.get("tur") == "zaman" for g in grafikler):
         h.append("zaman çizelgesi grafiği yok")
     grafik_metni = []
@@ -432,6 +441,9 @@ def yapi_denetimi(s, gorsel_sayisi, uzun, kaynak, kaynak_sayilari, koordinat=Non
         h.append(f"grafiklerde kaynakta geçmeyen sayılar: {', '.join(sorted(eksik_g))}")
     if YASAK.search(metin + " " + s.get("baslik", "")):
         h.append("yasaklı ifade")
+    m = SAYI_KELIME.search(metin)
+    if m:
+        h.append(f"sayı yazıyla yazılmış ('{m.group(0)}'); sayıları RAKAMLA yaz (ör. 1901)")
     ing = ingilizce_var(metin + " " + s.get("baslik", ""))
     if ing:
         h.append(f"İngilizce ifade var ({', '.join(ing)}); her cümle tamamen Türkçe olmalı")
@@ -552,10 +564,9 @@ def bolum_denetimi(b, alt, ust, kaynak, kaynak_sayilari):
     ing = ingilizce_var(metin)
     if ing:
         h.append(f"İngilizce ifade var ({', '.join(ing)}); her cümle tamamen Türkçe olmalı")
-    for p in b["parcalar"]:
-        if p.get("grafik") and not grafik_anlatimda_mi(p["grafik"], metin):
-            h.append(f"grafikteki sayı ({p['grafik'].get('deger')}) bölüm metninde geçmiyor; "
-                     "grafiğin olduğu parçada bu bilgiyi anlat")
+    m = SAYI_KELIME.search(metin)
+    if m:
+        h.append(f"sayı yazıyla yazılmış ('{m.group(0)}'); sayıları RAKAMLA yaz (ör. 1901)")
     for i, p in enumerate(b["parcalar"]):
         if re.search(r"[()\[\]*#]|https?:", p["metin"]):
             h.append(f"parça {i}: seslendirilemeyecek işaret/bağlantı var")
@@ -582,6 +593,16 @@ def _grafik_yerlestir(b, grafik):
         return
     deger = str(grafik.get("deger", ""))
     (isaretli or [p for p in b["parcalar"] if deger and deger in p["metin"]] or b["parcalar"])[0]["grafik"] = grafik
+
+
+def _anlatilmayan_grafik(b, kaynak_sayilari):
+    """Grafikteki sayı bölümde anlatılmıyorsa: bölüm metnindeki kaynak sayısından yeni sayaç kurulur, o da
+    yoksa grafik çıkarılır (Gemini'ye düzelttirmek tekrar tekrar başarısız oluyordu)."""
+    metin = " ".join(p["metin"] for p in b["parcalar"])
+    for p in b["parcalar"]:
+        if p.get("grafik") and not grafik_anlatimda_mi(p["grafik"], metin):
+            p.pop("grafik")
+            otomatik_grafik(b, kaynak_sayilari)
 
 
 def _bolum_hazirla(ham, gorsel_sayisi):
@@ -650,6 +671,7 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
             h = ["JSON yapısı şemaya uymuyor; parcalar listesi boş ya da hatalı"]
         else:
             _grafik_yerlestir(b, grafik)
+            _anlatilmayan_grafik(b, kaynak_sayilari)
             kirp(b, ust)
             if _kelime(b) < alt:  # kısa: yalnız yeni parça iste, mevcutlara ekle
                 ek = gemini.sor(EK_ISTEM.format(ad=pb["ad"], eksik=(alt + ust) // 2 - _kelime(b),
@@ -743,7 +765,11 @@ def yaz(kid):
         print(f"  uzun senaryo: {kid}", flush=True)
         s = uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat)
         if not s:
-            (d / "reddedildi").write_text("uzun senaryo denetimi geçemedi\n")
+            sayac = d / "basarisiz"
+            n = int(sayac.read_text()) + 1 if sayac.exists() else 1
+            sayac.write_text(f"{n}\n")
+            if n >= KONU_DENEME:
+                (d / "reddedildi").write_text(f"uzun senaryo denetimi {n} kez geçemedi\n")
             return False
         s["kaynaklar"] = paket["kaynaklar"]
         (d / "uzun.json").write_text(json.dumps(s, ensure_ascii=False, indent=1))

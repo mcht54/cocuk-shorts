@@ -60,6 +60,7 @@ def merak():
         return len(yayinla.sira("uzun")), len(yayinla.sira("shorts"))
     uzun, kisa = say()
     ozet(f"**Merak Arşivi** bekleyen uzun: {uzun} (hedef {MERAK_UZUN_HEDEF}), Shorts: {kisa} (hedef {MERAK_KISA_HEDEF})")
+    denenen = set()
     for tur in range(MERAK_TUR):
         if uzun >= MERAK_UZUN_HEDEF and kisa >= MERAK_KISA_HEDEF:
             break
@@ -67,7 +68,9 @@ def merak():
         yarim = sorted(d.name for d in konu.KONULAR.glob("*") if (d / "kaynak.json").exists()
                        and not (d / "reddedildi").exists()
                        and not ((d / "uzun.json").exists() and list(d.glob("kisa*.json"))))
+        yarim = [k for k in yarim if k not in denenen]  # aynı çalıştırmada başarısız konu tekrar denenmez
         kid = yarim[0] if yarim else konu.yeni_konu(tur)
+        denenen.add(kid)
         if not kid:
             ozet("- uygun konu bulunamadı (bu tur)")
             continue

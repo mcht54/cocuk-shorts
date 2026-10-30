@@ -107,6 +107,17 @@ class MerakDenetimTesti(unittest.TestCase):
         self.assertTrue(yaz.grafik_anlatimda_mi({"tur": "sayi", "deger": "20.000"}, "20.000 kişi saklanırdı."))
         self.assertIn("çarpıcı değil", yaz.grafik_hatasi({"tur": "sayi", "deger": "2"}))
 
+    def test_yaziyla_sayi_yakalanir(self):
+        h = yaz.yapi_denetimi(kisa("Bin dokuz yüz bir yılında bulundu."), 5, False, KAYNAK, self.sayilar)
+        self.assertTrue(any("RAKAMLA" in x for x in h))
+        self.assertIsNone(yaz.SAYI_KELIME.search("Bir yüzü taştan, iki kapısı vardı."))
+
+    def test_anlatilmayan_grafik_metindeki_sayiyla_degisir(self):
+        b = {"parcalar": [{"metin": "Burada 20.000 kişi saklanabiliyordu.", "gorsel": [0],
+                           "grafik": {"tur": "sayi", "deger": "82", "birim": "parça"}}]}
+        yaz._anlatilmayan_grafik(b, self.sayilar)
+        self.assertEqual(b["parcalar"][0]["grafik"]["deger"], "20.000")
+
     def test_uydurma_alinti_reddedilir(self):
         s = kisa()
         for i in s["iddialar"]:
