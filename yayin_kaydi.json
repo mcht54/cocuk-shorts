@@ -179,5 +179,19 @@
    "publishAt": "2026-11-06T14:00:00Z"
   },
   "yayin_zamani": "2026-11-06T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-10-31T16:01:19+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b012.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "_qoUc3CNPTQ",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-07T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-07T14:00:00+00:00"
  }
 ]
