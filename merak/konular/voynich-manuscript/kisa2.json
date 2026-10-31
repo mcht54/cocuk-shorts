@@ -1,0 +1,85 @@
+{
+ "baslik": "Voynich El Yazmasını Kimler Satın Aldı?",
+ "ekran_basligi": "Kayıp Sahipler",
+ "aciklama": "Yüzyıllar boyunca Voynich el yazmasının el değiştirdiği isimler.",
+ "etiketler": [
+  "imparator",
+  "simyacı",
+  "tarih",
+  "Voynich",
+  "Prag",
+  "koleksiyon",
+  "kitap",
+  "gizem"
+ ],
+ "parcalar": [
+  {
+   "metin": "El yazmasının ilk teyit edilmiş sahibi 17. yüzyılda Prag'da yaşamış Georg Baresch adında bir simyacıdır.",
+   "gorsel": [
+    24
+   ]
+  },
+  {
+   "metin": "Baresch el yazmasından Roma'daki Athanasius Kircher'e bahsetmiştir.",
+   "gorsel": [
+    25
+   ]
+  },
+  {
+   "metin": "Baresch'in ölümünün ardından el yazması Jan Marek Marci'ye geçti.",
+   "gorsel": [
+    12
+   ]
+  },
+  {
+   "metin": "Marci kitabı arkadaşı Kircher'e gönderdi.",
+   "gorsel": [
+    26
+   ]
+  },
+  {
+   "metin": "Bir mektupta kitabın İmparator Rudolf'a ait olduğu ve 600 dukata alındığı belirtildi.",
+   "gorsel": [
+    27
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "600",
+    "birim": "dukata"
+   }
+  },
+  {
+   "metin": "Tüm bu gizemli hikayenin detayları kanalda.",
+   "gorsel": [
+    28
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "El yazmasının ilk teyit edilmiş sahibi 17. yüzyılda Prag'da yaşamış simyacı Georg Baresch'tir.",
+   "kaynak_alinti": "The first confirmed owner was Georg Baresch, a 17th-century alchemist from Prague."
+  },
+  {
+   "iddia": "Baresch el yazmasından Roma'daki Kircher'e bahsetmiş ve yazıdan örnekler göndermiştir.",
+   "kaynak_alinti": "Baresch twice sent a sample copy of the script to Kircher in Rome, asking for clues."
+  },
+  {
+   "iddia": "Baresch'in ölümünün ardından el yazması Jan Marek Marci'ye geçmiştir.",
+   "kaynak_alinti": "Upon Baresch's death, the manuscript passed to his friend Jan Marek Marci (also known as Johannes Marcus Marci), then rector of Charles University in Prague."
+  },
+  {
+   "iddia": "Marci kitabı arkadaşı Kircher'e göndermiştir.",
+   "kaynak_alinti": "A few years later, Marci sent the book to Kircher, his longtime friend and correspondent."
+  },
+  {
+   "iddia": "Mektupta kitabın İmparator Rudolf'a ait olduğu ve getiren kişiye 600 dukat ödendiği belirtilmiştir.",
+   "kaynak_alinti": "Dr. Raphael, a tutor in the Bohemian language to Ferdinand III, then King of Bohemia, told me the said book belonged to the Emperor Rudolf and that he presented to the bearer who brought him the book 600 ducats."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Voynich_manuscript",
+  "https://tr.wikipedia.org/wiki/Voynich_el_yazmas%C4%B1"
+ ],
+ "imla": true
+}

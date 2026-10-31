@@ -1,0 +1,879 @@
+{
+ "baslik": "600 Yıllık Sır: Kimsenin Okuyamadığı Voynich El Yazması",
+ "kapak_yazisi": "KİMSENİN ÇÖZEMEDİĞİ KİTAP",
+ "kapak_gorsel": 0,
+ "aciklama": "Yüzlerce yıldır dünyanın en zeki kod kırıcıları ve dil bilimcileri tarafından incelenen Voynich el yazması neden hala çözülemedi? On beşinci yüzyılın başlarından kalan bu resimli kitap, bilinmeyen bir yazı sistemi ve gizemli çizimlerle dolu. Bu belgeselde, el yazmasının ardındaki somut ipuçlarını bir dedektif titizliğiyle inceliyoruz.",
+ "etiketler": [
+  "voynich el yazması",
+  "şifreli kitap",
+  "tarihin gizemleri",
+  "çözülemeyen sırlar",
+  "kod kırma",
+  "kriptoloji",
+  "orta çağ tarihi",
+  "merak arşivi",
+  "belgesel",
+  "yale üniversitesi",
+  "beinecke kütüphanesi",
+  "el yazması"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Birinci ve İkinci Dünya Savaşı kod kırıcıları dahi bu metnin sırrını çözmeyi başaramadı.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Gizemli el yazması adını, 1912 yılında eseri satın alan Polonyalı sahaf Wilfrid Voynich'ten almıştır.",
+     "gorsel": [
+      11
+     ]
+    },
+    {
+     "metin": "Yapılan radyokarbon testleri, üzerine yazı yazılan parşömenin 1404 ile 1438 yılları arasına ait olduğunu kesin olarak göstermektedir.",
+     "gorsel": [
+      16,
+      19
+     ]
+    },
+    {
+     "metin": "Soldan sağa doğru yazılan ve yaklaşık 240 sayfadan oluşan bu benzersiz çalışma, 1969 yılından beri Yale Üniversitesi bünyesindeki kütüphanede muhafaza ediliyor.",
+     "gorsel": [
+      0,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Parşömenin Sessiz Tanıklığı",
+   "parcalar": [
+    {
+     "metin": "Bu gizemli parşömen hangi zamana aitti?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Gizemli Parşömen"
+    },
+    {
+     "metin": "Arizona Üniversitesinde 2009 yılında yapılan radyokarbon testleri parşömeni 1404 ile 1438 yılları arasına tarihlendirdi.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "metin": "Protein testleri ise çarpıcı bir gerçeği kanıtladı.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Parşömen en az 14 veya 15 tam dana derisinden üretilmişti.",
+     "gorsel": [
+      3
+     ],
+     "grafik_verisi": {
+      "tur": "sayi",
+      "deger": "15",
+      "birim": "dana derisi",
+      "metin": "Parşömenin yapımında kullanılan dana derisi sayısı"
+     },
+     "grafik": {
+      "tur": "sayi",
+      "deger": "15",
+      "birim": "dana derisi",
+      "metin": "Parşömenin yapımında kullanılan dana derisi sayısı"
+     }
+    },
+    {
+     "metin": "Çok bantlı analizler parşömenin üzerine daha önce hiçbir şey yazılmadığını ortaya koydu.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Sayfalardaki yıpranmalar kitabın kutsal bir nesneden ziyade rutin bir el kitabı gibi yoğun şekilde kullanıldığını gösterdi.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Metin ve çizimlerde demir mazı mürekkebi kullanıldı ve analizler bunların eş zamanlı yapıldığını doğruladı.",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "Gerçekler ortada, peki bu izler bize ne anlatıyor?",
+     "gorsel": [
+      7
+     ]
+    },
+    {
+     "metin": "El yazması, Wilfrid Voynich tarafından 1912 yılında satın alınmıştır. 1969 yılından bu yana Yale Üniversitesi'nin Beinecke Nadir Kitaplar ve El Yazmaları Kütüphanesi'nde korunmaktadır.",
+     "gorsel": [
+      11
+     ]
+    },
+    {
+     "metin": "El yazması 23,5 cm x 16,5 cm x 5 cm ölçülerindedir ve 240 civarında sayfadan oluşmaktadır.",
+     "gorsel": [
+      16
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bilinmeyen Dünyanın Çizimleri",
+   "parcalar": [
+    {
+     "metin": "Yazısı çözülemeyen gizemli bir el yazması, sayfalarındaki çizimlerle bize hangi ipuçlarını fısıldıyor olabilir? Cevaplar, satır aralarındaki tuhaf resimlerde gizli.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "Araştırmacılar, metin okunamadığı için el yazmasını çizimlerine bakarak geleneksel olarak altı farklı bölüme ayırdı.",
+     "gorsel": [
+      1
+     ],
+     "yazi": "ALTI BÖLÜM"
+    },
+    {
+     "metin": "Toplam 126 sayfalık bitkisel bölümde yer alan bitkilerin hiçbiri kesin olarak teşhis edilemiyor ve birçoğu melez görünüyor.",
+     "gorsel": [
+      27
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "126",
+      "birim": "sayfa",
+      "metin": "Bitkisel bölümün el yazmasındaki sayfa sayısı"
+     }
+    },
+    {
+     "metin": "Astronomi bölümündeki dairesel şemalarda Zodyak burç simgeleri ve kordon benzeri iplerle yıldız tutan kadın figürleri yer alıyor.",
+     "gorsel": [
+      23
+     ]
+    },
+    {
+     "metin": "Balneoloji sayfalarında ise ayrıntılı boru ağlarıyla birbirine bağlanmış küvetlerde yıkanan çıplak kadın çizimleri görülüyor.",
+     "gorsel": [
+      9
+     ]
+    },
+    {
+     "metin": "Kozmoloji bölümündeki altı sayfalık katlanabilir yaprakta, kaleler ve bir yanardağ içeren dokuz adacıklı bir harita bulunuyor.",
+     "gorsel": [
+      21
+     ]
+    },
+    {
+     "metin": "Çizimlerdeki bu tuhaf detaylar bilinen ipuçlarımız; fakat bu esrarengiz görsel dünyanın asıl amacı hâlâ aydınlatılamadı.",
+     "gorsel": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Okunamayan Alfabenin Mimarisi",
+   "parcalar": [
+    {
+     "metin": "Bu okunmayan alfabenin mimarisi tam olarak ne saklıyor?",
+     "gorsel": [
+      1
+     ],
+     "yazi": "Gizemli Alfabe"
+    },
+    {
+     "metin": "Metin, 170.000'den fazla karakterden ve yaklaşık 35.000 kelimeden meydana gelmektedir.",
+     "gorsel": [
+      2
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "170.000",
+      "birim": "karakter",
+      "metin": "Metinde yer alan toplam karakter sayısı"
+     }
+    },
+    {
+     "metin": "Harflerin çoğu, bir veya iki basit kalem darbesiyle yazılmıştır.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "Neredeyse tüm metni 20 ile 25 karakterlik bir alfabe açıklamaktadır.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Yazının son derece akıcı biçimde kaleme alınmış olması dikkat çekmektedir.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Kitapta belirgin bir noktalama işaretine rastlanmamaktadır.",
+     "gorsel": [
+      6
+     ]
+    },
+    {
+     "metin": "İlk sayfada Jacobus Horcicky de Tepenecz imzası gibi birkaç yerde Latin harfleri yer almaktadır.",
+     "gorsel": [
+      8
+     ]
+    },
+    {
+     "metin": "Metindeki yaklaşık 35.000 kelimenin 8.114 tanesi benzersiz sözcük türlerinden oluşmaktadır.",
+     "gorsel": [
+      28,
+      20
+     ]
+    },
+    {
+     "gorsel": [
+      28,
+      20
+     ],
+     "metin": "Sayfaların çoğunda tek bir sütun halinde ilerleyen metnin sol kenar boşluklarında bazen yıldızlar yer alır."
+    },
+    {
+     "metin": "Bu okunmayan alfabenin mimarisi tam olarak ne saklıyor? Metin, 170.000'den fazla karakterden ve yaklaşık 35.000 kelimeden meydana gelmektedir.",
+     "gorsel": [
+      2,
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "El yazmasında yaklaşık 38.000 kelime bulunuyor ve 9.000 tanesi benzersiz.",
+       "kaynak_alinti": "The manuscript has roughly 38,000 words, of which 9,000 are unique."
+      }
+     ]
+    },
+    {
+     "gorsel": [
+      2,
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "El yazmasında yaklaşık 38.000 kelime bulunuyor ve 9.000 tanesi benzersiz.",
+       "kaynak_alinti": "The manuscript has roughly 38,000 words, of which 9,000 are unique."
+      }
+     ],
+     "metin": "Harflerin çoğu, bir veya iki basit kalem darbesiyle yazılmıştır. Neredeyse tüm metni 20 ile 25 karakterlik bir alfabe açıklamaktadır."
+    }
+   ]
+  },
+  {
+   "ad": "İstatistiksel Kalıplar",
+   "parcalar": [
+    {
+     "metin": "Bu istatistiksel kalıplar bize ne söylüyor?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "İstatistiksel Kalıplar"
+    },
+    {
+     "metin": "Metindeki kelime kullanım sıklıkları Zipf yasasına uymaktadır.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Harf dağılımı ve ritmik yapı Çince pinyin metinlerine benzemektedir.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Voynich A ve Voynich B adında iki farklı yapı saptanmıştır.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Beş farklı katibin çalıştığı belirlenmiştir.",
+     "gorsel": [
+      4
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Harf dizilimleri klasik şifrelerle uyuşmamaktadır.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Voynich el yazmasındaki harflerin dağılımı oldukça tuhaftır; bazı karakterler sadece kelimenin başında, bazıları orta bölümde, bazıları ise her zaman sonda bulunur.",
+     "gorsel": [
+      33,
+      34
+     ],
+     "iddialar": [
+      {
+       "iddia": "Bazı harfler sadece kelimenin başında, bazıları orta bölümde, bazıları ise her zaman sonda bulunur.",
+       "kaynak_alinti": "some characters occur only at the beginning of a word, some only in the middle, and some only at the end"
+      }
+     ]
+    },
+    {
+     "metin": "Voyniççe harf dizilimleri ve korelasyonları incelendiğinde, Avrupa dillerinden ziyade Shiji'deki Mandarin Çincesi pinyin metnine daha benzer olduğu bulunmuştur.",
+     "gorsel": [
+      35,
+      36
+     ],
+     "iddialar": [
+      {
+       "iddia": "Voyniççe harf dizilimleri ve korelasyonları Avrupa dillerinden ziyade Mandarin Çincesi pinyin metnine daha benzerdir.",
+       "kaynak_alinti": "found that in this respect Voynichese is more similar to the Mandarin Chinese pinyin text of the Records of the Grand Historian than to the text of works from European languages"
+      }
+     ]
+    },
+    {
+     "metin": "Voynich el yazmasındaki harflerin yapısında dikkat çekici bir düzenlilik bulunur.",
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Dilbilimci Gonzalo Rubio, gramer belirteçlerinin Voynich el yazmasında kelime ortasında asla yer almadığını ifade etmiştir.",
+       "kaynak_alinti": "The things we know as grammatical markers – things that occur commonly at the beginning or end of words, such as 's' or 'd' in our language, and that are used to express grammar, never appear in the middle of 'words' in the Voynich manuscript."
+      }
+     ]
+    },
+    {
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Dilbilimci Gonzalo Rubio, gramer belirteçlerinin Voynich el yazmasında kelime ortasında asla yer almadığını ifade etmiştir.",
+       "kaynak_alinti": "The things we know as grammatical markers – things that occur commonly at the beginning or end of words, such as 's' or 'd' in our language, and that are used to express grammar, never appear in the middle of 'words' in the Voynich manuscript."
+      }
+     ],
+     "metin": "Dilbilimci Gonzalo Rubio, dilimizde grameri ifade etmek için kelimenin başında veya sonunda kullanılan öğelerin Voynich el yazmasında asla kelime ortasında yer almadığını belirtmiştir."
+    },
+    {
+     "metin": "2014 yılında Diego Amancio liderliğindeki bir ekip istatistiksel yöntemlerle kelime ilişkilerini incelemiştir.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Diego Amancio ekibi, vakaların yüzde 90'ında Voynich sistemlerinin diğer bilinen kitaplara benzerlik gösterdiğini belirtmiştir.",
+       "kaynak_alinti": "The team concluded that, in 90% of cases, the Voynich systems are similar to those of other known books, indicating that the text is in an actual language, not random gibberish."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kayıp Yüzyılların İzinde",
+   "parcalar": [
+    {
+     "metin": "Bu esrarengiz el yazmasını anlatan teyit edilmiş en eski kayıt kime aitti?",
+     "gorsel": [
+      12
+     ],
+     "yazi": "Kayıp Yüzyıllar"
+    },
+    {
+     "metin": "1639 yılında Praglı simyacı Georg Baresch kitaptan bahsetti.",
+     "gorsel": [
+      12
+     ]
+    },
+    {
+     "metin": "Baresch sonrası eser Jan Marek Marci'ye geçti.",
+     "gorsel": [
+      12
+     ]
+    },
+    {
+     "metin": "Marci, 1665 yılında kitabı Cizvit bilgini Athanasius Kircher'e yolladı.",
+     "gorsel": [
+      12
+     ]
+    },
+    {
+     "metin": "İmparator İkinci Rudolf bu kitabı 600 duka altına satın aldı.",
+     "gorsel": [
+      14
+     ]
+    },
+    {
+     "metin": "Yazarın Roger Bacon olabileceği iddiaları ortaya atıldı.",
+     "gorsel": [
+      10
+     ]
+    },
+    {
+     "metin": "Kitap yaklaşık 200 yıl boyunca Roma Kolejinde saklandı.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "1870 yılındaki el koymadan kaçırılarak Frascati'ye taşındı.",
+     "gorsel": [
+      11
+     ]
+    },
+    {
+     "metin": "Maddi sıkıntıya düşen kolejin 1912 yılında eseri Wilfrid Voynich'e satması milat oldu.",
+     "gorsel": [
+      11
+     ],
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1639",
+        "metin": "Georg Baresch mektubuyla el yazması ilk kez kaydedildi"
+       },
+       {
+        "yil": "1665",
+        "metin": "Jan Marek Marci kitabı Athanasius Kircher'e yolladı"
+       },
+       {
+        "yil": "1912",
+        "metin": "Wilfrid Voynich eseri Roma yakınlarında satın aldı"
+       },
+       {
+        "yil": "1969",
+        "metin": "Hans Kraus el yazmasını Yale Üniversitesine bağışladı"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Bazı tahminlere göre, el yazmasının yazarı İngiliz Roger Bacon olabilir. Bu esrarengiz kitabın fiyatının 600 dukat olduğu söylenmektedir.",
+     "gorsel": [
+      10,
+      14
+     ]
+    },
+    {
+     "metin": "1870 yılında İtalyan hükümeti kilisenin mallarına el koydu. Bu süreçte eserin Cizvit rektörü Petrus Beckx'in mührünü taşıdığı bilinmektedir.",
+     "gorsel": [
+      12,
+      19
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Çürütülen Şifre İddiaları",
+   "parcalar": [
+    {
+     "metin": "Şifre uzmanları bu gizemli metni çözmeyi başarabildi mi?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Şifre İddiaları"
+    },
+    {
+     "metin": "William Friedman ve Elizebeth Friedman dahil Birinci ve İkinci Dünya Savaşı şifre uzmanları metni çözememiştir.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Kitabın Roger Bacon, John Dee veya Edward Kelley tarafından yazıldığı iddiaları kanıt yetersizliğiyle geçerliliğini yitirmiştir.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Wilfrid Voynichin eseri kendi menfaati için uydurduğu teorisi parşömenin 15. yüzyıl tarihlemesiyle çürütülmüştür.",
+     "gorsel": [
+      11
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İtalyan mühendis Giovanni Fontana nın şifre teknikleri Voynich metnindeki dilbilimsel karmaşıklığı açıklayamamıştır.",
+     "gorsel": [
+      13
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Son yüz yılda el yazmasını çözdüğünü öne süren onlarca farklı iddiadan hiçbirinin bağımsız olarak doğrulanamamış olması dikkat çekmektedir.",
+     "gorsel": [
+      15
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bazı araştırmacılara göre eserin Giovanni Fontana'nın şifre teknikleriyle yazıldığı öne sürülmüştür.",
+     "gorsel": [
+      13
+     ],
+     "iddialar": [
+      {
+       "iddia": "Giovanni Fontana'nın şifre teknikleri",
+       "kaynak_alinti": "Giovanni Fontana"
+      }
+     ]
+    },
+    {
+     "metin": "William Romaine Newbold ve Joseph Martin Feely gibi isimler de eseri deşifre ettiğini iddia edenler arasında yer almıştır.",
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "William Romaine Newbold ve Joseph Martin Feely deşifre iddialarında bulunmuştur",
+       "kaynak_alinti": "William Romaine Newbold, Joseph Martin Feely"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bugünün Bilinenleri",
+   "parcalar": [
+    {
+     "metin": "Voynich el yazması aradan geçen 600 yıla rağmen dünyanın en büyük çözülememiş metin muamması olmaya nasıl devam ediyor?",
+     "gorsel": [
+      1
+     ],
+     "yazi": "Büyük Muamma"
+    },
+    {
+     "metin": "1969 yılında sahaf Hans Kraus eseri Yale Üniversitesinin Beinecke Kütüphanesine bağışladı.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "El yazması bu bağışın ardından MS 408 adıyla kaydedildi.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yale Üniversitesi 2020 yılında tüm el yazmasını dijital kütüphanesinde yüksek çözünürlüklü olarak araştırmacılara açtı.",
+     "gorsel": [
+      4
+     ],
+     "yazi": "Dijital Yayın",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "2020",
+      "birim": "yıl",
+      "metin": "Yale Üniversitesinin dijital yayım yılı"
+     }
+    },
+    {
+     "metin": "Bilimsel verilerle kesinleşen gerçek nedir?",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Parşömenin 15. yüzyıl başına ait gerçek bir orta çağ eseri olduğu kesinleşti.",
+     "gorsel": [
+      6
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Ancak metnin yapay bir dil mi yoksa kayıp bir doğal dil mi olduğu hala kanıtlanamadı.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Eserin bilinmeyen bir şifre olup olmadığı da henüz kanıtlanabilmiş değil.",
+     "gorsel": [
+      8
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İşte bugün bilinenler ile bilinmeyenler arasındaki keskin çizgi budur.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Hiçbir kriptoloğun ve dil bilimcinin okuyamadığı 600 yıllık el yazması",
+   "kaynak_alinti": "The Voynich manuscript is an illustrated codex, hand-written in an undeciphered script"
+  },
+  {
+   "iddia": "1912'de Wilfrid Voynich tarafından satın alınması",
+   "kaynak_alinti": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912."
+  },
+  {
+   "iddia": "Yaklaşık 240 sayfa ve soldan sağa yazılmış olması",
+   "kaynak_alinti": "The manuscript consists of around 240 pages... The text is written from left to right"
+  },
+  {
+   "iddia": "Tanımlanamayan bitkiler, astrolojik şemalar ve insan figürleri",
+   "kaynak_alinti": "with sections of the manuscript showing people, unidentified plants and astrological symbols."
+  },
+  {
+   "iddia": "I. ve II. Dünya Savaşı kod kırıcılarının çözememesi",
+   "kaynak_alinti": "including American and British codebreakers from both World War I and World War II. Codebreakers Prescott Currier, William Friedman, Elizebeth Friedman, and John Tiltman were unsuccessful."
+  },
+  {
+   "iddia": "El yazması adını 1912'de satın alan Polonyalı sahaf Wilfrid Voynich'ten almıştır.",
+   "kaynak_alinti": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912."
+  },
+  {
+   "iddia": "Parşömenin radyokarbon tarihlemesi 1404 ile 1438 arasını göstermektedir.",
+   "kaynak_alinti": "indicated a date for the parchment between 1404 and 1438."
+  },
+  {
+   "iddia": "Metin soldan sağa yazılmıştır ve eser yaklaşık 240 sayfadan oluşmaktadır.",
+   "kaynak_alinti": "The manuscript consists of around 240 pages, but there is evidence that some of the pages are missing. The text is written from left to right"
+  },
+  {
+   "iddia": "El yazması 1969 yılından beri Yale Üniversitesi Kütüphanesi'nde bulunmaktadır.",
+   "kaynak_alinti": "Since 1969, it has been held in Yale University's Beinecke Rare Book and Manuscript Library."
+  },
+  {
+   "iddia": "Radyokarbon testleri parşömeni 1404 ile 1438 yılları arasına tarihlendirdi",
+   "kaynak_alinti": "Samples from various parts of the manuscript were radiocarbon dated at the University of Arizona in 2009. The results were consistent for all samples tested and indicated a date for the parchment between 1404 and 1438."
+  },
+  {
+   "iddia": "Protein testleri parşömenin en az 14 veya 15 tam dana derisinden üretildiğini kanıtladı",
+   "kaynak_alinti": "Protein testing in 2014 revealed that the parchment was made from calfskin... The parchment is made from 'at least fourteen or fifteen entire calfskins'."
+  },
+  {
+   "iddia": "Çok bantlı analizler parşömenin üzerine daha önce hiçbir şey yazılmadığını ortaya koydu",
+   "kaynak_alinti": "...multispectral analysis showed that it had not been written on before the manuscript was created..."
+  },
+  {
+   "iddia": "Sayfalardaki yıpranmalar kitabın kutsal bir nesneden ziyade rutin bir el kitabı gibi yoğun şekilde kullanıldığını gösterdi",
+   "kaynak_alinti": "...this indicates the manuscript was handled or paged through a great deal and likely served some routine function such as a medical manual or celestial almanac. Its heavy usage also suggests it had a workmanlike role rather than anything sacred or ceremonial."
+  },
+  {
+   "iddia": "Metin ve çizimlerde demir mazı mürekkebi kullanıldı ve analizler bunların eş zamanlı yapıldığını doğruladı",
+   "kaynak_alinti": "...it has been determined that a quill pen and iron gall ink were used for the text and figure outlines... The similarity between the drawing inks and text inks suggested a contemporaneous origin."
+  },
+  {
+   "iddia": "El yazması Wilfrid Voynich tarafından 1912 yılında satın alınmıştır",
+   "kaynak_alinti": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912."
+  },
+  {
+   "iddia": "El yazması 1969'da Yale Üniversitesi Beinecke Nadir Kitaplar ve El Yazmaları Kütüphanesi'ne verilmiştir",
+   "kaynak_alinti": "1969'da Voynich el yazması Hans P. Kraus tarafından Yale Üniversitesi'nin Beinecke Nadir Kitaplar ve El Yazmaları Kütüphanesi'ne bağışlandı."
+  },
+  {
+   "iddia": "El yazması 23,5 cm x 16,5 cm x 5 cm ölçülerindedir",
+   "kaynak_alinti": "El yazması 23,5 cm x 16,5 cm x 5 cm ölçülerinde"
+  },
+  {
+   "iddia": "Toplam sayfa sayısı 240 civarındadır",
+   "kaynak_alinti": "Toplam sayfa sayısı 240 civarındadır"
+  },
+  {
+   "iddia": "Metin okunamadığı için el yazması çizimlerine bakılarak geleneksel olarak altı bölüme ayrılmıştır.",
+   "kaynak_alinti": "Because the text cannot be read, the manuscript is conventionally divided into sections based on its illustrations. Most of the manuscript forms six different sections"
+  },
+  {
+   "iddia": "Bitkisel bölüm 126 sayfadır, bitkilerin hiçbiri kesin teşhis edilememiştir ve bazıları kompozit/melez görünmektedir.",
+   "kaynak_alinti": "Herbal, 126 pages: Each page displays one or two plants and a few paragraphs of text... None of the plants depicted are unambiguously identifiable... some of the plant drawings seem to be composites"
+  },
+  {
+   "iddia": "Astronomi bölümündeki dairesel şemalarda Zodyak simgeleri ve iplerle yıldız tutan kadın figürleri bulunur.",
+   "kaynak_alinti": "Contains circular diagrams suggestive of astronomy or astrology... conventional symbols for the zodiacal constellations... holds what appears to be a labelled star or is shown with the star attached to either arm by what could be a tether or cord of some kind."
+  },
+  {
+   "iddia": "Balneoloji bölümünde boru ağlarıyla birbirine bağlanmış küvetlerde yıkanan çıplak kadın çizimleri yer alır.",
+   "kaynak_alinti": "mostly showing small nude women, some wearing crowns, bathing in pools or tubs connected by an elaborate network of pipes."
+  },
+  {
+   "iddia": "Kozmoloji bölümündeki altı sayfalık katlanabilir yaprakta kaleler ve bir yanardağ içeren dokuz adacıklı bir harita vardır.",
+   "kaynak_alinti": "one of them spans six pages, commonly called the Rosettes folio, and contains a map or diagram with nine \"islands\" or \"rosettes\" connected by \"causeways\" and containing castles, as well as what might be a volcano."
+  },
+  {
+   "iddia": "Metin 170.000'den fazla karakter içerir",
+   "kaynak_alinti": "The text consists of over 170,000 characters"
+  },
+  {
+   "iddia": "Kelimeler yaklaşık 35.000 gruptan oluşur",
+   "kaynak_alinti": "about 35,000 groups of varying length"
+  },
+  {
+   "iddia": "Karakterlerin çoğu bir veya iki kalem darbesidir",
+   "kaynak_alinti": "Most of the characters are composed of one or two simple pen strokes."
+  },
+  {
+   "iddia": "20 ile 25 karakterlik alfabe yeterlidir",
+   "kaynak_alinti": "a script of 20–25 characters would account for virtually all of the text"
+  },
+  {
+   "iddia": "Belirgin noktalama işareti yoktur",
+   "kaynak_alinti": "There is no obvious punctuation."
+  },
+  {
+   "iddia": "Pratikte kelimelerin ikiden az veya ondan fazla harfi yoktur",
+   "kaynak_alinti": "Practically no words have fewer than two letters or more than ten."
+  },
+  {
+   "iddia": "Jacobj à Tepenecz imzası bulunmaktadır",
+   "kaynak_alinti": "the now-unreadable signature of \"Jacobj à Tepenecz\" is found in the bottom margin"
+  },
+  {
+   "iddia": "Metindeki yaklaşık 35.000 kelimeden 8.114 tanesi benzersiz kelime türü kabul edilir.",
+   "kaynak_alinti": "8,114 of those words are considered unique word types."
+  },
+  {
+   "iddia": "Metnin çoğu tek bir sütunda yazılmıştır ve bazen sol kenar boşluğunda yıldızlar bulunur.",
+   "kaynak_alinti": "Much of the text is written in a single column in the body of a page, with a slightly ragged right margin and paragraph divisions and sometimes with stars in the left margin."
+  },
+  {
+   "iddia": "Bazı karakterler yalnızca kelimenin başında, bazıları ortasında ve bazıları sadece sonunda yer alır.",
+   "kaynak_alinti": "some characters occur only at the beginning of a word, some only in the middle, and some only at the end"
+  },
+  {
+   "iddia": "Kelime sıklığı Zipf yasasına uyar.",
+   "kaynak_alinti": "following Zipf's law"
+  },
+  {
+   "iddia": "Ritmik yapı Çince pinyin metinlerine benzer.",
+   "kaynak_alinti": "Mandarin Chinese pinyin text"
+  },
+  {
+   "iddia": "İki farklı kelime haznesi ve yapı saptanmıştır.",
+   "kaynak_alinti": "Voynich A appears in the herbal and pharmaceutical parts... The language known as Voynich B"
+  },
+  {
+   "iddia": "Beş farklı katip çalışmıştır.",
+   "kaynak_alinti": "five different scribes"
+  },
+  {
+   "iddia": "Klasik şifrelerle uyuşmaz.",
+   "kaynak_alinti": "substitution cipher or polyalphabetic cipher"
+  },
+  {
+   "iddia": "1639 yılındaki mektup",
+   "kaynak_alinti": "The 1639 letter from Baresch to Kircher is the earliest known mention of the manuscript to have been confirmed."
+  },
+  {
+   "iddia": "Marci'nin kitabi Kircher'e yollamasi",
+   "kaynak_alinti": "Marci sent the book to Kircher, his longtime friend and correspondent. Marci also sent Kircher a cover letter (in Latin, dated 19 August 1665 or 1666)"
+  },
+  {
+   "iddia": "Rudolf'un 600 duka altin vermesi",
+   "kaynak_alinti": "the said book belonged to the Emperor Rudolf and that he presented to the bearer who brought him the book 600 ducats."
+  },
+  {
+   "iddia": "Roger Bacon iddialari",
+   "kaynak_alinti": "He believed the author was Roger Bacon, the Englishman."
+  },
+  {
+   "iddia": "Roma Kolejinde saklanmasi",
+   "kaynak_alinti": "No records of the book for the next 200 years have been found, but in all likelihood it was stored with the rest of Kircher's correspondence in the library of the Collegio Romano"
+  },
+  {
+   "iddia": "1870'te Frascati'ye tasinmasi",
+   "kaynak_alinti": "Beckx's private library was moved to the Villa Mondragone, Frascati"
+  },
+  {
+   "iddia": "Wilfrid Voynich'e satilmasi",
+   "kaynak_alinti": "In 1912, the Society of Jesus (Collegio Romano) was short of money and decided to sell some of its holdings discreetly... Wilfrid Voynich acquired 30 of these manuscripts, among them the one which now bears his name."
+  },
+  {
+   "iddia": "Yazarın Roger Bacon olduğu iddiası",
+   "kaynak_alinti": "Yazarın İngiliz Roger Bacon olduğuna inanıyordu."
+  },
+  {
+   "iddia": "Kitabın fiyatı 600 dukattır",
+   "kaynak_alinti": "600 dukat"
+  },
+  {
+   "iddia": "1870 yılında İtalyan hükümetinin kilise mallarına el koyması",
+   "kaynak_alinti": "Yeni İtalyan hükümeti Kilise'nin birçok malına el koydu"
+  },
+  {
+   "iddia": "Eserin Petrus Beckx'in mührünü taşıması",
+   "kaynak_alinti": "Petrus Beckx'in mührünü hala taşıyor."
+  },
+  {
+   "iddia": "William ve Elizebeth Friedman dahil uzmanlar başarısız oldu",
+   "kaynak_alinti": "Codebreakers Prescott Currier, William Friedman, Elizebeth Friedman, and John Tiltman were unsuccessful."
+  },
+  {
+   "iddia": "Roger Bacon iddiası zayıfladı",
+   "kaynak_alinti": "the Bacon authorship theory has been largely discredited"
+  },
+  {
+   "iddia": "Parşömen tarihlemesi sahtecilik iddiasını eler",
+   "kaynak_alinti": "radiocarbon dating of the vellum effectively rolls out any possibility that the manuscript is a post-medieval forgery"
+  },
+  {
+   "iddia": "Giovanni Fontana basit substitution cipher kullanmıştır",
+   "kaynak_alinti": "Giovanni Fontana... used a simple substitution cipher"
+  },
+  {
+   "iddia": "Hiçbir iddia bağımsız doğrulanmadı",
+   "kaynak_alinti": "The manuscript has never been demonstrably deciphered, and none of the proposed hypotheses have been independently verified."
+  },
+  {
+   "iddia": "Giovanni Fontana'nın şifre teknikleri",
+   "kaynak_alinti": "Giovanni Fontana"
+  },
+  {
+   "iddia": "William Romaine Newbold ve Joseph Martin Feely deşifre iddialarında bulunmuştur",
+   "kaynak_alinti": "William Romaine Newbold, Joseph Martin Feely"
+  },
+  {
+   "iddia": "eser 1969 yılında Yale Üniversitesinin Beinecke Kütüphanesine bağışlandı",
+   "kaynak_alinti": "Kraus was unable to find a buyer and donated the manuscript to Yale University in 1969"
+  },
+  {
+   "iddia": "el yazması MS 408 adıyla kaydedildi",
+   "kaynak_alinti": "where it was catalogued as \"MS 408\""
+  },
+  {
+   "iddia": "Yale Üniversitesi 2020 yılında tüm el yazmasını dijital kütüphanesinde yüksek çözünürlüklü olarak açtı",
+   "kaynak_alinti": "In 2020, Yale University published the entire manuscript online in its digital library."
+  },
+  {
+   "iddia": "parşömen 15. yüzyıl başına ait gerçek bir orta çağ eseridir",
+   "kaynak_alinti": "carbon-dated to the early 15th century (1404–1438)"
+  },
+  {
+   "iddia": "metnin yapay bir dil mi kayıp bir doğal dil mi yoksa şifre mi olduğu kanıtlanamamıştır",
+   "kaynak_alinti": "Hypotheses range from a script for a natural language or constructed language, an unreadable code, cipher"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Voynich_manuscript",
+  "https://tr.wikipedia.org/wiki/Voynich_el_yazmas%C4%B1"
+ ],
+ "imla": true
+}

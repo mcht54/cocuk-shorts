@@ -1,0 +1,83 @@
+{
+ "baslik": "Voynich El Yazması Hangi Yıla Dayanıyor?",
+ "ekran_basligi": "Gizemli El Yazması",
+ "aciklama": "Voynich el yazmasının karbon tarihleme sonuçları ve fiziksel özellikleri.",
+ "etiketler": [
+  "Voynich",
+  "tarih",
+  "parşömen",
+  "şifre",
+  "araştırma",
+  "bilim",
+  "gizem",
+  "kitap"
+ ],
+ "parcalar": [
+  {
+   "metin": "Voynich el yazması bilinmeyen bir yazı sistemiyle elle yazılmış resimli bir kitaptır.",
+   "gorsel": [
+    0
+   ]
+  },
+  {
+   "metin": "Üzerine yazıldığı parşömen 15. yüzyılın başlarına kadar karbon tarihlidir.",
+   "gorsel": [
+    1
+   ]
+  },
+  {
+   "metin": "Test edilen numuneler parşömen için 1404 ve 1438 arasında bir tarih gösterdi.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Protein testi parşömenin buzağı derisinden yapıldığını gösterdi.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "El yazması ismini 1912 yılında varlığını ortaya çıkaran Wilfrid M. Voynich adındaki Polonyalı sahaftan almıştır.",
+   "gorsel": [
+    11
+   ]
+  },
+  {
+   "metin": "Toplam sayfa sayısı 240 civarındadır ancak bazı sayfaların eksik olduğu düşünülmektedir.",
+   "gorsel": [
+    4
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "240",
+    "birim": "civarındadır"
+   }
+  },
+  {
+   "metin": "Tüm bu gizemli hikayenin detayları kanalda.",
+   "gorsel": [
+    5
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Parşömen 1404 ile 1438 arasında tarihlendirilmiştir.",
+   "kaynak_alinti": "The vellum on which it is written has been carbon-dated to the early 15th century (1404–1438)."
+  },
+  {
+   "iddia": "Parşömen buzağı derisinden yapılmıştır.",
+   "kaynak_alinti": "Protein testing in 2014 revealed that the parchment was made from calfskin"
+  },
+  {
+   "iddia": "Wilfrid Voynich el yazmasını 1912 yılında satın almıştır.",
+   "kaynak_alinti": "The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Voynich_manuscript",
+  "https://tr.wikipedia.org/wiki/Voynich_el_yazmas%C4%B1"
+ ],
+ "imla": true
+}
