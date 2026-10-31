@@ -1,0 +1,75 @@
+{
+ "baslik": "Androklos ve Yaban Domuzunun Kehaneti",
+ "ekran_basligi": "Efes'in Kuruluş Efsanesi",
+ "aciklama": "Efes antik kentinin kuruluş efsanesini ve yaban domuzu kehanetini keşfedin.",
+ "etiketler": [
+  "efes",
+  "antik kent",
+  "tarih",
+  "efsane",
+  "izmi̇r",
+  "arkeoloji",
+  "selçuk"
+ ],
+ "parcalar": [
+  {
+   "metin": "Efes antik kentinin kuruluş efsanesini hiç duydunuz mu?",
+   "gorsel": [
+    30
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Efes"
+   }
+  },
+  {
+   "metin": "Atina kralının cesur oğlu Androklos Ege'nin karşı yakasını keşfetmek ister.",
+   "gorsel": [
+    30
+   ]
+  },
+  {
+   "metin": "Kahinler ona bir balık ve bir domuzun işaret ettiği yerde kent kuracağını söyler.",
+   "gorsel": [
+    30
+   ]
+  },
+  {
+   "metin": "Ateş yakıp balık pişirirlerken çalıların arasından çıkan bir yaban domuzu balığı kapıp kaçar.",
+   "gorsel": [
+    30
+   ]
+  },
+  {
+   "metin": "Böylece kehanet gerçekleşir ve Efes burada kurulur.",
+   "gorsel": [
+    30
+   ]
+  },
+  {
+   "metin": "Tüm hikâye kanalda.",
+   "gorsel": [
+    30
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Atina kralı Kodros'un cesur oğlu Androklos Ege'nin karşı yakasını keşfetmek ister.",
+   "kaynak_alinti": "Atina kralı Kodros'un cesur oğlu Androklos, Ege'nin karşı yakasını keşfetmek ister."
+  },
+  {
+   "iddia": "Kahinler ona, balık ve domuzun işaret ettiği yerde bir kent kuracağını söyler.",
+   "kaynak_alinti": "Kahinler ona, balık ve domuzun işaret ettiği yerde bir kent kuracağını söyler."
+  },
+  {
+   "iddia": "Ateş yakarak tuttukları balıkları pişirirlerken çalıların arasından çıkan bir yaban domuzu, balığı kaparak kaçar.",
+   "kaynak_alinti": "Ateş yakarak tuttukları balıkları pişirirlerken çalıların arasından çıkan bir yaban domuzu, balığı kaparak kaçar."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Ephesus",
+  "https://tr.wikipedia.org/wiki/Efes"
+ ],
+ "imla": true
+}

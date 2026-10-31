@@ -1,0 +1,84 @@
+{
+ "baslik": "Binlerce Ruloya Ev Sahipliği Yapan Celsus Kütüphanesi",
+ "ekran_basligi": "Celsus Kütüphanesi",
+ "aciklama": "Görkemli mimarisi ve binlerce rulosuyla Celsus Kütüphanesi'nin tarihi.",
+ "etiketler": [
+  "celsus",
+  "kütüphane",
+  "efes",
+  "roma",
+  "tarih",
+  "mimari",
+  "müze"
+ ],
+ "parcalar": [
+  {
+   "metin": "Efes'in en güzel yapılarından birisi olan Celsus Kütüphanesi aynı zamanda mezar anıtı görevini üstlenmiştir.",
+   "gorsel": [
+    48
+   ]
+  },
+  {
+   "metin": "106 yılında Efes valisi olan Celsius ölünce kütüphane oğlu tarafından babasının adına yaptırılmıştır.",
+   "gorsel": [
+    48
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "106",
+    "birim": "yılında"
+   }
+  },
+  {
+   "metin": "Celsius'un lahdi kütüphanenin batı duvarının altındadır.",
+   "gorsel": [
+    48
+   ]
+  },
+  {
+   "metin": "Kütüphanede kitap ruloları duvarlardaki nişlerde saklanıyordu.",
+   "gorsel": [
+    48
+   ]
+  },
+  {
+   "metin": "Binanın cephesi 1970 ile 1980 yılları arasında restore edilmiştir.",
+   "gorsel": [
+    48
+   ]
+  },
+  {
+   "metin": "Tüm hikâye kanalda.",
+   "gorsel": [
+    48
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Roma dönemi yapılarının en güzellerinden birisi olan yapı hem kütüphane, hem de mezar anıtı görevini üstlenmiştir.",
+   "kaynak_alinti": "Roma dönemi yapılarının en güzellerinden birisi olan yapı hem kütüphane, hem de mezar anıtı görevini üstlenmiştir."
+  },
+  {
+   "iddia": "106 yılında Efes valisi olan Celsius ölünce oğlu kütüphaneyi babasının adına mezar anıtı olarak yaptırmıştır.",
+   "kaynak_alinti": "106 yılında Efes valisi olan Celsius ölünce oğlu kütüphaneyi babasının adına mezar anıtı olarak yaptırmıştır."
+  },
+  {
+   "iddia": "Celsius'un lahdi kütüphanenin batı duvarı altındadır.",
+   "kaynak_alinti": "Celsius'un lahdi kütüphanenin batı duvarı altındadır."
+  },
+  {
+   "iddia": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu.",
+   "kaynak_alinti": "Kütüphanede kitap ruloları, duvarlardaki nişlerde saklanıyordu."
+  },
+  {
+   "iddia": "Cephesi 1970-1980 yılları arasında restore edilmiştir.",
+   "kaynak_alinti": "Cephesi 1970-1980 yılları arasında restore edilmiştir."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Ephesus",
+  "https://tr.wikipedia.org/wiki/Efes"
+ ],
+ "imla": true
+}
