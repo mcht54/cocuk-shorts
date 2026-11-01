@@ -59,6 +59,8 @@ def video_durumlari(ad, dosya, adet=20):
     r = requests.get("https://www.googleapis.com/youtube/v3/videos", timeout=30,
                      headers={"Authorization": f"Bearer {ERISIM[ad]}"},
                      params={"part": "status", "id": ",".join(k["video_id"] for k in kayit), "maxResults": 50})
+    if r.status_code == 403 and "scope" in r.text:  # yalnız yükleme izni (youtube.upload): okuma yok, sorun değil
+        return [], f"- {ad} YouTube: video durumu okunamıyor (yetki yalnız yükleme)"
     if not r.ok:
         return [f"{ad}: video durumu okunamadı ({r.status_code} {r.text[:120]})"], None
     durum = {v["id"]: v["status"] for v in r.json().get("items", [])}
