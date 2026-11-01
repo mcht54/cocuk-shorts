@@ -32,6 +32,9 @@ def son_yukleme(dosya, suzgec):
     return max(tarihler) if tarihler else None
 
 
+ERISIM = {}  # ad -> erişim anahtarı (video durum denetimi için)
+
+
 def token_dene(ad, refresh):
     if not refresh:
         return f"{ad}: yenileme anahtarı (secret) tanımlı değil"
@@ -41,7 +44,36 @@ def token_dene(ad, refresh):
     if not r.ok:
         return (f"{ad}: YouTube yetkisi geçersiz ({r.status_code} {r.text[:120]}). "
                 "Yerelde `python yetki_al.py client_secret_findik.json` ile yenileyip secret'ı güncelleyin.")
+    ERISIM[ad] = r.json().get("access_token")
     return None
+
+
+def video_durumlari(ad, dosya, adet=20):
+    """Son yüklenen videoların YouTube'daki durumu: (sorunlar, rapor satırı). Silinen video sorun sayılmaz
+    (haftalık onayda silmek serbest); YouTube'un reddettiği / işleyemediği video sorundur."""
+    yol = DEPO / dosya
+    kayit = [k for k in (json.loads(yol.read_text()) if yol.exists() else [])
+             if k.get("durum") == "yuklendi" and k.get("video_id")][-adet:]
+    if not kayit or not ERISIM.get(ad):
+        return [], None
+    r = requests.get("https://www.googleapis.com/youtube/v3/videos", timeout=30,
+                     headers={"Authorization": f"Bearer {ERISIM[ad]}"},
+                     params={"part": "status", "id": ",".join(k["video_id"] for k in kayit), "maxResults": 50})
+    if not r.ok:
+        return [f"{ad}: video durumu okunamadı ({r.status_code} {r.text[:120]})"], None
+    durum = {v["id"]: v["status"] for v in r.json().get("items", [])}
+    sorunlar, silinen = [], []
+    for k in kayit:
+        st = durum.get(k["video_id"])
+        if st is None:
+            silinen.append(k["video_id"])
+        elif st.get("uploadStatus") in ("rejected", "failed"):
+            neden = st.get("rejectionReason") or st.get("failureReason") or "?"
+            sorunlar.append(f"{ad}: video {k['video_id']} YouTube tarafından {st['uploadStatus']} ({neden}) - "
+                            f"{k.get('bolum', '')}")
+    satir = (f"- {ad} YouTube: son {len(kayit)} videodan {len(kayit) - len(silinen)} yerinde"
+             + (f", silinmiş: {', '.join(silinen)}" if silinen else ""))
+    return sorunlar, satir
 
 
 def main():
@@ -73,6 +105,14 @@ def main():
         h = token_dene(ad, os.environ.get(anahtar))
         if h:
             sorunlar.append(h)
+            continue
+        try:
+            s, satir = video_durumlari(ad, "yayin_kaydi.json" if ad == "Minik Masal Evi" else "merak/kayit.json")
+            sorunlar += s
+            if satir:
+                rapor.append(satir)
+        except requests.RequestException as e:
+            rapor.append(f"- {ad} YouTube: video durumu okunamadı ({e})")
     if not os.environ.get("GEMINI_API_KEY"):
         sorunlar.append("GEMINI_API_KEY secret'ı yok: yeni bölüm/konu yazılamıyor, stok tükenince yayın durur.")
     try:
