@@ -193,5 +193,24 @@
    "publishAt": "2026-11-07T14:00:00Z"
   },
   "yayin_zamani": "2026-11-07T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-11-01T12:09:52+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b001.json",
+   "seri/findik-ile-pamuk/bolumler/b002.json",
+   "seri/findik-ile-pamuk/bolumler/b042.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 119.42,
+  "video_id": "3wZaC6YYdag",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "kapak": "yuklenemedi (403)"
  }
 ]
