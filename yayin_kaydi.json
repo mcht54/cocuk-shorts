@@ -212,5 +212,28 @@
    "selfDeclaredMadeForKids": true
   },
   "kapak": "yuklenemedi (403)"
+ },
+ {
+  "tarih": "2026-11-01T16:51:38+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b048.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "c2: yürüme eylemi var ama karakter 0.19 m yer değiştirdi"
+  ]
+ },
+ {
+  "tarih": "2026-11-01T17:36:12+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b004.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "-NJZzmDLseY",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-08T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-08T14:00:00+00:00"
  }
 ]
