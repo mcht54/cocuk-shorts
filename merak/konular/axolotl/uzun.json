@@ -1,0 +1,788 @@
+{
+ "baslik": "Yaşlanmayan ve Ölümsüz Gibi Görünen Su Ejderi: Axolotl Mucizesi",
+ "kapak_yazisi": "ÖLÜMSÜZ SU EJDERİ",
+ "kapak_gorsel": 9,
+ "aciklama": "Hiç yaşlanmayan ve kopan uzuvlarını tamamen yenileyebilen su ejderi aksolotlunun sıra dışı keşif hikayesini ve mucizevi biyolojisini inceliyoruz. Bu belgeselde Meksika'nın sularından bilim laboratuvarlarına uzanan büyüleyici bir yolculuğa çıkıyoruz.",
+ "etiketler": [
+  "axolotl",
+  "aksolotl",
+  "su ejderi",
+  "rejenerasyon",
+  "bilim belgeseli",
+  "meksika",
+  "biyoloji",
+  "neoteni",
+  "evrim",
+  "hayvanlarlar alemi",
+  "merak arşivi",
+  "aksolotl özellikleri",
+  "bilimsel keşif",
+  "endemik türler"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Doğa bilimciler, bir köstebek semenderi türü olan aksolotlun başkalaşım geçirmeden üreme olgunluğuna ulaştığını belirledi. Yetişkinler belirgin dış solungaçlarıyla tamamen suda kalır.",
+     "gorsel": [
+      8,
+      10
+     ]
+    },
+    {
+     "metin": "Bu canlıyı inceleyen araştırmacıların en çok dikkatini çeken yön, hayvanın olağandışı iyileşme kabiliyetidir. Aksolotllar yara izi bağlamak yerine dokularını yeniler.",
+     "gorsel": [
+      7,
+      13
+     ],
+     "yazi": "Doku Yenilenmesi"
+    },
+    {
+     "metin": "Bilim insanları; bacak ve kuyruk gibi kaybedilen tüm uzuvların, aylar süren bir zaman diliminde yeniden büyüyebildiğini keşfetti.",
+     "gorsel": [
+      21,
+      26
+     ]
+    },
+    {
+     "metin": "Bugün yapılan sayımlar, vahşi doğada yalnızca 50 ila 1000 yetişkin birey kaldığını ve türün kritik düzeyde tehlikede olduğunu belgeliyor.",
+     "gorsel": [
+      19,
+      2
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "50",
+      "birim": "birey",
+      "metin": "Vahşi doğada kalan kritik düzeydeki yetişkin birey sayısı"
+     }
+    }
+   ]
+  },
+  {
+   "ad": "Azteklerin Su Tanrısı",
+   "parcalar": [
+    {
+     "metin": "Aksolotl terimi, su kölesi, su uşağı veya su canavarı gibi çeşitli şekillerde çevrilen bir Nahuatl kelimesidir.",
+     "gorsel": [
+      3
+     ],
+     "yazi": "Aztek Tanrısı"
+    },
+    {
+     "metin": "Bu kelime ateş, şimşek, ölüler ve ikizler tanrısı Xolotl'u ifade eder.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Canlılar aslen Meksika'nın yüksek kesimlerindeki sulak alanlarda ve göllerde yaşıyordu.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Xochimilco ve Chalco göllerinde yaşadıkları bilinmektedir.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Ayrıca bu tür, bilimsel araştırmalarda model organizma olarak kullanılmaktadır.",
+     "gorsel": [
+      4
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Efsaneye göre ateş ve şimşek tanrısı Xolotl, diğer tanrılar tarafından kurban edilmekten kurtulabilmek için kendini bir aksolotle dönüştürmüştür.",
+     "gorsel": [
+      3,
+      37
+     ]
+    },
+    {
+     "metin": "Quetzalcoatl'ın ikizi olan bu tanrının; aynı zamanda köpekler, oyunlar, çirkin canlılar ve dirilenler üzerinde de hakimiyeti bulunuyordu.",
+     "gorsel": [
+      32,
+      3
+     ]
+    },
+    {
+     "metin": "Aksolotllar sadece mitolojide kalmamış, Aztek diyetinde temel bir besin ögesi olarak Meksika pazarlarında da satılmıştır.",
+     "gorsel": [
+      2,
+      1
+     ]
+    },
+    {
+     "gorsel": [
+      2,
+      1
+     ],
+     "metin": "Ancak Azteklerin başlattığı gölleri kurutma süreci, zamanla onların doğal yaşam alanlarının büyük kısmını tahrip etmiştir."
+    }
+   ]
+  },
+  {
+   "ad": "Paris'e Giden Sevkiyat",
+   "parcalar": [
+    {
+     "metin": "1863 yılında, Mexico City'den Paris'teki Jardin des Plantes'a 34 yetişkin aksolotlun yer aldığı bir sevkiyat gönderildi.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "Paris Sevkiyatı",
+     "grafik_veri": {
+      "tur": "sayi",
+      "deger": "34",
+      "birim": "adet",
+      "metin": "1863 yılında Paris'e gönderilen yetişkin aksolotl sayısı"
+     },
+     "grafik": {
+      "tur": "sayi",
+      "deger": "34",
+      "birim": "adet",
+      "metin": "1863 yılında Paris'e gönderilen yetişkin aksolotl sayısı"
+     }
+    },
+    {
+     "metin": "Bu sevkiyat sayesinde binlerce örnek Avrupa'da bilimsel araştırmalar için üretilip dağıtıldı.",
+     "gorsel": [
+      26
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu şaşırtıcı keşif, neoteni hakkındaki araştırmaların başlangıç noktası oldu.",
+     "gorsel": [
+      28
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Prag'da yaşayan Çek tıp doktoru Vilém Laufberger, tiroit hormonu enjeksiyonları kullanarak bir aksolotlun kara semenderine dönüşmesini sağladı.",
+     "gorsel": [
+      22
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İngiliz araştırmacı Julian Huxley ise ezilmiş hayvansal tiroit bezlerini kullanarak bu deneyi tekrarladı.",
+     "gorsel": [
+      43
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Orijinal sevkiyatta yer alan aksolotlların bir kısmının Ambystoma velasci türüne ait olup olmadığı kesin değildir.",
+     "gorsel": [
+      8
+     ]
+    },
+    {
+     "metin": "Orijinal sevkiyattaki bazı bireylerin durumu belirsizliğini korusa da, bu canlılar Avrupa genelinde hızla yayıldı. Binlerce örnek laboratuvar çalışmalarına dahil edildi.",
+     "gorsel": [
+      13
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Mucizevi Yenilenme Sırrı",
+   "parcalar": [
+    {
+     "metin": "Aksolotlların dikkat çeken iyileşme kabiliyeti bilim insanlarını şaşırttı.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "YENİLENME"
+    },
+    {
+     "metin": "Araştırmacılar, kaybedilen tüm uzuvların aylar içinde yeniden büyüyebildiğini keşfetti.",
+     "gorsel": [
+      8
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Göz ve kalp dokusu gibi hayati yapılar da yenilenebiliyor.",
+     "gorsel": [
+      9
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Canlılar, beyinlerinin hayati olmayan kısımları dahil merkezi sinir sistemini onarabiliyor.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Uzmanlar, yabancı organ nakillerinin tam işlevsellikle kabul edildiğini gözlemledi.",
+     "gorsel": [
+      11
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İncelemelere göre uzuv rejenerasyonunun üç temel şartı belirlendi.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yara epiteli oluşumu, sinir sinyali ve farklı eksenlerden hücreler bu süreci sağlıyor.",
+     "gorsel": [
+      13
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Aksolotlların genom dizilimi 2018 yılında yayımlanmıştır. Tam 32 milyar baz çifti uzunluğundaki bu yapı, o dönem tamamlanan en büyük hayvan genomudur.",
+     "gorsel": [
+      9
+     ]
+    },
+    {
+     "metin": "Bilim insanları, aksolotlların sinir sistemi ve beyinlerinin onarımını incelemek için adeno ilişkili virüsler adı verilen zararsız virüsler kullanmıştır.",
+     "gorsel": [
+      30
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Devasa Genom Dünyası",
+   "parcalar": [
+    {
+     "metin": "Aksolotlların genom dizilimi 2018 yılında yayımlanmıştır.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Tam 32 milyar baz çifti uzunluğundaki bu yapı, o dönem tamamlanan en büyük hayvan genomudur.",
+     "gorsel": [
+      5
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "32",
+      "birim": "milyar"
+     }
+    },
+    {
+     "metin": "Aksolotl genomu insan genomunun yaklaşık on katı büyüklüktedir.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Aksolotl genomunun kodladığı toplam protein sayısı insandakine benzerdir.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Bu devasa boyut farkı çoğunlukla büyük bir tekrarlayan sekans fraksiyonuyla açıklanmaktadır.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu tür neoteniktir ve başkalaşım geçirmeden üreme olgunluğuna ulaşır.",
+     "gorsel": [
+      9
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Aksolotl genomunun kodladığı protein sayısı, insandakine oldukça yakındır.",
+     "gorsel": [
+      7
+     ],
+     "iddialar": [
+      {
+       "iddia": "Aksolotl genomunun kodladığı protein sayısı insandakine benzerdir.",
+       "kaynak_alinti": "encodes a similar number of proteins (23,251, compared with about 20,000 in the human genome)"
+      }
+     ]
+    },
+    {
+     "metin": "Devasa boyut farkı, tekrarlayan sekans fraksiyonundan kaynaklanmaktadır.",
+     "gorsel": [
+      8
+     ],
+     "iddialar": [
+      {
+       "iddia": "Bu devasa boyut farkı çoğunlukla büyük bir tekrarlayan sekans fraksiyonuyla açıklanmaktadır.",
+       "kaynak_alinti": "The size difference is mostly explained by a large fraction of repetitive sequences"
+      }
+     ]
+    },
+    {
+     "metin": "Aksolotllar, uzuvlar, solungaçlar, gözler ve beyin parçaları dahil olmak üzere vücut parçalarını rejenerasyon yoluyla yenileme yeteneğine sahiptir.",
+     "gorsel": [
+      13
+     ]
+    },
+    {
+     "gorsel": [
+      13
+     ],
+     "metin": "Bu olağanüstü iyileşme gücü sayesinde bilimsel araştırmalarda model organizma olarak yaygın bir şekilde kullanılmaktadırlar."
+    },
+    {
+     "metin": "Yetişkin aksolotllar yaklaşık 15 ila 45 santimetre uzunluğa ulaşabilmektedir. Genellikle 23 santimetre boy yaygın olarak görülürken 30 santimetreden uzun bireylere oldukça nadir rastlanır.",
+     "gorsel": [
+      9
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Xochimilco'nun Kaybı",
+   "parcalar": [
+    {
+     "metin": "Vahşi aksolotllar, suya bırakılan tilapya ve sazan gibi istilacı balık türleri yüzünden neredeyse tamamen yok olma tehlikesiyle karşı karşıya kaldı.",
+     "gorsel": [
+      19
+     ],
+     "yazi": "İstilacı Türler"
+    },
+    {
+     "metin": "Uluslararası Doğa Koruma Birliği, azalan popülasyonu 50 ila 1000 yetişkin birey olarak belirleyip türü kritik tehlike altında değerlendirdi.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Xochimilco Gölü'nde 1998, 2003 ve 2008 yıllarında gerçekleştirilen sayım çalışmaları, kilometrekare başına sırasıyla 6000, 1000 ve 100 aksolotl bulunduğunu ortaya koydu.",
+     "gorsel": [
+      1
+     ],
+     "yazi": "Nüfus Sayımı",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "100",
+      "birim": "birey/km²",
+      "metin": "2008 yılı sayımında Xochimilco Gölü'ndeki kilometrekare başına aksolotl yoğunluğu"
+     }
+    },
+    {
+     "metin": "Yoğun olarak kullanılan tarımsal pestisitler yağmur suyuyla göle karışıyor ve bu kimyasal bileşikler aksolotl embriyoları ile larvalarında ölüm oranını keskin biçimde artırıyor.",
+     "gorsel": [
+      20
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Nil tilapyası ve sazan gibi istilacı balık türlerinin göle getirilmesi popülasyonu tehdit eden bir diğer önemli faktördür.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    }
+   ]
+  },
+  {
+   "ad": "Laboratuvardan Pop Kültüre",
+   "parcalar": [
+    {
+     "metin": "Japonya'da bu canlılar, Nissin Foods şirketinin 1980'lerdeki pazarlama kampanyası sonucunda wooper looper olarak anılmaya başladı.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "Pop Kültür"
+    },
+    {
+     "metin": "1999 yılında Pokémon Gold ve Silver video oyunları, doğrudan aksolotla dayanan Wooper adlı bir Pokémon karakterini tanıttı.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2021 yılında Meksika, arka yüzünde bir aksolotl figürü barındıran yeni 50 pesoluk banknot tasarımını piyasaya sürdü.",
+     "gorsel": [
+      7
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "50",
+      "birim": "pesoluk"
+     }
+    },
+    {
+     "metin": "Mojang Studios nesli tehlike altındaki türleri tanıstırma akımı kapsamında aksolotlları 2020'de Minecraft oyununa ekledi.",
+     "gorsel": [
+      7
+     ],
+     "yazi": ""
+    },
+    {
+     "gorsel": [
+      32
+     ],
+     "metin": "How to Train Your Dragon film serisindeki Dişsiz ejderhası da aksolotllar model alınarak tasarlandı."
+    },
+    {
+     "metin": "Aksolotllar Axie Infinity oyununda da öne çıkmaktadır. Ayrıca 2019 yılında Cetus takımyıldızındaki bir yıldıza Axólotl adı verilmiştir.",
+     "gorsel": [
+      32
+     ]
+    },
+    {
+     "metin": "Pokémon Ruby ve Sapphire oyunlarında tanıtılan Mudkip ve evrimleri de görsel olarak aksolotllardan ilham almıştır.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Diego Rivera'nın Cárcamo de Dolores'teki duvar resminde aksolotllar yer almaktadır.",
+     "gorsel": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bugün ve Gelecek",
+   "parcalar": [
+    {
+     "metin": "Aksolotlların doğal yaşam alanı, Mexico City'nin büyümesi neticesinde artık Xochimilco Gölü ile sınırlı kalmıştır.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu eşsiz tür, şehrin genişlemesinden kaynaklanan ciddi baskılarla karşı karşıya kalmaya devam etmektedir.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Meksika Ulusal Özerk Üniversitesi Ekolojik Restorasyon Laboratuvarı, koruma çalışmalarını sürdürmektedir.",
+     "gorsel": [
+      5
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2021 yılı itibarıyla bu laboratuvar bünyesinde 100 adet esaret altında üretilmiş aksolotl popülasyonu oluşturulmuştur.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "100 Birey",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "100",
+      "birim": "birey",
+      "metin": "2021 itibarıyla UNAM Ekolojik Restorasyon Laboratuvarı'nda üretilen aksolotl sayısı"
+     }
+    },
+    {
+     "metin": "Birçok bilim insanı, koruma faaliyetleri kapsamında esarette yetiştirilen bireylerin doğaya salınmasına odaklanmaktadır.",
+     "gorsel": [
+      47
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2025 yılında yapılan bir araştırma, esarette üretilen aksolotlların doğaya salınmasının yaşamsal uygulanabilirliğini doğrulamıştır.",
+     "gorsel": [
+      17
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Doğaya salınan ve yeniden yakalanan bu bireylerin, serbest bırakılmalarından bu yana kilo aldıkları tespit edilmiştir.",
+     "gorsel": [
+      41
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Doğaya salınan bu bireylerin, ne yazık ki ak balıkçıllar tarafından avlanma riskiyle karşı karşıya kalabileceği de belirtilmektedir.",
+     "gorsel": [
+      1
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Aksolotl bir köstebek semenderi türüdür; başkalaşım geçirmeden erginleşir ve yetişkinleri belirgin dış solungaçlarıyla tamamen suda yaşar.",
+   "kaynak_alinti": "The axolotl is a species of mole salamander. It is neotenic, reaching sexual maturity without undergoing metamorphosis, and the adults remain fully aquatic with obvious external gills."
+  },
+  {
+   "iddia": "Aksolotlun en çok dikkat çeken özelliği sıradışı iyileşme yeteneğidir; yara iziyle iyileşmek yerine doku yenilenmesi gerçekleştirir.",
+   "kaynak_alinti": "The characteristic of the axolotl that attracts the most attention is its unusual healing ability; axolotls do not heal by scarring but are instead capable of tissue regeneration."
+  },
+  {
+   "iddia": "Kopan bacak ve kuyruk gibi tüm uzuvlar aylar içinde yeniden büyüyebilir.",
+   "kaynak_alinti": "Entire lost appendages, such as the limbs and tail, can regrow over a period of months."
+  },
+  {
+   "iddia": "Vahşi doğada yaklaşık 50 ila 1000 yetişkin birey kalmıştır ve tür kritik tehlike altındadır.",
+   "kaynak_alinti": "with a decreasing population of around 50 to 1,000 adult individuals, the species has been assessed as critically endangered"
+  },
+  {
+   "iddia": "Aksolotl terimi su kölesi, uşağı, perisi veya canavarı olarak çevrilir.",
+   "kaynak_alinti": "The term axolotl is a Nahuatl word which has been translated variably as water slave, water servant, water sprite, water player, water monstrosity, water twin, or water dog."
+  },
+  {
+   "iddia": "Bu kelime ateş ve ölüler tanrısı Xolotl'u ifade eder.",
+   "kaynak_alinti": "The word refers to Xolotl, the Aztec god who holds dominion over fire, lightning, the dead and the resurrected, dogs, games, grotesque or ugly beings, and twins."
+  },
+  {
+   "iddia": "Aksolotllar aslen Meksika'nın yüksek kesimlerindeki göllerde yaşardı.",
+   "kaynak_alinti": "Axolotls originally inhabited a system of interconnected wetlands and lakes in the highlands of Mexico."
+  },
+  {
+   "iddia": "Xochimilco ve Chalco'nun küçük göllerinde yaşadıkları bilinmektedir.",
+   "kaynak_alinti": "They were known to inhabit the smaller lakes of Xochimilco and Chalco"
+  },
+  {
+   "iddia": "Bu tür model organizma olarak da kullanılır.",
+   "kaynak_alinti": "The species is also used as a model organism."
+  },
+  {
+   "iddia": "Tanrı Xolotl diğer tanrılar tarafından kurban edilmekten kurtulmak için kendini aksolotle dönüştürmüştür.",
+   "kaynak_alinti": "The species is named after Xolotl, the Aztec god of fire and lightning, who transformed himself into an axolotl to avoid being sacrificed by fellow gods."
+  },
+  {
+   "iddia": "Xolotl Quetzalcoatl'ın ikizidir ve köpekler, oyunlar, çirkin varlıklar ile dirilenler üzerinde hakimiyeti vardır.",
+   "kaynak_alinti": "The word refers to Xolotl, the Aztec god who holds dominion over fire, lightning, the dead and the resurrected, dogs, games, grotesque or ugly beings, and twins (as he is the twin of Quetzalcōātl)."
+  },
+  {
+   "iddia": "Aksolotl Aztek diyetinde temel bir ögeydi ve Meksika pazarlarında satılıyordu.",
+   "kaynak_alinti": "Aksolotl ayrıca Meksika pazarlarında yiyecek olarak satılırdı ve Aztek diyetinde temel bir ögeydi."
+  },
+  {
+   "iddia": "Göllerin kurutulması Aztekler tarafından başlatılmış ve doğal yaşam alanlarının çoğunun yok olmasına yol açmıştır.",
+   "kaynak_alinti": "The desiccation of these lakes, initiated by the Aztecs and accelerated during the 20th century, has led to the destruction of much of the axolotl's natural habitat"
+  },
+  {
+   "iddia": "1863 yılında Mexico City'den Paris'teki Jardin des Plantes'a 34 yetişkin aksolotl gönderildi.",
+   "kaynak_alinti": "In 1863, a shipment of 34 adult axolotls was sent from Mexico City to the Jardin des Plantes in Paris"
+  },
+  {
+   "iddia": "Binlerce örnek esarette üretilip bilimsel araştırma için Avrupa'ya dağıtıldı.",
+   "kaynak_alinti": "from which thousands of specimens were captive-bred and distributed around Europe for scientific research."
+  },
+  {
+   "iddia": "Auguste Duméril neoteniden habersizdi ve vivariumda semendere benzer yeni bir tür buldu.",
+   "kaynak_alinti": "Unaware of their neoteny, French zoologist Auguste Duméril was surprised when, instead of the axolotl, he found in the vivarium a new species, similar to the salamander."
+  },
+  {
+   "iddia": "Bu keşif neoteni araştırmalarının başlangıç noktası oldu.",
+   "kaynak_alinti": "This discovery was the starting point of research about neoteny."
+  },
+  {
+   "iddia": "Vilém Laufberger tiroit hormonu enjeksiyonlarıyla aksolotlun kara semenderine dönüşmesini sağladı.",
+   "kaynak_alinti": "In Prague, the Czech medical doctor Vilém Laufberger used thyroid hormone injections to induce an axolotl to grow into a terrestrial adult salamander."
+  },
+  {
+   "iddia": "Julian Huxley ezilmiş hayvansal tiroit bezleriyle deneyi tekrarladı.",
+   "kaynak_alinti": "Englishman Julian Huxley repeated the experiment using ground animal thyroid glands."
+  },
+  {
+   "iddia": "19. yüzyılda Alman kaşif Alexander von Humboldt, Meksikalıların aksolotl ile beslendiğini belirtmiştir.",
+   "kaynak_alinti": "German naturalist and explorer Alexander von Humboldt noted in the 19th century that the Mexicans, having been vanquished by the Spanish Empire, lived \"in great want, compelled to feed on roots of aquatic plants, insects and a problematical reptile called axolotl\"."
+  },
+  {
+   "iddia": "Orijinal sevkiyatta Ambystoma velasci örneklerinin bulunmadığı kesin değildir.",
+   "kaynak_alinti": "It is not certain that Ambystoma velasci specimens were not included in the original shipment."
+  },
+  {
+   "iddia": "Fransız zoolog Auguste Duméril, vivaryumda semendere benzer yeni bir tür bulduğunda şaşırmıştı.",
+   "kaynak_alinti": "Unaware of their neoteny, French zoologist Auguste Duméril was surprised when, instead of the axolotl, he found in the vivarium a new species, similar to the salamander."
+  },
+  {
+   "iddia": "Bu sevkiyat sayesinde binlerce örnek Avrupa'da bilimsel araştırmalar için üretilip dağıtıldı.",
+   "kaynak_alinti": "from which thousands of specimens were captive-bred and distributed around Europe for scientific research."
+  },
+  {
+   "iddia": "Bu şaşırtıcı keşif, neoteni hakkındaki araştırmaların başlangıç noktası oldu.",
+   "kaynak_alinti": "This discovery was the starting point of research about neoteny."
+  },
+  {
+   "iddia": "Fransız zoolog Auguste Duméril, aksolotlların başkalaşım geçirdiğini fark edememiş ve yeni bir tür bulduğunu sanmıştır.",
+   "kaynak_alinti": "Unaware of their neoteny, French zoologist Auguste Duméril was surprised when, instead of the axolotl, he found in the vivarium a new species, similar to the salamander."
+  },
+  {
+   "iddia": "Orijinal sevkiyatta yer alan aksolotlların bir kısmının Ambystoma velasci türüne ait olup olmadığı kesin değildir.",
+   "kaynak_alinti": "It is not certain that Ambystoma velasci specimens were not included in the original shipment."
+  },
+  {
+   "iddia": "Bacak ve kuyruk gibi kaybedilen tüm uzuvlar aylar süren bir zaman diliminde yeniden büyüyebilir.",
+   "kaynak_alinti": "Entire lost appendages, such as the limbs and tail, can regrow over a period of months."
+  },
+  {
+   "iddia": "Göz ve kalp dokusu gibi daha hayati yapılar yeniden büyütülebilir.",
+   "kaynak_alinti": "In certain cases, more vital structures can be regrown, such as tissues of the eye and heart."
+  },
+  {
+   "iddia": "Merkezi sinir sisteminin parçaları ve beynin hayati olmayan kısımları restore edilebilir.",
+   "kaynak_alinti": "Axolotls can even restore parts of their central nervous system, including non-vital parts of their brains."
+  },
+  {
+   "iddia": "Gözler ve beyin parçaları dahil olmak üzere diğer bireylerden nakiller kabul edilir.",
+   "kaynak_alinti": "They can readily accept transplants from other individuals, including eyes and parts of the brain, restoring these alien organs to full functionality."
+  },
+  {
+   "iddia": "Uzuv rejenerasyonunun üç temel gereksinimi vardır.",
+   "kaynak_alinti": "The three basic requirements for limb regeneration in an axolotl are the formation of a wound epithelium, the presence of nerve signaling, and the presence of cells from the different axes of the affected limb."
+  },
+  {
+   "iddia": "Aksolotlların genom dizilimi 2018 yılında yayımlanmış ve o dönem tamamlanan en büyük hayvan genomu olmuştur.",
+   "kaynak_alinti": "The 32 billion base pair long sequence of the axolotl's genome was published in 2018; the largest animal genome completed at the time"
+  },
+  {
+   "iddia": "Bilim insanları, adeno ilişkili virüsler adı verilen zararsız virüslerle aksolotlların beyin ve sinir sistemi içindeki genleri etkinleştirebilmektedir.",
+   "kaynak_alinti": "scientists found a new method of inserting and activating the genes inside the axolotl's brain and nervous system using special, harmless viruses called adeno-associated viruses (AAVs)."
+  },
+  {
+   "iddia": "Aksolotl genom dizilimi 2018 yılında yayımlandı.",
+   "kaynak_alinti": "The 32 billion base pair long sequence of the axolotl's genome was published in 2018; the largest animal genome completed at the time,"
+  },
+  {
+   "iddia": "Genom insan genomunun on katı büyüklüktedir.",
+   "kaynak_alinti": "Although the axolotl genome is about ten times the size of the human genome, it encodes a similar number of proteins"
+  },
+  {
+   "iddia": "Aksolotl genomunun kodladığı protein sayısı insana benzerdir.",
+   "kaynak_alinti": "(23,251, compared with about 20,000 in the human genome)."
+  },
+  {
+   "iddia": "Boyut farkı tekrarlayan sekanslarla açıklanır.",
+   "kaynak_alinti": "The size difference is mostly explained by a large fraction of repetitive sequences;"
+  },
+  {
+   "iddia": "Tür neoteniktir ve başkalaşım geçirmeden olgunluğa ulaşır.",
+   "kaynak_alinti": "It is neotenic, reaching sexual maturity without undergoing metamorphosis,"
+  },
+  {
+   "iddia": "Aksolotllar uzuv, solungaç, göz ve beyin kısımlarını yenileyebilir.",
+   "kaynak_alinti": "their unusual ability to regenerate body parts, including limbs, gills and parts of their eyes and brains."
+  },
+  {
+   "iddia": "Yetişkin aksolotllar 15 ila 45 santimetre uzunluğundadır.",
+   "kaynak_alinti": "ranges in length from 15 to 45 cm (6 to 18 in)"
+  },
+  {
+   "iddia": "Vahşi aksolotlların tilapya ve sazan gibi istilacı türler yüzünden yok olma noktasına gelmesi",
+   "kaynak_alinti": "Wild axolotls have been driven to near extinction by the introduction of invasive species such as tilapia and carp."
+  },
+  {
+   "iddia": "Uluslararası Doğa Koruma Birliği'nin türü kritik tehlikede olarak değerlendirmesi ve yetişkin birey sayısı",
+   "kaynak_alinti": "With a decreasing population of around 50 to 1,000 adult individuals, the species has been assessed as critically endangered by the International Union for Conservation of Nature"
+  },
+  {
+   "iddia": "1998, 2003 ve 2008 yıllarındaki sayım sonuçları",
+   "kaynak_alinti": "Surveys conducted in 1998, 2003, and 2008 found populations of 6,000, 1,000, and 100 axolotls per square kilometer, respectively, in Lake Xochimilco."
+  },
+  {
+   "iddia": "Tarımsal pestisitlerin göle karışması ve embriyo ile larvalardaki ölüm oranını artırması",
+   "kaynak_alinti": "Intensively used agricultural pesticides eventually enter the lake through runoff, and these contain chemical compounds that sharply increase the mortality rate in axolotl embryos and larvae."
+  },
+  {
+   "iddia": "Nil tilapyası ve sazan gibi istilacı balık türlerinin popülasyonu tehdit etmesi",
+   "kaynak_alinti": "Another factor that threatens the population is the introduction of invasive fish species, such as the Nile tilapia and the common carp."
+  },
+  {
+   "iddia": "Japonya'da wooper looper olarak anılmaları",
+   "kaynak_alinti": "In Japan, the creatures are commonly known as \"wooper loopers\" (ウーパールーパー) following a 1980s marketing campaign by Nissin Foods featuring an axolotl with that name."
+  },
+  {
+   "iddia": "Pokémon Gold ve Silver oyununda Wooper karakteri",
+   "kaynak_alinti": "In 1999, the video games Pokémon Gold and Silver, made by Japanese developer Game Freak, introduced a Pokémon named Wooper, which is directly based on an axolotl."
+  },
+  {
+   "iddia": "Meksika'nın 50 pesoluk yeni banknot tasarımı",
+   "kaynak_alinti": "In 2021, Mexico released a new design for the 50-peso banknote featuring an axolotl on its reverse."
+  },
+  {
+   "iddia": "50 milyon banknotun dolaşımdan saklanması",
+   "kaynak_alinti": "the Bank of Mexico reported in 2025 that up to 50 million were being kept out of circulation, as millions of people were choosing to hoard the notes rather than spend them."
+  },
+  {
+   "iddia": "Minecraft oyununa aksolotlların eklenmesi",
+   "kaynak_alinti": "Axolotls were added to the video game Minecraft in 2020 (depicted as troglofauna in-game), following Mojang Studios' trend of incorporating endangered species to raise awareness"
+  },
+  {
+   "iddia": "2002 yılında Pokémon Ruby and Sapphire oyunları Mudkip ve evrimlerini tanıttı.",
+   "kaynak_alinti": "Additionally, in 2002, Pokémon Ruby and Sapphire introduced the Pokémon Mudkip and its evolutions, which take some visual inspiration from axolotls."
+  },
+  {
+   "iddia": "How to Train Your Dragon film serisindeki Dişsiz ejderhası aksolotllar model alınarak tasarlandı.",
+   "kaynak_alinti": "In the How to Train Your Dragon movie franchise, the dragon Toothless was also modeled after axolotls."
+  },
+  {
+   "iddia": "Aksolotllar Axie Infinity oyununda da öne çıkmaktadır.",
+   "kaynak_alinti": "They also feature prominently in the game Axie Infinity."
+  },
+  {
+   "iddia": "2019 yılında Cetus takımyıldızındaki bir yıldıza Axólotl adı verildi.",
+   "kaynak_alinti": "In 2019, a star in the equatorial constellation of Cetus was named Axólotl."
+  },
+  {
+   "iddia": "Pokémon Ruby ve Sapphire oyunlarında tanıtılan Mudkip ve evrimleri de görsel olarak aksolotllardan ilham almıştır.",
+   "kaynak_alinti": "Pokémon Ruby and Sapphire introduced the Pokémon Mudkip and its evolutions, which take some visual inspiration from axolotls"
+  },
+  {
+   "iddia": "Diego Rivera'nın Cárcamo de Dolores'teki duvar resminde aksolotllar yer almaktadır.",
+   "kaynak_alinti": "they appear in Diego Rivera's 1951 mural Agua, el origen de la vida (Water, the Origin of Life) at the Cárcamo de Dolores in Chapultepec Park"
+  },
+  {
+   "iddia": "Aksolotlların doğal yaşam alanı Xochimilco Gölü ile sınırlıdır.",
+   "kaynak_alinti": "The axolotl's natural habitat is now limited to Lake Xochimilco as a result of the expansion of Mexico City and is under pressure from the city's growth."
+  },
+  {
+   "iddia": "2021 yılı itibarıyla laboratuvarda 100 aksolotl bulunmaktadır.",
+   "kaynak_alinti": "The Laboratorio de Restauracion Ecologica of the National Autonomous University of Mexico has built up a population of 100 captive-bred axolotls, as of 2021."
+  },
+  {
+   "iddia": "Koruma çalışmaları translokasyona odaklanmaktadır.",
+   "kaynak_alinti": "Many scientists are focusing their conservation efforts on the translocation of captive-bred individuals into new habitats or their reintroduction into Lake Xochimilco."
+  },
+  {
+   "iddia": "2025 yılındaki çalışma serbest bırakılmanın fizibilitesini göstermiştir.",
+   "kaynak_alinti": "A 2025 study confirmed the viability of releasing captive-bred axolotls into the wild, with recaptured individuals having gained weight since their release."
+  },
+  {
+   "iddia": "Adeno ilişkili virüsler kullanılarak genler aktive edilmiştir.",
+   "kaynak_alinti": "In a 2025 study, scientists found a new method of inserting and activating the genes inside the axolotl's brain and nervous system using special, harmless viruses called adeno-associated viruses."
+  },
+  {
+   "iddia": "Doğaya salınan aksolotlların ak balıkçıllar tarafından avlanma riski taşıdığı",
+   "kaynak_alinti": "However, this practice risks losing the axolotl through predation, as several of those released were preyed on by great egrets."
+  },
+  {
+   "iddia": "Esarette üretilen bireylerin doğaya bırakılmasının avlanma riski taşıdığı",
+   "kaynak_alinti": "However, this practice risks losing the axolotl through predation"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Axolotl",
+  "https://tr.wikipedia.org/wiki/Ambystoma_mexicanum"
+ ],
+ "imla": true
+}
