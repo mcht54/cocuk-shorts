@@ -235,5 +235,28 @@
    "publishAt": "2026-11-08T14:00:00Z"
   },
   "yayin_zamani": "2026-11-08T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-11-02T20:07:18+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b048.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "c2: yürüme eylemi var ama karakter 0.19 m yer değiştirdi"
+  ]
+ },
+ {
+  "tarih": "2026-11-02T20:36:29+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b049.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "P-NiVDcn5C8",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-09T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-09T14:00:00+00:00"
  }
 ]
