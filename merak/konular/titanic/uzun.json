@@ -1,0 +1,827 @@
+{
+ "baslik": "Okyanusun Dibindeki Sır: Titanik'in Bilinmeyen Yüzü",
+ "kapak_yazisi": "TİTANİK",
+ "kapak_gorsel": 5,
+ "aciklama": "Titanik'in inşasından ilk seferine kadar bilinmeyen yüzünü ve felaketin ardındaki detayları büyük resimden ayrıntıya inceleyin. Dönemin en büyük gemisinin ihtişamını ve felakete giden süreci keşfedin.",
+ "etiketler": [
+  "Titanic",
+  "Titanik",
+  "Belgesel",
+  "Tarih",
+  "Gemi",
+  "Buzdağı",
+  "1912",
+  "Merak Arşivi",
+  "Kaptan Smith",
+  "Belfast",
+  "White Star Line",
+  "Olaylar"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "RMS Titanic, İngiltere'nin Southampton şehrinden New York City'ye yaptığı ilk seferinde bir buzdağına çarpması sonucu batan bir İngiliz okyanus gemisiydi.",
+     "gorsel": [
+      35
+     ],
+     "yazi": "RMS Titanic",
+     "grafik": {
+      "tur": "harita",
+      "etiket": "Southampton"
+     }
+    },
+    {
+     "metin": "Gemideki 2.208 yolcu ve mürettebattan yaklaşık 1.500 kişi hayatını kaybetti.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Olay, barış zamanında tek bir geminin battığı en ölümcül olaylardan biri olarak kayıtlara geçti.",
+     "gorsel": [
+      2
+     ]
+    },
+    {
+     "metin": "White Star Line tarafından işletilen gemi, dünyanın en zengin insanlarını ve yeni bir hayat arayan yüzlerce göçmeni taşıyordu.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Bu felaket, deniz güvenliği düzenlemelerinde büyük değişikliklere yol açtı ve popüler kültürde kalıcı bir miras bıraktı.",
+     "gorsel": [
+      19
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tasarım ve İnşa",
+   "parcalar": [
+    {
+     "metin": "Gemi, White Star Line şirketinin üç Olympic sınıfı okyanus gemisinden ikincisiydi.",
+     "gorsel": [
+      6
+     ],
+     "yazi": "Olympic Sınıfı"
+    },
+    {
+     "metin": "İlk gemi RMS Olympic idi ve sınıfın son gemisi de RMS Britannic olacaktı.",
+     "gorsel": [
+      7
+     ]
+    },
+    {
+     "metin": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu, Ismay onay vererek inşa için gerekli anlaşmaları imzaladı.",
+     "gorsel": [
+      37
+     ]
+    },
+    {
+     "metin": "Geminin yapımı Belfast limanında bulunan Queen's Island bölgesinde gerçekleştirildi.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu.",
+     "gorsel": [
+      17
+     ]
+    },
+    {
+     "metin": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu.",
+       "kaynak_alinti": "On 29 July 1908, Harland and Wolff presented the drawings to J. Bruce Ismay and other White Star Line executives."
+      }
+     ]
+    },
+    {
+     "metin": "Ismay onay vererek inşa için gerekli anlaşmaları imzaladı.",
+     "gorsel": [
+      17
+     ],
+     "iddialar": [
+      {
+       "iddia": "Ismay onay vererek inşa için gerekli anlaşmaları imzaladı.",
+       "kaynak_alinti": "Ismay approved the design and signed three 'letters of agreement' two days later, authorising the start of construction."
+      }
+     ]
+    },
+    {
+     "metin": "Geminin yapımı Belfast limanında bulunan Queen's Island bölgesinde gerçekleştirildi.",
+     "gorsel": [
+      39
+     ],
+     "iddialar": [
+      {
+       "iddia": "Geminin yapımı Belfast limanında bulunan Queen's Island bölgesinde gerçekleştirildi.",
+       "kaynak_alinti": "The ships were constructed on Queen's Island, now known as the Titanic Quarter, in Belfast Harbour."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Boyutlar ve Güverteler",
+   "parcalar": [
+    {
+     "metin": "Titanic, omurgasının tabanından köprünün tepesine kadar 104 feet toplam yüksekliğe sahipti.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Gemi, 269.06 metre uzunluk ve 28.19 metre maksimum genişlik ölçülerine sahipti.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Olympic sınıfı gemilerdeki toplam güverte sayısı on idi.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Bu güvertelerin sekizi yolcuların kullanımına ayrılmıştı.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Titanic, 46.329 gross register ton ölçüsündeydi.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Gemi 52.310 ton deplasmana sahipti.",
+     "gorsel": [
+      5
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "52.310",
+      "birim": "ton"
+     }
+    },
+    {
+     "metin": "Olympic sınıfı gemilerdeki toplam güverte sayısı on idi. Bu güvertelerin sekizi yolcuların kullanımına ayrılmıştı.",
+     "gorsel": [
+      37
+     ],
+     "iddialar": [
+      {
+       "iddia": "Olympic sınıfı gemilerde on güverte vardı ve sekizi yolculara ayrılmıştı",
+       "kaynak_alinti": "All three of the Olympic-class ships had ten decks (excluding the top of the officers' quarters), eight of which were for passenger use."
+      }
+     ]
+    },
+    {
+     "metin": "Titanic omurgasının tabanından köprünün tepesine kadar 104 feet toplam yüksekliğe sahipti.",
+     "gorsel": [
+      25
+     ],
+     "iddialar": [
+      {
+       "iddia": "Geminin toplam yüksekliği tabandan köprünün tepesine 104 feet idi",
+       "kaynak_alinti": "The ship's total height, measured from the base of the keel to the top of the bridge, was 104 feet (32 m)."
+      }
+     ]
+    },
+    {
+     "metin": "Gemi 269.06 metre uzunluk ve 28.19 metre maksimum genişlik ölçülerine sahipti.",
+     "gorsel": [
+      5
+     ],
+     "iddialar": [
+      {
+       "iddia": "Titanic 269.06 metre uzunluk ve 28.19 metre maksimum genişliğe sahipti",
+       "kaynak_alinti": "Titanic was 882 feet 9 inches (269.06 m) long with a maximum breadth of 92 feet 6 inches (28.19 m)."
+      }
+     ]
+    },
+    {
+     "metin": "Titanic omurgasının tabanından köprünün tepesine kadar 104 feet toplam yüksekliğe sahipti. Gemi 269.06 metre uzunluk ve 28.19 metre maksimum genişlik ölçülerine sahipti.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Olympic sınıfı gemilerdeki toplam güverte sayısı on idi. Bu güvertelerin sekizi yolcuların kullanımına ayrılmıştı.",
+     "gorsel": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Güç ve Motorlar",
+   "parcalar": [
+    {
+     "metin": "Titanic'in tahrik gücü üç ana motordan oluşuyordu.",
+     "gorsel": [
+      5
+     ],
+     "yazi": "GÜÇ VE MOTORLAR"
+    },
+    {
+     "metin": "İki adet dört silindirli üçlü genleşmeli buhar motoru ve bir alçak basınç türbini her bir pervaneyi sürüyordu.",
+     "gorsel": [
+      21
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İki pistonlu motorun toplam gücü 30.000 beygir gücüne ulaşıyordu.",
+     "gorsel": [
+      40
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "30.000",
+      "birim": "beygir"
+     }
+    },
+    {
+     "metin": "Gemideki toplam kazan sayısı yirmi dokuzdu.",
+     "gorsel": [
+      35
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Kazanlar 15 feet 9 inç çapında ve 20 feet uzunluğundaydı.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Her bir kazan 91.5 ton ağırlığındaydı ve 48.5 ton su tutabiliyordu.",
+     "gorsel": [
+      22
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Fırınların çalışması için günde 600 tondan fazla kömür elle kürekleniyordu.",
+     "gorsel": [
+      52
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Gemideki toplam kazan sayısı yirmi dokuzdu. Kazanlar 15 feet 9 inç çapında ve 20 feet uzunluğundaydı.",
+     "gorsel": [
+      35,
+      40
+     ]
+    },
+    {
+     "metin": "Her bir kazan 91.5 ton ağırlığındaydı ve 48.5 ton su tutabiliyordu. Fırınların çalışması için günde 600 tondan fazla kömür elle kürekleniyordu.",
+     "gorsel": [
+      22,
+      23
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Lüks ve Teknolojik Özellikler",
+   "parcalar": [
+    {
+     "metin": "Birinci sınıf konaklama birimleri, konfor ve lüksün zirvesi olacak şekilde tasarlandı.",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Lüks"
+    },
+    {
+     "metin": "Spor salonu, yüzme havuzu, sigara içme odaları ve Victoria tarzı bir Türk hamamı bu imkanlar arasındaydı.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Yolcuların kullanımı için Marconi Marine Company tarafından yüksek güçlü bir radyotelgraf vericisi sağlandı.",
+     "gorsel": [
+      15
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Gemi, öncelikle yaklaşık 1.000 üçüncü sınıf yolcu taşıyacak bir göçmen gemisi olarak inşa edildi.",
+     "gorsel": [
+      26
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "1.000",
+      "birim": "yolcu",
+      "metin": "Üçüncü sınıf yolcu kapasitesi"
+     }
+    },
+    {
+     "metin": "Birinci sınıf konaklama birimlerinin yanı sıra gemide yolcuların hizmetine sunulan 7 fit derinliğinde tuzlu su yüzme havuzu da bulunuyordu.",
+     "gorsel": [
+      0,
+      1
+     ]
+    },
+    {
+     "gorsel": [
+      0,
+      1
+     ],
+     "metin": "Ayrıca squash kortu ve sıcak, Ilık ile soğuk odalardan oluşan Victoria tarzı bir Türk hamamı mevcuttu."
+    },
+    {
+     "metin": "Yolcuların zaman geçirmesi için kütüphane ve sigara odalarının yanı sıra açık güvertede gezinti alanları ve ahşap banklar sağlanmıştı.",
+     "gorsel": [
+      16,
+      26
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Yolculuk ve Mürettebat",
+   "parcalar": [
+    {
+     "metin": "Titanic ilk seferine Southampton, İngiltere'den, New York'a doğru 10 Nisan 1912'de hareket edecekti.",
+     "gorsel": [
+      5
+     ],
+     "yazi": "İlk Sefer"
+    },
+    {
+     "metin": "Titanic'in birinci sınıf konaklama birimleri konfor ve lüksün zirvesi olarak tasarlanmıştı.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "Gemide birinci sınıf yolcuların kullanımı için spor salonu, yüzme havuzu ve Türk hamamı bulunuyordu.",
+     "gorsel": [
+      1
+     ]
+    },
+    {
+     "metin": "Gemi ayrıca üçüncü sınıf yolcular için rahat kamara ve yemek salonları sunmaktaydı.",
+     "gorsel": [
+      26
+     ]
+    },
+    {
+     "metin": "Gemide birinci sınıf yolcuların kullanımı için ayrıca sigara içme odaları, kaliteli restoran ve kafeler bulunmaktaydı.",
+     "gorsel": [
+      15,
+      16
+     ]
+    },
+    {
+     "metin": "Titanic birinci sınıf yolcuların kullanımı amacıyla Marconi Marine Company tarafından yüksek güçlü bir radyotelgraf vericisi ile donatılmıştı.",
+     "gorsel": [
+      25
+     ]
+    },
+    {
+     "metin": "Titanic birinci sınıf yolcular için konforlu kabinler sunmaktaydı. Gemide ayrıca yolcuların kullanımı amacıyla bir squash kortu da yer alıyordu.",
+     "gorsel": [
+      0,
+      1
+     ]
+    },
+    {
+     "metin": "Gemide birinci sınıf yolcuların vakit geçirmesi için bir okuma ve yazma odası bulunmaktaydı. Yolcular ayrıca özel olarak tasarlanan Palmiye Bahçesi'nden faydalanabilmekteydi.",
+     "gorsel": [
+      15,
+      16
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Buzdağı ve Felaket",
+   "parcalar": [
+    {
+     "metin": "14 Nisan 1912 saat 23.39'da, gemideki saatle Titanic, New Foundland'ın Grand Banks güneyi açıklarında seyir etmekteydi.",
+     "gorsel": [
+      19
+     ],
+     "yazi": "14 Nisan 1912"
+    },
+    {
+     "metin": "Gözcü Frederic Fleet geminin ön tarafında tam olarak seçilemeyen büyük bir buzdağı fark etti.",
+     "gorsel": [
+      20
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Titanic'in sancak yani sağ tarafı buzdağı tarafından yırtılmıştır.",
+     "gorsel": [
+      42
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Omurgadaki birçok noktada bükülmeler olmuş, suyun altında kalan perçinler atmıştır.",
+     "gorsel": [
+      27
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Bu nedenle beş kompartıman suya doğru açılmıştır.",
+     "gorsel": [
+      43
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Felakette hayatını kaybeden tahmini insan sayısı 1.500 kişidir.",
+     "gorsel": [
+      4
+     ],
+     "yazi": "1.500 Can",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "1.500",
+      "birim": "kişi",
+      "metin": "Felakette hayatını kaybeden tahmini insan sayısı"
+     }
+    },
+    {
+     "metin": "Titanic'in sancak yani sağ tarafı buzdağı tarafından yırtılmıştır. Omurgadaki birçok noktada bükülmeler olmuş, suyun altında kalan perçinler atmıştır.",
+     "gorsel": [
+      20
+     ],
+     "iddialar": [
+      {
+       "iddia": "Titanic'in sancak yani sağ tarafı buzdağı tarafından yırtılmıştır. Omurgadaki birçok noktada bükülmeler olmuş, suyun altında kalan perçinler atmıştır.",
+       "kaynak_alinti": "The ship's starboard side was gouged by the iceberg, bending the keel in several places and causing rivets below the waterline to pop."
+      }
+     ]
+    },
+    {
+     "metin": "Bu nedenle beş kompartıman suya doğru açılmıştır. Felakette hayatını kaybeden tahmini insan sayısı 1.500 kişidir.",
+     "gorsel": [
+      27
+     ],
+     "iddialar": [
+      {
+       "iddia": "Bu nedenle beş kompartıman suya doğru açılmıştır. Felakette hayatını kaybeden tahmini insan sayısı 1.500 kişidir.",
+       "kaynak_alinti": "allowing water to flood into five compartments. Of the 2,208 passengers and crew aboard, approximately 1,500 died (estimates vary)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Miras ve Sonuçlar",
+   "parcalar": [
+    {
+     "metin": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+     "gorsel": [
+      41
+     ]
+    },
+    {
+     "metin": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+     "gorsel": [
+      41
+     ]
+    },
+    {
+     "metin": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+     "gorsel": [
+      41
+     ],
+     "iddialar": [
+      {
+       "iddia": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+       "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations"
+      }
+     ]
+    },
+    {
+     "metin": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+     "gorsel": [
+      39
+     ],
+     "iddialar": [
+      {
+       "iddia": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+       "kaynak_alinti": "and inspired a lasting legacy in popular culture."
+      }
+     ]
+    },
+    {
+     "metin": "Hizmete girdiğinde denizdeki en büyük gemi olan Titanic, White Star Line için inşa edilen üç Olympic sınıfı okyanus gemisinden ikincisiydi.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Hizmete girdiğinde denizdeki en büyük gemi olan Titanic, White Star Line için inşa edilen üç Olympic sınıfı okyanus gemisinden ikincisiydi.",
+       "kaynak_alinti": "At the time of her voyage, she was the largest ship afloat upon entering service and the second of three Olympic-class ocean liners built for the White Star Line."
+      }
+     ]
+    },
+    {
+     "metin": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+     "gorsel": [
+      41
+     ]
+    },
+    {
+     "metin": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+     "gorsel": [
+      20
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "RMS Titanic, İngiltere'nin Southampton şehrinden New York City'ye yaptığı ilk seferinde bir buzdağına çarpması sonucu batan bir İngiliz okyanus gemisiydi.",
+   "kaynak_alinti": "RMS Titanic was a British ocean liner that sank in the early hours of 15 April 1912 after striking an iceberg on her maiden voyage from Southampton, England, to New York City."
+  },
+  {
+   "iddia": "Gemideki 2.208 yolcu ve mürettebattan yaklaşık 1.500 kişi hayatını kaybetti.",
+   "kaynak_alinti": "Of the 2,208 passengers and crew aboard, approximately 1,500 died (estimates vary)"
+  },
+  {
+   "iddia": "Olay, barış zamanında tek bir geminin battığı en ölümcül olaylardan biri olarak kayıtlara geçti.",
+   "kaynak_alinti": "making the incident one of the deadliest peacetime sinkings of a single ship."
+  },
+  {
+   "iddia": "White Star Line tarafından işletilen gemi, dünyanın en zengin insanlarını ve yeni bir hayat arayan yüzlerce göçmeni taşıyordu.",
+   "kaynak_alinti": "Titanic was operated by the White Star Line, one of the premier transatlantic services, and carried some of the wealthiest people in the world, as well as hundreds of emigrants from the British Isles, Scandinavia, and elsewhere in Europe who were seeking a new life in the United States and Canada."
+  },
+  {
+   "iddia": "Bu felaket, deniz güvenliği düzenlemelerinde büyük değişikliklere yol açtı ve popüler kültürde kalıcı bir miras bıraktı.",
+   "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture."
+  },
+  {
+   "iddia": "Titanic, Belfast'taki Harland and Wolff şirketi tarafından inşa edildi.",
+   "kaynak_alinti": "The ship was built by the Harland and Wolff shipbuilding company in Belfast"
+  },
+  {
+   "iddia": "Gemi, Olympic sınıfı okyanus gemilerinin ikincisiydi.",
+   "kaynak_alinti": "RMS Titanic was the second of the three Olympic-class ocean liners"
+  },
+  {
+   "iddia": "Öncü gemi RMS Olympic idi ve son gemi RMS Britannic olacaktı.",
+   "kaynak_alinti": "the lead vessel was RMS Olympic and the final ship in the class would be RMS Britannic."
+  },
+  {
+   "iddia": "İlk iki gemi için 3 milyon sterlin maliyet üzerinde anlaşıldı.",
+   "kaynak_alinti": "In the case of the Olympic-class ships, a cost of £3 million"
+  },
+  {
+   "iddia": "Tasarım Lord Pirrie ve Thomas Andrews tarafından denetlendi.",
+   "kaynak_alinti": "The design was overseen by Lord Pirrie, chairman of Harland and Wolff; naval architect Thomas Andrews"
+  },
+  {
+   "iddia": "Tasarım sürecini Lord Pirrie, Thomas Andrews, Edward Wilding ve Alexander Carlisle yürüttü.",
+   "kaynak_alinti": "The design was overseen by Lord Pirrie, chairman of Harland and Wolff; naval architect Thomas Andrews, the managing director of Harland and Wolff's design department; Edward Wilding, Andrews's deputy and responsible for calculating the ship's design, stability and trim; and Alexander Carlisle, the shipyard's chief draughtsman and general manager."
+  },
+  {
+   "iddia": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu.",
+   "kaynak_alinti": "On 29 July 1908, Harland and Wolff presented the drawings to J. Bruce Ismay and other White Star Line executives."
+  },
+  {
+   "iddia": "Geminin yapımı Belfast limanında bulunan Queen's Island bölgesinde gerçekleştirildi.",
+   "kaynak_alinti": "The ships were constructed on Queen's Island, now known as the Titanic Quarter, in Belfast Harbour."
+  },
+  {
+   "iddia": "Tasarım çizimleri 29 Temmuz 1908 tarihinde J. Bruce Ismay ve White Star Line yöneticilerine sunuldu.",
+   "kaynak_alinti": "On 29 July 1908, Harland and Wolff presented the drawings to J. Bruce Ismay and other White Star Line executives."
+  },
+  {
+   "iddia": "Titanic 882 feet 9 inches long with a maximum breadth of 92 feet 6 inches.",
+   "kaynak_alinti": "Titanic was 882 feet 9 inches (269.06 m) long with a maximum breadth of 92 feet 6 inches (28.19 m)."
+  },
+  {
+   "iddia": "Geminin toplam yüksekliği 104 feet idi.",
+   "kaynak_alinti": "The ship's total height, measured from the base of the keel to the top of the bridge, was 104 feet (32 m)."
+  },
+  {
+   "iddia": "Olympic sınıfı üç gemide de on güverte vardı.",
+   "kaynak_alinti": "All three of the Olympic-class ships had ten decks (excluding the top of the officers' quarters), eight of which were for passenger use."
+  },
+  {
+   "iddia": "Titanic 46.329 GRT ölçüldü.",
+   "kaynak_alinti": "Titanic measured 46,329 GRT and 21,831 NRT and with a draught of 34 feet 7 inches (10.54 m) and displaced 52,310 tonnes."
+  },
+  {
+   "iddia": "Titanic omurgasının tabanından köprünün tepesine kadar 104 feet toplam yüksekliğe sahipti.",
+   "kaynak_alinti": "The ship's total height, measured from the base of the keel to the top of the bridge, was 104 feet (32 m)."
+  },
+  {
+   "iddia": "Gemi 269.06 metre uzunluk ve 28.19 metre maksimum genişlik ölçülerine sahipti.",
+   "kaynak_alinti": "Titanic was 882 feet 9 inches (269.06 m) long with a maximum breadth of 92 feet 6 inches (28.19 m)."
+  },
+  {
+   "iddia": "Olympic sınıfı gemilerdeki toplam güverte sayısı on idi. Bu güvertelerin sekizi yolcuların kullanımına ayrılmıştı.",
+   "kaynak_alinti": "All three of the Olympic-class ships had ten decks (excluding the top of the officers' quarters), eight of which were for passenger use."
+  },
+  {
+   "iddia": "Titanic'in üç ana motoru vardı.",
+   "kaynak_alinti": "Titanic propulsion was supplied by three main engines—two reciprocating four-cylinder, triple-expansion steam engines and one centrally placed low-pressure Parsons turbine—each driving a propeller."
+  },
+  {
+   "iddia": "İki pistonlu motorun gücü 30.000 beygir gücüydü.",
+   "kaynak_alinti": "The two reciprocating engines had a combined output of 30,000 horsepower (22,000 kW)."
+  },
+  {
+   "iddia": "Kazanlar 15 feet 9 inç çapında ve 20 feet uzunluğundaydı.",
+   "kaynak_alinti": "The boilers were 15 feet 9 inches (4.80 m) in diameter and 20 feet (6.1 m) long, each weighing 91.5 tonnes and capable of holding 48.5 tonnes of water."
+  },
+  {
+   "iddia": "Fırınlar günde 600 tondan fazla kömür yakıyordu.",
+   "kaynak_alinti": "The furnaces required over 600 tonnes of coal a day to be shovelled into them by hand, requiring the services of 176 firemen working around the clock."
+  },
+  {
+   "iddia": "İki pistonlu motorun toplam gücü 30.000 beygir gücüne ulaşıyordu.",
+   "kaynak_alinti": "The two reciprocating engines had a combined output of 30,000 horsepower (22,000 kW)."
+  },
+  {
+   "iddia": "Exhaust steam leaving the reciprocating engines was fed into the turbine, which was situated aft.",
+   "kaynak_alinti": "Exhaust steam leaving the reciprocating engines was fed into the turbine, which was situated aft."
+  },
+  {
+   "iddia": "Gemideki toplam kazan sayısı yirmi dokuzdu.",
+   "kaynak_alinti": "They were powered by steam produced in 29 boilers, 24 of which were double-ended and five single-ended, which contained a total of 159 furnaces."
+  },
+  {
+   "iddia": "Kazanlar 15 feet 9 inç çapında ve 20 feet uzunluğundaydı.",
+   "kaynak_alinti": "The boilers were 15 feet 9 inches (4.80 m) in diameter and 20 feet (6.1 m) long, each weighing 91.5 tonnes and capable of holding 48.5 tonnes of water."
+  },
+  {
+   "iddia": "Her bir kazan 91.5 ton ağırlığındaydı ve 48.5 ton su tutabiliyordu.",
+   "kaynak_alinti": "each weighing 91.5 tonnes and capable of holding 48.5 tonnes of water."
+  },
+  {
+   "iddia": "Fırınların çalışması için günde 600 tondan fazla kömür elle kürekleniyordu.",
+   "kaynak_alinti": "The furnaces required over 600 tonnes of coal a day to be shovelled into them by hand"
+  },
+  {
+   "iddia": "Birinci sınıf konaklama birimleri konfor ve lüksün zirvesi olarak tasarlandı.",
+   "kaynak_alinti": "The first-class accommodations were designed to be the pinnacle of comfort and luxury."
+  },
+  {
+   "iddia": "Spor salonu, yüzme havuzu, sigara odaları ve Türk hamamı bulunuyordu.",
+   "kaynak_alinti": "They included a gymnasium, swimming pool, smoking rooms, fine restaurants and cafes, a Victorian-style Turkish bath, and opulent cabins."
+  },
+  {
+   "iddia": "Marconi Marine Company tarafından yüksek güçlü bir verici sağlandı.",
+   "kaynak_alinti": "A high-powered spark-gap transmitter was provided by the Marconi Marine Company for first-class passenger use."
+  },
+  {
+   "iddia": "Gemi yaklaşık 1.000 üçüncü sınıf yolcu taşıyacak şekilde inşa edildi.",
+   "kaynak_alinti": "the ship was primarily built as an immigration ship designed to carry around 1,000 third-class passengers."
+  },
+  {
+   "iddia": "Yolcuların hizmetine sunulan 7 fit derinliğinde tuzlu su yüzme havuzu bulunuyordu.",
+   "kaynak_alinti": "a 7 ft (2.1 m) deep saltwater swimming pool"
+  },
+  {
+   "iddia": "Squash kortu ve Victoria tarzı bir Türk hamamı mevcuttu.",
+   "kaynak_alinti": "a squash court, and a Victorian-style Turkish bath"
+  },
+  {
+   "iddia": "Yolcuların zaman geçirmesi için kütüphane, sigara odaları ve açık güvertede ahşap banklar sağlanmıştı.",
+   "kaynak_alinti": "indoor amenities such as the library, smoking rooms... promenading or relaxing in hired deck chairs or wooden benches."
+  },
+  {
+   "iddia": "Yolcu listesi yayımlanıyordu ve bu liste zengin beceriksiz bekarlarla tanışmak için kullanılabiliyordu.",
+   "kaynak_alinti": "A passenger list was published before the sailing... use the list to identify rich bachelors"
+  },
+  {
+   "iddia": "Titanic ilk seferine 10 Nisan 1912'de Southampton'dan hareket etti.",
+   "kaynak_alinti": "Titanic ilk seferine Southampton, İngiltere'den, New York'a doğru 10 Nisan 1912'de hareket edecekti."
+  },
+  {
+   "iddia": "Gemi 31 Mayıs 1911 saat 12:15'te denize indirildi.",
+   "kaynak_alinti": "Titanic was launched at 12:15 pm on 31 May 1911 in the presence of Lord Pirrie, J. Pierpont Morgan, J. Bruce Ismay and 100,000 onlookers."
+  },
+  {
+   "iddia": "Deniz denemeleri 2 Nisan 1912 Salı günü saat 06:00'da başladı.",
+   "kaynak_alinti": "Titanic's sea trials began at 6 am on Tuesday, 2 April 1912, two days after the fitting out was finished and eight days before departure from Southampton on the maiden voyage."
+  },
+  {
+   "iddia": "İlk seferde gemide yaklaşık 891 mürettebat vardı.",
+   "kaynak_alinti": "Titanic had about 891 crew members on board for the maiden voyage."
+  },
+  {
+   "iddia": "Birinci sınıf konaklama birimleri konfor ve lüksün zirvesiydi.",
+   "kaynak_alinti": "The first-class accommodations were designed to be the pinnacle of comfort and luxury."
+  },
+  {
+   "iddia": "Birinci sınıf yolcular için spor salonu, yüzme havuzu ve Türk hamamı vardı.",
+   "kaynak_alinti": "They included a gymnasium, swimming pool, smoking rooms, fine restaurants and cafes, a Victorian-style Turkish bath, and opulent cabins."
+  },
+  {
+   "iddia": "Üçüncü sınıf yolcular için kamara ve yemek salonları sağlanmıştı.",
+   "kaynak_alinti": "They provided comfortable accomodations for the standards of the time, including providing a dining saloon and an open space free for their personal use."
+  },
+  {
+   "iddia": "Gemide birinci sınıf yolcular için sigara içme odaları, kaliteli restoran ve kafeler vardı.",
+   "kaynak_alinti": "They included a gymnasium, swimming pool, smoking rooms, fine restaurants and cafes, a Victorian-style Turkish bath, and opulent cabins."
+  },
+  {
+   "iddia": "Birinci sınıf yolcuların kullanımı için yüksek güçlü bir radyotelgraf vericisi sağlanmıştı.",
+   "kaynak_alinti": "A high-powered spark-gap transmitter was provided by the Marconi Marine Company for first-class passenger use."
+  },
+  {
+   "iddia": "Birinci sınıf yolcuların kullanımı için squash kortu vardı.",
+   "kaynak_alinti": "The first-class squash court was located here"
+  },
+  {
+   "iddia": "Birinci sınıf yolcular için okuma ve yazma odası bulunuyordu.",
+   "kaynak_alinti": "First Class reading and writing room"
+  },
+  {
+   "iddia": "Yolcular Palmiye Bahçesi'nden faydalanabiliyordu.",
+   "kaynak_alinti": "Palm Court"
+  },
+  {
+   "iddia": "14 Nisan 1912 saat 23.39'da, gemideki saat, Titanic, New Foundland'ın Grand Banks güneyi açıklarında seyir etmekteydi",
+   "kaynak_alinti": "14 Nisan 1912 saat 23.39'da (gemideki saat), Titanic, New Foundland'ın Grand Banks güneyi açıklarında seyir etmekteydi."
+  },
+  {
+   "iddia": "Gözcü Frederic Fleet geminin ön tarafında tam olarak seçilemeyen büyük bir buzdağı fark etti",
+   "kaynak_alinti": "Gözcü Frederic Fleet gemi'nin ön tarafında tam olarak seçilemeyen büyük bir buzdağı fark etti."
+  },
+  {
+   "iddia": "Titanic'in sancak tarafı buzdağı tarafından yırtılmıştır",
+   "kaynak_alinti": "Geminin sancak (sağ) tarafı buzdağı tarafından yırtılmıştır"
+  },
+  {
+   "iddia": "Omurgadaki birçok noktada bükülmeler olmuş ve suyun altında kalan perçinler atmış",
+   "kaynak_alinti": "omurgadaki birçok noktada bükülmeler olmuş, suyun altında kalan perçinler atmış"
+  },
+  {
+   "iddia": "Bu nedenle beş kompartıman suya doğru açılmış",
+   "kaynak_alinti": "ve bu nedenle beş kompartıman suya doğru açılmış"
+  },
+  {
+   "iddia": "Gemideki 2.208 yolcu ve mürettebattan yaklaşık 1.500 kişi hayatını kaybetti",
+   "kaynak_alinti": "Of the 2,208 passengers and crew aboard, approximately 1,500 died (estimates vary)"
+  },
+  {
+   "iddia": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture.",
+   "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture."
+  },
+  {
+   "iddia": "Of the twenty boats, eighteen were launched successfully.",
+   "kaynak_alinti": "Of the twenty boats, eighteen were launched successfully."
+  },
+  {
+   "iddia": "Many of the graves of victims of the sinking of the RMS Titanic in Fairview Cemetery, Halifax, Nova Scotia",
+   "kaynak_alinti": "Many of the graves of victims of the sinking of the RMS Titanic in Fairview Cemetery, Halifax, Nova Scotia"
+  },
+  {
+   "iddia": "Titanic wreck bow.jpg — View of the bow of the RMS Titanic photographed in June 2004 by the ROV Hercules during an expedition returning",
+   "kaynak_alinti": "Titanic wreck bow.jpg — View of the bow of the RMS Titanic photographed in June 2004 by the ROV Hercules during an expedition returning"
+  },
+  {
+   "iddia": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+   "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture."
+  },
+  {
+   "iddia": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+   "kaynak_alinti": "inspired a lasting legacy in popular culture."
+  },
+  {
+   "iddia": "Felaketin ardından kamuoyunun dikkati çekilmiş ve bu durum deniz güvenliği düzenlemelerinde önemli değişikliklerin yapılmasına öncülük etmiştir.",
+   "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture."
+  },
+  {
+   "iddia": "Titanic'in popüler kültürdeki kalıcı mirası, aradan geçen yıllara rağmen dünya genelinde büyük bir ilgiyle hatırlanmaya devam etmektedir.",
+   "kaynak_alinti": "The disaster drew public attention, spurred major changes in maritime safety regulations, and inspired a lasting legacy in popular culture."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Titanic",
+  "https://tr.wikipedia.org/wiki/RMS_Titanic"
+ ],
+ "imla": true
+}
