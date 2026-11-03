@@ -1,0 +1,78 @@
+{
+ "baslik": "Meksika'nın Kritik Tehlikedeki Simgesi",
+ "ekran_basligi": "KRİTİK TEHLİKEDE",
+ "aciklama": "Vahşi doğada yok olma eşiğindeki aksolotlların yaşam alanları ve tehditler.",
+ "etiketler": [
+  "meksika",
+  "xochimilco",
+  "neslitükenenler",
+  "aksolotl",
+  "doğa",
+  "koruma",
+  "göl",
+  "çevre"
+ ],
+ "parcalar": [
+  {
+   "metin": "Meksika'nın sularında yaşayan bu özel canlılar şu an neden kritik tehlike altındadır?",
+   "gorsel": [
+    1
+   ]
+  },
+  {
+   "metin": "Aksolotllar aslen Xochimilco ve Chalco göllerindeki sulak alanlarda yaşıyordu.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Kentleşme ve su kirliliği doğal yaşam alanlarını neredeyse tamamen yok etti.",
+   "gorsel": [
+    19
+   ]
+  },
+  {
+   "metin": "Göle sonradan bırakılan tilapia ve carp gibi istilacı türler de onları tehdit ediyor.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Vahşi doğada yetişkin birey sayısı 50 ile 1.000 arasında değişen azalan bir nüfusa sahiptir.",
+   "gorsel": [
+    19
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "50",
+    "birim": "birey",
+    "metin": "Vahşi doğada kalan en az yetişkin nüfus"
+   }
+  },
+  {
+   "metin": "Bu türün hayatta kalma mücadelesinin tüm hikâyesi kanalda.",
+   "gorsel": [
+    35
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Aksolotllar neotenyiktir; başkalaşım geçirmeden cinsel olgunluğa ulaşırlar ve yetişkinler belirgin dış solungaçlarla tamamen suda kalır.",
+   "kaynak_alinti": "It is neotenic, reaching sexual maturity without undergoing metamorphosis, and the adults remain fully aquatic with obvious external gills."
+  },
+  {
+   "iddia": "Vahşi aksolotllar, tilapia ve carp gibi istilacı türlerin tanıtılmasıyla neredeyse yok olma noktasına sürüklenmiştir.",
+   "kaynak_alinti": "Wild axolotls have been driven to near extinction by the introduction of invasive species such as tilapia and carp"
+  },
+  {
+   "iddia": "Aksolotl, IUCN tarafından kritik tehlike altında olarak değerlendirilmektedir ve CITES Ek II altında listelenmektedir.",
+   "kaynak_alinti": "the species has been assessed as critically endangered by the International Union for Conservation of Nature (IUCN) and is listed under Appendix II of the Convention on International Trade in Endangered Species (CITES)."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Axolotl",
+  "https://tr.wikipedia.org/wiki/Ambystoma_mexicanum"
+ ],
+ "imla": true
+}
