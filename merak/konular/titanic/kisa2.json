@@ -1,0 +1,82 @@
+{
+ "baslik": "Titanic'in Buzdağına Çarpış Anı",
+ "ekran_basligi": "Buzdağı Çarpışması",
+ "aciklama": "Titanic'in buzdağına çarpma anı, ilk dakikalar ve bu felaketin arka planındaki tarihi detaylar.",
+ "etiketler": [
+  "titanic",
+  "buzdağı",
+  "kaza",
+  "tarih",
+  "1912",
+  "bilgi",
+  "merak",
+  "arşiv"
+ ],
+ "parcalar": [
+  {
+   "metin": "14 Nisan 1912 tarihinde saat 23.39'du; RMS Titanic, New Foundland'ın Grand Banks güneyi açıklarında gece karanlığında seyir etmekteydi.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Gözcü Frederic Fleet ön tarafta tam olarak seçilemeyen büyük bir buzdağı fark etti ve hemen harekete geçti.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Fleet geminin çanını üç kez çalarak köprüye telefon etti ve Altıncı subay James Paul Moody ile görüştü.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Çarpışma 37 saniye sürdü ve sancak tarafı yırtılarak omurgada bükülmeler meydana geldi.",
+   "gorsel": [
+    27
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "37",
+    "birim": "saniye",
+    "metin": "Çarpışma 37 saniye sürmüştü."
+   }
+  },
+  {
+   "metin": "Geminin beş kompartımanı suya doğru açıldı ve buzlu sular hızla içeri dolmaya başladı.",
+   "gorsel": [
+    27
+   ]
+  },
+  {
+   "metin": "Tüm hikâye kanalda; White Star Line tarafından işletilen bu devasa okyanus gemisinin trajik sonu belgeselde.",
+   "gorsel": [
+    5
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Gözcü Frederic Fleet ön tarafta büyük bir buzdağı fark etti.",
+   "kaynak_alinti": "Gözcü Frederic Fleet gemi'nin ön tarafında tam olarak seçilemeyen büyük bir buzdağı fark etti."
+  },
+  {
+   "iddia": "Fleet geminin çanını üç kez çalarak köprüye haber verdi.",
+   "kaynak_alinti": "Fleet gemi'nin çan'ını üç kez çaldı ve köprüye telefon etti."
+  },
+  {
+   "iddia": "Çarpışma 37 saniye sürdü ve sancak tarafı yırtıldı.",
+   "kaynak_alinti": "Fleet'in buzdağını gördükten sonra, geminin ölümcül çarpışmasını 37 saniyede yaptığı tahmin edilmektedir."
+  },
+  {
+   "iddia": "Geminin beş kompartımanı suya doğru açıldı.",
+   "kaynak_alinti": "beş kompartıman suya doğru açılmış"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Titanic",
+  "https://tr.wikipedia.org/wiki/RMS_Titanic"
+ ],
+ "imla": true
+}

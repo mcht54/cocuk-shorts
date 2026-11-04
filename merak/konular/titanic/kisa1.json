@@ -1,0 +1,80 @@
+{
+ "baslik": "Titanic'in Lüks ve Teknolojik Özellikleri",
+ "ekran_basligi": "Lüks ve Teknoloji",
+ "aciklama": "Titanic'in benzersiz iç mekânları ve dönemin ileri teknolojisi.",
+ "etiketler": [
+  "titanic",
+  "lüks",
+  "teknoloji",
+  "tarih",
+  "merak",
+  "bilgi",
+  "gemi",
+  "eski"
+ ],
+ "parcalar": [
+  {
+   "metin": "Birinci sınıf konaklama birimleri lüksün zirvesi olacak şekilde tasarlandı.",
+   "gorsel": [
+    0
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Lüks ve Teknoloji"
+   }
+  },
+  {
+   "metin": "Gemide yüzme havuzu ve Victoria tarzı bir Türk hamamı vardı.",
+   "gorsel": [
+    1
+   ]
+  },
+  {
+   "metin": "Yolcular için yüksek güçlü bir radyotelgraf vericisi bulunuyordu.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Su geçirmez bölmeler geminin batmaz olarak anılmasını sağladı.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Dört bacadan sadece üçü işlevsel olarak kullanılmaktaydı.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Tüm hikâye kanalda.",
+   "gorsel": [
+    5
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Birinci sınıf konaklama birimleri lüksün zirvesi olacak şekilde tasarlandı.",
+   "kaynak_alinti": "The first-class accommodations were designed to be the pinnacle of comfort and luxury."
+  },
+  {
+   "iddia": "Gemide yüzme havuzu ve Victoria tarzı bir Türk hamamı vardı.",
+   "kaynak_alinti": "They included a gymnasium, swimming pool, smoking rooms, fine restaurants and cafes, a Victorian-style Turkish bath"
+  },
+  {
+   "iddia": "Yolcular için yüksek güçlü bir radyotelgraf vericisi bulunuyordu.",
+   "kaynak_alinti": "A high-powered spark-gap transmitter was provided"
+  },
+  {
+   "iddia": "Dört bacadan sadece üçü işlevsel olarak kullanılmaktaydı.",
+   "kaynak_alinti": "Standing above the decks were four funnels, each painted in the White Star buff with black tops; only three were functional"
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Titanic",
+  "https://tr.wikipedia.org/wiki/RMS_Titanic"
+ ],
+ "imla": true
+}
