@@ -1,0 +1,888 @@
+{
+ "baslik": "Korsanların Lanetli Kenti: Sular Altında Kalan Port Royal",
+ "kapak_yazisi": "BATIK KENTE",
+ "kapak_gorsel": 0,
+ "aciklama": "Karayipler'in en zengin ve en karanlık korsan kenti Port Royal'e ne oldu? 1692 yılında sulara gömülen bu lanetli kentin gizemini ve su altındaki sırlarını aralıyoruz.",
+ "etiketler": [
+  "port royal",
+  "korsanlar",
+  "tarih belgeseli",
+  "karayipler",
+  "batık şehir",
+  "jamaika",
+  "1692 depremi",
+  "merak arşivi",
+  "arkeoloji",
+  "korsan tarihi",
+  "dünya mirası",
+  "su altı kalıntıları"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Port Royal nerede saklı?",
+     "gorsel": [
+      3
+     ],
+     "yazi": "Port Royal",
+     "grafik": {
+      "tur": "harita",
+      "etiket": "Port Royal"
+     }
+    },
+    {
+     "metin": "Jamaika'nın güneydoğusunda, Kingston Limanı'nın ağzında, Palisadoes'un ucunda yer alıyor.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "1494'te İspanyollar tarafından kurulan bu yer, bir zamanlar Karayipler'deki en büyük şehirdi.",
+     "gorsel": [
+      20
+     ]
+    },
+    {
+     "metin": "Fakat 7 Haziran 1692'deki deprem ve tsunami şehri yok etti.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "İngilizlerin 1655 yılındaki işgaline kadar İspanya adanın kontrolünü elinde tuttu.",
+     "gorsel": [
+      22
+     ]
+    },
+    {
+     "metin": "1494 yılında Christopher Columbus liderliğinde adaya ilk ayak basan İspanyollar, Taino nüfusunun yok olmasına yol açtı ve Juan de Esquivel'in yerleşimcileri getirmesiyle kalıcı yerleşim başladı.",
+     "gorsel": [
+      20
+     ]
+    },
+    {
+     "metin": "İngilizlerin 1655 yılındaki işgaline kadar İspanya adanın kontrolünü elinde tuttu; bu dönemde İspanyollar, adanın erişimini engellemek için kontrolü ellerinde tuttular.",
+     "gorsel": [
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "İspanyol Temelleri",
+   "parcalar": [
+    {
+     "metin": "Taino yerlileri bu bölgeyi balıkçılık seferleri sırasında kullanıp Caguay veya Caguaya adını verdi mi?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Taino"
+    },
+    {
+     "metin": "İspanyollar Jamaika'ya ilk kez Christopher Columbus liderliğinde 1494 yılında ayak bastı.",
+     "gorsel": [
+      20
+     ],
+     "yazi": "1494",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1494",
+        "metin": "İspanyolların adaya ilk varışı"
+       },
+       {
+        "yil": "1509",
+        "metin": "Juan de Esquivel ile kalıcı yerleşim"
+       },
+       {
+        "yil": "1655",
+        "metin": "İngilizlerin şehri ele geçirmesi"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "İspanyolların adaya ilk varışı 1494 yılında gerçekleşti.",
+     "gorsel": [
+      20
+     ],
+     "yazi": "",
+     "grafik_veri": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1494",
+        "metin": "İspanyolların adaya ilk varışı"
+       },
+       {
+        "yil": "1509",
+        "metin": "Juan de Esquivel ile kalıcı yerleşim"
+       },
+       {
+        "yil": "1655",
+        "metin": "İngilizlerin şehri ele geçirmesi"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Kalıcı yerleşim ise Juan de Esquivel'in bir grup yerleşimciyi getirmesiyle 1509 yılında başladı.",
+     "gorsel": [
+      21
+     ],
+     "yazi": "1509"
+    },
+    {
+     "metin": "İspanya adadaki kontrolünü tam 146 yıl boyunca sürdürdü.",
+     "gorsel": [
+      22
+     ],
+     "yazi": "146 Yıl"
+    },
+    {
+     "metin": "Nihayet İngilizler 1655 yılındaki istilanın ardından kontrolü ele geçirdi.",
+     "gorsel": [
+      21
+     ],
+     "yazi": "1655"
+    },
+    {
+     "metin": "İspanyollar adada yeni topraklar ve altın ile gümüş gibi değerli kaynaklar aradı ama bunun yerine şeker kamışı yetiştirip işlemeye başladılar.",
+     "gorsel": [
+      20
+     ]
+    },
+    {
+     "metin": "İspanya, ticaret yolları üzerinde stratejik bir konumda yer alan adaya diğer ülkelerin erişimini engellemek amacıyla kontrolü elinde tuttu.",
+     "gorsel": [
+      20
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Korsan Ütopyası",
+   "parcalar": [
+    {
+     "metin": "Bu sahil kasabası nasıl dünyanın en tehlikeli merkezine dönüştü?",
+     "gorsel": [
+      20
+     ],
+     "yazi": "Korsan Ütopyası"
+    },
+    {
+     "metin": "İngiliz ve Hollandalı devlet destekli korsanlar İspanyol gemilerine saldırmaya teşvik edildi.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Dünyanın dört bir yanından gelen korsanlar burada toplanarak şehri bir korsan cumhuriyetine dönüştürdü.",
+     "gorsel": [
+      21
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Burası folklor ve tarihte Yeryüzünün En Kötü Şehri olarak ün saldı.",
+     "gorsel": [
+      22
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Şehrin en popüler olduğu dönemde her 10 sakininden biri için bir içki evi vardı.",
+     "gorsel": [
+      25
+     ],
+     "yazi": "10 Kişiye Bir Meyhane",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "10",
+      "birim": "kişi",
+      "metin": "Her on kişiye bir meyhane düştü."
+     }
+    },
+    {
+     "metin": "Sadece Temmuz 1661'de meyhanelere 40 yeni lisans verildi.",
+     "gorsel": [
+      26
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Gerçek korsanların zenginliği ile bugün bilinen yıkıntı nerede ayrılıyor?",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1692 depreminden sonra limanın ticaret merkezi rolünü hızla büyüyen komşu Kingston devraldı.",
+     "gorsel": [
+      25
+     ]
+    },
+    {
+     "metin": "İngiliz istilasından sonra kasabada hızla yapılar yükseldi. Yıl 1659 olduğunda kalenin çevresinde ikiyüz ev, dükkan ve depo inşa edilmişti.",
+     "gorsel": [
+      21
+     ]
+    },
+    {
+     "metin": "1692 yılına gelindiğinde limanı savunmak için beş kale kurulmuştu. Burası İngiliz fethinden sonra Jamaika'nın resmi olmayan başkenti gibi işlev gördü.",
+     "gorsel": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Zenginlik ve Batak",
+   "parcalar": [
+    {
+     "metin": "Port Royal'in kasaları nasıl birdenbire altınla doldu?",
+     "gorsel": [
+      20
+     ],
+     "yazi": "Zenginlik"
+    },
+    {
+     "metin": "1668 yılında Henry Morgan'ın Portobello baskını adanın yıllık şeker ihracatının değerinden yedi kat fazla yağma ürünü üretti.",
+     "gorsel": [
+      21
+     ],
+     "yazi": "75.000 Sterlin"
+    },
+    {
+     "metin": "Bu baskın tam 75.000 sterlin değerinde yağma ürünü ortaya çıkardı.",
+     "gorsel": [
+      20
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "75.000",
+      "birim": "sterlin"
+     }
+    },
+    {
+     "metin": "Tarihçi Charles Leslie'ye göre korsanlar bir gecede 2 ya da 3.000 sekizlik madeni para harcıyordu.",
+     "gorsel": [
+      4
+     ],
+     "yazi": "Gecelik Servet"
+    },
+    {
+     "metin": "20 yıllık bir dönemde Port Royal'de yaklaşık 10.000 kişi yaşadı.",
+     "gorsel": [
+      3
+     ],
+     "yazi": "10.000 Nüfus",
+     "grafik_veri": {
+      "tur": "karsilastirma",
+      "deger": 21,
+      "birim": "ha",
+      "etiket": "Port Royal",
+      "referans": "otobus"
+     }
+    },
+    {
+     "metin": "51 dönümlük araziye sıkışmış 2.000 bina vardı.",
+     "gorsel": [
+      2
+     ],
+     "yazi": "Sıkışık Sokaklar"
+    },
+    {
+     "metin": "1688 yılında deniz limanını tam 213 gemi ziyaret etti.",
+     "gorsel": [
+      24
+     ],
+     "yazi": "213 Gemi"
+    },
+    {
+     "metin": "İspanyollar yeni topraklar ve altın ile gümüş gibi değerli kaynaklar aramak için geldiler ancak bunun yerine şeker kamışı yetiştirip işlemeye başladılar.",
+     "gorsel": [
+      20
+     ]
+    },
+    {
+     "metin": "İspanya, adayı diğer ülkelerin erişiminden korumak için elinde tuttu ve Jamaika üzerindeki kontrolünü 146 yıl boyunca sürdürdü.",
+     "gorsel": [
+      21
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Büyük Kıyamet",
+   "parcalar": [
+    {
+     "metin": "7 Haziran 1692 tarihinde ne oldu?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Büyük Kıyamet"
+    },
+    {
+     "metin": "Yıkıcı bir deprem şehri vurdu ve kuzey kısmının çoğunun yok olmasına yol açtı.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Deprem ve tsunami, nüfusun neredeyse yarısı olan 1.000 ila 3.000 kişi arası insanın ölümüne sebep oldu.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Hastalıklar salgına dönüştü ve tahmini 2.000 ek insanı öldürdü.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1960'larda deniz tabanından, depremin zamanını kaydeden ve saat 11:43'te durmuş bir cep saati çıkarıldı.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Deprem, Port Royal'in altındaki kumun sıvılaşmasına ve Kingston Limanı'na doğru akmasına neden oldu.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "İngiliz işgalinden 1692 depremine kadar olan dönemde Port Royal, Jamaika'nın resmi olmayan başkenti olarak işlev gördü.",
+     "gorsel": [
+      21
+     ]
+    },
+    {
+     "metin": "1692 depreminden önceki dönemde, İngiliz işgalinden sonra Port Royal, Jamaika'nın resmi olmayan başkenti olarak işlev gördü.",
+     "gorsel": [
+      21
+     ]
+    },
+    {
+     "metin": "Deprem, Port Royal'in altındaki kumun sıvılaşmasına ve Kingston Limanı'na doğru akmasına neden oldu.",
+     "gorsel": [
+      33
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Küllerten Sonra",
+   "parcalar": [
+    {
+     "metin": "1703 yılında çıkan yangın, şehrin batmayan üçte birlik kısmında yeniden inşa çabalarını yok etti.",
+     "gorsel": [
+      4
+     ],
+     "yazi": "Yeniden İnşa"
+    },
+    {
+     "metin": "1722 yılında denizden gelen su baskını dahil olmak üzere 18. yüzyılın ilk yarısında çeşitli kasırgalar yaşandı.",
+     "gorsel": [
+      24
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1750'de başka bir yangın ve 1774'te büyük bir kasırga meydana geldi.",
+     "gorsel": [
+      25
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1815'teki büyük bir yangın onarımları yok etti ve 1850'de kolera salgını adayı etkiledi.",
+     "gorsel": [
+      23
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "14 Ocak 1907 tarihindeki deprem kum dilini sıvılaştırarak yeniden kurulan şehrin neredeyse tamamını yok etti ve Eğri Ev'i eğdi.",
+     "gorsel": [
+      2
+     ],
+     "yazi": "Büyük Deprem",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1703",
+        "metin": "Yeniden inşa edilen kasaba yangınla yıkıldı"
+       },
+       {
+        "yil": "1722",
+        "metin": "Deniz taşması ve kasırgalar"
+       },
+       {
+        "yil": "1815",
+        "metin": "Büyük yangın onarımları yok etti"
+       },
+       {
+        "yil": "1907",
+        "metin": "Deprem şehri yeniden vurdu"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "2025 yılında Port Royal, UNESCO tarafından Dünya Mirası Alanı olarak belirlendi.",
+     "gorsel": [
+      3
+     ]
+    },
+    {
+     "metin": "2019 yılına gelindiğinde kruvaziyer gemilerinin yanaşabileceği yüzer bir iskele inşa edildi ve ilk gemi 20 Ocak 2020 tarihinde limana ulaştı.",
+     "gorsel": [
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Kraliyet Donanması",
+   "parcalar": [
+    {
+     "metin": "İngiliz yönetimi altında Kraliyet Donanması Port Royal'de ne kullandı?",
+     "gorsel": [
+      23
+     ],
+     "yazi": "Kraliyet Donanması"
+    },
+    {
+     "metin": "Donanma, kıyıda bir bakım iskelesi kullandı ve kıyıda bir binayı depo olarak kiraladı.",
+     "gorsel": [
+      20
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "19. yüzyılın başlarında Karayipler'deki filoya hizmet veren önemli bir Kraliyet Donanması Tersanesi inşa edildi.",
+     "gorsel": [
+      25
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Tersane buhar güclü gemilerin yeni gereksinimlerini karşılamak için 20. yüzyılın başlarına kadar genişlemeye devam etti.",
+     "gorsel": [
+      26
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Donanma istasyonundan çekildi ve tersane 1905 yılında kapandı.",
+     "gorsel": [
+      31
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Tersane binalarının birçoğu 1907 depreminde veya 1951'deki Charlie Kasırgası'nda yıkıldı.",
+     "gorsel": [
+      32
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1675 yılından itibaren, bu tesisleri denetlemek üzere bölgeye daimi bir Deniz Kuvvetleri Subayı atandı.",
+     "gorsel": [
+      23
+     ]
+    },
+    {
+     "metin": "19. yüzyılın başlarında, Karayipler'deki filoya hizmet veren önemli bir Kraliyet Donanması Tersanesi inşa edildi.",
+     "gorsel": [
+      25
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bugünün Mirası",
+   "parcalar": [
+    {
+     "metin": "Sualtı kalıntılarının sırrını kim çözdü?",
+     "gorsel": [
+      0
+     ],
+     "yazi": "Sualtı Araştırması"
+    },
+    {
+     "metin": "1981 yılında Texas A&M Üniversitesi Sualtı Arkeolojisi Programı, su altında kalan kısımda 10 yıllık su altı arkeolojik araştırması başlattı.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "1998 yılında Port Royal Kalkınma Şirketi, miras turizmi için bir master plan hazırlattı.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2022 yılı itibarıyla köyün nüfusu 3.144 kişidir.",
+     "gorsel": [
+      14
+     ],
+     "yazi": "Köy Nüfusu",
+     "grafik": {
+      "tur": "sayi",
+      "deger": "3144",
+      "birim": "kişi",
+      "metin": "2022 yılındaki köy nüfusu"
+     }
+    },
+    {
+     "metin": "2019 yılına kadar bir yolcu gemisinin yanaşabileceği yüzer bir iskele inşa edildi ve ilk gemi 20 Ocak 2020 tarihinde geldi.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Port Royal, 2025 yılında UNESCO tarafından Dünya Mirası Alanı olarak belirlendi.",
+     "gorsel": [
+      3
+     ],
+     "yazi": "UNESCO Mirası"
+    },
+    {
+     "metin": "Sualtı kalıntılarının sırrını çözmek için Texas A&M Üniversitesi Sualtı Arkeolojisi Programı çalıştı. Bölümün düşük oksijen seviyesi sayesinde döneme ait çok sayıda organik malzeme kurtarılabildi.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "1998 yılında Port Royal Kalkınma Şirketi yeni bir master plan hazırlattı. Bu plan, mirasa dayalı turizm ve cazibe merkezleri oluşturmayı hedefliyordu.",
+     "gorsel": [
+      4
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Port Royal, Jamaika'nın güneydoğusunda, Kingston Limanı'nın ağzında, Palisadoes'un ucunda bulunan bir kasabadır.",
+   "kaynak_alinti": "Port Royal (Jamaican Patois: Puot Rayal) is a small town located at the end of the Palisadoes, at the mouth of Kingston Harbour, in southeastern Jamaica."
+  },
+  {
+   "iddia": "1494'te İspanyollar tarafından kurulan şehir, bir zamanlar Karayipler'deki en büyük ve en müreffeh şehirdi.",
+   "kaynak_alinti": "Founded in 1494 by the Spanish, it was once the largest and most prosperous city in the Caribbean"
+  },
+  {
+   "iddia": "Şehir, 7 Haziran 1692'deki bir deprem ve beraberindeki tsunami sonucunda yıkıldı.",
+   "kaynak_alinti": "It was destroyed by an earthquake on 7 June 1692 and its accompanying tsunami"
+  },
+  {
+   "iddia": "1494 yılında İspanyolların keşfettiği bu bölge, uzun süre şeker kamışı yetiştiriciliği için kullanıldı.",
+   "kaynak_alinti": "The Spanish first landed in Jamaica in 1494 under the leadership of Christopher Columbus, leading to the destruction of the Taino population. Permanent settlement occurred when Juan de Esquivel brought a group of settlers in 1509. They came in search of new lands and valuable resources, like gold and silver. Instead they began to cultivate and process the sugar cane."
+  },
+  {
+   "iddia": "İngilizlerin 1655 yılındaki işgaline kadar İspanya adanın kontrolünü elinde tuttu.",
+   "kaynak_alinti": "Spain maintained control over the island for 146 years, until the English took control following their invasion of 1655."
+  },
+  {
+   "iddia": "1494 yılında İspanyolların keşfettiği bölge, İspanya'nın kontrolünde uzun süre kaldı ve İngilizler burayı 1655 yılındaki istila ile ele geçirdi.",
+   "kaynak_alinti": "The Spanish first landed in Jamaica in 1494... Spain maintained control over the island for 146 years, until the English took control following their invasion of 1655."
+  },
+  {
+   "iddia": "İspanyolların ardından bölgeye yerleşen İngilizler ve Hollandalılar, devlete bağlı korsanlara İspanyol gemilerine saldırmaları için izin verdi.",
+   "kaynak_alinti": "Port Royal became home port to English and Dutch government sponsored privateers who were encouraged to attack Spanish vessels"
+  },
+  {
+   "iddia": "1494 yılında Christopher Columbus liderliğinde İspanyollar adaya geldi.",
+   "kaynak_alinti": "The Spanish first landed in Jamaica in 1494 under the leadership of Christopher Columbus"
+  },
+  {
+   "iddia": "Juan de Esquivel yerleşimcileri getirdi ve kalıcı yerleşim oldu.",
+   "kaynak_alinti": "Permanent settlement occurred when Juan de Esquivel brought a group of settlers in 1509."
+  },
+  {
+   "iddia": "İspanya adanın kontrolünü 146 yıl elinde tuttu.",
+   "kaynak_alinti": "Spain maintained control over the island for 146 years, until the English took control following their invasion of 1655."
+  },
+  {
+   "iddia": "İngilizler adayı 1655 yılında ele geçirdi.",
+   "kaynak_alinti": "The town was captured by England in 1655 during the invasion of Jamaica."
+  },
+  {
+   "iddia": "Taino yerlileri bölgeyi Caguay veya Caguaya adıyla biliyordu.",
+   "kaynak_alinti": "They used the area, which they called Caguay or Caguaya, during their fishing expeditions."
+  },
+  {
+   "iddia": "İspanyollar Jamaika'ya ilk kez 1494'te Columbus ile ayak bastı.",
+   "kaynak_alinti": "The Spanish first landed in Jamaica in 1494 under the leadership of Christopher Columbus"
+  },
+  {
+   "iddia": "Kalıcı yerleşim 1509'da Juan de Esquivel ile başladı.",
+   "kaynak_alinti": "Permanent settlement occurred when Juan de Esquivel brought a group of settlers in 1509."
+  },
+  {
+   "iddia": "İspanya adayı 146 yıl kontrol etti.",
+   "kaynak_alinti": "Spain maintained control over the island for 146 years"
+  },
+  {
+   "iddia": "İngilizler adayı 1655'te ele geçirdi.",
+   "kaynak_alinti": "until the English took control following their invasion of 1655."
+  },
+  {
+   "iddia": "İspanyollar adada yeni topraklar ve altın ile gümüş gibi değerli kaynaklar aradı ama bunun yerine şeker kamışı yetiştirip işlemeye başladılar.",
+   "kaynak_alinti": "They came in search of new lands and valuable resources, like gold and silver. Instead they began to cultivate and process the sugar cane."
+  },
+  {
+   "iddia": "İspanya, ticaret yolları üzerinde stratejik bir konumda yer alan adaya diğer ülkelerin erişimini engellemek amacıyla kontrolü elinde tuttu.",
+   "kaynak_alinti": "Spain kept control of Jamaica mostly so that it could prevent other countries from gaining access to the island, which was strategically situated within the trade routes of the Caribbean."
+  },
+  {
+   "iddia": "Port Royal, İspanyol gemilerine saldırmaya teşvik edilen İngiliz ve Hollandalı devlet destekli korsanlara ev sahipliği yaptı.",
+   "kaynak_alinti": "Port Royal became home port to English and Dutch government sponsored privateers who were encouraged to attack Spanish vessels"
+  },
+  {
+   "iddia": "Şehir korsan cumhuriyetine dönüştü ve dünyânın dört bir yanından korsanlar burada toplandı.",
+   "kaynak_alinti": "Port Royal effectively became a pirate republic, and they continued to use the city as their main base during the 17th century. Pirates from around the world congregated at Port Royal"
+  },
+  {
+   "iddia": "Şehir, folklor ve tarihte Yeryüzünün En Kötü Şehri olarak ün saldı.",
+   "kaynak_alinti": "The town became notorious in folklore as \"the wickedest city on Earth\"."
+  },
+  {
+   "iddia": "En popüler olduğu dönemde şehrin her 10 sakininden biri için bir içki evi vardı.",
+   "kaynak_alinti": "At the height of its popularity, the city had one drinking house for every 10 residents."
+  },
+  {
+   "iddia": "Sadece Temmuz 1661'de meyhanelere 40 yeni lisans verildi.",
+   "kaynak_alinti": "In July 1661 alone, 40 new licenses were granted to taverns."
+  },
+  {
+   "iddia": "İspanyollar burayı 1494'te kurmuştu; amaçları şeker kamışı yetiştirmek ve adayı ele geçirmek istemeyen diğer ülkelerden korumaktı.",
+   "kaynak_alinti": "Founded in 1494 by the Spanish"
+  },
+  {
+   "iddia": "İspanyollar burayı 1494'te kurmuştu; amaçları şeker kamışı yetiştirmek ve adayı ele geçirmek istemeyen diğer ülkelerden korumaktı.",
+   "kaynak_alinti": "Instead they began to cultivate and process the sugar cane."
+  },
+  {
+   "iddia": "İspanyollar burayı 1494'te kurmuştu; amaçları şeker kamışı yetiştirmek ve adayı ele geçirmek istemeyen other ülkelerden korumaktı.",
+   "kaynak_alinti": "Spain kept control of Jamaica mostly so that it could prevent other countries from gaining access to the island"
+  },
+  {
+   "iddia": "1692 depreminden sonra limanın ticaret merkezi rolünü hızla büyüyen komşu Kingston devraldı.",
+   "kaynak_alinti": "After the 1692 disaster, Port Royal's commercial role was steadily taken over by the rapidly growing nearby town (and later, city) of Kingston."
+  },
+  {
+   "iddia": "1659 yılına kadar ikiyüz ev, dükkan ve depo inşa edildi.",
+   "kaynak_alinti": "By 1659 two hundred houses, shops and warehouses had been built around the fort"
+  },
+  {
+   "iddia": "1692 yılına kadar limanı beş kale savundu.",
+   "kaynak_alinti": "by 1692 five forts defended the port"
+  },
+  {
+   "iddia": "Port Royal Jamaika'nın resmi olmayan başkenti olarak hizmet verdi.",
+   "kaynak_alinti": "Port Royal served as the unofficial capital of Jamaica"
+  },
+  {
+   "iddia": "Henry Morgan'ın Portobello baskını 75.000 sterlin değerinde yağma üretti.",
+   "kaynak_alinti": "The Portobello raid [in 1668] alone produced plunder worth £75,000"
+  },
+  {
+   "iddia": "Bu miktar adanın yıllık şeker ihracatının yedi katından fazlaydı.",
+   "kaynak_alinti": "more than seven times the annual value of the island's sugar exports"
+  },
+  {
+   "iddia": "Charles Leslie korsanların bir gecede 2 ya da 3.000 sekizlik harcadığını belirtti.",
+   "kaynak_alinti": "They have been known to spend 2 or 3,000 pieces of eight in one night"
+  },
+  {
+   "iddia": "20 yıllık dönemde Port Royal'de yaklaşık 10.000 kişi yaşadı.",
+   "kaynak_alinti": "During a 20-year period that ended in 1692, nearly 10,000 people lived in Port Royal."
+  },
+  {
+   "iddia": "2.000 bina 51 dönümlük araziye sıkışmıştı.",
+   "kaynak_alinti": "2,000 buildings crammed into 51 acres (21 ha) of real estate."
+  },
+  {
+   "iddia": "1688 yılında deniz limanını 213 gemi ziyaret etti.",
+   "kaynak_alinti": "213 ships visited the seaport in 1688."
+  },
+  {
+   "iddia": "İspanyollar yeni topraklar, altın ve gümüş aramak için geldiler ancak şeker kamışı yetiştirdiler.",
+   "kaynak_alinti": "They came in search of new lands and valuable resources, like gold and silver. Instead they began to cultivate and process the sugar cane."
+  },
+  {
+   "iddia": "İspanya adayı diğer ülkelerden korumak için 146 yıl kontrol altında tuttu.",
+   "kaynak_alinti": "Spain kept control of Jamaica mostly so that it could prevent other countries from gaining access to the island... Spain maintained control over the island for 146 years"
+  },
+  {
+   "iddia": "7 Haziran 1692 tarihinde yıkıcı bir deprem şehri vurdu ve kuzey kısmının çoğunun yok olmasına yol açtı.",
+   "kaynak_alinti": "On 7 June 1692, a devastating earthquake hit the city causing most of its northern section to be lost"
+  },
+  {
+   "iddia": "Deprem ve tsunami, nüfusun neredeyse yarısı olan 1.000 ila 3.000 kişi arası insanın ölümüne sebep oldu.",
+   "kaynak_alinti": "The earthquake and tsunami killed between 1,000 and 3,000 people combined, nearly half the city's population."
+  },
+  {
+   "iddia": "Hastalıklar salgına dönüştü ve tahmini 2.000 ek insanı öldürdü.",
+   "kaynak_alinti": "Disease ran rampant in the next several months, killing an estimated 2,000 additional people."
+  },
+  {
+   "iddia": "1960'larda deniz tabanından, depremin zamanını kaydeden ve saat 11:43'te durmuş bir cep saati çıkarıldı.",
+   "kaynak_alinti": "recovery from the sea floor in the 1960s of a pocket watch stopped at 11:43 a.m., recording the time of the devastating earthquake."
+  },
+  {
+   "iddia": "Deprem, Port Royal'in altındaki kumun sıvılaşmasına ve Kingston Limanı'na doğru akmasına neden oldu.",
+   "kaynak_alinti": "The earthquake caused the sand under Port Royal to liquefy and flow out into Kingston Harbour."
+  },
+  {
+   "iddia": "1692'den önceki 20 yılda Port Royal'de yaklaşık 10.000 kişinin yaşadığı",
+   "kaynak_alinti": "During a 20-year period that ended in 1692, nearly 10,000 people lived in Port Royal."
+  },
+  {
+   "iddia": "1659 yılına kadar kalenin etrafında 200 ev, dükkan ve depo inşa edildiği",
+   "kaynak_alinti": "By 1659 two hundred houses, shops and warehouses had been built around the fort"
+  },
+  {
+   "iddia": "İngiliz işgalinden depreme kadar Port Royal resmi olmayan başkentti",
+   "kaynak_alinti": "For much of the period between the English conquest and the 1692 earthquake, Port Royal served as the unofficial capital of Jamaica"
+  },
+  {
+   "iddia": "Depremden önceki yirmi yılda yaklaşık 10.000 kişi yaşadı",
+   "kaynak_alinti": "During a 20-year period that ended in 1692, nearly 10,000 people lived in Port Royal."
+  },
+  {
+   "iddia": "İngiliz işgalinden 1692 depremine kadar olan dönemde Port Royal, Jamaika'nın resmi olmayan başkenti olarak işlev gördü.",
+   "kaynak_alinti": "For much of the period between the English conquest and the 1692 earthquake, Port Royal served as the unofficial capital of Jamaica"
+  },
+  {
+   "iddia": "Deprem, Port Royal'in altındaki kumun sıvılaşmasına ve Kingston Limanı'na doğru akmasına neden oldu.",
+   "kaynak_alinti": "The earthquake caused the sand under Port Royal to liquefy and flow out into Kingston Harbour"
+  },
+  {
+   "iddia": "1703 yangını yeniden inşa çabalarını yok etti",
+   "kaynak_alinti": "An initial attempt at rebuilding was again destroyed in 1703 by fire."
+  },
+  {
+   "iddia": "1722 su baskını ve kasırgalar",
+   "kaynak_alinti": "Subsequent rebuilding was hampered by several hurricanes in the first half of the 18th century, including flooding from the sea in 1722"
+  },
+  {
+   "iddia": "1750 yangın ve 1774 kasırgası",
+   "kaynak_alinti": "a further fire in 1750, and a major hurricane in 1774"
+  },
+  {
+   "iddia": "1815 yangını ve 1850 kolera salgını",
+   "kaynak_alinti": "In 1815, what repairs were being undertaken were destroyed in another major fire, while the whole island was severely affected by an epidemic of cholera in 1850."
+  },
+  {
+   "iddia": "14 Ocak 1907 depremi kum dilini sıvılaştırdı",
+   "kaynak_alinti": "An earthquake on 14 January 1907 liquefied the sand spit, destroying nearly all of the rebuilt city, submerging additional portions, and tilting The Giddy House"
+  },
+  {
+   "iddia": "1998 yılında Port Royal Kalkınma Şirketi, mimarlık firması The Jerde Partnership'i bir ana plan hazırlaması için görevlendirdi.",
+   "kaynak_alinti": "In 1998, the Port Royal Development Company commissioned architectural firm The Jerde Partnership to create a master plan for the redevelopment of Port Royal"
+  },
+  {
+   "iddia": "2025 yılında Port Royal, UNESCO tarafından Dünya Mirası Alanı olarak belirlendi.",
+   "kaynak_alinti": "In 2025, Port Royal was designated as a World Heritage Site by UNESCO."
+  },
+  {
+   "iddia": "1998 yılında Port Royal Kalkınma Şirketi, bölgenin mirasını yansıtan turistik bir ana plan hazırlaması için mimarlık firması The Jerde Partnership'i görevlendirdi.",
+   "kaynak_alinti": "In 1998, the Port Royal Development Company commissioned architectural firm The Jerde Partnership to create a master plan for the redevelopment of Port Royal"
+  },
+  {
+   "iddia": "2019 yılına gelindiğinde kruvaziyer gemilerinin yanaşabileceği yüzer bir iskele inşa edildi ve ilk gemi 20 Ocak 2020 tarihinde limana ulaştı.",
+   "kaynak_alinti": "By 2019, a floating pier where a cruise ship could dock had been built; the first ship arrived on 20 January 2020."
+  },
+  {
+   "iddia": "İngiliz yönetimi altında Kraliyet Donanması bakım iskelesi kullandı",
+   "kaynak_alinti": "Under British rule the Royal Navy made use of a careening wharf at Port Royal and rented a building on the foreshore to serve as a storehouse."
+  },
+  {
+   "iddia": "19. yüzyılın başlarında Kraliyet Donanması Tersanesi inşa edildi",
+   "kaynak_alinti": "At the start of the 19th century, a significant amount of rebuilding took place in what was by now a substantial Royal Navy Dockyard serving the fleet in the Caribbean."
+  },
+  {
+   "iddia": "Tersane 20. yüzyılın başlarına kadar genişlemeye devam etti",
+   "kaynak_alinti": "The Yard continued to expand through to the beginning of the 20th century"
+  },
+  {
+   "iddia": "Donanma istasyondan çekildi ve tersane 1905 yılında kapandı",
+   "kaynak_alinti": "the Navy withdrew from its station in Jamaica and the Dockyard closed in 1905."
+  },
+  {
+   "iddia": "Binalar 1907 depreminde veya Charlie Kasırgası'nda yıkıldı",
+   "kaynak_alinti": "Many of the Dockyard buildings (most of which were of timber construction) were subsequently demolished or destroyed (some in the 1907 Kingston earthquake, others by Hurricane Charlie in 1951)."
+  },
+  {
+   "iddia": "1675 yılından itibaren, bu tesisleri denetlemek üzere bölgeye daimi bir Deniz Kuvvetleri Subayı atandı.",
+   "kaynak_alinti": "From 1675, a resident Naval Officer was appointed to oversee these facilities"
+  },
+  {
+   "iddia": "19. yüzyılın başlarında, Karayipler'deki filoya hizmet veren önemli bir Kraliyet Donanması Tersanesi inşa edildi.",
+   "kaynak_alinti": "At the start of the 19th century, a significant amount of rebuilding took place in what was by now a substantial Royal Navy Dockyard serving the fleet in the Caribbean."
+  },
+  {
+   "iddia": "1981 yılında Texas A&M Üniversitesi Sualtı Arkeolojisi Programı, su altında kalan kısımda 10 yıllık su altı arkeolojik araştırması başlattı.",
+   "kaynak_alinti": "In 1981, the Nautical Archaeology Program at Texas A&M University began a 10-year underwater archaeological investigation of the portion of Port Royal that sank underwater during the 17th century."
+  },
+  {
+   "iddia": "1998 yılında Port Royal Kalkınma Şirketi, miras turizmi için bir master plan hazırlattı.",
+   "kaynak_alinti": "In 1998, the Port Royal Development Company commissioned architectural firm The Jerde Partnership to create a master plan for the redevelopment of Port Royal, which was completed in 2000."
+  },
+  {
+   "iddia": "2022 yılı itibarıyla köyün nüfusu 3.144 kişidir.",
+   "kaynak_alinti": "In 2022, the village has 3,144 inhabitants."
+  },
+  {
+   "iddia": "2019 yılına kadar bir yolcu gemisinin yanaşabileceği yüzer bir iskele inşa edildi ve ilk gemi 20 Ocak 2020 tarihinde geldi.",
+   "kaynak_alinti": "By 2019, a floating pier where a cruise ship could dock had been built; the first ship arrived on 20 January 2020."
+  },
+  {
+   "iddia": "Port Royal, 2025 yılında UNESCO tarafından Dünya Mirası Alanı olarak belirlendi.",
+   "kaynak_alinti": "In 2025, Port Royal was designated as a World Heritage Site by UNESCO."
+  },
+  {
+   "iddia": "Texas A&M Üniversitesi Sualtı Arkeolojisi Programı çalıştı.",
+   "kaynak_alinti": "In 1981, the Nautical Archaeology Program at Texas A&M University began a 10-year underwater archaeological investigation"
+  },
+  {
+   "iddia": "düşük oksijen seviyesi sayesinde döneme ait çok sayıda organik malzeme kurtarılabildi.",
+   "kaynak_alinti": "Due to very low oxygen levels, a large amount of organic material could be recovered."
+  },
+  {
+   "iddia": "1998 yılında Port Royal Kalkınma Şirketi yeni bir master plan hazırlattı.",
+   "kaynak_alinti": "In 1998, the Port Royal Development Company commissioned architectural firm The Jerde Partnership to create a master plan for the redevelopment of Port Royal, which was completed in 2000."
+  },
+  {
+   "iddia": "Bu plan, mirasa dayalı turizm ve cazibe merkezleri oluşturmayı hedefliyordu.",
+   "kaynak_alinti": "The focus of the plan is a 17th-century-themed attraction that reflects the city's heritage."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Port_Royal",
+  "https://tr.wikipedia.org/wiki/Port_Royal"
+ ],
+ "imla": true
+}
