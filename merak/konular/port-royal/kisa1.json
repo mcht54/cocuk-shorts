@@ -1,0 +1,80 @@
+{
+ "baslik": "Port Royal'i Yutan 1692 Depremi",
+ "ekran_basligi": "Yutan Deprem",
+ "aciklama": "7 Haziran 1692 tarihinde Port Royal'i yerle bir eden deprem ve tsunaminin detayları.",
+ "etiketler": [
+  "1692 depremi",
+  "port royal",
+  "tsunami",
+  "tarih",
+  "felaket",
+  "arkeoloji",
+  "jamaika",
+  "sualtı"
+ ],
+ "parcalar": [
+  {
+   "metin": "7 Haziran 1692 tarihinde büyük bir deprem şehri vurdu.",
+   "gorsel": [
+    0
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Yutan Deprem"
+   }
+  },
+  {
+   "metin": "Deprem ve beraberindeki tsunami şehrin büyük kısmını yok etti.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Deniz tabanından çıkarılan bir cep saati felaketin saatini kaydetti.",
+   "gorsel": [
+    20
+   ]
+  },
+  {
+   "metin": "Sıvılaşma süreci binaların sular altına gömülmesine neden oldu.",
+   "gorsel": [
+    33
+   ]
+  },
+  {
+   "metin": "Deprem ve tsunami toplamda 1.000 ile 3.000 arasında insanı öldürdü.",
+   "gorsel": [
+    34
+   ]
+  },
+  {
+   "metin": "Olayın tüm detayları ve daha fazlası kanalımızda seni bekliyor.",
+   "gorsel": [
+    0
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "It was destroyed by an earthquake on 7 June 1692 and its accompanying tsunami",
+   "kaynak_alinti": "It was destroyed by an earthquake on 7 June 1692 and its accompanying tsunami"
+  },
+  {
+   "iddia": "The earthquake and tsunami killed between 1,000 and 3,000 people combined",
+   "kaynak_alinti": "The earthquake and tsunami killed between 1,000 and 3,000 people combined"
+  },
+  {
+   "iddia": "The historical Jamaica earthquake of 7 June 1692 can be dated closely not only by date, but by time of day as well. This is documented by recovery from the sea floor in the 1960s of a pocket watch stopped at 11:43 a.m.",
+   "kaynak_alinti": "The historical Jamaica earthquake of 7 June 1692 can be dated closely not only by date, but by time of day as well. This is documented by recovery from the sea floor in the 1960s of a pocket watch stopped at 11:43 a.m., recording the time of the devastating earthquake."
+  },
+  {
+   "iddia": "The earthquake caused the sand under Port Royal to liquefy and flow out into Kingston Harbour.",
+   "kaynak_alinti": "The earthquake caused the sand under Port Royal to liquefy and flow out into Kingston Harbour."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Port_Royal",
+  "https://tr.wikipedia.org/wiki/Port_Royal"
+ ],
+ "imla": true
+}

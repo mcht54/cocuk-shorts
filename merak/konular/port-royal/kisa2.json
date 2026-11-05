@@ -1,0 +1,80 @@
+{
+ "baslik": "Port Royal'in Batık Sırları ve Arkeoloji",
+ "ekran_basligi": "Batık Şehir",
+ "aciklama": "Sular altında kalan Port Royal kalıntılarının sualtı arkeolojisiyle yeniden keşfi.",
+ "etiketler": [
+  "su altı",
+  "arkeoloji",
+  "batık şehir",
+  "port royal",
+  "tarih",
+  "bilim",
+  "keşif",
+  "jamaika"
+ ],
+ "parcalar": [
+  {
+   "metin": "1981 yılında Texas A ve M Üniversitesi bir program başlattı.",
+   "gorsel": [
+    36
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Batık Şehir"
+   }
+  },
+  {
+   "metin": "Sular altında kalan 17. yüzyıl kalıntıları incelendi.",
+   "gorsel": [
+    37
+   ]
+  },
+  {
+   "metin": "Çok düşük oksijen seviyeleri organik malzemelerin korunmasını sağladı.",
+   "gorsel": [
+    38
+   ]
+  },
+  {
+   "metin": "Bu çalışmalar sayesinde günlük yaşam en ince detayına kadar yeniden kuruldu.",
+   "gorsel": [
+    39
+   ]
+  },
+  {
+   "metin": "Burası post orta çağ arkeologları tarafından batan şehir olarak bilinir.",
+   "gorsel": [
+    40
+   ]
+  },
+  {
+   "metin": "Tüm hikâye ve daha fazlası için kanalımızı ziyaret edebilirsin.",
+   "gorsel": [
+    0
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "In 1981, the Nautical Archaeology Program at Texas A&M University began a 10-year underwater archaeological investigation of the portion of Port Royal that sank underwater during the 17th century.",
+   "kaynak_alinti": "In 1981, the Nautical Archaeology Program at Texas A&M University began a 10-year underwater archaeological investigation of the portion of Port Royal that sank underwater during the 17th century."
+  },
+  {
+   "iddia": "Due to very low oxygen levels, a large amount of organic material could be recovered.",
+   "kaynak_alinti": "Due to very low oxygen levels, a large amount of organic material could be recovered."
+  },
+  {
+   "iddia": "The efforts made by the program have allowed everyday life in the English colonial port city to be reconstructed in great detail.",
+   "kaynak_alinti": "The efforts made by the program have allowed everyday life in the English colonial port city to be reconstructed in great detail."
+  },
+  {
+   "iddia": "Today, Port Royal is known to post-medieval archaeologists as the \"City That Sank\".",
+   "kaynak_alinti": "Today, Port Royal is known to post-medieval archaeologists as the \"City That Sank\"."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Port_Royal",
+  "https://tr.wikipedia.org/wiki/Port_Royal"
+ ],
+ "imla": true
+}
