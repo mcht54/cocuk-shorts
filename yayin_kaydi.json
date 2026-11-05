@@ -296,5 +296,24 @@
    "publishAt": "2026-11-11T14:00:00Z"
   },
   "yayin_zamani": "2026-11-11T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-11-05T21:53:23+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b050.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "görüntü 1.1 sn donuk",
+   "'pamuk' ağız hareketi konuşmayla eşleşmiyor (r=0.43)"
+  ]
+ },
+ {
+  "tarih": "2026-11-05T22:35:30+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b051.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "c1: yürüme eylemi var ama karakter 0.25 m yer değiştirdi"
+  ]
  }
 ]
