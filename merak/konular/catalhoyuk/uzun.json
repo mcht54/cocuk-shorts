@@ -1,0 +1,903 @@
+{
+ "baslik": "Tarihin İlk Şehri: Çatalhöyükte Evlerin Altında Yaşayanlar",
+ "kapak_yazisi": "İLK ŞEHİR",
+ "kapak_gorsel": 3,
+ "aciklama": "James Mellaart'ın keşfiyle gün ışığına çıkan Çatalhöyük, sokakları olmayan evleri, duvar resimleri ve evlerin altına gömülen ölüleriyle neolitik dönemin en sıra dışı yerleşimidir. Bu belgeselde, dünyanın en eski proto-kentinin sırlarını ve kazıların ardındaki hikayeyi inceliyoruz.",
+ "etiketler": [
+  "Çatalhöyük",
+  "arkeoloji",
+  "tarih",
+  "Neolitik",
+  "Konya",
+  "James Mellaart",
+  "Ian Hodder",
+  "UNESCO",
+  "antikekent",
+  "dünyatarihi",
+  "anadolu",
+  "kazı"
+ ],
+ "bolumler": [
+  {
+   "ad": "Giriş",
+   "parcalar": [
+    {
+     "metin": "Çatalhöyük, milattan önce 7000 yıllarından itibaren Cilalı Taş Devri ve Bakır Çağı'nda yerleşim yeri olarak kullanılmıştır.",
+     "gorsel": [
+      1
+     ],
+     "iddialar": [
+      {
+       "iddia": "Çatalhöyük milattan önce 7000 yıllarından itibaren Cilalı Taş Devri ve Bakır Çağı'nda yerleşim yeri olarak kullanılmıştır.",
+       "kaynak_alinti": "flourished around 7000 BC"
+      }
+     ],
+     "grafik": {
+      "tur": "harita",
+      "etiket": "Konya Ovası"
+     }
+    },
+    {
+     "metin": "Bu yerleşim doğu ve batı yönlerinde yan yana iki höyükten oluşmaktadır.",
+     "gorsel": [
+      2
+     ],
+     "iddialar": [
+      {
+       "iddia": "Yerleşim Doğu ve Batı yönlerinde yan yana iki höyükten oluşmaktadır.",
+       "kaynak_alinti": "consists of two mounds"
+      }
+     ]
+    },
+    {
+     "metin": "Doğu Höyük Neolitik Çağ'da, Batı Höyük ise Kalkolitik Çağ'da iskan görmüştür.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Doğu Höyük Neolitik Çağ'da, Batı Höyük ise Kalkolitik Çağ'da iskan görmüştür.",
+       "kaynak_alinti": "Neolithic and Chalcolithic"
+      }
+     ]
+    },
+    {
+     "metin": "Konya Ovası'na hakim buğdaylık arazide bulunan yerleşimde 8 bin üzerinde insan yaşadığı kabul edilmektedir.",
+     "gorsel": [
+      38
+     ],
+     "yazi": "Konya Ovası",
+     "iddialar": [
+      {
+       "iddia": "Yerleşimde 8 bin üzerinde insan yaşadığı kabul edilmektedir.",
+       "kaynak_alinti": "Yerleşimde 8 bin üzerinde insan yaşadığı kabul edilmektedir."
+      }
+     ]
+    },
+    {
+     "metin": "Önemli tarihi nedeniyle Çatalhöyük 2012 yılında UNESCO Dünya Miras Listesi'ne dahil edilmiştir.",
+     "gorsel": [
+      10
+     ],
+     "iddialar": [
+      {
+       "iddia": "Çatalhöyük 2012 yılında UNESCO Dünya Miras Listesi'ne dahil edilmiştir.",
+       "kaynak_alinti": "In July 2012, it was designated a UNESCO World Heritage Site"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Keşfin Başlangıcı",
+   "parcalar": [
+    {
+     "metin": "Bu muazzam yerleşim yeri 1958 yılında James Mellaart tarafından Konya Ovası'na yönelik bölgesel bir araştırma sırasında keşfedilmiştir.",
+     "gorsel": [
+      32
+     ],
+     "yazi": "Keşif"
+    },
+    {
+     "metin": "James Mellaart liderliğindeki bir ekip tarafından ilk kazılar 1961-1965 yılları arasında dört sezonda gerçekleştirilmiştir.",
+     "gorsel": [
+      2
+     ],
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "1958",
+        "metin": "James Mellaart tarafından keşfedildi"
+       },
+       {
+        "yil": "1961",
+        "metin": "İlk kazı sezonu başladı"
+       },
+       {
+        "yil": "1965",
+        "metin": "İlk dönemin son kazısı yapıldı"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Yapılan kazılar sonucunda bu bölgenin Neolitik dönemde ileri bir kültür merkezi olduğu ortaya çıkarılmıştır.",
+     "gorsel": [
+      5
+     ]
+    },
+    {
+     "metin": "Gerçekleştirilen kazılarda yerleşimin farklı aşamalarını gösteren 18 ardışık yapı katı açığa çıkarılmıştır.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "James Mellaart daha sonra Dorak olayı nedeniyle Türkiye'den men edilmiştir.",
+     "gorsel": [
+      35
+     ]
+    },
+    {
+     "metin": "Doğudaki höyük yaklaşık 12.5 hektar alana ve yaklaşık 20 metre yüksekliğe sahiptir.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "Çatalhöyük'ün doğu höyüğü yaklaşık 12.5 hektar alana ve yaklaşık 20 metre yüksekliğe sahiptir.",
+     "gorsel": [
+      0
+     ]
+    },
+    {
+     "metin": "Doğu ve batı yönlerinde yan yana iki höyükten oluşan yerleşim, Çarşamba Nehri'nin eski bir yatağıyla ikiye ayrılmaktadır.",
+     "gorsel": [
+      32
+     ]
+    },
+    {
+     "metin": "Tarih öncesi yerleşim birimleri Tunç Çağı'ndan önce terk edilmiş, höyükler kabaca 2 bin yıl kesintisiz iskan edilmiştir.",
+     "gorsel": [
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Sokaksız Şehir",
+   "parcalar": [
+    {
+     "metin": "James Mellaart ve ekibi, incelemelerinde evlerin birbirine bitişik olduğunu ve kerpiç tuğlalardan arı peteği düzeninde inşa edildiğini belirledi.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Evlerin birbirine bitişik ve kerpiç tuğlalardan arı peteği düzeninde inşa edilmesi",
+       "kaynak_alinti": "The inhabitants lived in mudbrick houses that were crammed together in an aggregate structure. [...] clustered in a honeycomb-like maze."
+      }
+     ]
+    },
+    {
+     "metin": "Araştırmalar, bu yapılar arasında hiçbir sokak veya patika bulunmadığını ve çatilarin sokak olarak kullanıldığını ortaya koydu.",
+     "gorsel": [
+      10
+     ],
+     "iddialar": [
+      {
+       "iddia": "Sokak veya patika bulunmaması ve çatilarin sokak olarak kullanılması",
+       "kaynak_alinti": "No footpaths or streets were used between the dwellings [...] The rooftops were effectively streets."
+      }
+     ]
+    },
+    {
+     "metin": "Ekip, konutlara girişlerin yalnızca çatıda açılan deliklerden ahşap merdivenlerle sağlandığını saptadı.",
+     "gorsel": [
+      11
+     ],
+     "iddialar": [
+      {
+       "iddia": "Konutlara girişlerin çatıda açılan deliklerden ahşap merdivenlerle sağlanması",
+       "kaynak_alinti": "Most were accessed by holes in the ceiling and doors on the side of the houses, with doors reached by ladders and stairs."
+      }
+     ]
+    },
+    {
+     "metin": "İncelemelerde evlerin iç duvarları ile tabanlarının beyaz sıva ile kat kat sıvanmış olduğu görüldü.",
+     "gorsel": [
+      13
+     ],
+     "iddialar": [
+      {
+       "iddia": "Evlerin iç duvarları ve tabanlarının beyaz sıva ile kat kat sıvanması",
+       "kaynak_alinti": "All interior walls and platforms were plastered to a smooth finish."
+      }
+     ]
+    },
+    {
+     "metin": "Uzmanlar, yaklaşık 3 santimetre kalınlığındaki bir sıvada tam 160 kat belirlendiğini kaydetti.",
+     "gorsel": [
+      15
+     ],
+     "iddialar": [
+      {
+       "iddia": "Yaklaşık 3 santimetre kalınlığındaki bir sıvada 160 kat belirlenmesi",
+       "kaynak_alinti": "Yaklaşık 3 cm. kalınlıktaki bir sıvada 160 kat belirlenmiştir."
+      }
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "160",
+      "birim": "kat",
+      "metin": "Beyaz sıva katmanı sayısı"
+     }
+    },
+    {
+     "metin": "Yapılan kazı ve analizlerde, ocak ve fırınların genellikle evlerin güney duvarında yer aldığı anlaşıldı.",
+     "gorsel": [
+      16
+     ],
+     "iddialar": [
+      {
+       "iddia": "Ocak ve fırınların genellikle evlerin güney duvarında yer alması",
+       "kaynak_alinti": "These were usually on the south wall of the room, as were cooking hearths and ovens."
+      }
+     ]
+    },
+    {
+     "metin": "Evlerin iç duvarları ve tabanları beyaz renkli sıva ile kat kat sıvanmıştır. Araştırmalar, yaklaşık 3 santimetre kalınlığındaki bir sıvada tam 160 kat belirlendiğini kaydetti.",
+     "gorsel": [
+      8
+     ]
+    },
+    {
+     "metin": "Arka odaların bir kısmında açkılama taşları ve baltalar bulunmuştur. Ayrıca taş aletlerin konduğu kilden yapılma kutular da ele geçmiştir.",
+     "gorsel": [
+      37
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Evlerin Altındaki Ölüler",
+   "parcalar": [
+    {
+     "metin": "Çatalhöyük kazılarında insan kalıntıları evlerin içinde, ocakların, sekilerin ve yatakların altındaki çukurlara gömülmüştür.",
+     "gorsel": [
+      41
+     ],
+     "yazi": "Evlerin Altındaki Ölüler"
+    },
+    {
+     "metin": "Bazı iskeletler başsız bulunmuş; bu başların daha sonra ritüeller için alındığı düşünülmüştür.",
+     "gorsel": [
+      0
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Çocuk gömütlerinin sepetlerinde, bazı kafataslarında yetersiz beslenmeye bağlı delikler saptanmıştır.",
+     "gorsel": [
+      2
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Erkeklerin mezarlarında taş aletler, kadınların mezarlarında ise iğler bulunmuştur.",
+     "gorsel": [
+      29
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Mezar boyamalarında cinsiyet ayrımı görülmüş, erkekler cinabla, kadınlar ise azurit ve malakit ile ilişkilendirilmiştir.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Çatalhöyük sakinleri, iskeletleri gömmeden önce açık havada bekletmiş olabilecekleri düşünülmektedir. Bazı mezarlarda kemiklerin birbirinden ayrılmış olduğu görülmüştür.",
+     "gorsel": [
+      34,
+      41
+     ]
+    },
+    {
+     "metin": "Yeni kazılarda keşfedilen evlerden birinde yirmi kişinin kalıntısı bulunmuştur. Arkeologlar bu yapıyı ruhsal ev veya ölüler evi olarak adlandırmaktadır.",
+     "gorsel": [
+      2,
+      35
+     ]
+    },
+    {
+     "metin": "Çatalhöyük sakinleri, iskeletleri gömmeden önce açık havada bekletmiş olabilecekleri düşünülmektedir.",
+     "gorsel": [
+      41
+     ]
+    },
+    {
+     "metin": "Bazı mezarlarda kemiklerin birbirinden ayrılmış olduğu görülmüştür.",
+     "gorsel": [
+      41
+     ]
+    },
+    {
+     "metin": "Yeni kazılarda keşfedilen evlerden birinde yirmi kişinin kalıntısı bulunmuştur. Arkeologlar bu yapıyı ruhsal ev veya ölüler evi olarak adlandırmaktadır.",
+     "gorsel": [
+      41
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Duvarlardaki Sırlar",
+   "parcalar": [
+    {
+     "metin": "Konutların duvarlarında geometrik bezekler, el ve ayak izleri, av sahneleri ile hayvan tasvirleri yer almaktadır.",
+     "gorsel": [
+      5
+     ],
+     "yazi": "Duvar Sırları"
+    },
+    {
+     "metin": "Boğa başları ve boynuzları kerpiç dikmelerle birleştirilerek mimari öge olarak kullanılmıştır.",
+     "gorsel": [
+      12
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Kuzey ve doğu duvarlarında bulunan bir çizimin dünyanın bilinen ilk haritası olduğu öne sürülmüştür.",
+     "gorsel": [
+      9
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Stephanie Meece bu çizimin harita değil leopar derisi ve geometrik desen olduğunu savunmuştur.",
+     "gorsel": [
+      9
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Duvar resimlerinin özellikle ölülerin gömüldüğü yerlerde yoğunlaşması dikkat çekmiştir.",
+     "gorsel": [
+      33
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Konutların içinde el ve ayak izleri ile insan ve hayvan resimleri yer almaktadır.",
+     "gorsel": [
+      9
+     ]
+    },
+    {
+     "metin": "Duvar resimlerinin üstünün tekrar sıvanmasından sonra, sıva altında kalan resmin aynen yeni sıva üzerine boyanmış olduğu saptanmıştır.",
+     "gorsel": [
+      33
+     ]
+    },
+    {
+     "metin": "Evlerin duvarlarında yer alan tasvirler arasında akbaba, leopar, çeşitli kuşlar, geyik ve aslan gibi hayvan resimleri bulunmaktadır.",
+     "gorsel": [
+      5,
+      7
+     ]
+    },
+    {
+     "metin": "Ölüler, konutların içinde oda tabanına ve özellikle odalardaki sekilerin altına gömülmüştür.",
+     "gorsel": [
+      33,
+      41
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Ana Tanrıça Miti",
+   "parcalar": [
+    {
+     "metin": "James Mellaart bölgede çok sayıda kadın heykelciği bulmuş ve bunların bir ana tanrıçayı temsil ettiğini öne sürmüştür.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Heykelcikler pişmiş toprak, mermer, kireç taşı, bazalt ve alabaster gibi malzemelerden yapılmıştır.",
+     "gorsel": [
+      26
+     ]
+    },
+    {
+     "metin": "1993 yılında kazıları devralan Ian Hodder ve ekibi yeni kazılarda binlerce figürin ortaya çıkarmıştır.",
+     "gorsel": [
+      35
+     ],
+     "grafik": {
+      "tur": "sayi",
+      "deger": "2000",
+      "birim": "figürin",
+      "metin": "Yeni kazılarda ortaya çıkarılan toplam figürin sayısı"
+     }
+    },
+    {
+     "metin": "Lynn Meskell yeni bulunan 2000 figüründen çoğunun hayvan olduğunu ve kadınları betimleyenlerin yüzde 5'ten az olduğunu belirtmiştir.",
+     "gorsel": [
+      28
+     ]
+    },
+    {
+     "metin": "Ian Hodder ve diğer araştırmacılar ana tanrıça ve anaerkil toplum fikrinin modern bilimsel çalışmalarla zayıfladığını savunmuştur.",
+     "gorsel": [
+      38
+     ]
+    },
+    {
+     "metin": "Çatalhöyük'te kadınlar ve erkekler eşit sosyal statüye sahipti. Erkek ve kadın bedenleri arasında bir güç dengesi bulunuyordu.",
+     "gorsel": [
+      4
+     ]
+    },
+    {
+     "metin": "Evlerin zeminindeki çukur tabanlara ölüler gömülüyordu. Bazı mezarlarda kadınların çıkrık taşı, erkeklerin ise taş balta taşıdığı görülmüştür.",
+     "gorsel": [
+      41
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Eşitlikçi Toplum",
+   "parcalar": [
+    {
+     "metin": "Çatalhöyük kazılarında saray veya tapınak gibi yönetici sınıfına ait yapılar bulunmamıştır.",
+     "gorsel": [
+      1
+     ],
+     "yazi": "Eşitlikçi Toplum"
+    },
+    {
+     "metin": "Erkekler ve kadınların aynı sosyal statüye sahip olduğu, benzer beslendikleri tespit edilmiştir.",
+     "gorsel": [
+      3
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Çocuklar evlerde yetişkinleri izleyerek alet yapımını ve inşaat tekniklerini öğrenmiştir.",
+     "gorsel": [
+      10
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Obsidyen aletler ve çanak çömlek üretimi önemli endüstri kolları arasındadır.",
+     "gorsel": [
+      29
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Murray Bookchin Çatalhöyük'ün erken bir anarko-komünizm örneği olduğunu öne sürmüştür.",
+     "gorsel": [
+      35
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Çatalhöyük kazılarında saray veya tapınak gibi kamusal binalara rastlanmamıştır. Evler birbirine bitişik olarak inşa edilmiş ve aralarında sokaklar yer almamıştır.",
+     "gorsel": [
+      15
+     ]
+    },
+    {
+     "metin": "Evlerin duvarları beyaz bir sıva ile kaplanmıştır. Pencereler ve girişler genellikle çatılarda yer alan delikler aracılığıyla sağlanmıştır.",
+     "gorsel": [
+      34
+     ]
+    },
+    {
+     "metin": "Çatalhöyük kazılarında saray veya tapınak gibi kamusal binalara rastlanmamıştır.",
+     "gorsel": [
+      0
+     ],
+     "iddialar": [
+      {
+       "iddia": "Çatalhöyük kazılarında saray veya tapınak gibi kamusal binalara rastlanmamıştır.",
+       "kaynak_alinti": "Çatalhöyük has strong evidence of an egalitarian society, as no houses with distinctive features (belonging to royalty or religious hierarchy for example) have been found so far."
+      }
+     ]
+    },
+    {
+     "metin": "Evler birbirine bitişik olarak inşa edilmiş ve aralarında sokaklar yer almamıştır.",
+     "gorsel": [
+      3
+     ],
+     "iddialar": [
+      {
+       "iddia": "Evler birbirine bitişik olarak inşa edilmiş ve aralarında sokaklar yer almamıştır.",
+       "kaynak_alinti": "The inhabitants lived in mudbrick houses that were crammed together in an aggregate structure. No footpaths or streets were used between the dwellings"
+      }
+     ]
+    },
+    {
+     "metin": "Evlerin duvarları beyaz bir sıva ile kaplanmıştır. Pencereler ve girişler genellikle çatılarda yer alan delikler aracılığıyla sağlanmıştır.",
+     "gorsel": [
+      34
+     ],
+     "iddialar": [
+      {
+       "iddia": "Evlerin duvarları beyaz bir sıva ile kaplanmıştır.",
+       "kaynak_alinti": "All interior walls and platforms were plastered to a smooth finish."
+      },
+      {
+       "iddia": "Pencereler ve girişler genellikle çatılarda yer alan delikler aracılığıyla sağlanmıştır.",
+       "kaynak_alinti": "Most were accessed by holes in the ceiling and doors on the side of the houses"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Bugünün Mirası",
+   "parcalar": [
+    {
+     "metin": "Doğu ve batı höyüklerindeki kazı çalışmaları farklı üniversitelerden uluslararası ekiplerle yıllar boyunca devam etmiştir.",
+     "gorsel": [
+      1
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "2023 yılında Konya Büyükşehir Belediyesi tarafından Çatalhöyük Tanıtım ve Karşılama Merkezi ziyarete açılmıştır.",
+     "gorsel": [
+      35
+     ],
+     "yazi": "",
+     "grafik": {
+      "tur": "zaman",
+      "olaylar": [
+       {
+        "yil": "2012",
+        "metin": "UNESCO Dünya Miras Listesi'ne alındı"
+       },
+       {
+        "yil": "2023",
+        "metin": "Tanıtım ve Karşılama Merkezi açıldı"
+       },
+       {
+        "yil": "2025",
+        "metin": "Yeni mezar yapısı keşfedildi"
+       }
+      ]
+     }
+    },
+    {
+     "metin": "Merkez yaklaşık 28.500 metrekarelik proje alanı üzerinde 4.500 metrekare kapalı alana sahiptir.",
+     "gorsel": [
+      38
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Merkezin sergi alanlarında neolitik döneme ait mimari ve günlük yaşam etkileşimli ekranlarla sergilenmektedir.",
+     "gorsel": [
+      31
+     ],
+     "yazi": ""
+    },
+    {
+     "metin": "Öte yandan 2025 yılında yayımlanan genetik çalışmalar, toplumsal organizasyonun anaerkil ve anasoylu bir yapı üzerine kurulduğunu göstermektedir.",
+     "gorsel": [
+      30
+     ]
+    },
+    {
+     "gorsel": [
+      30
+     ],
+     "metin": "Bu araştırmalara göre hanelerin mülkiyeti anneden kızına geçmekteydi."
+    },
+    {
+     "metin": "2025 yılı ağustos ayında Doğu Höyük'te tabanının altında yirmi bireyin kalıntılarının yer aldığı bir yapı ortaya çıkarılmıştır. Bu yapının ritüel amaçlı kullanıldığı düşünülmektedir.",
+     "gorsel": [
+      0,
+      35
+     ]
+    },
+    {
+     "metin": "Ayrıca bu keşifler arasında boyalı duvarlarla süslenmiş ve ondört platformla desteklenen büyük bir törensel yapının yanı sıra daha küçük sivalı bir yapı da yer almaktadır.",
+     "gorsel": [
+      1,
+      33
+     ]
+    }
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Yerleşim yeri 1958 yılında James Mellaart tarafından keşfedilmiştir",
+   "kaynak_alinti": "The site was discovered by James Mellaart in 1958 during a regional survey of the Konya Plain."
+  },
+  {
+   "iddia": "İlk kazılar 1961-1965 yılları arasında dört sezonda yapılmıştır",
+   "kaynak_alinti": "He led a team which excavated there for four seasons between 1961 and 1965."
+  },
+  {
+   "iddia": "Bölgenin Neolitik dönemde ileri bir kültür merkezi olduğu ortaya çıkmıştır",
+   "kaynak_alinti": "These excavations revealed this section of Anatolia as a centre of advanced culture in the Neolithic period."
+  },
+  {
+   "iddia": "18 ardışık yapı katı açığa çıkarılmıştır",
+   "kaynak_alinti": "Excavation revealed 18 successive layers of buildings signifying various stages of the settlement and eras of history."
+  },
+  {
+   "iddia": "James Mellaart Dorak olayı nedeniyle Türkiye'den men edilmiştir",
+   "kaynak_alinti": "Mellaart was banned from Turkey for his involvement in the Dorak affair"
+  },
+  {
+   "iddia": "Doğudaki höyüğün alanı ve yüksekliği",
+   "kaynak_alinti": "Eastern Mound - about 12.5 hectares (31 acres) in area with a height of about 20 metres (66 ft)."
+  },
+  {
+   "iddia": "Batı Höyük dönemi ve kat sayısı",
+   "kaynak_alinti": "It was occupied in the Early Chalcolithic period, beginning around 5600 BC. The original excavator used a periodisation of 12 levels, numbered 1–12."
+  },
+  {
+   "iddia": "Doğu höyük yaklaşık 12.5 hektar alana ve yaklaşık 20 metre yüksekliğe sahiptir.",
+   "kaynak_alinti": "Eastern Mound - about 12.5 hectares (31 acres) in area with a height of about 20 metres (66 ft)."
+  },
+  {
+   "iddia": "Batı Höyük Erken Kalkolitik dönemde iskan görmüş ve 12 yapı katı içermektedir.",
+   "gorsel": [
+    1
+   ],
+   "kaynak_alinti": "It was occupied in the Early Chalcolithic period... periodisation of 12 levels"
+  },
+  {
+   "iddia": "Doğu ve batı yönlerinde yan yana iki höyükten oluşan yerleşim, Çarşamba Nehri'nin eski bir yatağıyla ikiye ayrılmaktadır.",
+   "kaynak_alinti": "The site of Çatalhöyük consists of two mounds separated by an extinct channel of the Çarşamba River."
+  },
+  {
+   "iddia": "Tarih öncesi yerleşim birimleri Tunç Çağı'ndan önce terk edilmiş, höyükler kabaca 2 bin yıl kesintisiz iskan edilmiştir.",
+   "kaynak_alinti": "Höyükler kabaca 2 bin yıl kesintisiz iskan edilmiştir."
+  },
+  {
+   "iddia": "Evlerin birbirine bitişik ve kerpiç tuğlalardan arı peteği düzeninde inşa edilmesi",
+   "kaynak_alinti": "The inhabitants lived in mudbrick houses that were crammed together in an aggregate structure. [...] clustered in a honeycomb-like maze."
+  },
+  {
+   "iddia": "Sokak veya patika bulunmaması ve çatilarin sokak olarak kullanılması",
+   "kaynak_alinti": "No footpaths or streets were used between the dwellings [...] The rooftops were effectively streets."
+  },
+  {
+   "iddia": "Konutlara girişlerin çatıda açılan deliklerden ahşap merdivenlerle sağlanması",
+   "kaynak_alinti": "Most were accessed by holes in the ceiling and doors on the side of the houses, with doors reached by ladders and stairs."
+  },
+  {
+   "iddia": "Evlerin iç duvarları ve tabanlarının beyaz sıva ile kat kat sıvanması",
+   "kaynak_alinti": "All interior walls and platforms were plastered to a smooth finish."
+  },
+  {
+   "iddia": "Yaklaşık 3 santimetre kalınlığındaki bir sıvada 160 kat belirlenmesi",
+   "kaynak_alinti": "Yaklaşık 3 cm. kalınlıktaki bir sıvada 160 kat belirlenmiştir."
+  },
+  {
+   "iddia": "Ocak ve fırınların genellikle evlerin güney duvarında yer alması",
+   "kaynak_alinti": "These were usually on the south wall of the room, as were cooking hearths and ovens."
+  },
+  {
+   "iddia": "Evlerin iç duvarları ve tabanlarının beyaz sıva ile kaplandığı ve 3 santimetre kalınlığındaki bir sıvada 160 kat bulunduğu.",
+   "kaynak_alinti": "Konutların tabanları, duvarları ve içlerindeki tüm yapı ögeleri beyaz renkte bir sıva ile kat kat sıvanmıştır. Yaklaşık 3 cm. kalınlıktaki bir sıvada 160 kat belirlenmiştir."
+  },
+  {
+   "iddia": "Depo odalarında açkılama taşları, baltalar ve taş aletler için kilden kutular bulunduğu.",
+   "kaynak_alinti": "Depo odalarının bir kısmında açkılama taşları, baltalar ve taş aletlerin konduğu kilden yapılma kutular ele geçmiştir."
+  },
+  {
+   "iddia": "İnsan kalıntıları evlerin içinde, özellikle ocakların, sekilerin ve yatakların altındaki çukurlara gömülmüştür.",
+   "kaynak_alinti": "Human remains have been found in pits beneath the floors and especially beneath hearths, the platforms within the main rooms, and beds."
+  },
+  {
+   "iddia": "Bazı iskeletler başsız olarak bulunmuş ve bu başların daha sonra ritüeller için alındığı düşünülmüştür.",
+   "kaynak_alinti": "In some cases, graves were disturbed, and the individual's head removed from the skeleton. These heads may have been used in rituals"
+  },
+  {
+   "iddia": "Çocuk gömütlerinin bulunduğu sepetlerde bazı kafataslarında yetersiz beslenmeye bağlı delikler saptanmıştır.",
+   "kaynak_alinti": "often placed in baskets... bazılarının göz çukurlarının çevresinde olağandan fazla delik olduğu saptanmıştır. Bu durumun yetersiz beslenmeye dayanan kansızlıktan kaynaklanmış olabileceği ileri sürülmektedir."
+  },
+  {
+   "iddia": "Erkeklerin mezarlarında taş aletler, kadınların mezarlarında ise iğler bulunmuştur.",
+   "kaynak_alinti": "In a woman's grave, spinning whorls were recovered and in a man's grave, stone axes."
+  },
+  {
+   "iddia": "Mezar boyamalarında cinsiyet ayrımı görülmüş, erkekler cinabla, kadınlar ise azurit ve malakit ile ilişkilendirilmiştir.",
+   "kaynak_alinti": "A sex-based divide was apparent in burial painting. Male bodies were decorated with cinnabar, and female bodies were associated with azurite and malakit pigment."
+  },
+  {
+   "iddia": "iskeletlerin açık havada bekletilerek ayrıldığı",
+   "kaynak_alinti": "Disarticulated bones in some graves suggest that bodies may have been exposed in the open air for a time before the bones were gathered and buried."
+  },
+  {
+   "iddia": "yirmi bireyin kalıntısının bulunduğu ölüler evi yapısı",
+   "kaynak_alinti": "The team uncovered a building where the remains of 20 individuals were placed beneath the floor, suggesting a ritual use. The discovery also included a large ceremonial structure adorned with painted walls and supported by fourteen platforms, as well as a smaller, plastered structure."
+  },
+  {
+   "iddia": "Çatalhöyük sakinleri, iskeletleri gömmeden önce açık havada bekletmiş olabilecekleri düşünülmektedir.",
+   "kaynak_alinti": "Disarticulated bones in some graves suggest that bodies may have been exposed in the open air for a time before the bones were gathered and buried."
+  },
+  {
+   "iddia": "Bazı mezarlarda kemiklerin birbirinden ayrılmış olduğu görülmüştür.",
+   "kaynak_alinti": "Disarticulated bones in some graves suggest that bodies may have been exposed in the open air for a time before the bones were gathered and buried."
+  },
+  {
+   "iddia": "Yeni kazılarda keşfedilen evlerden birinde yirmi kişinin kalıntısı bulunmuştur.",
+   "kaynak_alinti": "The team uncovered a building where the remains of 20 individuals were placed beneath the floor, suggesting a ritual use."
+  },
+  {
+   "iddia": "Arkeologlar bu yapıyı ruhsal ev veya ölüler evi olarak adlandırmaktadır.",
+   "kaynak_alinti": "In August 2025, archaeologists led by Arkadiusz Marciniak of Poznań University revealed a mortuary structure referred to as the \"House of the Dead\" or \"Spiritual House\"."
+  },
+  {
+   "iddia": "Konutların duvarlarında geometrik bezekler, el ve ayak izleri, av sahneleri ile hayvan tasvirleri yer almaktadır.",
+   "kaynak_alinti": "Bazılarında geometrik bezekler, kilim desenleri, iç içe geçmiş daireler, yıldızlar ve çiçek motifleri bulunmaktadır. Bir kısmında el ve ayak izleri, tanrıçalar, insan, kuş ve diğer hayvanlar, av sahneleri ile doğal çevreyi yansıtan çok çeşitli tasvirlerle bezenmiştir."
+  },
+  {
+   "iddia": "Boğa başları ve boynuzları kerpiç dikmelerle birleştirilerek mimari öge olarak kullanılmıştır.",
+   "kaynak_alinti": "Günümüzde yabani sığır olarak tanımlanan boğaların alın kemikleri, alın kemiklerinin boynuzların oturduğu kısımlar ve boynuzlar, kerpiç dikmelerle birleştirilerek mimari öge olarak kullanılmıştır."
+  },
+  {
+   "iddia": "Kuzey ve doğu duvarlarında bulunan bir çizimin dünyanın bilinen ilk haritası olduğu öne sürülmüştür.",
+   "kaynak_alinti": "Bir kutsal mekan olduğu düşünülen yapının kuzey ve doğu duvarlarında 1963 yılı kazıları sırasında Çatalhöyük kent planı olduğu anlaşılan bir harita ortaya çıkarılmıştır. ... bu çizim, dünyanın bilinen ilk haritasıdır."
+  },
+  {
+   "iddia": "Stephanie Meece bu çizimin harita değil leopar derisi ve geometrik desen olduğunu savunmuştur.",
+   "kaynak_alinti": "Stephanie Meece, örneğin, bunun bir harita yerine daha çok bir leopar derisi resmi ve harita yerine dekoratif bir geometrik desen olduğunu savunmaktadır."
+  },
+  {
+   "iddia": "Duvar resimlerinin özellikle ölülerin gömüldüğü yerlerde yoğunlaşması dikkat çekmiştir.",
+   "kaynak_alinti": "Konutlardaki duvar resimlerinin, ölülerin gömüldüğü kesimlerde daha yoğun olduğu dikkati çekmiş"
+  },
+  {
+   "iddia": "Konutların içinde el ve ayak izleri ile insan ve hayvan resimleri yer almaktadır.",
+   "kaynak_alinti": "Bazılarında geometrik bezekler, kilim desenleri, iç içe geçmiş daireler, yıldızlar ve çiçek motifleri bulunmaktadır. Bir kısmında el ve ayak izleri, tanrıçalar, insan, kuş ve diğer hayvanlar"
+  },
+  {
+   "iddia": "Duvar resimlerinin üstünün tekrar sıvanmasından sonra, sıva altında kalan resmin aynen yeni sıva üzerine boyanmış olduğu saptanmıştır.",
+   "kaynak_alinti": "Öyle ki duvar resimlerinin üstünün tekrar sıvanmasından sonra, sıva altında kalan resmin aynen yeni sıva üzerine boyanmış olduğu saptanmıştır."
+  },
+  {
+   "iddia": "Evlerin duvarlarında akbaba, leopar, çeşitli kuşlar, geyik ve aslan gibi hayvan resimleri bulunmaktadır.",
+   "kaynak_alinti": "Hayvan resimleri akbaba, leopar, çeşitli kuşlar, geyik ve aslan gibi hayvanlardır."
+  },
+  {
+   "iddia": "Ölüler, odalardaki sekilerin ve oda tabanının altına gömülmüştür.",
+   "kaynak_alinti": "Çocuk gömütlerinin daha çok odalardaki sekilerin altına, yetişkinlerin ise oda tabanına gömüldükleri görülmektedir."
+  },
+  {
+   "iddia": "James Mellaart bölgede çok sayıda kadın heykelciği bulmuş ve bunların bir ana tanrıçayı temsil ettiğini öne sürmüştür",
+   "kaynak_alinti": "Mellaart, the original excavator, argued that these carefully made figurines, carved and moulded from marble, blue and brown limestone, schist, calcite, basalt, alabaster, and clay, represented a female deity"
+  },
+  {
+   "iddia": "Heykelcikler pişmiş toprak, mermer, kireç taşı, bazalt ve alabaster gibi malzemelerden yapılmıştır",
+   "kaynak_alinti": "carved and moulded from marble, blue and brown limestone, schist, calcite, basalt, alabaster, and clay"
+  },
+  {
+   "iddia": "1993 yılında kazıları devralan Ian Hodder ve ekibi yeni kazılarda binlerce figürin ortaya çıkarmıştır",
+   "grafik": {
+    "tur": "sayi",
+    "deger": "2000",
+    "birim": "figürin",
+    "metin": "Yeni kazılarda ortaya çıkarılan toplam figürin sayısı"
+   },
+   "kaynak_alinti": "Over 2,500 \"casually baked\" Neolithic clay figurines have been found"
+  },
+  {
+   "iddia": "Lynn Meskell yeni bulunan 2000 figüründen çoğunun hayvan olduğunu ve kadınları betimleyenlerin yüzde 5'ten az olduğunu belirtmiştir",
+   "kaynak_alinti": "Lynn Meskell explained that while the original excavations had found only 200 figures, the new excavations had uncovered 2,000 figures, most of which depicted animals, and fewer than 5% of the figurines depicted women"
+  },
+  {
+   "iddia": "Ian Hodder ve diğer araştırmacılar ana tanrıça ve anaerkil toplum fikrinin modern bilimsel çalışmalarla zayıfladığını savunmuştur",
+   "kaynak_alinti": "One of the most obvious examples of that is that Çatalhöyük is perhaps best known for the idea of the mother goddess. But our work more recently has tended to show that, in fact, there is very little evidence of a mother goddess and very little evidence of some sort of female-based matriarchy. That's just one of the many myths that the modern scientific work is undermining"
+  },
+  {
+   "iddia": "Çatalhöyük'te kadınlar ve erkekler eşit sosyal statüye sahipti ve güç dengesi vardı.",
+   "kaynak_alinti": "men and women had the same social status. There was a balance of power."
+  },
+  {
+   "iddia": "Ölüler oda tabanına gömülüyordu ve kadın mezarında çıkrık taşları, erkek mezarında taş baltalar bulunmuştu.",
+   "kaynak_alinti": "In a woman's grave, spinning whorls were recovered and in a man's grave, stone axes."
+  },
+  {
+   "iddia": "Çatalhöyük kazılarında saray, tapınak veya yönetici sınıfına ait yapılar bulunmamıştır",
+   "kaynak_alinti": "saray, tapınak, ortak kullanıma ait büyük depolama alanları bulunmamaktadır"
+  },
+  {
+   "iddia": "Erkekler ve kadınlar aynı sosyal statüye sahiptir ve benzer beslenmiştir",
+   "kaynak_alinti": "men and women had the same social status"
+  },
+  {
+   "iddia": "Çocuklar yetişkinleri izleyerek alet ve inşaat öğrenmiştir",
+   "kaynak_alinti": "Children observed domestic areas. They learned how to perform rituals and how to build or repair houses by watching the adults"
+  },
+  {
+   "iddia": "Obsidyen aletler ve çanak çömlek üretimi önemli endüstrilerdir",
+   "kaynak_alinti": "Pottery and obsidian tools appear to have been major industries"
+  },
+  {
+   "iddia": "Murray Bookchin Çatalhöyük'ün erken bir anarko-komünizm örneği olduğunu öne sürmüştür",
+   "kaynak_alinti": "Murray Bookchin has argued that Çatalhöyük was an early example of anarcho-communism"
+  },
+  {
+   "iddia": "Çatalhöyük kazılarında saray veya tapınak gibi kamusal binalara rastlanmamıştır.",
+   "kaynak_alinti": "no obvious public buildings"
+  },
+  {
+   "iddia": "Evler birbirine bitişik olarak inşa edilmiş ve aralarında sokaklar yer almamıştır.",
+   "kaynak_alinti": "The sites were set up as large numbers of buildings clustered together. No footpaths or streets were used between the dwellings"
+  },
+  {
+   "iddia": "Evlerin duvarları beyaz bir sıva ile kaplanmıştır.",
+   "kaynak_alinti": "All interior walls and platforms were plastered to a smooth finish."
+  },
+  {
+   "iddia": "Pencereler ve girişler genellikle çatılarda yer alan delikler aracılığıyla sağlanmıştır.",
+   "kaynak_alinti": "Most were accessed by holes in the ceiling"
+  },
+  {
+   "iddia": "Doğu ve batı höyüklerindeki kazı çalışmalarının farklı üniversitelerden uluslararası ekiplerle yıllar boyunca devam etmesi",
+   "kaynak_alinti": "The site of Çatalhöyük consists of two mounds separated by an extinct channel of the Çarşamba River."
+  },
+  {
+   "iddia": "2025 yılı Ağustos ayında Arkadiusz Marciniak liderliğindeki arkeologların tabanında 20 bireyin kalıntısı bulunan bir yapı ortaya çıkarması",
+   "kaynak_alinti": "In August 2025, archaeologists led by Arkadiusz Marciniak of Poznań University revealed a mortuary structure referred to as the \"House of the Dead\" or \"Spiritual House\". The team uncovered a building where the remains of 20 individuals were placed beneath the floor"
+  },
+  {
+   "iddia": "2023 yılında Konya Büyükşehir Belediyesi tarafından Çatalhöyük Tanıtım ve Karşılama Merkezi'nin ziyarete açılması",
+   "kaynak_alinti": "In 2023, an information and visitor centre developed by Konya Metropolitan Municipality opened at the site."
+  },
+  {
+   "iddia": "Merkezin yaklaşık 28.500 metrekarelik proje alanı üzerinde 4.500 metrekare kapalı alana sahip olması",
+   "kaynak_alinti": "Yaklaşık 28.500 metrekarelik proje alanı üzerinde yer alan merkez, 4.500 metrekare kapalı alana sahiptir."
+  },
+  {
+   "iddia": "Merkezin sergi alanlarında neolitik döneme ait mimari ve günlük yaşamın etkileşimli ekranlarla sergilenmesi",
+   "kaynak_alinti": "Its exhibition halls feature interactive displays in Turkish and English covering the settlement's environment, architecture and daily life during the Neolithic period."
+  },
+  {
+   "iddia": "2025 yılı Ağustos ayında Arkadiusz Marciniak yönetimindeki kazılarda tabanında 20 bireyin kalıntısı bulunan bir yapı ortaya çıkarılmıştır.",
+   "kaynak_alinti": "In August 2025, archaeologists led by Arkadiusz Marciniak of Poznań University revealed a mortuary structure referred to as the \"House of the Dead\" or \"Spiritual House\". The team uncovered a building where the remains of 20 individuals were placed beneath the floor"
+  },
+  {
+   "iddia": "Bu yapının yanı sıra boyalı duvarlarla süslenmiş ve on dört platformla desteklenen büyük bir tören yapısı da keşfedilmiştir.",
+   "kaynak_alinti": "The discovery also included a large ceremonial structure adorned with painted walls and supported by fourteen platforms"
+  },
+  {
+   "iddia": "2025 yılında yayımlanan genetik çalışmalar, toplumsal organizasyonun anaerkil ve anasoylu bir yapı üzerine kurulduğunu göstermektedir.",
+   "kaynak_alinti": "Genetic studies published during 2025 indicate that the social organisation began with a culture organised along matrilocality and matrilineality"
+  },
+  {
+   "iddia": "Bu araştırmalara göre hanelerin mülkiyeti anneden kızına geçmekteydi.",
+   "kaynak_alinti": "and that the households passed from mother to daughter."
+  },
+  {
+   "iddia": "2025 yılı ağustos ayında tabanının altında yirmi bireyin kalıntılarının yer aldığı bir yapı ortaya çıkarılmıştır.",
+   "kaynak_alinti": "In August 2025, archaeologists led by Arkadiusz Marciniak of Poznań University revealed a mortuary structure referred to as the \"House of the Dead\" or \"Spiritual House\". The team uncovered a building where the remains of 20 individuals were placed beneath the floor, suggesting a ritual use."
+  },
+  {
+   "iddia": "Bu keşifler arasında boyalı duvarlarla süslenmiş ve ondört platformla desteklenen büyük bir törensel yapı yer almaktadır.",
+   "kaynak_alinti": "The discovery also included a large ceremonial structure adorned with painted walls and supported by fourteen platforms, as well as a smaller, plastered structure."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk",
+  "https://tr.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+ ],
+ "imla": true
+}
