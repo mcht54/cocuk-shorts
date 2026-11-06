@@ -361,5 +361,24 @@
    "publishAt": "2026-11-13T14:00:00Z"
   },
   "yayin_zamani": "2026-11-13T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-11-06T22:39:25+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "karisik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b001.json",
+   "seri/findik-ile-pamuk/bolumler/b002.json",
+   "seri/findik-ile-pamuk/bolumler/b003.json",
+   "seri/findik-ile-pamuk/bolumler/b042.json",
+   "seri/findik-ile-pamuk/bolumler/b043.json",
+   "seri/findik-ile-pamuk/bolumler/b044.json",
+   "seri/findik-ile-pamuk/bolumler/b045.json",
+   "seri/findik-ile-pamuk/bolumler/b046.json",
+   "seri/findik-ile-pamuk/bolumler/b047.json"
+  ],
+  "durum": "uretildi",
+  "sure": 365.33
  }
 ]
