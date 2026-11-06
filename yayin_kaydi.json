@@ -315,5 +315,28 @@
   "hatalar": [
    "c1: yürüme eylemi var ama karakter 0.25 m yer değiştirdi"
   ]
+ },
+ {
+  "tarih": "2026-11-06T02:17:46+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b051.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "c1: yürüme eylemi var ama karakter 0.25 m yer değiştirdi"
+  ]
+ },
+ {
+  "tarih": "2026-11-06T02:53:28+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b014.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "yoqbqIclC4E",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-12T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-12T14:00:00+00:00"
  }
 ]
