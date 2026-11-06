@@ -12,6 +12,7 @@ Beğenmediğinizi YouTube Studio'da silin ya da Gizli yapın; dokunmadığınız
 |---|---|
 | Minik Masal Evi Shorts | her gün 17:00 |
 | Minik Masal Evi uzun derleme | pazar 10:00 (yalnız yayınlanmış Shorts'lardan, hemen yayınlanır) |
+| Minik Masal Evi "Uyku Öncesi Masallar" | çarşamba 10:00 (yayınlanmış bölümlerden en az kullanılanlar, en çok 20) |
 | Merak Arşivi belgesel | salı ve cuma 18:00 |
 | Merak Arşivi Shorts | pazartesi, çarşamba, perşembe, cumartesi 19:00 |
 

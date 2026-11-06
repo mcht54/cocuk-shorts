@@ -15,7 +15,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -28,6 +28,10 @@ KAYIT = KOK / "yayin_kaydi.json"
 CIKTI = KOK / "cikti3d" / "derleme"
 EN_AZ_PARCA, EN_COK_PARCA = 3, 7
 EN_AZ_SURE = 60.0
+# çarşamba "karışık" derlemesi: yayınlanmış tüm bölümlerden en az kullanılanlar, ~15 dk (çocuk kanallarında
+# uzun video daha çok izlenir). Kullanıcı onayı 2026-11-06 ("haftada 2 uzun video").
+KARISIK_EN_AZ, KARISIK_EN_COK = 8, 20
+KARISIK_ARALIK_GUN = 4  # yedek zamanlama aynı haftada ikinci karışık derleme yüklemesin
 
 
 def ozet(metin):
@@ -42,6 +46,32 @@ def kayitlar():
     return json.loads(KAYIT.read_text()) if KAYIT.exists() else []
 
 
+def sec_karisik(simdi=None):
+    """Yayınlanmış Shorts bölümlerinden karışık derlemelerde en az kullanılanlar (eşitlikte en eski)."""
+    simdi = simdi or datetime.now(timezone.utc)
+    k = kayitlar()
+    karisiklar = [x for x in k if x.get("profil") == "derleme" and x.get("tur") == "karisik"
+                  and x.get("durum") == "yuklendi"]
+    if any(simdi - datetime.fromisoformat(x["tarih"]) < timedelta(days=KARISIK_ARALIK_GUN) for x in karisiklar):
+        ozet("Bu hafta karışık derleme zaten yüklendi; tekrar yapılmaz.")
+        return []
+    kullanim = {}
+    for x in karisiklar:
+        for b in x.get("parcalar", []):
+            kullanim[b] = kullanim.get(b, 0) + 1
+    yayinda = []
+    for x in k:
+        if (x.get("profil") == "shorts" and x.get("durum") == "yuklendi" and x["bolum"] not in yayinda
+                and (KOK / x["bolum"]).exists()
+                and (not x.get("yayin_zamani") or datetime.fromisoformat(x["yayin_zamani"]) <= simdi)):
+            yayinda.append(x["bolum"])
+    secilen = sorted(yayinda, key=lambda b: (kullanim.get(b, 0), yayinda.index(b)))[:KARISIK_EN_COK]
+    if len(secilen) < KARISIK_EN_AZ:
+        ozet(f"Karışık derleme için yeterli yayınlanmış bölüm yok ({len(secilen)}/{KARISIK_EN_AZ}).")
+        return []
+    return sorted(secilen)
+
+
 def sec(bolum_nolari=None):
     """Elle verilen bölümler; yoksa Shorts'u yüklenmiş ama henüz derlemeye girmemiş en eski bölümler."""
     if bolum_nolari:
@@ -50,7 +80,7 @@ def sec(bolum_nolari=None):
         k = kayitlar()
         # gizli deneme derlemeleri sayılmaz: bölümleri herkese açık derlemeye yine girer
         derlenen = {b for x in k if x.get("profil") == "derleme" and x.get("durum") == "yuklendi"
-                    and (x.get("youtube") or {}).get("privacyStatus") == "public" for b in x.get("parcalar", [])}
+                    and x.get("tur") != "karisik" and (x.get("youtube") or {}).get("privacyStatus") == "public" for b in x.get("parcalar", [])}
         secilen = []
         simdi = datetime.now(timezone.utc)
         for x in k:
@@ -170,7 +200,7 @@ def kapak(mp4, saniye, baslik, cikti):
     return cikti
 
 
-def birlestir(parca_dizini):
+def birlestir(parca_dizini, tur="haftalik"):
     parcalar, atlanan = parcalari_topla(parca_dizini)
     for b, neden in atlanan:
         ozet(f"- atlandı {b}: {neden}")
@@ -204,9 +234,13 @@ def birlestir(parca_dizini):
     hatalar, olcum = denetle(mp4, t, boyut)
     seri = json.loads((SERI / "seri.json").read_text())
     adlar = [b["baslik"] for b in bolumler]
-    baslik = f"{seri['seri_adi']} | {n} Masal Bir Arada: {', '.join(adlar)}"
-    if len(baslik) > 88:
-        baslik = f"{seri['seri_adi']} | {n} Masal Bir Arada | 3D Çocuk Çizgi Filmi"
+    dakika = max(1, round(t / 60))
+    if tur == "karisik":
+        baslik = f"Uyku Öncesi Masallar | {seri['seri_adi']} | {n} Masal, {dakika} Dakika | 3D Çizgi Film"
+    else:
+        baslik = f"{seri['seri_adi']} | {n} Masal Bir Arada: {', '.join(adlar)}"
+        if len(baslik) > 88:
+            baslik = f"{seri['seri_adi']} | {n} Masal Bir Arada | 3D Çocuk Çizgi Filmi"
     bolum_listesi = "\n".join(f"{_sn(b['bas'])} {b['baslik']}" for b in bolumler)
     aciklama = (f"{seri['seri_adi']} serisinden {n} kısa masal arka arkaya. Her bölüm bir değeri işler: "
                 + ", ".join(b["deger"] for b in bolumler if b["deger"]) + ".\n\n"
@@ -214,8 +248,9 @@ def birlestir(parca_dizini):
     etiketler = ["çocuk çizgi filmi", "masal", "3D animasyon", "okul öncesi", "çizgi film türkçe",
                  seri["seri_adi"], "uyku öncesi masal"]
     kapak_yolu = kapak(parcalar[0]["mp4"], min(6.0, bolumler[0]["sure"] * 0.4),
-                       f"{n} Masal Bir Arada", mp4.with_suffix(".kapak.jpg"))
-    rapor = {"profil": "derleme", "video": str(mp4.relative_to(KOK)), "kapak": str(kapak_yolu.relative_to(KOK)),
+                       "Uyku Öncesi Masallar" if tur == "karisik" else f"{n} Masal Bir Arada",
+                       mp4.with_suffix(".kapak.jpg"))
+    rapor = {"profil": "derleme", "tur": tur, "video": str(mp4.relative_to(KOK)), "kapak": str(kapak_yolu.relative_to(KOK)),
              "kalite_gecti": not hatalar, "hatalar": hatalar, "olcum": olcum, "bolumler": bolumler,
              "atlanan": [{"bolum": b, "neden": x} for b, x in atlanan],
              "youtube": {"baslik": baslik, "aciklama": aciklama, "etiketler": etiketler},
@@ -252,7 +287,8 @@ def yukle():
         ozet("Derleme kaliteyi geçmedi ya da video raporla eşleşmiyor; yüklenmedi.")
         return 1
     kayit = {"tarih": datetime.now(timezone.utc).isoformat(timespec="seconds"), "profil": "derleme",
-             "bolum": "derleme", "parcalar": [b["bolum"] for b in rapor["bolumler"]], "durum": "uretildi",
+             "bolum": "derleme", "tur": rapor.get("tur", "haftalik"),
+             "parcalar": [b["bolum"] for b in rapor["bolumler"]], "durum": "uretildi",
              "sure": rapor["olcum"]["sure"]}
     if os.environ.get("YAYIN") == "acik":
         from cocuk import youtube
@@ -280,12 +316,15 @@ def main():
     alt = ap.add_subparsers(dest="komut", required=True)
     s = alt.add_parser("sec")
     s.add_argument("--bolumler", default="")
+    s.add_argument("--tur", default="haftalik", choices=["haftalik", "karisik"])
     b = alt.add_parser("birlestir")
     b.add_argument("parca_dizini")
+    b.add_argument("--tur", default="haftalik", choices=["haftalik", "karisik"])
     alt.add_parser("yukle")
     a = ap.parse_args()
     if a.komut == "sec":
-        secilen = sec([n for n in a.bolumler.replace(" ", "").split(",") if n])
+        nolar = [n for n in a.bolumler.replace(" ", "").split(",") if n]
+        secilen = sec_karisik() if a.tur == "karisik" and not nolar else sec(nolar)
         cikti = os.environ.get("GITHUB_OUTPUT")
         if cikti:
             with open(cikti, "a") as f:
@@ -293,7 +332,7 @@ def main():
         print(json.dumps(secilen))
         return 0
     if a.komut == "birlestir":
-        return birlestir(a.parca_dizini)
+        return birlestir(a.parca_dizini, a.tur)
     return yukle()
 
 
