@@ -1,0 +1,74 @@
+{
+ "baslik": "Çatalhöyük'te Ölüler Nereye Gömülüyordu?",
+ "ekran_basligi": "Ev Altındaki Mezarlar",
+ "aciklama": "Çatalhöyük halkının ölülerini evlerin altına nasıl gömdüğünü keşfedin.",
+ "etiketler": [
+  "Çatalhöyük",
+  "Arkeoloji",
+  "AntikRitüeller",
+  "Tarih",
+  "MerakArşivi",
+  "Neolitik"
+ ],
+ "parcalar": [
+  {
+   "metin": "Çatalhöyük sakinleri ölülerini köyün içine ve evlerin altına gömüyordu. İnsanlar bedenleri bükerek defnediyordu. Bazen sepetlere koyuyor veya hasırlara sarıyorlardı.",
+   "gorsel": [
+    41
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Ev Altındaki Mezarlar"
+   }
+  },
+  {
+   "gorsel": [
+    41
+   ],
+   "metin": "Bu erken gömüler aile bağlarını yansıtıyordu."
+  },
+  {
+   "metin": "İnsan kalıntıları özellikle tabanlara, ocakların ve sekilerin altına yerleştiriliyordu. Kadın mezarlarında iğler ele geçmişti.",
+   "gorsel": [
+    33
+   ]
+  },
+  {
+   "metin": "Bazı iskeletlerin başları gövdelerinden ayrılarak ayrı yerlerde kullanılıyordu. Bu kafatasları kil ile sıvanıyor ve boyayla yüzler yeniden yapılıyordu.",
+   "gorsel": [
+    14
+   ]
+  },
+  {
+   "metin": "Ağustos 2025'te ise yirmi kişinin kalıntılarının bulunduğu bir Ölüler Evi ortaya çıkarıldı. Bu bina ritüel amaçlı kullanılıyordu.",
+   "gorsel": [
+    0
+   ]
+  },
+  {
+   "metin": "Tüm bu gizemli detaylar kanalda. Tarihin tozlu sayfalarını aralamaya devam ediyoruz.",
+   "gorsel": [
+    35
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Ölüler evlerin altına ve sekilerin altına gömülüyordu",
+   "kaynak_alinti": "Human remains have been found in pits beneath the floors and especially beneath hearths, the platforms within the main rooms, and beds."
+  },
+  {
+   "iddia": "Bazı kafalar iskeletten ayrılıyordu",
+   "kaynak_alinti": "In some cases, graves were disturbed, and the individual's head removed from the skeleton."
+  },
+  {
+   "iddia": "20 kişinin kalıntısının olduğu Ölüler Evi bulundu",
+   "kaynak_alinti": "In August 2025, archaeologists led by Arkadiusz Marciniak of Poznań University revealed a mortuary structure referred to as the \"House of the Dead\" or \"Spiritual House\"."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk",
+  "https://tr.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+ ],
+ "imla": true
+}

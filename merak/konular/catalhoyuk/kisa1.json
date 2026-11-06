@@ -1,0 +1,69 @@
+{
+ "baslik": "Çatalhöyük'te Sokaksız Yaşam",
+ "ekran_basligi": "Sokaksız Kent",
+ "aciklama": "Çatalhöyük'te evlerin neden sokaksız inşa edildiğini ve çatıların nasıl kullanıldığını keşfedin.",
+ "etiketler": [
+  "Çatalhöyük",
+  "Arkeoloji",
+  "Tarih",
+  "Neolitik",
+  "Konya",
+  "AntikKent",
+  "MerakArşivi"
+ ],
+ "parcalar": [
+  {
+   "metin": "Çatalhöyük'te evler arasında sokaklar veya patikalar bulunmuyordu ve bu yerleşim planı günümüz şehirlerinden çok farklıydı.",
+   "gorsel": [
+    3
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "Sokaksız Kent"
+   }
+  },
+  {
+   "metin": "Bal peteğine benzer bir düzende birbirine bitişik inşa edilmişlerdi, bu da güçlü komşuluk ilişkileri gerektiriyordu.",
+   "gorsel": [
+    10
+   ]
+  },
+  {
+   "metin": "Evlere girişler yan duvarlarda değil, çatılarda açılan deliklerden ve merdivenler aracılığıyla sağlanıyordu.",
+   "gorsel": [
+    34
+   ]
+  },
+  {
+   "metin": "Çatılar aynı zamanda sokak görevi görüyor ve günlük etkinlikler burada, açık havada yapılıyordu.",
+   "gorsel": [
+    35
+   ]
+  },
+  {
+   "metin": "Tüm bu sıradışı yaşamın hikâyesi ve antik dönemin bilinmeyen detayları kanalda seni bekliyor.",
+   "gorsel": [
+    38
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Evler arasında sokak veya patika yoktu, bal peteği gibi bitişikti",
+   "kaynak_alinti": "No footpaths or streets were used between the dwellings, which were clustered in a honeycomb-like maze."
+  },
+  {
+   "iddia": "Girişler çatdaki deliklerden yapılıyordu",
+   "kaynak_alinti": "Most were accessed by holes in the ceiling and doors on the side of the houses"
+  },
+  {
+   "iddia": "Damlar sokak olarak kullanılıyordu",
+   "kaynak_alinti": "The rooftops were effectively streets."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk",
+  "https://tr.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+ ],
+ "imla": true
+}

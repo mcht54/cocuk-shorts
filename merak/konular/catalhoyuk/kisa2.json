@@ -1,0 +1,70 @@
+{
+ "baslik": "Çatalhöyük Evleri Nasıl Yenileniyordu?",
+ "ekran_basligi": "80 Yıllık Evler",
+ "aciklama": "Çatalhöyük sakinlerinin evlerini her 80 yılda bir nasıl yenilediğini öğrenin.",
+ "etiketler": [
+  "Çatalhöyük",
+  "AntikMimari",
+  "Tarih",
+  "Arkeoloji",
+  "MerakArşivi",
+  "Neolitik"
+ ],
+ "parcalar": [
+  {
+   "metin": "Çatalhöyük'teki konutların kullanım süresi ortalama 80 yıl kadardı. Bu uzun süre zarfında yapılar yıpranmaktaydı.",
+   "gorsel": [
+    39
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "80",
+    "birim": "yıl",
+    "metin": "Bir konutun ortalama kullanım süresi"
+   }
+  },
+  {
+   "metin": "Bu süre dolduğunda evler özenle temizlenerek toprak ve molazla tamamen dolduruluyordu.",
+   "gorsel": [
+    21
+   ]
+  },
+  {
+   "metin": "Ardından bir önceki konutun duvarları yeni yapının temelleri olacak şekilde aynı plan üzerine yeni bir konut inşa ediliyordu.",
+   "gorsel": [
+    34
+   ]
+  },
+  {
+   "metin": "Höyüğün zaman içinde katman katman büyümesinin temel sebebi bu ev yenileme ve üst üste inşa etme yapımdı.",
+   "gorsel": [
+    0
+   ]
+  },
+  {
+   "metin": "Antik dönemin en bilinen yerleşimlerinden biri olan bu bölgenin sırları aydınlatılmaya devam ediyor. Daha fazlası için tüm hikâye kanalda.",
+   "gorsel": [
+    35
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Konutların kullanım süresi 80 yıl gibi görünmektedir",
+   "kaynak_alinti": "Konutların kullanım süresi 80 yıl gibi görünmektedir."
+  },
+  {
+   "iddia": "Evler temizlenmiş, toprak ve molazla doldurulmuş, üstüne aynı planda yenisi inşa edilmiştir",
+   "kaynak_alinti": "Bu süre dolduğunda ev temizlenmiş, toprak ve molazla doldurulmuş, üstüne aynı planda yenisi inşa edilmiştir."
+  },
+  {
+   "iddia": "Bir önceki konutun duvarları, bir sonrakinin temelleri olmuştur",
+   "kaynak_alinti": "Bir önceki konutun duvarları, bir sonrakinin temelleri olmuştur."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk",
+  "https://tr.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+ ],
+ "imla": true
+}
