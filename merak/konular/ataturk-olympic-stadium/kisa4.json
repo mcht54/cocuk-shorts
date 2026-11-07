@@ -1,0 +1,74 @@
+{
+ "baslik": "Olimpiyat Stadı'nın Açılış Maçı Çilesi",
+ "ekran_basligi": "Tarihi Açılış",
+ "aciklama": "Atatürk Olimpiyat Stadı'nın açılış maçında yaşanan büyük trafik ve katılım rekorunu keşfedin.",
+ "etiketler": [
+  "Galatasaray",
+  "Olimpiyakos",
+  "Açılış",
+  "Atatürk Olimpiyat Stadı",
+  "Tarih",
+  "Merak Arşivi",
+  "İstanbul"
+ ],
+ "parcalar": [
+  {
+   "metin": "Atatürk Olimpiyat Stadı'nın açılış maçı 31 Temmuz 2002 tarihinde Galatasaray ile Olympiakos arasında oynandı.",
+   "gorsel": [
+    10
+   ]
+  },
+  {
+   "metin": "Aşırı trafik yoğunluğu ve yolların henüz tamamlanmamış olması nedeniyle maç geç başlatıldı.",
+   "gorsel": [
+    9
+   ]
+  },
+  {
+   "metin": "Binlerce taraftar TEM otoyolunda araçlarını bırakıp stada yürüyerek gelmek zorunda kaldı.",
+   "gorsel": [
+    8
+   ]
+  },
+  {
+   "metin": "Kartlı geçiş sistemine göre karşılaşmaya toplam 79.414 seyirci giriş yaptı.",
+   "gorsel": [
+    2
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "79.414",
+    "birim": "seyirci"
+   }
+  },
+  {
+   "metin": "Bu dev açılışın tüm hikayesi kanalımızda seni bekliyor.",
+   "gorsel": [
+    23
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Açılış maçı 31 Temmuz 2002'de Galatasaray ile Olympiakos arasında oynandı.",
+   "kaynak_alinti": "31 Temmuz 2002'de oynanan Galatasaray-Olimpiakos dostluk maçı ile açılmıştır."
+  },
+  {
+   "iddia": "Aşırı trafik yoğunluğu ve yolların henüz tamamlanmamış olması nedeniyle maç geç başlatıldı.",
+   "kaynak_alinti": "Açılış öncesi yolların tam olarak inşa edilememesi ve Olimpiyat Komitesi Heyetinin stat açılışına maksimum 50 bin kişi beklemesinden kaynaklanan organizasyon bozuklukları nedeniyle tarihî maç büyük sıkıntılara neden olmuştur."
+  },
+  {
+   "iddia": "Binlerce taraftar TEM otoyolunda araçlarını bırakıp stada yürüyerek gelmek zorunda kaldı.",
+   "kaynak_alinti": "birçok taraftar arabasını TEM'de bırakarak stada yürümüş; onlarca otobüs ise sıkışan trafikte kalmış, birçoğu geri dönmüştür."
+  },
+  {
+   "iddia": "Kartlı geçiş sistemine göre karşılaşmaya toplam 79.414 seyirci giriş yaptı.",
+   "kaynak_alinti": "Bilet gişelerinin bağlı bulunduğu kartlı geçiş sisteminden alınan bilgilere göre karşılaşmaya toplam 79.414 seyirci girmiştir."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Atat%C3%BCrk_Olympic_Stadium",
+  "https://tr.wikipedia.org/wiki/Atat%C3%BCrk_Olimpiyat_Stadyumu"
+ ],
+ "imla": true
+}

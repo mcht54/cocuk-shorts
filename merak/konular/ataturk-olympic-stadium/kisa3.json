@@ -1,0 +1,73 @@
+{
+ "baslik": "İstanbul'da Unutulmaz Şampiyonlar Ligi Finali",
+ "ekran_basligi": "İstanbul'un Mucizesi",
+ "aciklama": "Liverpool ve Milan arasında oynanan efsanevi Şampiyonlar Ligi finalinin yapıldığı stadın sırları.",
+ "etiketler": [
+  "Şampiyonlar Ligi",
+  "Liverpool",
+  "Milan",
+  "Atatürk Olimpiyat Stadı",
+  "Futbol",
+  "Merak Arşivi",
+  "İstanbul"
+ ],
+ "parcalar": [
+  {
+   "metin": "Atatürk Olimpiyat Stadı 2005 yılında unutulmaz bir Şampiyonlar Ligi finaline ev sahipliği yaptı.",
+   "gorsel": [
+    22
+   ],
+   "grafik": {
+    "tur": "harita",
+    "etiket": "İstanbul'un Mucizesi"
+   }
+  },
+  {
+   "metin": "Liverpool ile Milan arasında oynanan bu dev maç tarihe İstanbul'un Mucizesi olarak geçti.",
+   "gorsel": [
+    3
+   ]
+  },
+  {
+   "metin": "Maçın ilk yarısını 3-0 geride kapatan Liverpool kupayı penaltılarla kazandı.",
+   "gorsel": [
+    4
+   ]
+  },
+  {
+   "metin": "Stadyum bu büyük organizasyon öncesinde UEFA tarafından 5 yıldızlı spor kompleksi ilan edildi.",
+   "gorsel": [
+    5
+   ]
+  },
+  {
+   "metin": "Bu tarihi maçın tüm detayları kanalımızdaki videoda seni bekliyor.",
+   "gorsel": [
+    6
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "The 2005 UEFA Champions League Final between Milan and Liverpool was played at the Atatürk Olympic Stadium on 25 May 2005.",
+   "kaynak_alinti": "The 2005 UEFA Champions League Final between Milan and Liverpool was played at the Atatürk Olympic Stadium on 25 May 2005."
+  },
+  {
+   "iddia": "With its 77,563 (all-seater) capacity and Olympic size, it was granted the \"5-star sports complex\" title by the UEFA in 2004, enabling it to host the finals of UEFA events.",
+   "kaynak_alinti": "With its 77,563 (all-seater) capacity and Olympic size, it was granted the \"5-star sports complex\" title by the UEFA in 2004, enabling it to host the finals of UEFA events."
+  },
+  {
+   "iddia": "Karşılaşmanın ilk yarısını 3-0 geride kapatan Liverpool, ikinci devrede bulduğu üç golle önce maçı uzatmaya taşımış, ardından penaltı atışlarında rakibine üstünlük kurarak Şampiyonlar Ligi finalini kazanmıştır.",
+   "kaynak_alinti": "Karşılaşmanın ilk yarısını 3-0 geride kapatan Liverpool, ikinci devrede bulduğu üç golle önce maçı uzatmaya taşımış, ardından penaltı atışlarında rakibine üstünlük kurarak Şampiyonlar Ligi finalini kazanmıştır."
+  },
+  {
+   "iddia": "From 2002 to 2005, the stadium had a capacity of 80,597 (all-seater). This was later reduced to 76,092 (all-seater) by removing the seats from where it was not possible to see the entire pitch, prior to the 2005 UEFA Champions League Final...",
+   "kaynak_alinti": "From 2002 to 2005, the stadium had a capacity of 80,597 (all-seater). This was later reduced to 76,092 (all-seater) by removing the seats from where it was not possible to see the entire pitch, prior to the 2005 UEFA Champions League Final..."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Atat%C3%BCrk_Olympic_Stadium",
+  "https://tr.wikipedia.org/wiki/Atat%C3%BCrk_Olimpiyat_Stadyumu"
+ ],
+ "imla": true
+}

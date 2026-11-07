@@ -1,0 +1,70 @@
+{
+ "baslik": "İstanbul'un Dev Çatı Mühendisliği",
+ "ekran_basligi": "Mega Çatı",
+ "aciklama": "Atatürk Olimpiyat Stadı'nın devasa çatı sisteminin arkasındaki ağırlık sırrını öğrenin.",
+ "etiketler": [
+  "Atatürk Olimpiyat Stadı",
+  "Mühendislik",
+  "Çatı",
+  "İstanbul",
+  "Merak Arşivi",
+  "Mimarlık",
+  "Teknoloji"
+ ],
+ "parcalar": [
+  {
+   "metin": "Atatürk Olimpiyat Stadı'nın batı çatısı binlerce tonluk ağırlığıyla mühendislik harikasıdır.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Hilal biçimindeki bu devasa çelik çatı tam 2.800 ton ağırlığındadır.",
+   "gorsel": [
+    8
+   ]
+  },
+  {
+   "metin": "Doğu çatısı ise 1.300 ton ağırlığa ve 13.000 metrekarelik alana sahiptir.",
+   "gorsel": [
+    18
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "13.000",
+    "birim": "metrekarelik"
+   }
+  },
+  {
+   "metin": "Bu özel çelik yapılar Adana Ceyhan'daki tesiste üretilmiştir.",
+   "gorsel": [
+    25
+   ]
+  },
+  {
+   "metin": "Tüm bu tarihi ve teknik hikaye kanalımızda seni bekliyor.",
+   "gorsel": [
+    27
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Batı çatısı 2.800 ton ağırlığındadır.",
+   "kaynak_alinti": "The stadium's two steel roofs (weighing 2,800 t and 1,300 t) were produced by Tekfen's Steel Structure Fabrication Plant in Ceyhan, Adana."
+  },
+  {
+   "iddia": "Doğu çatısı 1.300 ton ağırlığındadır.",
+   "kaynak_alinti": "The stadium's two steel roofs (weighing 2,800 t and 1,300 t) were produced by Tekfen's Steel Structure Fabrication Plant in Ceyhan, Adana."
+  },
+  {
+   "iddia": "Doğu çatısı 13.000 metrekarelik alana sahiptir.",
+   "kaynak_alinti": "stadın doğu çatısı ise 13.000 m2 alana sahip ve 1.200 ton ağırlığındadır."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Atat%C3%BCrk_Olympic_Stadium",
+  "https://tr.wikipedia.org/wiki/Atat%C3%BCrk_Olimpiyat_Stadyumu"
+ ],
+ "imla": true
+}

@@ -1,0 +1,78 @@
+{
+ "baslik": "Atatürk Olimpiyat Stadı'nın Boşaltma Rekoru",
+ "ekran_basligi": "7.5 Dakikada Tahliye!",
+ "aciklama": "Atatürk Olimpiyat Stadı'nın devasa kapasitesine rağmen acil durumlarda ne kadar hızlı boşaltılabildiğini keşfedin.",
+ "etiketler": [
+  "Atatürk Olimpiyat Stadı",
+  "İstanbul",
+  "Merak Arşivi",
+  "Stadyum",
+  "Mimarlık",
+  "Şaşırtıcı Bilgiler",
+  "Türkiye"
+ ],
+ "parcalar": [
+  {
+   "metin": "Atatürk Olimpiyat Stadı'ndaki binlerce kişilik dev kalabalık sadece 7.5 dakikada tamamen tahliye edilebiliyor.",
+   "gorsel": [
+    10
+   ]
+  },
+  {
+   "metin": "Bu muazzam hız stadyumun tam 134 girişi ve 148 çıkış kapısına sahip olması sayesinde mümkün oluyor.",
+   "gorsel": [
+    9
+   ],
+   "grafik": {
+    "tur": "sayi",
+    "deger": "148",
+    "birim": "çıkış"
+   }
+  },
+  {
+   "metin": "1999 yılında başlanan ve 2002 yılında tamamlanan yapı Türkiye'nin en büyük kapasiteli stadyumudur.",
+   "gorsel": [
+    8
+   ]
+  },
+  {
+   "metin": "Stadın batı tarafında yer alan dev çelik çatı mimarisiyle de göz kamaştırıyor.",
+   "gorsel": [
+    2
+   ]
+  },
+  {
+   "metin": "Tüm detaylar ve daha fazlası kanalımızdaki ana hikayede seni bekliyor.",
+   "gorsel": [
+    24
+   ]
+  }
+ ],
+ "iddialar": [
+  {
+   "iddia": "Stadyumda 134 giriş ve 148 çıkış kapısı bulunmaktadır.",
+   "kaynak_alinti": "With its 134 entrances and 148 exit gates, the Olympic Stadium allows 80,000 spectators to evacuate within 7.5 minutes, in case of an emergency."
+  },
+  {
+   "iddia": "Stadyum 80.000 seyirciyi acil bir durumda 7.5 dakikada tahliye edebilmektedir.",
+   "kaynak_alinti": "With its 134 entrances and 148 exit gates, the Olympic Stadium allows 80,000 spectators to evacuate within 7.5 minutes, in case of an emergency."
+  },
+  {
+   "iddia": "İnşaatına 1999 yılında başlanmış ve 2002 yılında tamamlanmıştır.",
+   "kaynak_alinti": "Its construction began in 1999 and was completed in 2002."
+  },
+  {
+   "iddia": "Ülkedeki en büyük kapasiteli stadyumdur.",
+   "kaynak_alinti": "it is the largest-capacity stadium in the country, and largest permanent track and field stadium outside Africa and Asia by capacity."
+  },
+  {
+   "iddia": "Stadın batı tarafında hilal biçiminde çelik bir çatı yer almaktadır.",
+   "kaynak_alinti": "The west roof, designed in the form of a crescent and principally composed of a 1,000 t main beam called mega-truss, is supported by two reinforced concrete shafts with 196 m span."
+  }
+ ],
+ "kaynaklar": [
+  "https://en.wikipedia.org/wiki/Atat%C3%BCrk_Olympic_Stadium",
+  "https://tr.wikipedia.org/wiki/Atat%C3%BCrk_Olimpiyat_Stadyumu"
+ ],
+ "imla": true
+}
