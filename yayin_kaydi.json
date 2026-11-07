@@ -380,5 +380,28 @@
   ],
   "durum": "uretildi",
   "sure": 365.33
+ },
+ {
+  "tarih": "2026-11-07T16:19:32+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b006.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "kare 228 boş görünüyor: ['kontrast yok (düz/boş görsel)', 'çizgi/ayrıntı yok (degrade ya da bulanık)']"
+  ]
+ },
+ {
+  "tarih": "2026-11-07T16:51:11+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b007.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "My68GourKdc",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-14T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-14T14:00:00+00:00"
  }
 ]
