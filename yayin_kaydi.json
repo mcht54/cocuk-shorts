@@ -403,5 +403,29 @@
    "publishAt": "2026-11-14T14:00:00Z"
   },
   "yayin_zamani": "2026-11-14T14:00:00+00:00"
+ },
+ {
+  "tarih": "2026-11-08T16:21:20+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "haftalik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b003.json",
+   "seri/findik-ile-pamuk/bolumler/b012.json",
+   "seri/findik-ile-pamuk/bolumler/b043.json",
+   "seri/findik-ile-pamuk/bolumler/b044.json",
+   "seri/findik-ile-pamuk/bolumler/b045.json",
+   "seri/findik-ile-pamuk/bolumler/b046.json",
+   "seri/findik-ile-pamuk/bolumler/b047.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 281.58,
+  "video_id": "JpZ9ckY3Wig",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "kapak": "yuklenemedi (403)"
  }
 ]
