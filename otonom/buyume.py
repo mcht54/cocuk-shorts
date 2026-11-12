@@ -43,6 +43,15 @@ def main():
     ozet(f"Çalma listeleri: {eklenen}/{len(yuklenen)} video listede"
          + ("" if eklenen else " (izin yalnız yükleme olabilir: yetki_al.py --buyume)"))
     izl = youtube.izlenmeler([k["video_id"] for k in yuklenen], anahtar)
+    gizlilik = {}
+    ids = [k["video_id"] for k in yuklenen]
+    for i in range(0, len(ids), 50):
+        r = youtube.requests.get(f"{youtube.API}/videos", timeout=30, headers={"Authorization": f"Bearer {anahtar}"},
+                                 params={"part": "status", "id": ",".join(ids[i:i + 50])})
+        if r.ok:
+            for v in r.json().get("items", []):
+                gizlilik[v["id"]] = v["status"].get("privacyStatus") + (
+                    f" ({v['status']['publishAt'][:16]})" if v["status"].get("publishAt") else "")
     satirlar = []
     for k in yuklenen:
         bolum = k["bolum"]
@@ -52,14 +61,15 @@ def main():
         elif k.get("tur"):
             ad = f"derleme ({k['tur']})"
         satirlar.append({"video_id": k["video_id"], "profil": k.get("profil"), "ad": ad,
-                         "yayin": (k.get("yayin_zamani") or k["tarih"])[:10], "izlenme": izl.get(k["video_id"])})
+                         "yayin": (k.get("yayin_zamani") or k["tarih"])[:10], "izlenme": izl.get(k["video_id"]),
+                         "durum": gizlilik.get(k["video_id"], "silinmiş?")})
     satirlar.sort(key=lambda s: -(s["izlenme"] or 0))
     RAPOR.write_text(json.dumps({"tarih": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                                  "videolar": satirlar}, ensure_ascii=False, indent=1))
     toplam = sum(s["izlenme"] or 0 for s in satirlar)
-    ozet(f"\n### İzlenmeler (toplam {toplam})\n| Video | Tür | Yayın | İzlenme |\n|---|---|---|---|")
+    ozet(f"\n### İzlenmeler (toplam {toplam})\n| Video | Tür | Yayın | Durum | İzlenme |\n|---|---|---|---|---|")
     for s in satirlar:
-        ozet(f"| {s['ad']} | {s['profil']} | {s['yayin']} | {s['izlenme']} |")
+        ozet(f"| {s['ad']} | {s['profil']} | {s['yayin']} | {s['durum']} | {s['izlenme']} |")
     return 0
 
 
