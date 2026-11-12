@@ -514,5 +514,19 @@
    "selfDeclaredMadeForKids": true
   },
   "kapak": "yuklenemedi (403)"
+ },
+ {
+  "tarih": "2026-11-12T18:19:00+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b018.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "video_id": "fe2FEHzy1HQ",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-19T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-19T14:00:00+00:00"
  }
 ]
