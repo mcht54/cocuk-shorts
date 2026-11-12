@@ -8,6 +8,7 @@ Seslendirmeler is_dizini/ses altında önbelleklenir (kaldığı yerden devam).
 """
 import hashlib
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -47,6 +48,23 @@ def _yuvarla(o):
     return o
 
 
+DEVAM_CUMLESI = re.compile(r"[^.!?…]*\b(yarın devam|cevap yarın|devamı yarın)[^.!?…]*[.!?…]*", re.I)
+
+
+def devam_cumlelerini_at(cekimler):
+    """Uzun derlemede sonraki bölüm hemen başladığı için "Yarın devam!" gibi seri cümleleri atılır;
+    boş kalan satır da düşer."""
+    for c in cekimler:
+        satirlar = []
+        for s in c.get("satirlar", []):
+            metin = re.sub(r"\s{2,}", " ", DEVAM_CUMLESI.sub("", s["metin"])).strip()
+            if metin:
+                satirlar.append({**s, "metin": metin})
+        if "satirlar" in c:
+            c["satirlar"] = satirlar
+    return cekimler
+
+
 def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
     seri, bolum = yukle(seri_dizini, bolum_yolu)
     prof = profil_al(profil_adi, prototip)
@@ -57,6 +75,8 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
 
     kar_tanim = {k: v for k, v in seri["karakterler"].items() if v["tur"] != "ses"}
     cekimler = [dict(c) for c in bolum["cekimler"]]
+    if profil_adi == "uzun":
+        devam_cumlelerini_at(cekimler)
     if prof["giris_cekimi"] and bolum.get("giris_cekimi", True):  # bölüm kapatabilir (ör. diyalogsuz test)
         cekimler.insert(0, {
             "id": "giris", "tip": "genis", "hareket": "donus", "isik": cekimler[0].get("isik", "sabah"),
