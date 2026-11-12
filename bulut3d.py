@@ -23,6 +23,32 @@ KAYIT = KOK / "yayin_kaydi.json"
 PROFIL = os.environ.get("PROFIL", "shorts")
 
 
+ARAMA_ETIKETLERI = ["çizgi film", "çocuk çizgi filmi", "türkçe çizgi film", "masal", "masal dinle",
+                    "çocuk masalları", "eğitici çizgi film", "okul öncesi", "3D animasyon", "uyku masalı",
+                    "Fındık ile Pamuk", "Minik Masal Evi"]
+
+
+def meta_hazirla(meta):
+    """Yükleme bilgisini aramaya göre düzenler (2026-11-12): merak uyandıran bölüm adı başa, seri adı
+    sonra; anne babaların aradığı genel kelimeler etiket ve açıklamaya. Bölüm dosyası değişmez."""
+    meta = dict(meta)
+    parcalar = [p.strip() for p in meta.get("baslik", "").split("|") if p.strip()]
+    if len(parcalar) >= 2 and parcalar[0] == "Fındık ile Pamuk":
+        meta["baslik"] = f"{parcalar[1]} | Fındık ile Pamuk | Çocuk Çizgi Filmi"
+    ozel = [e for e in meta.get("etiketler", []) if e not in ARAMA_ETIKETLERI]
+    etiketler, toplam = [], 0
+    for e in ARAMA_ETIKETLERI[:6] + ozel + ARAMA_ETIKETLERI[6:]:
+        if e not in etiketler and toplam + len(e) + 2 <= 480:  # YouTube etiket sınırı 500 karakter
+            etiketler.append(e)
+            toplam += len(e) + 2
+    meta["etiketler"] = etiketler
+    aciklama = meta.get("aciklama", "")
+    if "özgün Türkçe 3D çizgi film" not in aciklama:  # hashtag'leri youtube.yukle ilk 5 etiketten ekler
+        meta["aciklama"] = (aciklama + "\n\nFındık ile Pamuk, 3-7 yaş için özgün Türkçe 3D çizgi film ve masal "
+                            "serisi. Her bölüm bir değer öğretir.")
+    return meta
+
+
 def ozet(metin):
     yol = os.environ.get("GITHUB_STEP_SUMMARY")
     if yol:
@@ -135,7 +161,7 @@ def sonuc_isle(bolum, kayitlar, slot=None, kod=0):
     if os.environ.get("YAYIN") == "acik":
         from cocuk import youtube
         gizlilik = os.environ.get("YT_GIZLILIK", "private")
-        meta = json.loads(bolum.read_text())["youtube"]
+        meta = meta_hazirla(json.loads(bolum.read_text())["youtube"])
         publish, zaman = takvim.yukleme_zamani(slot) if slot else (None, datetime.now(timezone.utc))
         vid, durum = youtube.yukle(mp4, meta, youtube.erisim_anahtari(), gizlilik=gizlilik,
                                    acik_onay=os.environ.get("YT_HERKESE_ACIK_ONAY") == "evet",
