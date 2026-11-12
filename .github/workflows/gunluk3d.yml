@@ -41,58 +41,74 @@ jobs:
             if [ "$n" = "0" ]; then echo "atla=1" >> "$GITHUB_OUTPUT"; fi
           fi
 
-  uret:
+  sec:
     needs: kontrol
     if: needs.kontrol.outputs.atla != '1'
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    outputs:
+      bolum: ${{ steps.s.outputs.bolum }}
+      slot: ${{ steps.s.outputs.slot }}
+      ad: ${{ steps.s.outputs.ad }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.14"
           cache: pip
-      - name: Sistem paketleri
-        run: |
-          sudo apt-get update -q
-          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
-      - name: Blender (önbellekli)
-        uses: actions/cache@v4
-        with:
-          path: blender
-          key: blender-5.2.3-linux
-      - run: bash otonom/blender_kur.sh
-      - run: pip install -r requirements.txt -r requirements-3d.txt
-      - name: Üret, denetle, (izinliyse) yükle
+      - run: pip install -r requirements.txt
+      - id: s
         env:
-          BLENDER: ${{ github.workspace }}/blender/blender
-          # ölçüm (2026-10-27): EEVEE 4 örnek 720p ≈13 sn/kare; 12 fps ile Shorts ≈1.5 saat
-          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'EEVEE' }}
-          ORNEKLEME: "4"
-          OLCEK: "67"
-          FPS: "12"
-          RENDER_SN_KARE: "40"
-          RENDER_IS_PARCACIGI: "4"
-          EN_AZ_BOS_DISK_GB: "5"
           PROFIL: ${{ inputs.profil || 'shorts' }}
           BOLUM: ${{ inputs.bolum }}
+          YAYIN: ${{ inputs.yayin == 'hayir' && 'kapali' || vars.YAYIN || 'kapali' }}
+          EN_COK_SLOT: "1"
+        run: |
+          python bulut3d.py sec
+          b=$(grep '^bolum=' "$GITHUB_OUTPUT" | tail -1 | cut -d= -f2)
+          [ -n "$b" ] && echo "ad=$(basename "$b" .json)-${{ github.run_id }}" >> "$GITHUB_OUTPUT" || true
+
+  # 2026-11-12: 24 fps + 1080p (kullanıcı: "daha canlı, daha çok izlenme"); 8 makinede parçalı çizim
+  ciz:
+    needs: sec
+    if: needs.sec.outputs.bolum != ''
+    uses: ./.github/workflows/ciz.yml
+    with:
+      bolum: ${{ needs.sec.outputs.bolum }}
+      profil: ${{ inputs.profil || 'shorts' }}
+      ad: ${{ needs.sec.outputs.ad }}
+      prototip: ${{ inputs.profil == 'uzun' }}
+
+  yukle:
+    needs: [sec, ciz]
+    if: always() && needs.sec.outputs.bolum != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: video-${{ needs.sec.outputs.ad }}
+          path: hazir
+      - name: Videoyu yerine koy
+        run: |
+          [ -d hazir/cikti3d ] && cp -r hazir/cikti3d . || echo "video yok (çizim başarısız)"
+          [ -f hazir/karakter_izleri.json ] && cp hazir/karakter_izleri.json seri/findik-ile-pamuk/ || true
+      - name: Denetle, (izinliyse) yükle
+        env:
+          PROFIL: ${{ inputs.profil || 'shorts' }}
           YAYIN: ${{ inputs.yayin == 'hayir' && 'kapali' || vars.YAYIN || 'kapali' }}
           YT_GIZLILIK: ${{ vars.YT_GIZLILIK || 'private' }}
           YT_HERKESE_ACIK_ONAY: ${{ vars.YT_HERKESE_ACIK_ONAY || 'hayir' }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: xvfb-run -a python bulut3d.py
-      - name: Videoyu ve raporu 7 gün indirilebilir bırak
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: bolum-${{ github.run_id }}
-          path: |
-            cikti3d/**/*.mp4
-            cikti3d/**/*.rapor.json
-          retention-days: 7
-          if-no-files-found: ignore
+        run: python bulut3d.py yukle "${{ needs.sec.outputs.bolum }}" "${{ needs.sec.outputs.slot }}"
       - name: Yayın kaydını depoya yaz
         if: always()
         run: |

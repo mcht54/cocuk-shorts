@@ -34,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       bolumler: ${{ steps.s.outputs.bolumler }}
+      matris: ${{ steps.s.outputs.matris }}
       adet: ${{ steps.s.outputs.adet }}
       tur: ${{ steps.s.outputs.tur }}
     steps:
@@ -52,55 +53,21 @@ jobs:
           echo "tur=$TUR" >> "$GITHUB_OUTPUT"
           python derleme.py sec --tur "$TUR" --bolumler "${{ inputs.bolumler }}"
 
+  # 2026-11-12: 24 fps + 1080p, her bölüm 8 makinede parçalı çizilir (ciz.yml); pazar çizilen bölüm
+  # çarşamba karışık derlemesinde önbellekten gelir, yeniden çizilmez
   uret:
     needs: sec
     if: needs.sec.outputs.adet != '0'
-    runs-on: ubuntu-latest
-    timeout-minutes: 300
     strategy:
       fail-fast: false
       matrix:
-        bolum: ${{ fromJSON(needs.sec.outputs.bolumler) }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.14"
-          cache: pip
-      - name: Sistem paketleri
-        run: |
-          sudo apt-get update -q
-          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
-      - name: Blender (önbellekli)
-        uses: actions/cache@v4
-        with:
-          path: blender
-          key: blender-5.2.3-linux
-      - run: bash otonom/blender_kur.sh
-      - run: pip install -r requirements.txt -r requirements-3d.txt
-      - name: Yatay bölüm üret ve denetle
-        env:
-          BLENDER: ${{ github.workspace }}/blender/blender
-          RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'EEVEE' }}
-          FPS: "12"
-          RENDER_SN_KARE: "40"
-          RENDER_IS_PARCACIGI: "4"
-          EN_AZ_BOS_DISK_GB: "5"
-        # tek bölüm ~40 sn: uzun profilin 60 sn alt sınırı derlemenin tamamına uygulanır
-        run: xvfb-run -a python uret3d.py --bolum "${{ matrix.bolum }}" --profil uzun --prototip --ornekleme 4 --olcek 67
-      - id: ad
-        if: always()
-        run: echo "ad=$(basename '${{ matrix.bolum }}' .json)" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: parca-${{ steps.ad.outputs.ad }}
-          path: |
-            cikti3d/**/*-uzun-*.mp4
-            cikti3d/**/*-uzun-*.rapor.json
-            cikti3d/**/*-uzun-*.veri/
-          retention-days: 3
-          if-no-files-found: ignore
+        include: ${{ fromJSON(needs.sec.outputs.matris) }}
+    uses: ./.github/workflows/ciz.yml
+    with:
+      bolum: ${{ matrix.bolum }}
+      profil: uzun
+      ad: ${{ matrix.ad }}
+      prototip: true
 
   birlestir:
     needs: [sec, uret]
@@ -117,7 +84,7 @@ jobs:
       - run: pip install -r requirements.txt -r requirements-3d.txt
       - uses: actions/download-artifact@v4
         with:
-          pattern: parca-*
+          pattern: video-*
           path: parcalar
       - name: Birleştir ve denetle
         run: python derleme.py birlestir parcalar --tur "${{ needs.sec.outputs.tur || 'haftalik' }}"

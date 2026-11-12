@@ -1,0 +1,174 @@
+name: Bölüm çiz (parçalı)
+
+# Bir bölümü 24 fps / 1080p çizer. Tek makinede ~7 saat sürdüğü için (EEVEE ~30 sn/kare) kareler
+# PARCA makineye bölünür ve aynı anda çizilir (herkese açık depoda ücretsiz), sonra birleştirilir.
+# Aynı bölüm + aynı kod + aynı ayarla daha önce çizildiyse (ör. pazar derlemesinden çarşambaya)
+# önbellekteki video kullanılır, yeniden çizilmez.
+# Çıktı: "video-<ad>" artifact'ı (cikti3d/**/mp4 + rapor + veri, karakter_izleri.json).
+on:
+  workflow_call:
+    inputs:
+      bolum: {type: string, required: true}
+      profil: {type: string, required: true}
+      ad: {type: string, required: true}
+      prototip: {type: boolean, default: false}
+      parca: {type: number, default: 8}
+      olcek: {type: string, default: "100"}
+      fps: {type: string, default: "24"}
+      ornekleme: {type: string, default: "4"}
+
+env:
+  BLENDER: ${{ github.workspace }}/blender/blender
+  RENDER_MOTORU: ${{ vars.RENDER_MOTORU || 'EEVEE' }}
+  FPS: ${{ inputs.fps }}
+  RENDER_SN_KARE: "90"
+  RENDER_IS_PARCACIGI: "4"
+  EN_AZ_BOS_DISK_GB: "5"
+
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      hazir: ${{ steps.onbellek.outputs.cache-hit }}
+      parcalar: ${{ steps.p.outputs.parcalar }}
+      anahtar: ${{ steps.a.outputs.anahtar }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: a
+        run: >
+          echo "anahtar=video-${{ inputs.ad }}-${{ inputs.profil }}-${{ inputs.olcek }}-${{ inputs.fps }}-${{ inputs.ornekleme }}-${{ hashFiles(inputs.bolum, 'seri/findik-ile-pamuk/seri.json', 'cocuk3d/**', 'uret3d.py') }}"
+          >> "$GITHUB_OUTPUT"
+      - id: onbellek
+        uses: actions/cache/restore@v4
+        with:
+          path: hazir-video
+          key: ${{ steps.a.outputs.anahtar }}
+      - name: Önbellekteki videoyu ver
+        if: steps.onbellek.outputs.cache-hit == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ inputs.ad }}
+          path: hazir-video
+          retention-days: 3
+      - id: p
+        run: python3 -c "import json; print('parcalar=' + json.dumps(list(range(${{ inputs.parca }}))))" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.onbellek.outputs.cache-hit != 'true'
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Sistem paketleri
+        if: steps.onbellek.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - uses: actions/cache@v4
+        if: steps.onbellek.outputs.cache-hit != 'true'
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - if: steps.onbellek.outputs.cache-hit != 'true'
+        run: bash otonom/blender_kur.sh
+      - if: steps.onbellek.outputs.cache-hit != 'true'
+        run: pip install -r requirements.txt -r requirements-3d.txt
+      - name: Plan + sahne
+        if: steps.onbellek.outputs.cache-hit != 'true'
+        run: >
+          xvfb-run -a python uret3d.py --asama hazirla --bolum "${{ inputs.bolum }}" --profil "${{ inputs.profil }}"
+          --ornekleme "${{ inputs.ornekleme }}" --olcek "${{ inputs.olcek }}" ${{ inputs.prototip && '--prototip' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: steps.onbellek.outputs.cache-hit != 'true'
+        with:
+          name: is-${{ inputs.ad }}
+          path: uretim/
+          retention-days: 2
+          include-hidden-files: true
+
+  ciz:
+    needs: hazirla
+    if: needs.hazirla.outputs.hazir != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: true
+      matrix:
+        parca: ${{ fromJSON(needs.hazirla.outputs.parcalar) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Sistem paketleri
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg xvfb libgl1-mesa-dri libegl1 libxkbcommon0 libxi6 libxrender1 libsm6
+      - uses: actions/cache@v4
+        with:
+          path: blender
+          key: blender-5.2.3-linux
+      - run: bash otonom/blender_kur.sh
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: is-${{ inputs.ad }}
+          path: uretim
+      - name: Kareleri çiz (parça ${{ matrix.parca }})
+        run: >
+          xvfb-run -a python uret3d.py --asama ciz --parca ${{ matrix.parca }} --parca-sayisi ${{ inputs.parca }}
+          --bolum "${{ inputs.bolum }}" --profil "${{ inputs.profil }}"
+          --ornekleme "${{ inputs.ornekleme }}" --olcek "${{ inputs.olcek }}" ${{ inputs.prototip && '--prototip' || '' }}
+      - name: Kareleri klasör yapısıyla topla
+        run: mkdir -p parca && cp --parents uretim/*/*/kareler/*.png parca/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kare-${{ inputs.ad }}-${{ matrix.parca }}
+          path: parca/
+          retention-days: 2
+          compression-level: 0
+
+  bitir:
+    needs: [hazirla, ciz]
+    if: needs.hazirla.outputs.hazir != 'true' && needs.ciz.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install -r requirements.txt -r requirements-3d.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: is-${{ inputs.ad }}
+          path: uretim
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: kare-${{ inputs.ad }}-*
+          path: .
+          merge-multiple: true
+      - name: Kurgu + kalite kontrolü
+        run: >
+          python uret3d.py --asama bitir --bolum "${{ inputs.bolum }}" --profil "${{ inputs.profil }}"
+          --ornekleme "${{ inputs.ornekleme }}" --olcek "${{ inputs.olcek }}" ${{ inputs.prototip && '--prototip' || '' }}
+      - name: Videoyu topla
+        if: always()
+        run: |
+          mkdir -p hazir-video
+          cp -r cikti3d hazir-video/ 2>/dev/null || true
+          cp seri/findik-ile-pamuk/karakter_izleri.json hazir-video/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: video-${{ inputs.ad }}
+          path: hazir-video
+          retention-days: 7
+      - name: Önbelleğe al (yalnız kaliteyi geçen)
+        if: success()
+        uses: actions/cache/save@v4
+        with:
+          path: hazir-video
+          key: ${{ needs.hazirla.outputs.anahtar }}

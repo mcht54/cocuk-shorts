@@ -328,7 +328,8 @@ def main():
         cikti = os.environ.get("GITHUB_OUTPUT")
         if cikti:
             with open(cikti, "a") as f:
-                f.write(f"bolumler={json.dumps(secilen)}\nadet={len(secilen)}\n")
+                matris = [{"bolum": b, "ad": Path(b).stem + "-uzun"} for b in secilen]
+                f.write(f"bolumler={json.dumps(secilen)}\nmatris={json.dumps(matris)}\nadet={len(secilen)}\n")
         print(json.dumps(secilen))
         return 0
     if a.komut == "birlestir":
