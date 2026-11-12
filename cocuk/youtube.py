@@ -129,6 +129,10 @@ def listeye_ekle(video_id, liste_adi, anahtar, aciklama=""):
                                     "status": {"privacyStatus": "public"}})
             r.raise_for_status()
             liste = r.json()["id"]
+        r = requests.get(f"{API}/playlistItems", headers=b, timeout=30,
+                         params={"part": "id", "playlistId": liste, "videoId": video_id})
+        if r.ok and r.json().get("items"):  # zaten listede
+            return liste
         r = requests.post(f"{API}/playlistItems", headers=b, params={"part": "snippet"}, timeout=30,
                           json={"snippet": {"playlistId": liste,
                                             "resourceId": {"kind": "youtube#video", "videoId": video_id}}})

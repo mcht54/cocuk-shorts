@@ -1,0 +1,42 @@
+name: Büyüme (çalma listeleri + izlenme raporu)
+
+# Haftada iki kez: yüklenmiş videolar çalma listelerine eklenir (eksikse), izlenmeler
+# otonom/izlenme.json'a yazılır. Geniş YouTube izni gerekir (yetki_al.py --buyume, 2026-11-12 verildi).
+on:
+  schedule:
+    - cron: "41 8 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  buyume:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python -m otonom.buyume
+      - name: Raporu depoya yaz
+        run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          cp otonom/izlenme.json "$RUNNER_TEMP/izlenme.json"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/izlenme.json" otonom/izlenme.json
+            git add otonom/izlenme.json
+            git diff --cached --quiet && exit 0
+            git commit -q -m "izlenme raporu: $(date -u +%F)" && git push -q && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
