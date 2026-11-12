@@ -167,6 +167,9 @@ def sonuc_isle(bolum, kayitlar, slot=None, kod=0):
                                    acik_onay=os.environ.get("YT_HERKESE_ACIK_ONAY") == "evet",
                                    shorts=PROFIL == "shorts", sentetik=False, yayin_zamani=publish)
         kayit.update(durum="yuklendi", video_id=vid, youtube=durum, yayin_zamani=zaman.isoformat(timespec="seconds"))
+        if youtube.listeye_ekle(vid, "Fındık ile Pamuk | Tüm Bölümler", youtube.erisim_anahtari(),
+                                "Fındık ile Pamuk'un bütün masalları sırayla. 3-7 yaş için Türkçe 3D çizgi film."):
+            kayit["liste"] = "eklendi"
         ozet(f"YouTube: https://youtube.com/shorts/{vid} — {durum}"
              + (f" — yayın {zaman:%Y-%m-%d %H:%M} UTC" if publish else ""))
         if not publish and durum.get("privacyStatus") != gizlilik:

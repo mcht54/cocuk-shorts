@@ -298,6 +298,10 @@ def yukle():
                                    acik_onay=os.environ.get("YT_HERKESE_ACIK_ONAY") == "evet",
                                    shorts=False, sentetik=False)
         kayit.update(durum="yuklendi", video_id=vid, youtube=durum)
+        liste = ("Uyku Öncesi Masallar | Fındık ile Pamuk" if rapor.get("tur") == "karisik"
+                 else "Fındık ile Pamuk | Uzun Videolar")
+        if youtube.listeye_ekle(vid, liste, anahtar, "Fındık ile Pamuk masalları arka arkaya, uzun videolar."):
+            kayit["liste"] = "eklendi"
         ozet(f"YouTube: https://youtube.com/watch?v={vid} — {durum}")
         kod, metin = kapak_yukle(vid, KOK / rapor["kapak"], anahtar)
         kayit["kapak"] = "yuklendi" if kod == 200 else f"yuklenemedi ({kod})"

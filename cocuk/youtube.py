@@ -106,3 +106,34 @@ def izlenmeler(video_idleri, anahtar):
         for v in r.json().get("items", []):
             sonuc[v["id"]] = int(v["statistics"].get("viewCount", 0))
     return sonuc
+
+
+API = "https://www.googleapis.com/youtube/v3"
+
+
+def listeye_ekle(video_id, liste_adi, anahtar, aciklama=""):
+    """Videoyu adıyla bulunan (yoksa oluşturulan, herkese açık) çalma listesine ekler. Çalma listeleri
+    izlenme süresini artırır (bir bölüm bitince sıradaki başlar). Yalnız yükleme izni varsa (403) sessizce
+    None döner; yükleme asla bu yüzden başarısız sayılmaz. Başarıda liste kimliği."""
+    b = {"Authorization": f"Bearer {anahtar}"}
+    try:
+        r = requests.get(f"{API}/playlists", headers=b, timeout=30,
+                         params={"part": "snippet", "mine": "true", "maxResults": 50})
+        if r.status_code == 403:
+            return None
+        r.raise_for_status()
+        liste = next((p["id"] for p in r.json().get("items", []) if p["snippet"]["title"] == liste_adi), None)
+        if not liste:
+            r = requests.post(f"{API}/playlists", headers=b, params={"part": "snippet,status"}, timeout=30,
+                              json={"snippet": {"title": liste_adi, "description": aciklama, "defaultLanguage": "tr"},
+                                    "status": {"privacyStatus": "public"}})
+            r.raise_for_status()
+            liste = r.json()["id"]
+        r = requests.post(f"{API}/playlistItems", headers=b, params={"part": "snippet"}, timeout=30,
+                          json={"snippet": {"playlistId": liste,
+                                            "resourceId": {"kind": "youtube#video", "videoId": video_id}}})
+        r.raise_for_status()
+        return liste
+    except requests.RequestException as e:
+        print(f"çalma listesi eklenemedi ({liste_adi}): {e}", flush=True)
+        return None

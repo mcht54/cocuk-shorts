@@ -16,6 +16,9 @@ PORT = 8765
 YONLENDIRME = f"http://127.0.0.1:{PORT}"
 # asgari yetki: yalnız yükleme. İzlenme istatistiği için --istatistik ile salt okuma eklenir.
 KAPSAM = "https://www.googleapis.com/auth/youtube.upload"
+if "--buyume" in sys.argv:  # çalma listesi yönetimi + izlenme istatistiği (kanal büyütme)
+    KAPSAM = ("https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/yt-analytics.readonly")
+    sys.argv.remove("--buyume")
 if "--istatistik" in sys.argv:
     KAPSAM += " https://www.googleapis.com/auth/youtube.readonly"
     sys.argv.remove("--istatistik")
