@@ -549,5 +549,21 @@
   },
   "yayin_zamani": "2026-11-13T18:15:53+00:00",
   "baslik": "İngilizce Selamlaşma: Hello, Thank you, Goodbye | Çocuklar için İngilizce"
+ },
+ {
+  "tarih": "2026-11-13T20:54:40+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e002.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "BgVICuAJlUo",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "yayin_zamani": "2026-11-13T20:54:40+00:00",
+  "baslik": "İngilizce Hareketler: Jump, Run, Walk | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
