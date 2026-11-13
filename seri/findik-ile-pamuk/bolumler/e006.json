@@ -1,0 +1,254 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 6,
+ "tur": "ingilizce",
+ "baslik": "Duygular: Happy, Sad, Surprised",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Duygular",
+ "konu_en": "Feelings",
+ "konu_kodu": "duygular",
+ "kelimeler": [
+  {
+   "en": "happy",
+   "tr": "mutlu"
+  },
+  {
+   "en": "sad",
+   "tr": "üzgün"
+  },
+  {
+   "en": "surprised",
+   "tr": "şaşırmış"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 6: Duygular.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Mutlu İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile İngilizce duyguları öğreniyoruz: happy, sad, surprised."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bugün nasıl hissediyorsun? Duyguları İngilizce söyleyelim mi?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.4,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Happy!",
+     "dil": "en",
+     "anlam": "mutlu"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Mutlu demek. Sen de söyle ve gülümse!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Happy, happy!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Sad!",
+     "dil": "en",
+     "anlam": "üzgün"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Üzgün demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Sad, sad!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": -0.5
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Surprised!",
+     "dil": "en",
+     "anlam": "şaşırmış"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Şaşırmış demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Surprised, surprised!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Happy! Sad! Surprised!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç güzel duygu öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

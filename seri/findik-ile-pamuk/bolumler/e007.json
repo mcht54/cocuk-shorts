@@ -1,0 +1,250 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 7,
+ "tur": "ingilizce",
+ "baslik": "Hayvanlar: Squirrel, Rabbit, Bird",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Hayvanlar",
+ "konu_en": "Animals",
+ "konu_kodu": "hayvanlar_1",
+ "kelimeler": [
+  {
+   "en": "squirrel",
+   "tr": "sincap"
+  },
+  {
+   "en": "rabbit",
+   "tr": "tavşan"
+  },
+  {
+   "en": "bird",
+   "tr": "kuş"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 7: Hayvanlar.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Sincap İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ormanda sevimli hayvanların İngilizce isimlerini öğretiyor."
+ },
+ "cekimler": [
+  {
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ormandaki sevimli hayvanların İngilizcesini biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Squirrel!",
+     "anlam": "sincap"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sincap demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Squirrel, squirrel!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.9
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Rabbit!",
+     "anlam": "tavşan"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Tavşan demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Rabbit, rabbit!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.9
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Bird!",
+     "anlam": "kuş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kuş demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Bird, bird!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.4,
+     "son": 0.9
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Squirrel! Rabbit! Bird!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç sevimli hayvanı İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

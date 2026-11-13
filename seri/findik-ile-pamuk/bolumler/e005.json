@@ -1,0 +1,293 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 5,
+ "tur": "ingilizce",
+ "baslik": "Renkler: Red, White, Orange",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Renkler",
+ "konu_en": "Colors",
+ "konu_kodu": "renkler_1",
+ "kelimeler": [
+  {
+   "en": "red",
+   "tr": "kırmızı"
+  },
+  {
+   "en": "white",
+   "tr": "beyaz"
+  },
+  {
+   "en": "orange",
+   "tr": "turuncu"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 5: Renkler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "elma": [
+   -0.5,
+   0.1,
+   0.0
+  ],
+  "top": [
+   0.65,
+   0.2,
+   0.0
+  ],
+  "palamut": [
+   -0.65,
+   0.1,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Kırmızı İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu derste çocuklar red, white ve orange renklerini öğreniyor."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Kırmızı İngilizce ne demek, biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Red!",
+     "dil": "en",
+     "anlam": "kırmızı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kırmızı demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Red, red!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "elma",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "White!",
+     "dil": "en",
+     "anlam": "beyaz"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Beyaz demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "White, white!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Orange!",
+     "dil": "en",
+     "anlam": "turuncu"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Turuncu demek. Sen de say!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Orange, orange!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "palamut",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.3,
+     "nereye": [
+      -0.3,
+      0.3
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Red! White! Orange!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç rengi de İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

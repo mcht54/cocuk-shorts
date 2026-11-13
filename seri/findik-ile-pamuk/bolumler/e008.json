@@ -1,0 +1,276 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 8,
+ "tur": "ingilizce",
+ "baslik": "Sayılar: Four, Five, Six",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Sayılar",
+ "konu_en": "Numbers",
+ "konu_kodu": "sayilar_2",
+ "kelimeler": [
+  {
+   "en": "four",
+   "tr": "dört"
+  },
+  {
+   "en": "five",
+   "tr": "beş"
+  },
+  {
+   "en": "six",
+   "tr": "altı"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 8: Sayılar.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Dört İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ormanda eğlenerek dört, beş ve altı sayılarını İngilizce öğreniyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Birlikte kaça kadar sayabiliriz? Hadi öğrenelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Four!",
+     "anlam": "dört"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Dört demek. Sen de say!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Four, four!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Five!",
+     "anlam": "beş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Beş demek. Hadi say!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Five, five!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.45,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 3,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Six!",
+     "anlam": "altı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Altı demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Six, six!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.25
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 3,
+     "son": 0.75
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.8,
+     "yon": 0.5
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Four! Five! Six!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç yeni sayıyı İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.58,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}
