@@ -14,6 +14,8 @@ KANALLAR = [("Minik Masal Evi", DEPO / "yayin_kaydi.json"), ("Merak Arşivi", DE
 
 
 def baslik(k):
+    if k.get("baslik"):  # 2026-11-13'ten beri yüklenen başlık kayda yazılır (otonom.seo)
+        return k["baslik"]
     if k.get("konu"):
         yol = DEPO / "merak" / "konular" / k["konu"] / f"{k['senaryo']}.json"
     else:

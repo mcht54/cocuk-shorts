@@ -5,6 +5,7 @@ Kullanım: python -m cocuk3d.bolum_denetle seri/findik-ile-pamuk   -> hatalar; �
 """
 import json
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -23,10 +24,18 @@ SATIR_ARASI, CEKIM_SONU = 0.3, 0.45
 SHORTS_EN_COK = 55.0  # profil sınırı 59; seslendirme sapmasına pay
 
 
+KELIME_SN_EN = 0.85  # İngilizce ders satırları yavaş okunur (ses_en hızı -8..-14%) ve kelimeler tek tek
+
+
+def _satir_suresi(s):
+    hiz = KELIME_SN_EN if s.get("dil") == "en" else KELIME_SN
+    return len(s["metin"].split()) * hiz + SATIR_ARASI + min(2.5, max(0.0, float(s.get("bekle", 0))))
+
+
 def tahmini_sure(bolum):
     toplam = 0.0
     for c in bolum["cekimler"]:
-        t = sum(len(s["metin"].split()) * KELIME_SN + SATIR_ARASI for s in c["satirlar"])
+        t = sum(_satir_suresi(s) for s in c["satirlar"])
         toplam += max(2.0, t + CEKIM_SONU)
     return toplam
 
@@ -71,6 +80,7 @@ def denetle(bolum, seri):
                 h.append(f"{ad}: yasaklı kelime: {s['metin']}")
             if len(s["metin"].split()) > 14:
                 h.append(f"{ad}: satır çok uzun ({len(s['metin'].split())} kelime)")
+            h += ingilizce_satir_denetle(ad, s)
         for e in sorted(c["eylemler"], key=lambda e: e["bas"]):
             k, ey = e["kim"], e["eylem"]
             yer = f"{ad}/{k}/{ey}@{e['bas']}"
@@ -144,8 +154,31 @@ def denetle(bolum, seri):
     if sure < 20:
         h.append(f"tahmini süre {sure:.0f} sn çok kısa")
     yt = bolum["youtube"]
-    if len(yt["baslik"]) > 90:
-        h.append(f"YouTube başlığı {len(yt['baslik'])} karakter (#shorts için en çok 90)")
+    if len(yt.get("baslik", "")) > 90:
+        h.append(f"YouTube başlığı {len(yt.get('baslik', ''))} karakter (#shorts için en çok 90)")
+    return h
+
+
+TR_HARF = re.compile(r"[çğıöşüÇĞİÖŞÜ]")
+TR_KELIME = re.compile(r"\b(ve|bir|bu|şu|ne|evet|hayır|hadi|bak|sen|ben|de|da)\b", re.I)
+
+
+def ingilizce_satir_denetle(ad, s):
+    """İngilizce satır yalnız İngilizce olmalı (Türkçe ses İngilizceyi, İngilizce ses Türkçeyi bozar)."""
+    h = []
+    if s.get("dil", "tr") not in ("tr", "en"):
+        h.append(f"{ad}: bilinmeyen dil {s.get('dil')}")
+    if s.get("dil") == "en":
+        if TR_HARF.search(s["metin"]) or TR_KELIME.search(s["metin"]):
+            h.append(f"{ad}: İngilizce satırda Türkçe var: {s['metin']}")
+        if len(s["metin"].split()) > 6:
+            h.append(f"{ad}: İngilizce satır en çok 6 kelime: {s['metin']}")
+        if s.get("anlam") is not None and not str(s["anlam"]).strip():
+            h.append(f"{ad}: anlam boş")
+    elif s.get("anlam"):
+        h.append(f"{ad}: anlam yalnız İngilizce satırda olur: {s['metin']}")
+    if "bekle" in s and not 0 <= float(s["bekle"]) <= 2.5:
+        h.append(f"{ad}: bekle 0-2.5 sn olmalı")
     return h
 
 
@@ -153,7 +186,8 @@ def seriyi_denetle(seri_dizini):
     seri_dizini = Path(seri_dizini)
     seri = json.loads((seri_dizini / "seri.json").read_text())
     sonuc, basliklar = {}, {}
-    for yol in sorted(seri_dizini.glob("bolumler/b*.json")):
+    # b*.json masal bölümleri, e*.json İngilizce dersleri (2026-11-13)
+    for yol in sorted(seri_dizini.glob("bolumler/[be]*.json")):
         b = json.loads(yol.read_text())
         h = denetle(b, seri)
         if b["baslik"] in basliklar:

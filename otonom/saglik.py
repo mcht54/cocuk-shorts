@@ -17,7 +17,10 @@ DEPO = Path(__file__).resolve().parent.parent
 SIMDI = datetime.now(timezone.utc)
 # (ad, kayıt dosyası, süzgeç, takvim hattı ya da en çok kaç saat sessiz kalabilir)
 BEKLENEN = [
-    ("Minik Masal Evi Shorts", "yayin_kaydi.json", lambda k: k.get("profil") == "shorts", "masal_shorts"),
+    ("Minik Masal Evi Shorts", "yayin_kaydi.json",
+     lambda k: k.get("profil") == "shorts" and "/bolumler/e" not in k.get("bolum", ""), "masal_shorts"),
+    ("Minik Masal Evi İngilizce Shorts", "yayin_kaydi.json",
+     lambda k: k.get("profil") == "shorts" and "/bolumler/e" in k.get("bolum", ""), "ingilizce_shorts"),
     ("Minik Masal Evi haftalık uzun", "yayin_kaydi.json", lambda k: k.get("profil") == "derleme", 8 * 24 + 12),
     ("Merak Arşivi Shorts", "merak/kayit.json", lambda k: k.get("profil") == "shorts", "merak_shorts"),
     ("Merak Arşivi uzun belgesel", "merak/kayit.json", lambda k: k.get("profil") == "uzun", "merak_uzun"),
@@ -122,7 +125,10 @@ def main():
         from merak import yayinla
         m = stok.masal_stogu()
         u, k = len(yayinla.sira("uzun")), len(yayinla.sira("shorts"))
-        rapor.append(f"- stok: masal {m} bölüm, merak {u} uzun / {k} Shorts")
+        ing = stok.masal_stogu("e*.json")
+        rapor.append(f"- stok: masal {m} bölüm, İngilizce {ing} ders, merak {u} uzun / {k} Shorts")
+        if ing < stok.KRITIK_GUN:
+            sorunlar.append(f"Minik Masal Evi İngilizce stoku {ing} ders (stok.yml çalışıyor mu? Gemini kotası?)")
         if m < stok.KRITIK_GUN:
             sorunlar.append(f"Minik Masal Evi stoku {m} bölüm (stok.yml çalışıyor mu? Gemini kotası?)")
         if os.environ.get("MERAK_BASLANGIC") and k < stok.KRITIK_GUN:

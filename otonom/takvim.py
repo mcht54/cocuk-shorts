@@ -10,6 +10,8 @@ from datetime import datetime, timedelta, timezone
 # hat: (haftanın günleri 0=pazartesi, saat UTC). Türkiye = UTC+3.
 SLOTLAR = {
     "masal_shorts": (range(7), 14),             # her gün 17:00
+    # 2026-11-13 kullanıcı: günde 2 Shorts, biri İngilizce eğitim. Okul çıkışı öncesi öğle saati, masaldan ayrı
+    "ingilizce_shorts": (range(7), 9),          # her gün 12:00
     "merak_uzun": ((1, 4), 15),                 # salı, cuma 18:00
     "merak_shorts": ((0, 2, 3, 5), 16),         # pzt, çar, per, cmt 19:00
 }
@@ -29,10 +31,22 @@ def slotlar(hat, bas, bit):
     return out
 
 
-def dolu(kayitlar):
-    """Kayıtlarda yüklenmiş videoların yayın zamanları (zamanlanmış ya da hemen yayınlanmış)."""
+def kayit_hatti(k):
+    """Minik Masal Evi kaydının hattı: yeni kayıtlarda "hat" alanı, eskilerde bölüm dosyasından."""
+    if k.get("hat"):
+        return k["hat"]
+    if k.get("profil") == "shorts":
+        return "ingilizce_shorts" if "/bolumler/e" in k.get("bolum", "") else "masal_shorts"
+    return None
+
+
+def dolu(kayitlar, hat=None):
+    """Kayıtlarda yüklenmiş videoların yayın zamanları (zamanlanmış ya da hemen yayınlanmış).
+    Aynı kayıt dosyasını paylaşan masal ve İngilizce hatları birbirinin saatini doldurmuş saymaz."""
     out = set()
     for k in kayitlar:
+        if hat in ("masal_shorts", "ingilizce_shorts") and kayit_hatti(k) != hat:
+            continue
         if k.get("durum") == "yuklendi" and k.get("yayin_zamani"):
             out.add(datetime.fromisoformat(k["yayin_zamani"]))
     return out
@@ -41,7 +55,7 @@ def dolu(kayitlar):
 def bos_slotlar(hat, kayitlar, simdi=None):
     """Doldurulması gereken slotlar, en yakından uzağa."""
     simdi = simdi or datetime.now(timezone.utc)
-    alinan = dolu(kayitlar)
+    alinan = dolu(kayitlar, hat)
     return [s for s in slotlar(hat, simdi - GECIKME_PAYI, simdi + ONAY_UFKU)
             if not any(abs((s - d).total_seconds()) < 3 * 3600 for d in alinan)]
 
@@ -60,5 +74,7 @@ if __name__ == "__main__":
     import sys
     from pathlib import Path
 
-    hat, yol = sys.argv[1], Path(sys.argv[2])
-    print(len(bos_slotlar(hat, json.loads(yol.read_text()) if yol.exists() else [])))
+    # birden çok hat virgülle verilebilir: toplam boş slot
+    hatlar, yol = sys.argv[1].split(","), Path(sys.argv[2])
+    kayit = json.loads(yol.read_text()) if yol.exists() else []
+    print(sum(len(bos_slotlar(h, kayit)) for h in hatlar))

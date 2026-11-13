@@ -70,7 +70,7 @@ def main():
     bolum_yolu = Path(a.bolum).resolve()
     seri_dizini = Path(a.seri).resolve() if a.seri else bolum_yolu.parent.parent
     bolum = json.loads(bolum_yolu.read_text())
-    ad = f"b{bolum['bolum_no']:03d}-{a.profil}" + ("-onizleme" if a.onizleme else "")
+    ad = f"{bolum_yolu.stem}-{a.profil}" + ("-onizleme" if a.onizleme else "")  # b001 masal, e001 İngilizce
     is_dizini = KOK / "uretim" / bolum["seri_id"] / ad
     cikti_dizini = KOK / "cikti3d" / bolum["seri_id"]
     is_dizini.mkdir(parents=True, exist_ok=True)

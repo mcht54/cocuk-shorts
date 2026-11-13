@@ -1,0 +1,272 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 2,
+ "tur": "ingilizce",
+ "baslik": "Hareketler: Jump, Run, Walk",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Hareketler",
+ "konu_en": "Action Words",
+ "konu_kodu": "hareketler",
+ "kelimeler": [
+  {
+   "en": "jump",
+   "tr": "zıpla"
+  },
+  {
+   "en": "run",
+   "tr": "koş"
+  },
+  {
+   "en": "walk",
+   "tr": "yürü"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 2: Hareketler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.9,
+   0.2
+  ],
+  "pamuk": [
+   0.7,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Zıpla İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ile İngilizce hareket kelimeleri: zıpla, koş, yürü. Çocuğunuz kelimeyi söylerken hareketi de yapsın!"
+ },
+ "cekimler": [
+  {
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hazır mısın? İngilizce hareket oyunu başlıyor!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Jump!",
+     "dil": "en",
+     "anlam": "zıpla"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Zıpla demek. Sen de söyle ve zıpla!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Jump, jump!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 1,
+     "son": 0.25
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 0.95
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Run!",
+     "dil": "en",
+     "anlam": "koş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Koş demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Run, run!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      1.5,
+      0.3
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.6,
+     "nereye": [
+      0.2,
+      0.15
+     ],
+     "son": 0.95
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Walk!",
+     "dil": "en",
+     "anlam": "yürü"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Yürü demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Walk, walk!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.05,
+     "nereye": [
+      -0.4,
+      0.25
+     ],
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.6,
+     "nereye": [
+      -0.1,
+      0.2
+     ],
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Jump! Run! Walk!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç hareketi İngilizce söyledin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "macera"
+}

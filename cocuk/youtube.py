@@ -48,7 +48,7 @@ def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=T
         "snippet": {
             "title": baslik,
             "description": aciklama[:4900],
-            "tags": senaryo.get("etiketler", [])[:15],
+            "tags": senaryo.get("etiketler", [])[:30],  # sınır 500 karakter; otonom.seo zaten kısaltır
             "categoryId": kategori,  # 27 = Eğitim
             "defaultLanguage": "tr",
             "defaultAudioLanguage": "tr",
@@ -60,12 +60,16 @@ def yukle(dosya, senaryo, anahtar, gizlilik="private", acik_onay=False, shorts=T
             "embeddable": True,
         },
     }
+    parcalar = "snippet,status"
+    if senaryo.get("localizations"):  # ör. İngilizce dersleri için en başlık/açıklama (2026-11-13)
+        govde["localizations"] = senaryo["localizations"]
+        parcalar += ",localizations"
     if yayin_zamani:
         govde["status"]["privacyStatus"] = "private"
         govde["status"]["publishAt"] = yayin_zamani.strftime("%Y-%m-%dT%H:%M:%S.000Z")
     basla = requests.post(
         "https://www.googleapis.com/upload/youtube/v3/videos",
-        params={"uploadType": "resumable", "part": "snippet,status"},
+        params={"uploadType": "resumable", "part": parcalar},
         headers={"Authorization": f"Bearer {anahtar}",
                  "X-Upload-Content-Type": "video/mp4",
                  "X-Upload-Content-Length": str(os.path.getsize(dosya))},

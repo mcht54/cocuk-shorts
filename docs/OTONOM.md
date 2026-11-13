@@ -10,9 +10,11 @@ Beğenmediğinizi YouTube Studio'da silin ya da Gizli yapın; dokunmadığınız
 
 | Yayın | Ne zaman |
 |---|---|
-| Minik Masal Evi Shorts | her gün 17:00 |
+| Minik Masal Evi Shorts (masal) | her gün 17:00 |
+| Minik Masal Evi İngilizce dersi Shorts | her gün 12:00 (`e*.json`, 2026-11-13) |
 | Minik Masal Evi uzun derleme | pazar 10:00 (yalnız yayınlanmış Shorts'lardan, hemen yayınlanır) |
 | Minik Masal Evi "Uyku Öncesi Masallar" | çarşamba 10:00 (yayınlanmış bölümlerden en az kullanılanlar, en çok 20) |
+| Minik Masal Evi "Çocuklar için İngilizce" derlemesi | cuma 10:00 (yayınlanmış İngilizce derslerinden, 3-14 ders) |
 | Merak Arşivi belgesel | salı ve cuma 18:00 |
 | Merak Arşivi Shorts | pazartesi, çarşamba, perşembe, cumartesi 19:00 |
 
@@ -35,6 +37,15 @@ Beğenmediğinizi YouTube Studio'da silin ya da Gizli yapın; dokunmadığınız
 - **Minik Masal Evi:** `otonom/masal_yaz.py` Gemini ile yeni bölüm yazar (çoğu macera/aksiyon), bölüm
   `cocuk3d/bolum_denetle.py` ve çocuk güvenliği denetiminden geçmezse hatalarla düzelttirilir, yine
   geçmezse yazılmaz. Hedef stok 21 bölüm.
+- **Minik Masal Evi İngilizce dersleri:** `otonom/ingilizce_yaz.py` müfredattan (renkler, sayılar, hayvanlar,
+  selamlaşma... kolaydan zora) sıradaki konuyla ders yazar. Ders kalıbı: İngilizce kelime yerli İngilizce
+  sesle (`seri.json` → `ses_en`) + ekranda "APPLE = elma" kartı → anlatıcı Türkçe anlamı ve "Sen de söyle!"
+  → İngilizce tekrar + çocuğun tekrar etmesi için sessiz pay (`bekle`). İngilizce satırda Türkçe, Türkçe
+  satırda hedef İngilizce kelime olmaz (yanlış telaffuz). İlk 4 ders elle: `seri/findik-ile-pamuk/ingilizce_yaz1.py`.
+  Hedef stok 21 ders.
+- **SEO:** tüm başlık/açıklama/etiketler `otonom/seo.py`'den gelir ve yüklemeden önce denetlenir (ana kelime
+  başlığın başında, açıklamanın ilk satırında; tam 3 hashtag; etiket ≤500 karakter; tekrar eden başlık yok).
+  İngilizce derslerinde ayrıca İngilizce yerelleştirilmiş başlık ("Learn Colors in English for Kids").
 - **Merak Arşivi:** `merak/konu.py` Gemini'den konu adayı alır; Wikipedia makalesi, metin uzunluğu,
   serbest lisanslı görsel sayısı ve okunma sayısıyla doğrular. `merak/yaz.py` yalnız Wikipedia metninden
   1 uzun + 4 Shorts senaryosu yazar. Yanlış bilgiye karşı: kaynakta geçmeyen sayı kodla reddedilir,

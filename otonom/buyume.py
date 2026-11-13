@@ -26,7 +26,11 @@ def ozet(metin):
 
 def liste_adi(k):
     if k.get("profil") == "shorts":
+        if "/bolumler/e" in k.get("bolum", ""):
+            return "Çocuklar için İngilizce | Fındık ile Pamuk"
         return "Fındık ile Pamuk | Tüm Bölümler"
+    if k.get("tur") == "ingilizce":
+        return "Çocuklar için İngilizce | Fındık ile Pamuk"
     if k.get("tur") == "karisik":
         return "Uyku Öncesi Masallar | Fındık ile Pamuk"
     return "Fındık ile Pamuk | Uzun Videolar"

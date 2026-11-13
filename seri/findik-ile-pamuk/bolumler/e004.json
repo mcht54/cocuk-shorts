@@ -1,0 +1,278 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 4,
+ "tur": "ingilizce",
+ "baslik": "İlk Kelimeler: Apple, Ball, Bucket",
+ "deger": "İngilizce öğrenmek",
+ "konu": "İlk Kelimeler",
+ "konu_en": "First Words",
+ "konu_kodu": "ilk_kelimeler",
+ "kelimeler": [
+  {
+   "en": "apple",
+   "tr": "elma"
+  },
+  {
+   "en": "ball",
+   "tr": "top"
+  },
+  {
+   "en": "bucket",
+   "tr": "kova"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 4: İlk Kelimeler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "elma": [
+   -0.5,
+   0.1,
+   0.0
+  ],
+  "top": [
+   0.5,
+   0.1,
+   0.0
+  ],
+  "kova": [
+   0.05,
+   0.35,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Elma İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ile ilk İngilizce kelimeler: elma, top, kova. Evdeki eşyaları İngilizce söyleme oyunu!"
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bunların İngilizcesini biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.25,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Apple!",
+     "dil": "en",
+     "anlam": "elma"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Elma demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Apple!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "elma",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ball!",
+     "dil": "en",
+     "anlam": "top"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Top demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Ball!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bucket!",
+     "dil": "en",
+     "anlam": "kova"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kova demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Bucket!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.3
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Apple! Ball! Bucket!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Aferin! Üç yeni İngilizce kelime öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

@@ -15,6 +15,7 @@ from ortak import gemini
 DEPO = Path(__file__).resolve().parent.parent
 SERI = DEPO / "seri" / "findik-ile-pamuk"
 MASAL_HEDEF, MASAL_TUR = 21, 3
+INGILIZCE_HEDEF, INGILIZCE_TUR = 21, 4  # 2026-11-13: günlük İngilizce dersi Shorts'u (e*.json)
 MERAK_UZUN_HEDEF, MERAK_KISA_HEDEF, MERAK_TUR = 6, 21, 2
 KRITIK_GUN = 5
 
@@ -27,14 +28,14 @@ def ozet(metin):
     print(metin, flush=True)
 
 
-def masal_stogu():
+def masal_stogu(desen="b*.json"):
     kayit = json.loads((DEPO / "yayin_kaydi.json").read_text()) if (DEPO / "yayin_kaydi.json").exists() else []
     yapilan = {k["bolum"] for k in kayit if k.get("profil") == "shorts" and k.get("durum") == "yuklendi"}
     kalan = {}
     for k in kayit:
         if k.get("profil") == "shorts" and k.get("durum") == "kalite_kaldi":
             kalan[k["bolum"]] = kalan.get(k["bolum"], 0) + 1
-    return sum(1 for p in SERI.glob("bolumler/b*.json")
+    return sum(1 for p in SERI.glob("bolumler/" + desen)
                if str(p.relative_to(DEPO)) not in yapilan and kalan.get(str(p.relative_to(DEPO)), 0) < 2)
 
 
@@ -51,6 +52,19 @@ def masal():
         if masal_yaz.yaz_bir(no):
             yazilan += 1
     ozet(f"- yeni bölüm: {yazilan}")
+    return stok + yazilan
+
+
+def ingilizce():
+    from otonom import ingilizce_yaz
+    stok = masal_stogu("e*.json")
+    ozet(f"**Minik Masal Evi İngilizce** bekleyen ders: {stok} (hedef {INGILIZCE_HEDEF})")
+    yazilan = 0
+    for _ in range(min(INGILIZCE_TUR, max(0, INGILIZCE_HEDEF - stok))):
+        no = max([int(p.stem[1:]) for p in SERI.glob("bolumler/e*.json")] or [0]) + 1
+        if ingilizce_yaz.yaz_bir(no):
+            yazilan += 1
+    ozet(f"- yeni ders: {yazilan}")
     return stok + yazilan
 
 
@@ -90,19 +104,21 @@ def merak():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kanal", default="hepsi", choices=["masal", "merak", "hepsi"])
+    ap.add_argument("--kanal", default="hepsi", choices=["masal", "ingilizce", "merak", "hepsi"])
     a = ap.parse_args()
     kritik = []
-    for ad, is_ in (("masal", masal), ("merak", merak)):
+    for ad, is_ in (("masal", masal), ("ingilizce", ingilizce), ("merak", merak)):
         if a.kanal not in (ad, "hepsi"):
             continue
         try:
             sonuc = is_()
         except gemini.GeminiYok as e:
             ozet(f"- {ad}: Gemini kullanılamadı ({e}); stok yarın yeniden denenecek")
-            sonuc = masal_stogu() if ad == "masal" else None
+            sonuc = {"masal": masal_stogu(), "ingilizce": masal_stogu("e*.json")}.get(ad)
         if ad == "masal" and sonuc is not None and sonuc < KRITIK_GUN:
             kritik.append(f"Minik Masal Evi stoku {sonuc} bölüm")
+        if ad == "ingilizce" and sonuc is not None and sonuc < KRITIK_GUN:
+            kritik.append(f"Minik Masal Evi İngilizce stoku {sonuc} ders")
         if ad == "merak" and isinstance(sonuc, tuple) and sonuc[1] < KRITIK_GUN:
             kritik.append(f"Merak Arşivi Shorts stoku {sonuc[1]}")
     for k in kritik:

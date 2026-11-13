@@ -47,6 +47,11 @@
         "ses": "tr-TR-EmelNeural",
         "hiz": "+8%",
         "perde": "+38Hz"
+      },
+      "ses_en": {
+        "ses": "en-US-AnaNeural",
+        "hiz": "-8%",
+        "perde": "+10Hz"
       }
     },
     "pamuk": {
@@ -97,6 +102,11 @@
         "ses": "tr-TR-EmelNeural",
         "hiz": "-4%",
         "perde": "+14Hz"
+      },
+      "ses_en": {
+        "ses": "en-US-AnaNeural",
+        "hiz": "-14%",
+        "perde": "-6Hz"
       }
     },
     "anlatici": {
@@ -105,6 +115,11 @@
       "ses": {
         "ses": "tr-TR-AhmetNeural",
         "hiz": "-4%",
+        "perde": "+0Hz"
+      },
+      "ses_en": {
+        "ses": "en-US-JennyNeural",
+        "hiz": "-12%",
         "perde": "+0Hz"
       }
     }

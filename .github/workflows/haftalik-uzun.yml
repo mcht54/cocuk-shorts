@@ -10,10 +10,13 @@ on:
     - cron: "7 15 * * 0"   # yedek: ilki atlanırsa (derlenen Shorts tekrar seçilmez)
     - cron: "7 7 * * 3"    # çarşamba 10:07 TR: karışık ~15 dk "Uyku Öncesi Masallar" (onay 2026-11-06)
     - cron: "7 15 * * 3"   # yedek (bu hafta karışık yüklendiyse tekrar yapılmaz)
+    # cuma 10:07 TR: "Çocuklar için İngilizce" derlemesi (2026-11-13 kullanıcı: haftada 3 uzun, biri İngilizce)
+    - cron: "7 7 * * 5"
+    - cron: "7 15 * * 5"   # yedek
   workflow_dispatch:
     inputs:
       tur:
-        description: "haftalik = haftanın yeni bölümleri; karisik = yayınlanmış bölümlerden ~15 dk"
+        description: "haftalik = haftanın yeni bölümleri; karisik = yayınlanmış bölümlerden ~15 dk; ingilizce = İngilizce dersleri"
         default: "haftalik"
       bolumler:
         description: "Bölüm numaraları, virgülle (ör. 1,2,3,4,5,6). Boş = yüklenmiş ama derlenmemiş Shorts'lar"
@@ -48,7 +51,7 @@ jobs:
         run: |
           TUR="${{ inputs.tur }}"
           if [ -z "$TUR" ]; then
-            if [ "$(date -u +%u)" = "3" ]; then TUR=karisik; else TUR=haftalik; fi
+            case "$(date -u +%u)" in 3) TUR=karisik ;; 5) TUR=ingilizce ;; *) TUR=haftalik ;; esac
           fi
           echo "tur=$TUR" >> "$GITHUB_OUTPUT"
           python derleme.py sec --tur "$TUR" --bolumler "${{ inputs.bolumler }}"

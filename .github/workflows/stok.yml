@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       kanal:
-        description: "masal / merak / hepsi"
+        description: "masal / ingilizce / merak / hepsi"
         default: "hepsi"
 
 permissions:

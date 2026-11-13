@@ -1,0 +1,288 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 1,
+ "tur": "ingilizce",
+ "baslik": "Selamlaşma: Hello, Thank you, Goodbye",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Selamlaşma",
+ "konu_en": "Greetings",
+ "konu_kodu": "selamlasma",
+ "kelimeler": [
+  {
+   "en": "hello",
+   "tr": "merhaba"
+  },
+  {
+   "en": "thank you",
+   "tr": "teşekkür ederim"
+  },
+  {
+   "en": "goodbye",
+   "tr": "hoşça kal"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 1: Selamlaşma.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.5,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "elma": [
+   0.8,
+   0.1,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Merhaba İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk İngilizce selamlaşmayı öğretiyor: merhaba, teşekkür ederim, hoşça kal."
+ },
+ "cekimler": [
+  {
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İngilizce selam vermeyi biliyor musun? Hadi öğrenelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.3,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hello!",
+     "dil": "en",
+     "anlam": "merhaba"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Hello, friend!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Merhaba demek. Hadi sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Hello!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.0,
+     "son": 0.25
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.2,
+     "son": 0.45
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.6,
+     "yon": 0.0
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Al, sana bir elma!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Thank you!",
+     "dil": "en",
+     "anlam": "teşekkür ederim"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Teşekkür ederim demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Thank you!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "elma",
+     "son": 0.15
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ver",
+     "bas": 0.2,
+     "nesne": "elma",
+     "kime": "findik",
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.35,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "genis",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Goodbye!",
+     "dil": "en",
+     "anlam": "hoşça kal"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Hoşça kal demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Goodbye!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      1.3,
+      0.3
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.4,
+     "kime": "findik"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.45,
+     "son": 0.9
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hello! Thank you! Goodbye!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Bravo! Üç yeni İngilizce kelime öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

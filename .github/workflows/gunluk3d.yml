@@ -1,5 +1,8 @@
 name: Günlük 3D bölüm (Fındık ile Pamuk)
 
+# 2026-11-13: günde 2 Shorts — masal (17:00) + İngilizce dersi (12:00, e*.json). Her çalıştırma en yakın
+# boş saati olan hattan 1 bölüm üretir; günde 6 deneme 2 saati rahat doldurur.
+
 on:
   # Herkese açık günlük yayın kullanıcı onayıyla açıldı (2026-10-30), kanal: Minik Masal Evi.
   # 2026-10-30: takvim 1 hafta önceden dolar (haftalık onay); her çalıştırma en çok 2 boş saati doldurur.
@@ -11,6 +14,9 @@ on:
     inputs:
       bolum:
         description: "Belirli bölüm (boş = sıradaki), ör. seri/findik-ile-pamuk/bolumler/b002.json"
+        required: false
+      hat:
+        description: "boş = en yakın boş saat; masal_shorts / ingilizce_shorts"
         required: false
       profil:
         description: "shorts / uzun"
@@ -36,7 +42,7 @@ jobs:
       - id: k
         run: |
           if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ vars.YAYIN }}" = "acik" ]; then
-            n=$(python3 -m otonom.takvim masal_shorts yayin_kaydi.json)
+            n=$(python3 -m otonom.takvim masal_shorts,ingilizce_shorts yayin_kaydi.json)
             echo "boş yayın saati: $n"
             if [ "$n" = "0" ]; then echo "atla=1" >> "$GITHUB_OUTPUT"; fi
           fi
@@ -48,6 +54,7 @@ jobs:
     outputs:
       bolum: ${{ steps.s.outputs.bolum }}
       slot: ${{ steps.s.outputs.slot }}
+      hat: ${{ steps.s.outputs.hat }}
       ad: ${{ steps.s.outputs.ad }}
     steps:
       - uses: actions/checkout@v4
@@ -60,6 +67,7 @@ jobs:
         env:
           PROFIL: ${{ inputs.profil || 'shorts' }}
           BOLUM: ${{ inputs.bolum }}
+          HAT: ${{ inputs.hat }}
           YAYIN: ${{ inputs.yayin == 'hayir' && 'kapali' || vars.YAYIN || 'kapali' }}
           EN_COK_SLOT: "1"
         run: |

@@ -21,6 +21,7 @@ BASLANGIC_PAY = 0.35
 SATIR_ARASI = 0.3
 CEKIM_SONU = 0.45
 EN_KISA_CEKIM = 2.0
+KART_TUT = 1.6  # İngilizce kelime kartı satırdan sonra bu kadar ekranda kalır
 
 
 def yukle(seri_dizini, bolum_yolu):
@@ -36,6 +37,13 @@ def yukle(seri_dizini, bolum_yolu):
             if e["kim"] not in seri["karakterler"]:
                 raise ValueError(f"tanımsız karakter: {e['kim']}")
     return seri, bolum
+
+
+def _sessizlik_kirp(sinyal, kel, pay=0.25):
+    """Satır sonundaki sessizliği (son kelimeden ve son sesli örnekten sonra) pay saniyeye indirir."""
+    sesli = np.where(np.abs(sinyal) > 0.02)[0]
+    son = max(sesli[-1] / SR if len(sesli) else 0.0, kel[-1][1] if kel else 0.0)
+    return sinyal[:min(len(sinyal), int((son + pay) * SR))]
 
 
 def _yuvarla(o):
@@ -82,7 +90,8 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
             "id": "giris", "tip": "genis", "hareket": "donus", "isik": cekimler[0].get("isik", "sabah"),
             "hedef": list(bolum["baslangic"]),
             "satirlar": [{"kim": "anlatici",
-                          "metin": f"{seri['seri_adi']}! Bölüm {bolum['bolum_no']}: {bolum['baslik']}."}],
+                          "metin": bolum.get("giris_metni")
+                          or f"{seri['seri_adi']}! Bölüm {bolum['bolum_no']}: {bolum['baslik']}."}],
             "eylemler": [{"kim": k, "eylem": "el_salla", "bas": 0.25, "son": 0.95} for k in bolum["baslangic"]],
         })
 
@@ -92,7 +101,9 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
     for c in cekimler:
         t = BASLANGIC_PAY
         for i, s in enumerate(c.get("satirlar", [])):
-            prof_ses = seri["karakterler"][s["kim"]]["ses"]
+            # İngilizce ders satırı (dil: en) yerli İngilizce sesle okunur; Türkçe ses İngilizceyi bozar
+            kar = seri["karakterler"][s["kim"]]
+            prof_ses = kar.get("ses_en", kar["ses"]) if s.get("dil") == "en" else kar["ses"]
             anahtar = hashlib.md5((s["metin"] + json.dumps(prof_ses, sort_keys=True)).encode()).hexdigest()[:12]
             npy = is_dizini / "ses" / f"{anahtar}.npy"
             kj = is_dizini / "ses" / f"{anahtar}.json"
@@ -102,10 +113,17 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
                 sinyal, kel = ses3d.satir_seslendir(s["metin"], prof_ses, is_dizini / "ses", anahtar)
                 np.save(npy, sinyal)
                 kj.write_text(json.dumps(kel, ensure_ascii=False))
+            if bolum.get("tur") == "ingilizce":
+                # TTS her satırın sonuna ~1 sn sessizlik koyar; derste tekrar payı "bekle" ile ayrıca verilir,
+                # bu yüzden kırpılır (ders 56 sn -> ~44 sn). Masal bölümlerinin ritmi değişmesin diye yalnız derste.
+                sinyal = _sessizlik_kirp(sinyal, kel)
             bas = zaman + t
-            satirlar.append({"kim": s["kim"], "bas": bas, "sinyal": sinyal, "metin": s["metin"], "cekim": c["id"]})
-            kelimeler += [{"bas": bas + a, "son": bas + b, "metin": m, "kim": s["kim"]} for a, b, m in kel]
-            t += len(sinyal) / SR + SATIR_ARASI
+            satirlar.append({"kim": s["kim"], "bas": bas, "sinyal": sinyal, "metin": s["metin"], "cekim": c["id"],
+                             "dil": s.get("dil", "tr"), "anlam": s.get("anlam")})
+            kelimeler += [{"bas": bas + a, "son": bas + b, "metin": m, "kim": s["kim"], "dil": s.get("dil", "tr")}
+                          for a, b, m in kel]
+            # "bekle": çocuğun tekrar etmesi için satırdan sonra sessiz pay (sn, en çok 2.5)
+            t += len(sinyal) / SR + SATIR_ARASI + min(2.5, max(0.0, float(s.get("bekle", 0))))
         sure = max(t - SATIR_ARASI + CEKIM_SONU, c.get("en_az", EN_KISA_CEKIM))
         kare = int(round(sure * fps))
         c["bas_kare"] = int(round(zaman * fps))
@@ -214,6 +232,9 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
         "satirlar": [{"kim": s["kim"], "bas": round(s["bas"], 3), "son": round(s["bas"] + len(s["sinyal"]) / SR, 3),
                       "cekim": s["cekim"]} for s in satirlar],
         "cekimler": plan["cekimler"],
+        # İngilizce kelime kartı: "anlam"ı olan İngilizce satır boyunca (+ tekrar payı) ekranın üstünde
+        "kartlar": [{"bas": round(s["bas"], 3), "son": round(s["bas"] + len(s["sinyal"]) / SR + KART_TUT, 3),
+                     "en": s["metin"].strip(" .!?"), "tr": s["anlam"]} for s in satirlar if s.get("anlam")],
         "efektler": efektler,
         "ses": {"ornek": n, "konusma_muzik_db": ses3d.konusma_muzik_farki_db(konusma, muzik_son, maske),
                 "konusma_ornek": int(maske.sum())},
