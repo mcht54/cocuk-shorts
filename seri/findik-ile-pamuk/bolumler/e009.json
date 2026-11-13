@@ -1,0 +1,260 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 9,
+ "tur": "ingilizce",
+ "baslik": "Vücudumuz: Head, Ears, Nose",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Vücudumuz",
+ "konu_en": "Body Parts",
+ "konu_kodu": "vucut_1",
+ "kelimeler": [
+  {
+   "en": "head",
+   "tr": "baş"
+  },
+  {
+   "en": "ears",
+   "tr": "kulaklar"
+  },
+  {
+   "en": "nose",
+   "tr": "burun"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 9: Vücudumuz.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.2
+  ],
+  "pamuk": [
+   0.7,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Baş İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ormanda vücudumuzun bölümlerini İngilizce olarak öğretiyor."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Vücudumuzun bölümlerini İngilizce söylemeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.3,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.35,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Head!",
+     "dil": "en",
+     "anlam": "baş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Baş demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Head, head!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ears!",
+     "dil": "en",
+     "anlam": "kulaklar"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kulaklar demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Ears, ears!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.8
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Nose!",
+     "dil": "en",
+     "anlam": "burun"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Burun demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Nose, nose!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.2,
+     "nereye": [
+      -0.3,
+      0.2
+     ],
+     "son": 0.7
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Head! Ears! Nose!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Vücudumuzun bölümlerini İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

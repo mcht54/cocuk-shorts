@@ -1,0 +1,281 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 10,
+ "tur": "ingilizce",
+ "baslik": "Zıt Kelimeler: Big, Small, Up",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Zıt Kelimeler",
+ "konu_en": "Opposites",
+ "konu_kodu": "zitlar_1",
+ "kelimeler": [
+  {
+   "en": "big",
+   "tr": "büyük"
+  },
+  {
+   "en": "small",
+   "tr": "küçük"
+  },
+  {
+   "en": "up",
+   "tr": "yukarı"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 10: Zıt Kelimeler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "palamut": [
+   -0.7,
+   0.2,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Zıt Kelimeler Ne?",
+ "youtube": {
+  "aciklama": "Bu derste big, small ve up kelimelerini öğreniyoruz."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Zıt kelimeleri öğrenmeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.25,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Big!",
+     "dil": "en",
+     "anlam": "büyük"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Büyük demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Big, big!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "palamut",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 2,
+     "son": 0.9
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Small!",
+     "dil": "en",
+     "anlam": "küçük"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Küçük demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Small, small!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      0.3,
+      0.2
+     ],
+     "son": 0.45
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Up!",
+     "dil": "en",
+     "anlam": "yukarı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Yukarı demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Up, up!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 3,
+     "son": 0.45
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 3,
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Big! Small! Up!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç yeni İngilizce kelime öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}
