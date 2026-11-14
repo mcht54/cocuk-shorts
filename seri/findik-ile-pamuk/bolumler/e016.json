@@ -1,0 +1,330 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 16,
+ "tur": "ingilizce",
+ "baslik": "Sayılar: Seven, Eight, Nine, Ten",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Sayılar",
+ "konu_en": "Numbers",
+ "konu_kodu": "sayilar_3",
+ "kelimeler": [
+  {
+   "en": "seven",
+   "tr": "yedi"
+  },
+  {
+   "en": "eight",
+   "tr": "sekiz"
+  },
+  {
+   "en": "nine",
+   "tr": "dokuz"
+  },
+  {
+   "en": "ten",
+   "tr": "on"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 16: Sayılar.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.5,
+   0.2
+  ],
+  "pamuk": [
+   0.5,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "palamut": [
+   -0.3,
+   0.2,
+   0.0
+  ],
+  "elma": [
+   0.3,
+   0.2,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Yedi İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ile Pamuk ormanda sayıları öğreniyor: seven, eight, nine, ten."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İngilizce sayı saymayı biliyor musun? Hadi öğrenelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Seven!",
+     "dil": "en",
+     "anlam": "yedi"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Yedi demek. Sen de say!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Seven, seven!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "palamut",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 3,
+     "son": 0.7
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Eight!",
+     "dil": "en",
+     "anlam": "sekiz"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sekiz demek. Hadi say!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Eight, eight!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "elma",
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 3,
+     "son": 0.7
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Nine!",
+     "dil": "en",
+     "anlam": "dokuz"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Dokuz demek. Sen de say!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Nine, nine!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.4,
+      0.25
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.45,
+     "kez": 3,
+     "son": 0.85
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Ten!",
+     "dil": "en",
+     "anlam": "on"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "On demek. Hadi say!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Ten, ten!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.4,
+      0.25
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.45,
+     "kez": 3,
+     "son": 0.85
+    }
+   ],
+   "id": "c5"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Seven! Eight! Nine! Ten!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Aferin! Dört yeni İngilizce sayı öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ],
+   "id": "c6"
+  }
+ ],
+ "muzik": "normal"
+}

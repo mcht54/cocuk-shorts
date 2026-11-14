@@ -1,0 +1,255 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 14,
+ "tur": "ingilizce",
+ "baslik": "Doğa: Tree, Flower, Water",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Doğa",
+ "konu_en": "Nature",
+ "konu_kodu": "doga",
+ "kelimeler": [
+  {
+   "en": "tree",
+   "tr": "ağaç"
+  },
+  {
+   "en": "flower",
+   "tr": "çiçek"
+  },
+  {
+   "en": "water",
+   "tr": "su"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 14: Doğa.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Ağaç İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile doğadaki ağaç, çiçek ve su kelimelerini İngilizce öğreniyoruz."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Doğadaki harika şeylerin İngilizcesini keşfetmeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Tree!",
+     "anlam": "ağaç"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Ağaç demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Tree, tree!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Flower!",
+     "anlam": "çiçek"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Çiçek demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Flower, flower!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Water!",
+     "anlam": "su"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Su demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Water, water!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.25
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Tree! Flower! Water!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Doğa ile ilgili üç yeni kelime öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}

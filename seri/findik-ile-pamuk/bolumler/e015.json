@@ -1,0 +1,251 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 15,
+ "tur": "ingilizce",
+ "baslik": "Ailem: Mom, Dad, Baby",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Ailem",
+ "konu_en": "Family",
+ "konu_kodu": "aile",
+ "kelimeler": [
+  {
+   "en": "mom",
+   "tr": "anne"
+  },
+  {
+   "en": "dad",
+   "tr": "baba"
+  },
+  {
+   "en": "baby",
+   "tr": "bebek"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 15: Ailem.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Anne İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu derste çocuklar aile bireylerini (anne, baba, bebek) İngilizce olarak öğreniyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ailemizi İngilizce nasıl söyleriz biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.2,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Mom!",
+     "dil": "en",
+     "anlam": "anne"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Anne demek. Sen de söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Mom, mom!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Dad!",
+     "dil": "en",
+     "anlam": "baba"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Baba demek. Hadi söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Dad, dad!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Baby!",
+     "dil": "en",
+     "anlam": "bebek"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Bebek demek. Sen de söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Baby, baby!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "pamuk"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Mom! Dad! Baby!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Ailenin İngilizce adlarını öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}

@@ -1,0 +1,241 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 13,
+ "tur": "ingilizce",
+ "baslik": "Hareketler: Sit down, Stand up, Wave",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Hareketler",
+ "konu_en": "Action Words",
+ "konu_kodu": "hareketler_2",
+ "kelimeler": [
+  {
+   "en": "sit down",
+   "tr": "otur"
+  },
+  {
+   "en": "stand up",
+   "tr": "kalk"
+  },
+  {
+   "en": "wave",
+   "tr": "el salla"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 13: Hareketler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Otur İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu videoda Fındık ile Pamuk eşliğinde sit down, stand up ve wave hareket kelimelerini öğreniyoruz."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Yeni hareketler öğrenmeye hazır mısın? Başlayalım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sit down!",
+     "anlam": "otur"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Otur demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sit down, sit down!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Stand up!",
+     "anlam": "kalk"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kalk demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Stand up, stand up!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "otur",
+     "bas": 0.1,
+     "son": 0.2
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kalk",
+     "bas": 0.21,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Wave!",
+     "anlam": "el salla"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "El salla demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Wave, wave!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kalk",
+     "bas": 0.0,
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.3,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sit down! Stand up! Wave!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika iş çıkardın! Üç yeni hareket öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.52,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}
