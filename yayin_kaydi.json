@@ -565,5 +565,22 @@
   "yayin_zamani": "2026-11-13T20:54:40+00:00",
   "baslik": "İngilizce Hareketler: Jump, Run, Walk | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-14T01:49:53+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e003.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "lMzx7f0PKN4",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-14T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-14T09:00:00+00:00",
+  "baslik": "İngilizce Sayılar: One, Two, Three | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
