@@ -582,5 +582,22 @@
   "yayin_zamani": "2026-11-14T09:00:00+00:00",
   "baslik": "İngilizce Sayılar: One, Two, Three | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-14T12:36:42+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e004.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "X_PzlgYKnZ8",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-15T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-15T09:00:00+00:00",
+  "baslik": "İngilizce İlk Kelimeler: Apple, Ball, Bucket | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
