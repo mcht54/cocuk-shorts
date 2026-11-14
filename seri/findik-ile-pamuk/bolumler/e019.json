@@ -1,0 +1,262 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 19,
+ "tur": "ingilizce",
+ "baslik": "Nazik Sözler: Please, Sorry, You're welcome",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Nazik Sözler",
+ "konu_en": "Polite Words",
+ "konu_kodu": "nezaket",
+ "kelimeler": [
+  {
+   "en": "please",
+   "tr": "lütfen"
+  },
+  {
+   "en": "sorry",
+   "tr": "özür dilerim"
+  },
+  {
+   "en": "you're welcome",
+   "tr": "rica ederim"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 19: Nazik Sözler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.3,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "top": [
+   -0.2,
+   0.3,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Lütfen İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile nazik sözler olan lütfen, özür dilerim ve rica ederim ifadelerini İngilizce öğreniyoruz."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İngilizce nazik kelimeleri öğrenmeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Please!",
+     "anlam": "lütfen"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Lütfen demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Please, please!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Sorry!",
+     "anlam": "özür dilerim"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Özür dilerim demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Sorry, sorry!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "uzgun"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "You're welcome!",
+     "anlam": "rica ederim"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Rica ederim demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "You're welcome!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.2
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.45,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Please! Sorry! You're welcome!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Çok nazik üç kelime öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

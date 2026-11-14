@@ -1,0 +1,259 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 17,
+ "tur": "ingilizce",
+ "baslik": "Hava Durumu: Sun, Rain, Cloud",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Hava Durumu",
+ "konu_en": "Weather",
+ "konu_kodu": "hava",
+ "kelimeler": [
+  {
+   "en": "sun",
+   "tr": "güneş"
+  },
+  {
+   "en": "rain",
+   "tr": "yağmur"
+  },
+  {
+   "en": "cloud",
+   "tr": "bulut"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 17: Hava Durumu.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Güneş İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu derste çocuklar hava durumu ile ilgili sun, rain ve cloud kelimelerini öğreniyor."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hava bugün nasıl, İngilizcelerini biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sun!",
+     "anlam": "güneş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Güneş demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sun, sun!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Rain!",
+     "anlam": "yağmur"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Yağmur demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Rain, rain!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.2,
+     "nereye": [
+      0.3,
+      0.25
+     ],
+     "son": 0.6
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Cloud!",
+     "anlam": "bulut"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Bulut demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Cloud, cloud!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.3
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Sun! Rain! Cloud!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Hava durumunu İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

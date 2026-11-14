@@ -1,0 +1,263 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 20,
+ "tur": "ingilizce",
+ "baslik": "Oyuncaklar: Toy, Ball, Box",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Oyuncaklar",
+ "konu_en": "Toys",
+ "konu_kodu": "oyuncaklar",
+ "kelimeler": [
+  {
+   "en": "toy",
+   "tr": "oyuncak"
+  },
+  {
+   "en": "ball",
+   "tr": "top"
+  },
+  {
+   "en": "box",
+   "tr": "kutu"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 20: Oyuncaklar.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "top": [
+   0.45,
+   0.2,
+   0.0
+  ],
+  "sandik": [
+   -0.5,
+   0.2,
+   0.0
+  ]
+ },
+ "ekran_basligi": "Oyuncak İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu derste çocuklara toy, ball ve box kelimeleri öğretiliyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Odadaki oyuncakların İngilizcesini merak ediyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.4,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Toy!",
+     "anlam": "oyuncak"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Oyuncak demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Toy, toy!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Ball!",
+     "anlam": "top"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Top demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Ball, ball!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.25
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Box!",
+     "anlam": "kutu"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kutu demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Box, box!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ac",
+     "bas": 0.0,
+     "nesne": "sandik",
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Toy! Ball! Box!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Oyuncakların İngilizcesini öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.58,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}
