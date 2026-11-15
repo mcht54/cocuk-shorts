@@ -650,5 +650,30 @@
   "yayin_zamani": "2026-11-18T09:00:00+00:00",
   "baslik": "İngilizce Hayvanlar: Squirrel, Rabbit, Bird | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-15T15:41:43+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "haftalik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b004.json",
+   "seri/findik-ile-pamuk/bolumler/b005.json",
+   "seri/findik-ile-pamuk/bolumler/b007.json",
+   "seri/findik-ile-pamuk/bolumler/b013.json",
+   "seri/findik-ile-pamuk/bolumler/b014.json",
+   "seri/findik-ile-pamuk/bolumler/b015.json",
+   "seri/findik-ile-pamuk/bolumler/b049.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 248.25,
+  "video_id": "cF-kTHsODOU",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "liste": "eklendi",
+  "kapak": "yuklenemedi (403)"
  }
 ]
