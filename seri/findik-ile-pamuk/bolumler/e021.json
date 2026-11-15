@@ -1,0 +1,268 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 21,
+ "tur": "ingilizce",
+ "baslik": "Yiyecekler: Bread, Milk, Cake",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Yiyecekler",
+ "konu_en": "Food",
+ "konu_kodu": "yiyecekler",
+ "kelimeler": [
+  {
+   "en": "bread",
+   "tr": "ekmek"
+  },
+  {
+   "en": "milk",
+   "tr": "süt"
+  },
+  {
+   "en": "cake",
+   "tr": "pasta"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 21: Yiyecekler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "oda",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Ekmek İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu bölümde çocuklarımız yiyeceklerden ekmek, süt ve pasta kelimelerinin İngilizcesini eğlenerek öğreniyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Lezzetli yiyeceklerin İngilizcesini öğrenmeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": -0.5
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Bread!",
+     "anlam": "ekmek"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Ekmek demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Bread, bread!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 2,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Milk!",
+     "anlam": "süt"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Süt demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Milk, milk!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.55,
+     "kez": 1,
+     "son": 0.85
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Cake!",
+     "anlam": "pasta"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Pasta demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Cake, cake!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.2,
+      0.2
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "ic_mekan",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Bread! Milk! Cake!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç nefis yiyeceği İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.58,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}

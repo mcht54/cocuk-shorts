@@ -1,0 +1,270 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 23,
+ "tur": "ingilizce",
+ "baslik": "Vücudumuz: Hands, Eyes, Feet",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Vücudumuz",
+ "konu_en": "Body Parts",
+ "konu_kodu": "vucut_2",
+ "kelimeler": [
+  {
+   "en": "hands",
+   "tr": "eller"
+  },
+  {
+   "en": "eyes",
+   "tr": "gözler"
+  },
+  {
+   "en": "feet",
+   "tr": "ayaklar"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 23: Vücudumuz.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Eller İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu derste eller, gözler ve ayaklar vücut parçaları İngilizce olarak öğretiliyor."
+ },
+ "cekimler": [
+  {
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Vücudumuzu İngilizce tanımaya hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 1,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hands!",
+     "dil": "en",
+     "anlam": "eller"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Eller demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Hands, hands!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 0.95
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Eyes!",
+     "dil": "en",
+     "anlam": "gözler"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Gözler demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Eyes, eyes!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.2,
+     "kez": 1,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "genis",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Feet!",
+     "dil": "en",
+     "anlam": "ayaklar"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Ayaklar demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Feet, feet!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.2,
+     "kez": 2,
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 2,
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Hands! Eyes! Feet!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Vücudumuzun bölümlerini İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

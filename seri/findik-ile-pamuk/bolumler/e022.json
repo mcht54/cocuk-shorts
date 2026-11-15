@@ -1,0 +1,256 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 22,
+ "tur": "ingilizce",
+ "baslik": "Zıt Kelimeler: Fast, Slow, Down",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Zıt Kelimeler",
+ "konu_en": "Opposites",
+ "konu_kodu": "zitlar_2",
+ "kelimeler": [
+  {
+   "en": "fast",
+   "tr": "hızlı"
+  },
+  {
+   "en": "slow",
+   "tr": "yavaş"
+  },
+  {
+   "en": "down",
+   "tr": "aşağı"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 22: Zıt Kelimeler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Zıt Kelimeler İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile zıt kelimeleri İngilizce öğreniyoruz."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Zıt kelimeleri İngilizce öğrenmeye hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Fast!",
+     "anlam": "hızlı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Hızlı demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Fast, fast!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      -0.2,
+      0.2
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Slow!",
+     "anlam": "yavaş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Yavaş demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Slow, slow!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.05,
+     "nereye": [
+      0.4,
+      0.2
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Down!",
+     "anlam": "aşağı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Aşağı demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Down, down!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.1,
+     "son": 0.5
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Fast! Slow! Down!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Harika kelimeler öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kalk",
+     "bas": 0.0,
+     "son": 0.2
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 2,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.65,
+     "son": 1.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.67,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
