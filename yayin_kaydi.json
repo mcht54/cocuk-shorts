@@ -633,5 +633,22 @@
   "yayin_zamani": "2026-11-17T09:00:00+00:00",
   "baslik": "İngilizce Duygular: Happy, Sad, Surprised | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-15T08:19:12+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e007.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "hpJM-PA3eSM",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-18T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-18T09:00:00+00:00",
+  "baslik": "İngilizce Hayvanlar: Squirrel, Rabbit, Bird | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
