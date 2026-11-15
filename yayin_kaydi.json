@@ -692,5 +692,22 @@
   "yayin_zamani": "2026-11-19T09:00:00+00:00",
   "baslik": "İngilizce Sayılar: Four, Five, Six | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-15T22:15:30+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e009.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "iBNvN0VDl3E",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-20T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-20T09:00:00+00:00",
+  "baslik": "İngilizce Vücudumuz: Head, Ears, Nose | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
