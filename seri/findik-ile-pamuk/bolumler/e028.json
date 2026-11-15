@@ -1,0 +1,283 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 28,
+ "tur": "ingilizce",
+ "baslik": "Renkler: Pink, Brown, Black",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Renkler",
+ "konu_en": "Colors",
+ "konu_kodu": "renkler_3",
+ "kelimeler": [
+  {
+   "en": "pink",
+   "tr": "pembe"
+  },
+  {
+   "en": "brown",
+   "tr": "kahverengi"
+  },
+  {
+   "en": "black",
+   "tr": "siyah"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 28: Renkler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Pembe İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile çocuklar pembe, kahverengi ve siyah renklerinin İngilizcesini eğlenceli şekilde öğreniyor."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Renklerin İngilizcesini biliyor musun? Hadi öğrenelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Pink!",
+     "dil": "en",
+     "anlam": "pembe"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Pembe demek. Sen de söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Pink, pink!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 1,
+     "son": 0.3
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 0.95
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Brown!",
+     "dil": "en",
+     "anlam": "kahverengi"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kahverengi demek. Hadi söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Brown, brown!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 1,
+     "son": 0.3
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 0.95
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Black!",
+     "dil": "en",
+     "anlam": "siyah"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Siyah demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Black, black!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.2,
+      0.2
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.1,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 2,
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Pink! Brown! Black!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Aferin sana! Üç yeni renk öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 1,
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.58,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}

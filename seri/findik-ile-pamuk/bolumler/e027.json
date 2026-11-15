@@ -1,0 +1,284 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 27,
+ "tur": "ingilizce",
+ "baslik": "Kıyafetler: Hat, Shoes, Coat",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Kıyafetler",
+ "konu_en": "Clothes",
+ "konu_kodu": "kiyafetler",
+ "kelimeler": [
+  {
+   "en": "hat",
+   "tr": "şapka"
+  },
+  {
+   "en": "shoes",
+   "tr": "ayakkabı"
+  },
+  {
+   "en": "coat",
+   "tr": "mont"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 27: Kıyafetler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "kis",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.1
+  ],
+  "pamuk": [
+   0.6,
+   0.1
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Şapka İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu videoda çocuklar kışlık kıyafetleri öğreniyor: hat (şapka), shoes (ayakkabı) ve coat (mont)."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hava çok soğuk! Kıyafetlerin İngilizcesini biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.6
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Hat!",
+     "anlam": "şapka"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Şapka demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Hat, hat!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.55,
+     "yon": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Shoes!",
+     "anlam": "ayakkabı"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Ayakkabı demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Shoes, shoes!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      0.4,
+      0.15
+     ],
+     "son": 0.45
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.65,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Coat!",
+     "anlam": "mont"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Mont demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Coat, coat!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.15
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Hat! Shoes! Coat!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Üç yeni kıyafet öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}

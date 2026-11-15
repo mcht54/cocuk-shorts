@@ -1,0 +1,287 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 25,
+ "tur": "ingilizce",
+ "baslik": "Yönler: Left, Right, Here",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Yönler",
+ "konu_en": "Directions",
+ "konu_kodu": "yonler",
+ "kelimeler": [
+  {
+   "en": "left",
+   "tr": "sol"
+  },
+  {
+   "en": "right",
+   "tr": "sağ"
+  },
+  {
+   "en": "here",
+   "tr": "burada"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 25: Yönler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Sol Sağ İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Bu videoda çocuklar yönleri ve konum bildirmeyi öğreniyor: left (sol), right (sağ) ve here (burada)."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Yön ve yer bildirmeyi İngilizce söylemeyi biliyor musun? Hadi öğrenelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.2,
+     "son": 0.7
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.3,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Left!",
+     "anlam": "sol"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sol demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Left, left!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -1.2,
+      0.2
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": -1.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Right!",
+     "anlam": "sağ"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sağ demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Right, right!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      1.2,
+      0.2
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.4,
+     "yon": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Here!",
+     "anlam": "burada"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Burada demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Here, look here!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.0,
+      0.2
+     ],
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.75
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.8,
+     "yon": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Left! Right! Here!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! Yön ve yer bildiren kelimeleri İngilizce öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.05,
+     "kez": 2,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}

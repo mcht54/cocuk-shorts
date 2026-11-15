@@ -1,0 +1,272 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 26,
+ "tur": "ingilizce",
+ "baslik": "Günün Zamanları: Morning, Night, Good night",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Günün Zamanları",
+ "konu_en": "Times of Day",
+ "konu_kodu": "gunun_zamani",
+ "kelimeler": [
+  {
+   "en": "morning",
+   "tr": "sabah"
+  },
+  {
+   "en": "night",
+   "tr": "gece"
+  },
+  {
+   "en": "good night",
+   "tr": "iyi geceler"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 26: Günün Zamanları.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.7,
+   0.1
+  ],
+  "pamuk": [
+   0.6,
+   0.1
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Sabah İngilizce Ne Demek?",
+ "youtube": {
+  "aciklama": "Bu bölümde çocuklar 'morning', 'night' ve 'good night' ifadelerini Fındık ile Pamuk eşliğinde neşeyle öğreniyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Günün zamanlarını İngilizce söylemeyi biliyor musun?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Morning!",
+     "anlam": "sabah"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sabah demek. Hadi sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Morning, morning!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "kalk",
+     "bas": 0.05
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "gece",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Night!",
+     "anlam": "gece"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Gece demek. Sen de tekrar et!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Night, night!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "normal"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.5,
+     "nereye": [
+      0.3,
+      0.15
+     ],
+     "son": 0.85
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "kaydir",
+   "isik": "gece",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Good night!",
+     "anlam": "iyi geceler"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "İyi geceler demek. Hadi söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Good night!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      -0.3,
+      0.15
+     ],
+     "son": 0.35
+    },
+    {
+     "kim": "findik",
+     "eylem": "otur",
+     "bas": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "gece",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Morning! Night! Good night!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Tebrikler! Zamanları İngilizce harika söyledin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 0.95
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 0.95
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}
