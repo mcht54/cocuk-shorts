@@ -1,0 +1,280 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 31,
+ "tur": "ingilizce",
+ "baslik": "İlk Cümleler: I am happy, I like apples, Let's play",
+ "deger": "İngilizce öğrenmek",
+ "konu": "İlk Cümleler",
+ "konu_en": "First Sentences",
+ "konu_kodu": "cumleler_1",
+ "kelimeler": [
+  {
+   "en": "I am happy",
+   "tr": "ben mutluyum"
+  },
+  {
+   "en": "I like apples",
+   "tr": "elmaları severim"
+  },
+  {
+   "en": "Let's play",
+   "tr": "hadi oynayalım"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 31: İlk Cümleler.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.8,
+   0.2
+  ],
+  "pamuk": [
+   0.8,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {
+  "elma": [
+   0.5,
+   0.2,
+   0.0
+  ],
+  "top": [
+   -0.6,
+   0.2,
+   0.0
+  ]
+ },
+ "ekran_basligi": "İlk Cümleler Ne?",
+ "youtube": {
+  "aciklama": "Fındık ve Pamuk ile ilk İngilizce cümleleri öğreniyoruz: I am happy, I like apples, Let's play."
+ },
+ "cekimler": [
+  {
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İngilizce ilk cümleleri kurmaya hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.3,
+     "son": 0.8
+    }
+   ],
+   "id": "c1"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "I am happy!",
+     "dil": "en",
+     "anlam": "ben mutluyum"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Ben mutluyum demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "I am happy!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.8
+    }
+   ],
+   "id": "c2"
+  },
+  {
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "I like apples!",
+     "dil": "en",
+     "anlam": "elmaları severim"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Elmaları severim demek. Hadi söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "I like apples!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "elma",
+     "son": 0.3
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    }
+   ],
+   "id": "c3"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Let's play!",
+     "dil": "en",
+     "anlam": "hadi oynayalım"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Hadi oynayalım demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Let's play!",
+     "dil": "en",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "tut",
+     "bas": 0.0,
+     "nesne": "top",
+     "son": 0.3
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.35,
+     "nereye": [
+      -0.3,
+      0.2
+     ],
+     "son": 0.7
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.7,
+     "kez": 1,
+     "son": 0.95
+    }
+   ],
+   "id": "c4"
+  },
+  {
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "I am happy!",
+     "dil": "en"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Harika! İngilizce ilk cümleleri öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.15,
+     "kez": 1,
+     "son": 0.45
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.55,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.57,
+     "son": 1.0
+    }
+   ],
+   "id": "c5"
+  }
+ ],
+ "muzik": "normal"
+}
