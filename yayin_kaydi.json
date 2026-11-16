@@ -726,5 +726,22 @@
   "yayin_zamani": "2026-11-20T14:00:00+00:00",
   "baslik": "Benimle Oynar mısın? | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-16T20:02:40+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e010.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "2KTYHNFQY80",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-21T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-21T09:00:00+00:00",
+  "baslik": "İngilizce Zıt Kelimeler: Big, Small, Up | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
