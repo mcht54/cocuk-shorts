@@ -760,5 +760,22 @@
   "yayin_zamani": "2026-11-21T14:00:00+00:00",
   "baslik": "Hata Yapmak Normal | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-17T14:57:06+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e011.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "1-3DFJUbQEo",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-22T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-22T09:00:00+00:00",
+  "baslik": "İngilizce Meyveler: Apple, Banana, Strawberry | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
