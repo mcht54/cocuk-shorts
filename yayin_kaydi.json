@@ -794,5 +794,22 @@
   "yayin_zamani": "2026-11-22T14:00:00+00:00",
   "baslik": "Uyku Vakti | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-18T09:08:56+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e012.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "Xyo37ptUYJ8",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-23T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-23T09:00:00+00:00",
+  "baslik": "İngilizce Renkler: Blue, Yellow, Green | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
