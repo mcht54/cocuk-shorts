@@ -828,5 +828,40 @@
   "yayin_zamani": "2026-11-23T14:00:00+00:00",
   "baslik": "Duygular Yüzümüzde | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-18T19:03:18+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "karisik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b001.json",
+   "seri/findik-ile-pamuk/bolumler/b002.json",
+   "seri/findik-ile-pamuk/bolumler/b003.json",
+   "seri/findik-ile-pamuk/bolumler/b004.json",
+   "seri/findik-ile-pamuk/bolumler/b007.json",
+   "seri/findik-ile-pamuk/bolumler/b008.json",
+   "seri/findik-ile-pamuk/bolumler/b009.json",
+   "seri/findik-ile-pamuk/bolumler/b012.json",
+   "seri/findik-ile-pamuk/bolumler/b013.json",
+   "seri/findik-ile-pamuk/bolumler/b014.json",
+   "seri/findik-ile-pamuk/bolumler/b015.json",
+   "seri/findik-ile-pamuk/bolumler/b016.json",
+   "seri/findik-ile-pamuk/bolumler/b017.json",
+   "seri/findik-ile-pamuk/bolumler/b044.json",
+   "seri/findik-ile-pamuk/bolumler/b045.json",
+   "seri/findik-ile-pamuk/bolumler/b046.json",
+   "seri/findik-ile-pamuk/bolumler/b049.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 638.34,
+  "video_id": "prRdKUPpw9k",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "liste": "eklendi",
+  "kapak": "yuklenemedi (403)"
  }
 ]
