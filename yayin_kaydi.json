@@ -811,5 +811,22 @@
   "yayin_zamani": "2026-11-23T09:00:00+00:00",
   "baslik": "İngilizce Renkler: Blue, Yellow, Green | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-18T18:46:27+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b020.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "soNI1k05Irc",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-23T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-23T14:00:00+00:00",
+  "baslik": "Duygular Yüzümüzde | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
