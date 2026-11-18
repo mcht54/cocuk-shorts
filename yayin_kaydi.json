@@ -777,5 +777,22 @@
   "yayin_zamani": "2026-11-22T09:00:00+00:00",
   "baslik": "İngilizce Meyveler: Apple, Banana, Strawberry | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-18T00:31:09+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b011.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "nwA2X64qfNA",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-22T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-22T14:00:00+00:00",
+  "baslik": "Uyku Vakti | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
