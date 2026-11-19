@@ -1,0 +1,319 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 52,
+ "baslik": "Renkli Taşlar Macerası",
+ "deger": "renkleri tanımak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "bahce",
+ "baslangic": {
+  "findik": [
+   -1.4,
+   0.2
+  ],
+  "pamuk": [
+   -1.6,
+   0.4
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Kırmızı Taşın Yanına Kim Yürüyecek?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Renkli Taşlar Macerası | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk, bahçedeki renkli taşlar arasında güvenli adımlarla yürüyerek kırmızı, mavi ve sarı renkleri heyecan dolu bir parkurda keşfediyor. Bu bölümün değeri: renkleri tanımak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "renkleri tanımak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bak Pamuk! Bahçenin zemininde rengarenk boyalı taşlar var!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Kırmızı, mavi ve sarı taşlar! Güvenlice yürüyelim mi?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      -0.8,
+      0.2
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      -1.0,
+      0.4
+     ],
+     "son": 0.55
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.55,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.6,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İlk görev kırmızı taş! Güvenli adımlarla yanına yürüyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.3,
+     "nereye": [
+      -0.1,
+      0.2
+     ],
+     "son": 0.75
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.8,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk",
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Şimdi sıra bende! Mavi taşın yanına güvenle varıyorum!"
+    },
+    {
+     "kim": "findik",
+     "metin": "Harikasın Pamuk! Çok dikkatlisin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.25,
+     "nereye": [
+      -0.2,
+      0.4
+     ],
+     "son": 0.65
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.7,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.7,
+     "kime": "pamuk"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "genis",
+   "hareket": "sars",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Son durak sarı taş! Birlikte yürüyelim!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Bir, iki, üç... Sarı taşın yanındayız!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.35,
+     "nereye": [
+      0.6,
+      0.2
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.4,
+     "nereye": [
+      0.6,
+      0.4
+     ],
+     "son": 0.85
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bütün renkleri bulup bahçedeki oyunu tamamladık!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Kırmızı, mavi ve sarı! Çok eğlenceliydi!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Renkleri tanıyan minik kaşifler her macerayı güvenle tamamlar."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      1.0,
+      0.2
+     ],
+     "son": 0.3
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.02,
+     "nereye": [
+      1.0,
+      0.4
+     ],
+     "son": 0.32
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.35,
+     "kez": 2,
+     "son": 0.65
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.4,
+     "kez": 2,
+     "son": 0.7
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.7,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.7,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.75,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.75,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
