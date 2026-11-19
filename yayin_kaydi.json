@@ -863,5 +863,22 @@
   },
   "liste": "eklendi",
   "kapak": "yuklenemedi (403)"
+ },
+ {
+  "tarih": "2026-11-19T03:01:49+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e013.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "tDnKifGvDxA",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-24T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-24T09:00:00+00:00",
+  "baslik": "İngilizce Hareketler: Sit down, Stand up, Wave | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
