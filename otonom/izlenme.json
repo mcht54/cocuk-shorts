@@ -1,12 +1,12 @@
 {
- "tarih": "2026-11-16T18:52:37+00:00",
+ "tarih": "2026-11-19T17:37:20+00:00",
  "videolar": [
   {
    "video_id": "cF-kTHsODOU",
    "profil": "derleme",
    "ad": "derleme (haftalik)",
    "yayin": "2026-11-15",
-   "izlenme": 504,
+   "izlenme": 512,
    "durum": "public"
   },
   {
@@ -14,7 +14,7 @@
    "profil": "derleme",
    "ad": "derleme (haftalik)",
    "yayin": "2026-11-08",
-   "izlenme": 204,
+   "izlenme": 205,
    "durum": "public"
   },
   {
@@ -22,7 +22,7 @@
    "profil": "derleme",
    "ad": "derleme (karisik)",
    "yayin": "2026-11-11",
-   "izlenme": 144,
+   "izlenme": 145,
    "durum": "public"
   },
   {
@@ -30,7 +30,23 @@
    "profil": "shorts",
    "ad": "Renkli Orman",
    "yayin": "2026-11-07",
-   "izlenme": 68,
+   "izlenme": 124,
+   "durum": "public"
+  },
+  {
+   "video_id": "nSGp9n4pV3Y",
+   "profil": "shorts",
+   "ad": "Bir, İki, Üç Zıpla!",
+   "yayin": "2026-11-10",
+   "izlenme": 51,
+   "durum": "public"
+  },
+  {
+   "video_id": "Sc6Iej1Yjag",
+   "profil": "shorts",
+   "ad": "Birlikte Daha Kolay",
+   "yayin": "2026-11-11",
+   "izlenme": 51,
    "durum": "public"
   },
   {
@@ -38,7 +54,7 @@
    "profil": "shorts",
    "ad": "Büyük Yarış",
    "yayin": "2026-11-06",
-   "izlenme": 49,
+   "izlenme": 50,
    "durum": "public"
   },
   {
@@ -47,14 +63,6 @@
    "ad": "Hazine Avı 5: Gerçek Hazine",
    "yayin": "2026-11-04",
    "izlenme": 38,
-   "durum": "public"
-  },
-  {
-   "video_id": "nSGp9n4pV3Y",
-   "profil": "shorts",
-   "ad": "Bir, İki, Üç Zıpla!",
-   "yayin": "2026-11-10",
-   "izlenme": 35,
    "durum": "public"
   },
   {
@@ -70,7 +78,7 @@
    "profil": "shorts",
    "ad": "Hazine Avı 3: Kristal Mağara",
    "yayin": "2026-11-02",
-   "izlenme": 23,
+   "izlenme": 24,
    "durum": "public"
   },
   {
@@ -78,23 +86,7 @@
    "profil": "derleme",
    "ad": "derleme",
    "yayin": "2026-11-01",
-   "izlenme": 20,
-   "durum": "public"
-  },
-  {
-   "video_id": "P-NiVDcn5C8",
-   "profil": "shorts",
-   "ad": "Top Takımı",
-   "yayin": "2026-11-09",
-   "izlenme": 13,
-   "durum": "public"
-  },
-  {
-   "video_id": "Sc6Iej1Yjag",
-   "profil": "shorts",
-   "ad": "Birlikte Daha Kolay",
-   "yayin": "2026-11-11",
-   "izlenme": 12,
+   "izlenme": 22,
    "durum": "public"
   },
   {
@@ -102,7 +94,31 @@
    "profil": "shorts",
    "ad": "Hazine Avı 1: Gizemli Harita",
    "yayin": "2026-10-31",
-   "izlenme": 9,
+   "izlenme": 18,
+   "durum": "public"
+  },
+  {
+   "video_id": "P-NiVDcn5C8",
+   "profil": "shorts",
+   "ad": "Top Takımı",
+   "yayin": "2026-11-09",
+   "izlenme": 17,
+   "durum": "public"
+  },
+  {
+   "video_id": "lMzx7f0PKN4",
+   "profil": "shorts",
+   "ad": "Sayılar: One, Two, Three",
+   "yayin": "2026-11-14",
+   "izlenme": 13,
+   "durum": "public"
+  },
+  {
+   "video_id": "mX5Bfe-oUiY",
+   "profil": "shorts",
+   "ad": "Sihirli Kelime",
+   "yayin": "2026-11-16",
+   "izlenme": 11,
    "durum": "public"
   },
   {
@@ -114,19 +130,11 @@
    "durum": "public"
   },
   {
-   "video_id": "-NJZzmDLseY",
-   "profil": "shorts",
-   "ad": "Sabırlı Pamuk",
-   "yayin": "2026-11-08",
-   "izlenme": 8,
-   "durum": "public"
-  },
-  {
    "video_id": "15_bywZDXDA",
    "profil": "shorts",
    "ad": "Doğruyu Söyleyen Fındık",
    "yayin": "2026-10-30",
-   "izlenme": 7,
+   "izlenme": 8,
    "durum": "public"
   },
   {
@@ -134,6 +142,22 @@
    "profil": "shorts",
    "ad": "Hazine Avı 4: Hazine Sandığı",
    "yayin": "2026-11-03",
+   "izlenme": 8,
+   "durum": "public"
+  },
+  {
+   "video_id": "-NJZzmDLseY",
+   "profil": "shorts",
+   "ad": "Sabırlı Pamuk",
+   "yayin": "2026-11-08",
+   "izlenme": 6,
+   "durum": "public"
+  },
+  {
+   "video_id": "BgVICuAJlUo",
+   "profil": "shorts",
+   "ad": "Hareketler: Jump, Run, Walk",
+   "yayin": "2026-11-13",
    "izlenme": 5,
    "durum": "public"
   },
@@ -162,14 +186,6 @@
    "durum": "public"
   },
   {
-   "video_id": "VIpQSvkLGdM",
-   "profil": "shorts",
-   "ad": "Renkler: Red, White, Orange",
-   "yayin": "2026-11-16",
-   "izlenme": 3,
-   "durum": "public"
-  },
-  {
    "video_id": "y1QAIuEd6u4",
    "profil": "shorts",
    "ad": "Yavaş mı Hızlı mı?",
@@ -178,12 +194,20 @@
    "durum": "public"
   },
   {
-   "video_id": "5JPcpcE85ew",
+   "video_id": "VIpQSvkLGdM",
    "profil": "shorts",
-   "ad": "Pes Etmeyen Fındık",
-   "yayin": "2026-11-17",
+   "ad": "Renkler: Red, White, Orange",
+   "yayin": "2026-11-16",
    "izlenme": 2,
-   "durum": "private (2026-11-17T14:00)"
+   "durum": "public"
+  },
+  {
+   "video_id": "Jtk8UwRLlcI",
+   "profil": "shorts",
+   "ad": "Sayılar: Four, Five, Six",
+   "yayin": "2026-11-19",
+   "izlenme": 2,
+   "durum": "public"
   },
   {
    "video_id": "yoqbqIclC4E",
@@ -202,26 +226,10 @@
    "durum": "public"
   },
   {
-   "video_id": "mX5Bfe-oUiY",
+   "video_id": "zpiX0rZKcPg",
    "profil": "shorts",
-   "ad": "Sihirli Kelime",
-   "yayin": "2026-11-16",
-   "izlenme": 1,
-   "durum": "public"
-  },
-  {
-   "video_id": "BgVICuAJlUo",
-   "profil": "shorts",
-   "ad": "Hareketler: Jump, Run, Walk",
-   "yayin": "2026-11-13",
-   "izlenme": 1,
-   "durum": "public"
-  },
-  {
-   "video_id": "lMzx7f0PKN4",
-   "profil": "shorts",
-   "ad": "Sayılar: One, Two, Three",
-   "yayin": "2026-11-14",
+   "ad": "Öfke Bulutu",
+   "yayin": "2026-11-18",
    "izlenme": 1,
    "durum": "public"
   },
@@ -234,12 +242,12 @@
    "durum": "private"
   },
   {
-   "video_id": "zpiX0rZKcPg",
+   "video_id": "5JPcpcE85ew",
    "profil": "shorts",
-   "ad": "Öfke Bulutu",
-   "yayin": "2026-11-18",
+   "ad": "Pes Etmeyen Fındık",
+   "yayin": "2026-11-17",
    "izlenme": 0,
-   "durum": "private (2026-11-18T14:00)"
+   "durum": "public"
   },
   {
    "video_id": "fe2FEHzy1HQ",
@@ -247,7 +255,7 @@
    "ad": "Lütfen Dersen",
    "yayin": "2026-11-19",
    "izlenme": 0,
-   "durum": "private (2026-11-19T14:00)"
+   "durum": "public"
   },
   {
    "video_id": "X_PzlgYKnZ8",
@@ -263,7 +271,7 @@
    "ad": "Duygular: Happy, Sad, Surprised",
    "yayin": "2026-11-17",
    "izlenme": 0,
-   "durum": "private (2026-11-17T09:00)"
+   "durum": "public"
   },
   {
    "video_id": "hpJM-PA3eSM",
@@ -271,15 +279,7 @@
    "ad": "Hayvanlar: Squirrel, Rabbit, Bird",
    "yayin": "2026-11-18",
    "izlenme": 0,
-   "durum": "private (2026-11-18T09:00)"
-  },
-  {
-   "video_id": "Jtk8UwRLlcI",
-   "profil": "shorts",
-   "ad": "Sayılar: Four, Five, Six",
-   "yayin": "2026-11-19",
-   "izlenme": 0,
-   "durum": "private (2026-11-19T09:00)"
+   "durum": "public"
   },
   {
    "video_id": "iBNvN0VDl3E",
@@ -296,6 +296,78 @@
    "yayin": "2026-11-20",
    "izlenme": 0,
    "durum": "private (2026-11-20T14:00)"
+  },
+  {
+   "video_id": "2KTYHNFQY80",
+   "profil": "shorts",
+   "ad": "Zıt Kelimeler: Big, Small, Up",
+   "yayin": "2026-11-21",
+   "izlenme": 0,
+   "durum": "private (2026-11-21T09:00)"
+  },
+  {
+   "video_id": "j3MnT7PxIkI",
+   "profil": "shorts",
+   "ad": "Hata Yapmak Normal",
+   "yayin": "2026-11-21",
+   "izlenme": 0,
+   "durum": "private (2026-11-21T14:00)"
+  },
+  {
+   "video_id": "1-3DFJUbQEo",
+   "profil": "shorts",
+   "ad": "Meyveler: Apple, Banana, Strawberry",
+   "yayin": "2026-11-22",
+   "izlenme": 0,
+   "durum": "private (2026-11-22T09:00)"
+  },
+  {
+   "video_id": "nwA2X64qfNA",
+   "profil": "shorts",
+   "ad": "Uyku Vakti",
+   "yayin": "2026-11-22",
+   "izlenme": 0,
+   "durum": "private (2026-11-22T14:00)"
+  },
+  {
+   "video_id": "Xyo37ptUYJ8",
+   "profil": "shorts",
+   "ad": "Renkler: Blue, Yellow, Green",
+   "yayin": "2026-11-23",
+   "izlenme": 0,
+   "durum": "private (2026-11-23T09:00)"
+  },
+  {
+   "video_id": "soNI1k05Irc",
+   "profil": "shorts",
+   "ad": "Duygular Yüzümüzde",
+   "yayin": "2026-11-23",
+   "izlenme": 0,
+   "durum": "private (2026-11-23T14:00)"
+  },
+  {
+   "video_id": "prRdKUPpw9k",
+   "profil": "derleme",
+   "ad": "derleme (karisik)",
+   "yayin": "2026-11-18",
+   "izlenme": 0,
+   "durum": "public"
+  },
+  {
+   "video_id": "tDnKifGvDxA",
+   "profil": "shorts",
+   "ad": "Hareketler: Sit down, Stand up, Wave",
+   "yayin": "2026-11-24",
+   "izlenme": 0,
+   "durum": "private (2026-11-24T09:00)"
+  },
+  {
+   "video_id": "r9MURByE3BI",
+   "profil": "shorts",
+   "ad": "Sözünü Tutan Pamuk",
+   "yayin": "2026-11-24",
+   "izlenme": 0,
+   "durum": "private (2026-11-24T14:00)"
   }
  ]
 }
