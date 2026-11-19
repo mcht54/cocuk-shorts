@@ -880,5 +880,22 @@
   "yayin_zamani": "2026-11-24T09:00:00+00:00",
   "baslik": "İngilizce Hareketler: Sit down, Stand up, Wave | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-19T14:59:23+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b021.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "r9MURByE3BI",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-24T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-24T14:00:00+00:00",
+  "baslik": "Sözünü Tutan Pamuk | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
