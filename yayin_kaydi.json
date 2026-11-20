@@ -906,5 +906,14 @@
   "hatalar": [
    "c4: yürüme eylemi var ama karakter 0.23 m yer değiştirdi"
   ]
+ },
+ {
+  "tarih": "2026-11-20T09:01:13+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e014.json",
+  "profil": "shorts",
+  "durum": "kalite_kaldi",
+  "hatalar": [
+   "c4: yürüme eylemi var ama karakter 0.23 m yer değiştirdi"
+  ]
  }
 ]
