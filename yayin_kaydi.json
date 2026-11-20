@@ -942,5 +942,22 @@
   },
   "liste": "eklendi",
   "kapak": "yuklenemedi (403)"
+ },
+ {
+  "tarih": "2026-11-20T18:46:08+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e015.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "pUOW73x3rK4",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-25T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-25T09:00:00+00:00",
+  "baslik": "İngilizce Ailem: Mom, Dad, Baby | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
