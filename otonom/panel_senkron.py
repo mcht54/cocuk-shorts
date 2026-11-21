@@ -1,0 +1,173 @@
+"""Panel "İçerik takvimi" senkronu (anahtarsız): GitHub Actions OIDC belgesiyle Mchttasarım paneline Minik Masal Evi takvimini gönderir,
+paneldeki bekleyen replik düzenlemelerini sıradaki (henüz yüklenmemiş) bölümlere uygular. Panelde GitHub anahtarı yoktur.
+
+Kural: yüklenmiş bölüm değişmez; düzenlenen bölüm render öncesi denetimden (cocuk3d.bolum_denetle) geçmezse geri alınır ve reddedilir.
+Kullanım (Actions'ta, `permissions: id-token: write`): python -m otonom.panel_senkron al | son
+Panel erişilemezse akış BOZULMAZ (çıkış 0)."""
+import datetime as dt
+import json
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import requests
+
+from cocuk3d import bolum_denetle
+
+KOK = Path(__file__).resolve().parent.parent
+SERI = KOK / "seri" / "findik-ile-pamuk"
+KAYIT = KOK / "yayin_kaydi.json"
+PANEL = os.environ.get("PANEL_URL", "https://panel.mchttasarim.com.tr")
+AUD = "mchttasarim-panel-icerik"
+KANAL = "minik_masal"
+ONAY = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "panel_onay_ks.json"
+TR = dt.timezone(dt.timedelta(hours=3))
+HAT = {"masal_shorts": ("Masal", "17:00"), "ingilizce_shorts": ("İngilizce ders", "12:00")}
+
+
+def _hat(ad):
+    return "ingilizce_shorts" if ad.startswith("e") else "masal_shorts"
+
+
+def _kayitlar():
+    k = json.loads(KAYIT.read_text()) if KAYIT.exists() else []
+    yuk, kaldi = {}, {}
+    for x in k:
+        ad = x["bolum"].rsplit("/", 1)[-1]
+        if x.get("profil") != "shorts":
+            continue
+        if x.get("durum") == "yuklendi":
+            yuk[ad] = x
+        elif x.get("durum") == "kalite_kaldi":
+            kaldi[ad] = kaldi.get(ad, 0) + 1
+    return yuk, kaldi
+
+
+def _ozet(ad, B, kayit, simdi):
+    hat = _hat(ad)
+    yt = (kayit or {}).get("youtube") or {}
+    zaman = yt.get("publishAt") or (kayit or {}).get("tarih")
+    gun, saat = "", HAT[hat][1]
+    yayinda = False
+    if zaman:
+        z = dt.datetime.fromisoformat(zaman.replace("Z", "+00:00"))
+        gun, saat = z.astimezone(TR).date().isoformat(), z.astimezone(TR).strftime("%H:%M")
+        yayinda = z <= simdi
+    vid = (kayit or {}).get("video_id")
+    return {"id": ad[:-5], "gun": gun, "saat": saat, "baslik": B.get("baslik", ""), "bolum_no": B.get("bolum_no"), "hedef": HAT[hat][0],
+            "sektor": hat, "konu": B.get("deger") or "",
+            "durum": ("yayinlandi" if yayinda else "zamanlandi") if kayit else "sirada",
+            "platformlar": [{"anahtar": "youtube", "ad": "YouTube Shorts", "durum": ("paylasildi" if yayinda else "zamanlandi") if kayit else "bekliyor",
+                             "link": f"https://youtube.com/shorts/{vid}" if vid else None}],
+            "satirlar": [{"id": f"{c.get('id')}.{i}", "kim": str(s.get("kim", "")).title(), "metin": s.get("metin", ""), "dil": s.get("dil")}
+                         for c in B.get("cekimler", []) for i, s in enumerate(c.get("satirlar", []))],
+            "duzenlenebilir": not kayit,
+            "kilit_nedeni": "Video üretilip YouTube'a yüklendi; değişiklik Studio'dan yapılır." if kayit else None}
+
+
+def takvim_ozeti(simdi=None, sirada=7):
+    simdi = simdi or dt.datetime.now(dt.timezone.utc)
+    yuk, kaldi = _kayitlar()
+    adlar = sorted(p.name for p in SERI.glob("bolumler/[be]*.json"))
+    sira_dosyasi = SERI / "yayin_sirasi.json"
+    oncelik = [f"{a}.json" for a in (json.loads(sira_dosyasi.read_text()) if sira_dosyasi.exists() else []) if f"{a}.json" in adlar]
+    secilen = []
+    for ad, k in yuk.items():
+        z = (k.get("youtube") or {}).get("publishAt") or k.get("tarih")
+        if z and dt.datetime.fromisoformat(z.replace("Z", "+00:00")) >= simdi - dt.timedelta(days=7) and ad in adlar:
+            secilen.append((ad, k))
+    for hat in HAT:
+        sira = [a for a in adlar if _hat(a) == hat]
+        if hat == "masal_shorts":
+            sira = [a for a in oncelik if _hat(a) == hat] + [a for a in sira if a not in oncelik]
+        secilen += [(a, None) for a in [a for a in sira if a not in yuk and kaldi.get(a, 0) < 2][:sirada]]
+    return [_ozet(ad, json.loads((SERI / "bolumler" / ad).read_text()), k, simdi) for ad, k in secilen]
+
+
+def uygula(duzenlemeler):
+    yuk, _ = _kayitlar()
+    seri = json.loads((SERI / "seri.json").read_text())
+    uyg, ret, ozgun = [], [], {}
+    for d in duzenlemeler:
+        bid = str(d.get("bolum_id", ""))
+        yol = SERI / "bolumler" / f"{bid}.json"
+        if not re.fullmatch(r"[be]\d{3}", bid) or not yol.exists():
+            ret.append({"id": d["id"], "neden": "bölüm bulunamadı"}); continue
+        if f"{bid}.json" in yuk:
+            ret.append({"id": d["id"], "neden": "bölüm bu arada üretilip yüklendi"}); continue
+        eski = yol.read_text()
+        B = json.loads(eski)
+        # uzunluk sınırı bu senkrondaki İLK hâle göre (art arda düzenlemeyle replik büyümesin; panel de asıl metne göre ölçer)
+        ilk = ozgun.setdefault(bid, {f"{c.get('id')}.{i}": str(x.get("metin", "")) for c in B.get("cekimler", []) for i, x in enumerate(c.get("satirlar", []))})
+        cek = {c.get("id"): c for c in B.get("cekimler", [])}
+        hata = None
+        for k, metin in (d.get("satirlar") or {}).items():
+            cid, _, i = k.partition(".")
+            try:
+                s = cek[cid]["satirlar"][int(i)]
+            except (KeyError, IndexError, ValueError):
+                hata = f"bilinmeyen replik {k}"; break
+            t = " ".join(str(metin).split())
+            if not t or len(t.split()) > len(ilk.get(k, "").split()) + 4:
+                hata = "replik boş ya da çok uzun"; break
+            s["metin"] = t
+        if not hata:
+            h = bolum_denetle.denetle(B, seri)
+            if h:
+                hata = "bölüm denetimi: " + "; ".join(h[:3])
+        if hata:
+            ret.append({"id": d["id"], "neden": hata}); continue
+        yol.write_text(json.dumps(B, ensure_ascii=False, indent=1) + "\n")
+        uyg.append(d["id"])
+        print(f"panel düzenlemesi uygulandı: {bid}", flush=True)
+    return uyg, ret
+
+
+def _gonderildi():
+    try:
+        subprocess.run(["git", "fetch", "-q", "origin"], cwd=KOK, timeout=60, check=True)
+        return subprocess.run(["git", "merge-base", "--is-ancestor", "HEAD", "origin/main"], cwd=KOK, timeout=30).returncode == 0
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def _belge():
+    url, tok = os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL"), os.environ.get("ACTIONS_ID_TOKEN_REQUEST_TOKEN")
+    if not url or not tok:
+        raise RuntimeError("OIDC yok (akışa 'permissions: id-token: write' gerekir)")
+    r = requests.get(url, params={"audience": AUD}, headers={"Authorization": f"bearer {tok}"}, timeout=30)
+    r.raise_for_status()
+    return r.json()["value"]
+
+
+def _post(yol, govde):
+    r = requests.post(f"{PANEL}/api/icerik-takvimi/senkron/{KANAL}{yol}", json=govde, timeout=60,
+                      headers={"Authorization": f"Bearer {_belge()}", "X-Requested-With": "ajans-web"})
+    if not r.ok:
+        raise RuntimeError(f"panel {r.status_code}: {r.text[:200]}")
+    return r.json()
+
+
+def main(komut):
+    try:
+        if komut == "al":
+            uyg, ret = uygula(_post("", {"bolumler": takvim_ozeti()}).get("duzenlemeler", []))
+            ONAY.write_text(json.dumps({"uygulanan": uyg, "reddedilen": ret}))
+            print(f"panel: takvim gönderildi; {len(uyg)} düzenleme uygulandı, {len(ret)} reddedildi", flush=True)
+        elif komut == "son":
+            if ONAY.exists():
+                o = json.loads(ONAY.read_text())
+                if (o["uygulanan"] or o["reddedilen"]) and (not o["uygulanan"] or _gonderildi()):
+                    _post("/onay", o)
+                ONAY.unlink()
+            _post("", {"bolumler": takvim_ozeti()})
+            print("panel: güncel takvim gönderildi", flush=True)
+    except Exception as e:  # noqa: BLE001 — panel düşse de hat durmaz
+        print("panel senkronu yapılamadı (hat etkilenmez):", str(e)[:300], flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "al"))

@@ -1,0 +1,41 @@
+name: Panel senkronu (İçerik takvimi)
+
+# 3 saatte bir: Minik Masal Evi takvimi Mchttasarım paneline gider; panelde düzenlenen (henüz yüklenmemiş) bölüm replikleri depoya işlenir.
+# Kimlik: GitHub OIDC (kısa ömürlü, imzalı); panelde GitHub anahtarı yoktur. Panel düşerse bu akış başarısız sayılmaz.
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: panel-senkron
+  cancel-in-progress: false
+
+jobs:
+  senkron:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: pip install -q -r requirements.txt
+      - name: Takvimi gönder, düzenlemeleri al
+        run: python -m otonom.panel_senkron al
+      - name: Düzenlemeleri depoya yaz
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add seri/findik-ile-pamuk/bolumler
+          git diff --cached --quiet && exit 0
+          git commit -q -m "panel: bölüm replikleri düzenlendi [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i * 6)); done
+          exit 1
+      - name: Onay ve güncel takvim
+        if: always()
+        run: python -m otonom.panel_senkron son
