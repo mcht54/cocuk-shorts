@@ -1,0 +1,223 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 53,
+ "baslik": "Gizli Mağara Yolu",
+ "deger": "arkadaşını dinlemek",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "magara",
+ "baslangic": {
+  "findik": [
+   -1.2,
+   0.2
+  ],
+  "pamuk": [
+   -1.0,
+   0.4
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Doğru Yolu Kim Biliyor?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Gizli Mağara Yolu | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ve Pamuk kristal mağarada ilerlerken birbirlerini dinlemenin önemini keşfeder. Bu bölümün değeri: arkadaşını dinlemek.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "arkadaşını dinlemek"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hadi hızlıca sağdaki yoldan koşalım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.3,
+     "nereye": [
+      -0.3,
+      0.15
+     ],
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "magara",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Dur Fındık! Haritaya göre sol yol daha güvenli!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "magara",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Haklısın, seni dinlemeliydim. Sol yoldan gidelim!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.4,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "takip",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Birlikte her yolu kolayca bulabiliriz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.5,
+      0.3
+     ],
+     "son": 0.7
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.1,
+     "nereye": [
+      0.3,
+      0.1
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.75,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "magara",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Arkadaşını dinlemek en güzel maceraların anahtarıdır."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.2,
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.25,
+     "son": 0.85
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.9,
+     "yon": 0.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.9,
+     "yon": 0.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
