@@ -1005,5 +1005,30 @@
   "hatalar": [
    "c3: yürüme eylemi var ama karakter 0.23 m yer değiştirdi"
   ]
+ },
+ {
+  "tarih": "2026-11-22T16:15:30+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "haftalik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b008.json",
+   "seri/findik-ile-pamuk/bolumler/b009.json",
+   "seri/findik-ile-pamuk/bolumler/b010.json",
+   "seri/findik-ile-pamuk/bolumler/b016.json",
+   "seri/findik-ile-pamuk/bolumler/b017.json",
+   "seri/findik-ile-pamuk/bolumler/b018.json",
+   "seri/findik-ile-pamuk/bolumler/b019.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 264.83,
+  "video_id": "6Wq6eO4TnHs",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "liste": "eklendi",
+  "kapak": "yuklenemedi (403)"
  }
 ]
