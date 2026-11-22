@@ -981,7 +981,7 @@
   "tarih": "2026-11-21T14:01:49+00:00",
   "bolum": "seri/findik-ile-pamuk/bolumler/e016.json",
   "profil": "shorts",
-  "durum": "kalite_kaldi",
+  "durum": "kalite_kaldi_duzeltildi",
   "hatalar": [
    "c4: yürüme eylemi var ama karakter 0.09 m yer değiştirdi",
    "c5: yürüme eylemi var ama karakter 0.09 m yer değiştirdi"
@@ -991,7 +991,7 @@
   "tarih": "2026-11-21T22:44:07+00:00",
   "bolum": "seri/findik-ile-pamuk/bolumler/e016.json",
   "profil": "shorts",
-  "durum": "kalite_kaldi",
+  "durum": "kalite_kaldi_duzeltildi",
   "hatalar": [
    "c4: yürüme eylemi var ama karakter 0.09 m yer değiştirdi",
    "c5: yürüme eylemi var ama karakter 0.09 m yer değiştirdi"
@@ -1001,7 +1001,7 @@
   "tarih": "2026-11-22T08:24:45+00:00",
   "bolum": "seri/findik-ile-pamuk/bolumler/e017.json",
   "profil": "shorts",
-  "durum": "kalite_kaldi",
+  "durum": "kalite_kaldi_duzeltildi",
   "hatalar": [
    "c3: yürüme eylemi var ama karakter 0.23 m yer değiştirdi"
   ]

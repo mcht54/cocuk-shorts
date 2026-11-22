@@ -131,8 +131,12 @@ def denetle(mp4, is_dizini, seri_dizini):
     if en_uzun_donuk / fps > 1.0:
         hatalar.append(f"görüntü {en_uzun_donuk / fps:.1f} sn donuk")
     for i, k in ornek:
-        tamam, _, kh = gorsel_kontrol(Image.fromarray(k.astype(np.uint8)), en_az_kenar=0)
-        if not tamam and "kontrast yok (düz/boş görsel)" in kh:
+        tamam, ol, kh = gorsel_kontrol(Image.fromarray(k.astype(np.uint8)), en_az_kenar=0)
+        # yarısı düz çimen + gökyüzü olan bahçe karesi de düşük sapma verir (b052: iki karakter net görünürken
+        # "boş" sayıldı). Boş = gerçekten dümdüz ya da sahnede görünen karakter yok.
+        karakter_var = i < len(meta["kareler"]) and any(
+            v.get("gorunur", 0) >= 0.5 for v in meta["kareler"][i]["karakter"].values())
+        if not tamam and "kontrast yok (düz/boş görsel)" in kh and (ol["sapma"] < 8 or not karakter_var):
             hatalar.append(f"kare {i} boş görünüyor: {kh}")
     if len(farklar) != n:
         hatalar.append(f"karede eksik: {len(farklar)} / {n}")
