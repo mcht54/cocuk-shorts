@@ -27,6 +27,7 @@ KOK = Path(__file__).resolve().parent
 SERI = KOK / "seri" / "findik-ile-pamuk"
 KAYIT = KOK / "yayin_kaydi.json"
 CIKTI = KOK / "cikti3d" / "derleme"
+KAPAKLAR = KOK / "kapaklar"
 EN_AZ_PARCA, EN_COK_PARCA = 3, 7
 EN_AZ_SURE = 60.0
 # çarşamba "karışık" derlemesi: yayınlanmış tüm bölümlerden en az kullanılanlar, ~15 dk (çocuk kanallarında
@@ -76,6 +77,8 @@ def sec_karisik(simdi=None, tur="karisik"):
                 and (KOK / x["bolum"]).exists() and ingilizce_mi(x["bolum"]) == (tur == "ingilizce")
                 and (not x.get("yayin_zamani") or datetime.fromisoformat(x["yayin_zamani"]) <= simdi)):
             yayinda.append(x["bolum"])
+    if tur == "karisik":  # "Uyku Öncesi Masallar": macera/aksiyon bölümleri girmez (sakin, uykuya uygun) — 2026-11-22
+        yayinda = [b for b in yayinda if json.loads((KOK / b).read_text()).get("muzik", "normal") != "macera"]
     secilen = sorted(yayinda, key=lambda b: (kullanim.get(b, 0), yayinda.index(b)))[:en_cok]
     if len(secilen) < en_az:
         ozet(f"{tur} derleme için yeterli yayınlanmış bölüm yok ({len(secilen)}/{en_az}).")
@@ -211,8 +214,33 @@ def kapak(mp4, saniye, baslik, cikti):
     return cikti
 
 
+DIZI_BASLIK = re.compile(r"^(?P<dizi>.+?)\s+(?P<no>\d+)\s*:")
+
+
+def dizi_butunlugu(parcalar):
+    """Mini dizi bölümleri ("Hazine Avı 3: ...") derlemede yalnız 1'den başlayıp ARALIKSIZ sırayla yer alır; bir bölüm kalite
+    kontrolünden kalırsa sonrakiler o derlemeye girmez (hikâye ortadan başlamasın). Döner: (kalan parçalar, [(bölüm, neden)])."""
+    gruplar = {}
+    for p in parcalar:
+        m = DIZI_BASLIK.match(json.loads((KOK / p["bolum"]).read_text()).get("baslik", ""))
+        if m:
+            gruplar.setdefault(m["dizi"], []).append((int(m["no"]), p))
+    cikar, neden = set(), []
+    for dizi, liste in gruplar.items():
+        beklenen = 1
+        for no, p in sorted(liste, key=lambda x: x[0]):
+            if no != beklenen:
+                cikar.add(p["bolum"])
+                neden.append((p["bolum"], f"{dizi} {beklenen}. bölüm bu derlemede yok; hikâye ortadan başlamasın diye çıkarıldı"))
+            else:
+                beklenen += 1
+    return [p for p in parcalar if p["bolum"] not in cikar], neden
+
+
 def birlestir(parca_dizini, tur="haftalik"):
     parcalar, atlanan = parcalari_topla(parca_dizini)
+    parcalar, dizi_disi = dizi_butunlugu(parcalar)
+    atlanan += dizi_disi
     for b, neden in atlanan:
         ozet(f"- atlandı {b}: {neden}")
     if len(parcalar) < EN_AZ_PARCA:
@@ -315,6 +343,8 @@ def yukle():
         if youtube.listeye_ekle(vid, liste, anahtar, liste_aciklama):
             kayit["liste"] = "eklendi"
         ozet(f"YouTube: https://youtube.com/watch?v={vid} — {durum}")
+        KAPAKLAR.mkdir(exist_ok=True)  # kapak depoda saklanır: kanal doğrulanınca kapak_tekrar.py sonradan yükler
+        (KAPAKLAR / f"{vid}.jpg").write_bytes((KOK / rapor["kapak"]).read_bytes())
         kod, metin = kapak_yukle(vid, KOK / rapor["kapak"], anahtar)
         kayit["kapak"] = "yuklendi" if kod == 200 else f"yuklenemedi ({kod})"
         ozet("Kapak resmi yüklendi." if kod == 200 else

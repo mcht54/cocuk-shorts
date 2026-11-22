@@ -1,0 +1,39 @@
+name: Kapak yeniden deneme (uzun videolar)
+
+# YouTube özel kapağı yalnız telefonla doğrulanmış kanalda kabul eder (403). Kapaklar kapaklar/ altında saklanır;
+# her gün yeniden denenir: kanal doğrulanınca tüm eski uzun videoların kapağı kendiliğinden yüklenir.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kapak-tekrar
+  cancel-in-progress: false
+
+jobs:
+  dene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python kapak_tekrar.py
+      - run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add kapaklar/durum.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "kapak durumu: $(date -u +%F)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done

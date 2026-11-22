@@ -121,6 +121,7 @@ jobs:
             git fetch -q origin main && git reset -q --hard origin/main
             python kayit_birlestir.py "$RUNNER_TEMP/kayit.json" "$RUNNER_TEMP/izler.json"
             git add yayin_kaydi.json seri/findik-ile-pamuk/karakter_izleri.json
+            [ ! -d kapaklar ] || git add kapaklar
             git diff --cached --quiet && exit 0
             git commit -q -m "yayın kaydı (derleme): $(date -u +%F)" && git push -q && exit 0
             sleep $((i * 5))
