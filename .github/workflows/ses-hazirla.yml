@@ -1,0 +1,48 @@
+name: Gece ses hazırlığı (Gemini doğal ses)
+
+# Sıradaki bölümlerin Türkçe satırlarını Gemini ile seslendirip ses_kutuphane/ altına işler; render yalnız kütüphaneden
+# okur (bölüm tam değilse edge-tts). Yalnız TR 22:00–10:30 arasında ses üretir (kod içinde de denetlenir), çünkü
+# ücretsiz ses kotası Dijital Çırak'la paylaşılabilir ve o hat gündüz (16:30 / 21:00) üretir. Kota ~11:00 TR'de sıfırlanır.
+on:
+  schedule:
+    - cron: "40 19 * * *"   # 22:40 TR
+    - cron: "40 23 * * *"   # 02:40 TR (gecikmeli/ilki kota yüzünden yarım kaldıysa)
+  workflow_dispatch:
+    inputs:
+      bolum: {description: "Tek bölüm (ör. seri/findik-ile-pamuk/bolumler/b054.json)", required: false, default: ""}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ses-hazirla
+  cancel-in-progress: false
+
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"   # faster-whisper (ctranslate2) tekerlekleri
+          cache: pip
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: pip install -q -r requirements.txt "faster-whisper==1.1.1"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-small-v1
+      - name: Sesler
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m otonom.ses_hazirla ${{ inputs.bolum && format('--bolum "{0}"', inputs.bolum) || '' }}
+      - run: |
+          git config user.name "cocuk-shorts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ses_kutuphane 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "ses kütüphanesi: $(date -u +%F)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done
+          exit 1

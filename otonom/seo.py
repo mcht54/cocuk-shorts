@@ -176,7 +176,7 @@ def denetle(meta, shorts=True, onceki_basliklar=()):
         h.append(f"başlık {len(tam)} karakter (> {BASLIK_SINIRI})")
     if "<" in baslik or ">" in baslik:
         h.append("başlıkta < > var (YouTube reddeder)")
-    ilk = baslik[:60].lower()
+    ilk = baslik[:60].replace("İ", "i").replace("I", "ı").lower()  # Türkçe İ: .lower() "i̇" yapar, eşleşmez
     if not any(a in ilk for a in MASAL_ANAHTAR + INGILIZCE_ANAHTAR + [SERI.lower()]):
         h.append("başlığın ilk 60 karakterinde ana arama kelimesi yok")
     if baslik.strip().lower() in {b.strip().lower() for b in onceki_basliklar if b}:

@@ -8,12 +8,13 @@ Seslendirmeler is_dizini/ses altında önbelleklenir (kaldığı yerden devam).
 """
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 
 import numpy as np
 
-from . import animasyon, kamera, ses3d
+from . import animasyon, gemini_ses, kamera, ses3d
 from .profil import profil as profil_al
 
 SR = ses3d.SR
@@ -73,15 +74,9 @@ def devam_cumlelerini_at(cekimler):
     return cekimler
 
 
-def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
-    seri, bolum = yukle(seri_dizini, bolum_yolu)
+def cekim_listesi(seri, bolum, profil_adi, prototip=False):
+    """Bölümün çekimleri; profile göre giriş çekimi eklenir, uzun derlemede seri cümleleri atılır."""
     prof = profil_al(profil_adi, prototip)
-    fps, en, boy = prof["fps"], prof["en"], prof["boy"]
-    sx = prof["x_sikistir"]
-    is_dizini = Path(is_dizini)
-    (is_dizini / "ses").mkdir(parents=True, exist_ok=True)
-
-    kar_tanim = {k: v for k, v in seri["karakterler"].items() if v["tur"] != "ses"}
     cekimler = [dict(c) for c in bolum["cekimler"]]
     if profil_adi == "uzun":
         devam_cumlelerini_at(cekimler)
@@ -94,6 +89,28 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
                           or f"{seri['seri_adi']}! Bölüm {bolum['bolum_no']}: {bolum['baslik']}."}],
             "eylemler": [{"kim": k, "eylem": "el_salla", "bas": 0.25, "son": 0.95} for k in bolum["baslangic"]],
         })
+    return cekimler
+
+
+def turkce_satirlar(cekimler):
+    return [(s["kim"], s["metin"]) for c in cekimler for s in c.get("satirlar", []) if s.get("dil", "tr") != "en"]
+
+
+def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
+    seri, bolum = yukle(seri_dizini, bolum_yolu)
+    prof = profil_al(profil_adi, prototip)
+    fps, en, boy = prof["fps"], prof["en"], prof["boy"]
+    sx = prof["x_sikistir"]
+    is_dizini = Path(is_dizini)
+    (is_dizini / "ses").mkdir(parents=True, exist_ok=True)
+
+    kar_tanim = {k: v for k, v in seri["karakterler"].items() if v["tur"] != "ses"}
+    cekimler = cekim_listesi(seri, bolum, profil_adi, prototip)
+    # Doğal ses: bölümün TÜM Türkçe satırları Gemini ses kütüphanesindeyse onlar, değilse bölümün tamamı edge-tts
+    gayar = gemini_ses.sesler(seri)
+    dogal = None if os.environ.get("GEMINI_SES") == "kapali" else gemini_ses.bolum_sesleri(turkce_satirlar(cekimler), gayar)
+    print("ses:", "Gemini (kütüphane)" if dogal else "edge-tts", flush=True)
+    (is_dizini / "ses_kaynagi.txt").write_text("gemini" if dogal else "edge")
 
     # 1) seslendirme ve çekim süreleri
     zaman = 0.0
@@ -107,7 +124,9 @@ def planla(seri_dizini, bolum_yolu, profil_adi, is_dizini, prototip=False):
             anahtar = hashlib.md5((s["metin"] + json.dumps(prof_ses, sort_keys=True)).encode()).hexdigest()[:12]
             npy = is_dizini / "ses" / f"{anahtar}.npy"
             kj = is_dizini / "ses" / f"{anahtar}.json"
-            if npy.exists() and kj.exists():
+            if dogal and s.get("dil", "tr") != "en":
+                sinyal, kel = dogal[(s["kim"], s["metin"])]
+            elif npy.exists() and kj.exists():
                 sinyal, kel = np.load(npy), [tuple(x) for x in json.loads(kj.read_text())]
             else:
                 sinyal, kel = ses3d.satir_seslendir(s["metin"], prof_ses, is_dizini / "ses", anahtar)
