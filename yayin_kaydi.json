@@ -1030,5 +1030,22 @@
   },
   "liste": "eklendi",
   "kapak": "yuklenemedi (403)"
+ },
+ {
+  "tarih": "2026-11-22T17:42:17+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e016.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "3OPfgQ-GHTg",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-26T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-26T09:00:00+00:00",
+  "baslik": "İngilizce Sayılar: Seven, Eight, Nine | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
