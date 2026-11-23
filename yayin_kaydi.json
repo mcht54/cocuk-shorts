@@ -1064,5 +1064,22 @@
   "yayin_zamani": "2026-11-26T14:00:00+00:00",
   "baslik": "Dinlemeyi Bilmek | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-23T09:31:18+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e017.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "xILHCOMtm2w",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-27T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-27T09:00:00+00:00",
+  "baslik": "İngilizce Hava Durumu: Sun, Rain, Cloud | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
