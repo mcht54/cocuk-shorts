@@ -1081,5 +1081,22 @@
   "yayin_zamani": "2026-11-27T09:00:00+00:00",
   "baslik": "İngilizce Hava Durumu: Sun, Rain, Cloud | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-23T21:48:24+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b024.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "DqLV_8_j4SA",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-27T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-27T14:00:00+00:00",
+  "baslik": "Pamuk'un Odası | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
