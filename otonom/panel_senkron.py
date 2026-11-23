@@ -77,7 +77,7 @@ def _kapak_durumu(vid, kayit):
     tamam = json.loads(kd.read_text()) if kd.exists() else {}
     if vid in tamam or str(kayit.get("kapak", "")).startswith("yuklendi"):
         return {"anahtar": "kapak", "ad": "Özel kapak", "durum": "paylasildi", "link": None}
-    return {"anahtar": "kapak", "ad": "Özel kapak (kanal telefon doğrulaması bekliyor)", "durum": "hata", "link": None}
+    return {"anahtar": "kapak", "ad": "Kapak: telefon doğrulaması bekliyor", "durum": "hata", "link": None}
 
 
 def uzun_ozeti(simdi=None, geri_gun=14, ileri_gun=7):
