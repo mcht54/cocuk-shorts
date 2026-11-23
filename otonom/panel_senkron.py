@@ -67,6 +67,61 @@ def _ozet(ad, B, kayit, simdi):
             "kilit_nedeni": "Video üretilip YouTube'a yüklendi; değişiklik Studio'dan yapılır." if kayit else None}
 
 
+# Haftalık uzun videolar (derleme.py, haftalik-uzun.yml): pazar haftalık, çarşamba "Uyku Öncesi Masallar", cuma İngilizce — 10:07 TR
+UZUN = {"haftalik": ("Haftalık derleme", 6), "karisik": ("Uyku Öncesi Masallar", 2), "ingilizce": ("İngilizce derleme", 4)}
+UZUN_SAAT = "20:00"  # akış 10:07 TR başlar; çizim+derleme sürdüğü için yükleme genelde akşam
+
+
+def _kapak_durumu(vid, kayit):
+    kd = KOK / "kapaklar" / "durum.json"
+    tamam = json.loads(kd.read_text()) if kd.exists() else {}
+    if vid in tamam or str(kayit.get("kapak", "")).startswith("yuklendi"):
+        return {"anahtar": "kapak", "ad": "Özel kapak", "durum": "paylasildi", "link": None}
+    return {"anahtar": "kapak", "ad": "Özel kapak (kanal telefon doğrulaması bekliyor)", "durum": "hata", "link": None}
+
+
+def uzun_ozeti(simdi=None, geri_gun=14, ileri_gun=7):
+    """Uzun videolar: son iki haftada yüklenenler + önümüzdeki 7 günün planlı derlemeleri (düzenlenemez, yalnız takip)."""
+    simdi = simdi or dt.datetime.now(dt.timezone.utc)
+    k = json.loads(KAYIT.read_text()) if KAYIT.exists() else []
+    out, yapilan = [], set()
+    for x in k:
+        if x.get("profil") != "derleme" or x.get("durum") != "yuklendi" or not x.get("video_id"):
+            continue
+        z = dt.datetime.fromisoformat(x["tarih"].replace("Z", "+00:00"))
+        if z < simdi - dt.timedelta(days=geri_gun):
+            continue
+        tur = x.get("tur") or "haftalik"
+        ad = UZUN.get(tur, (tur, None))[0]
+        yerel = z.astimezone(TR)
+        yapilan.add((tur, yerel.isocalendar()[:2]))
+        basliklar = []
+        for yol in x.get("parcalar", []):
+            try:
+                basliklar.append(json.loads((KOK / yol).read_text()).get("baslik", ""))
+            except (OSError, ValueError):
+                pass
+        vid = x["video_id"]
+        out.append({"id": f"uzun-{vid}", "gun": yerel.date().isoformat(), "saat": yerel.strftime("%H:%M"), "baslik": f"{ad} · {len(x.get('parcalar', []))} bölüm",
+                    "bolum_no": None, "hedef": "Uzun video", "sektor": "uzun_video",
+                    "konu": f"{round(x.get('sure', 0) / 60, 1)} dk · " + ", ".join(b for b in basliklar if b)[:170],
+                    "durum": "yayinlandi" if (x.get("youtube") or {}).get("privacyStatus") == "public" else "uretildi",
+                    "platformlar": [{"anahtar": "youtube_uzun", "ad": "YouTube video", "durum": "paylasildi", "link": f"https://www.youtube.com/watch?v={vid}"},
+                                    _kapak_durumu(vid, x)],
+                    "satirlar": [], "duzenlenebilir": False, "kilit_nedeni": "Uzun video Shorts bölümlerinden otomatik derlenir; bölümleri Masal sekmesinden düzenleyebilirsin."})
+    bugun = simdi.astimezone(TR).date()
+    for i in range(ileri_gun + 1):
+        g = bugun + dt.timedelta(days=i)
+        for tur, (ad, wd) in UZUN.items():
+            if g.weekday() != wd or (tur, g.isocalendar()[:2]) in yapilan:
+                continue
+            out.append({"id": f"uzun-{tur}-{g.isoformat()}", "gun": g.isoformat(), "saat": UZUN_SAAT, "baslik": ad, "bolum_no": None,
+                        "hedef": "Uzun video", "sektor": "uzun_video", "konu": "O hafta yayınlanan Shorts bölümlerinden otomatik derlenir; yükleme genelde akşam saatlerinde.",
+                        "durum": "sirada", "platformlar": [{"anahtar": "youtube_uzun", "ad": "YouTube video", "durum": "bekliyor", "link": None}],
+                        "satirlar": [], "duzenlenebilir": False, "kilit_nedeni": "Uzun video yayın günü otomatik derlenir."})
+    return out
+
+
 def takvim_ozeti(simdi=None, sirada=7):
     simdi = simdi or dt.datetime.now(dt.timezone.utc)
     yuk, kaldi = _kayitlar()
@@ -83,7 +138,7 @@ def takvim_ozeti(simdi=None, sirada=7):
         if hat == "masal_shorts":
             sira = [a for a in oncelik if _hat(a) == hat] + [a for a in sira if a not in oncelik]
         secilen += [(a, None) for a in [a for a in sira if a not in yuk and kaldi.get(a, 0) < 2][:sirada]]
-    return [_ozet(ad, json.loads((SERI / "bolumler" / ad).read_text()), k, simdi) for ad, k in secilen]
+    return [_ozet(ad, json.loads((SERI / "bolumler" / ad).read_text()), k, simdi) for ad, k in secilen] + uzun_ozeti(simdi)
 
 
 def uygula(duzenlemeler):

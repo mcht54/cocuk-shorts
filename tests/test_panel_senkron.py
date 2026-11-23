@@ -52,3 +52,25 @@ class PanelSenkron(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class UzunVideoOzeti(unittest.TestCase):
+    def test_yuklenen_ve_planli_uzunlar(self):
+        import datetime as dt
+        tmp = Path(tempfile.mkdtemp())
+        kayit = tmp / "yayin_kaydi.json"
+        kayit.write_text(json.dumps([
+            {"tarih": "2026-11-22T16:15:30+00:00", "profil": "derleme", "bolum": "derleme", "tur": "haftalik", "durum": "yuklendi",
+             "sure": 264.8, "video_id": "VID1", "youtube": {"privacyStatus": "public"}, "kapak": "yuklenemedi (403)", "parcalar": []},
+            {"tarih": "2026-10-01T16:00:00+00:00", "profil": "derleme", "bolum": "derleme", "tur": "haftalik", "durum": "yuklendi", "video_id": "ESKI"}]))
+        with mock.patch.object(P, "KAYIT", kayit), mock.patch.object(P, "KOK", tmp):
+            o = P.uzun_ozeti(dt.datetime(2026, 11, 23, 12, tzinfo=dt.timezone.utc))
+        ids = [b["id"] for b in o]
+        self.assertIn("uzun-VID1", ids)
+        self.assertNotIn("uzun-ESKI", ids)  # iki haftadan eski gösterilmez
+        y = next(b for b in o if b["id"] == "uzun-VID1")
+        self.assertEqual(y["durum"], "yayinlandi")
+        self.assertFalse(y["duzenlenebilir"])
+        self.assertEqual(y["platformlar"][1]["durum"], "hata")  # özel kapak yüklenemedi
+        # 23 Kasım pazartesi: önümüzdeki çarşamba, cuma, pazar planlı
+        self.assertEqual(sorted(b["gun"] for b in o if b["durum"] == "sirada"), ["2026-11-25", "2026-11-27", "2026-11-29"])
