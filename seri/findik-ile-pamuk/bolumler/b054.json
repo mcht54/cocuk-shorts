@@ -1,0 +1,247 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 54,
+ "baslik": "Orman Yolu Yarışı",
+ "deger": "kurallara uymak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.5,
+   0.2
+  ],
+  "pamuk": [
+   -1.5,
+   0.45
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Kurallara Uyarak Yarışalım!",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Orman Yolu Yarışı | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ve Pamuk ormanda koşu yaparken kurallara uymanın önemini öğreniyor. Bu bölümün değeri: kurallara uymak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "kurallara uymak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "orta",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "İşaretli yoldan dışarı çıkmadan koşacağız, tamam mı?"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Tamam! Kurallara uymak yarışı güvenli yapar!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.3,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Fındık ve Pamuk çizgiden sapmadan hızla ilerliyor."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      0.5,
+      0.2
+     ],
+     "son": 0.9
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.05,
+     "nereye": [
+      0.3,
+      0.45
+     ],
+     "son": 0.95
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Bak, kısa yoldan gitmek yok, çizgiye uyuyoruz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.5,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "yakin",
+   "hareket": "sabit",
+   "isik": "ogle",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Bitiş çizgisine yaklaşıyoruz, harika hissediyorum!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Az kaldı, beraber bitireceğiz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      0.8,
+      0.2
+     ],
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      0.8,
+      0.45
+     ],
+     "son": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Bitiş çizgisine ulaştık! Hiç kural bozmadık."
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kurallara uymak herkesin güvenle eğlenmesini sağlar."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "pamuk"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.0,
+     "kime": "findik"
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
