@@ -1098,5 +1098,22 @@
   "yayin_zamani": "2026-11-27T14:00:00+00:00",
   "baslik": "Pamuk'un Odası | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-24T11:20:03+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e018.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "Gc4-RnaVaFQ",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-28T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-28T09:00:00+00:00",
+  "baslik": "İngilizce Şekiller: Circle, Square, Triangle | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
