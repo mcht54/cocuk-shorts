@@ -1,0 +1,268 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 39,
+ "tur": "ingilizce",
+ "baslik": "Vücudumuz: Head, Ears, Nose (2. Tekrar)",
+ "deger": "İngilizce öğrenmek",
+ "konu": "Vücudumuz",
+ "konu_en": "Body Parts",
+ "konu_kodu": "vucut_1",
+ "kelimeler": [
+  {
+   "en": "head",
+   "tr": "baş"
+  },
+  {
+   "en": "ears",
+   "tr": "kulaklar"
+  },
+  {
+   "en": "nose",
+   "tr": "burun"
+  }
+ ],
+ "giris_metni": "Fındık ile Pamuk İngilizce öğreniyor! Ders 39: Vücudumuz.",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -0.6,
+   0.2
+  ],
+  "pamuk": [
+   0.6,
+   0.2
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Baş İngilizce Ne?",
+ "youtube": {
+  "aciklama": "Çocuklar bu eğlenceli videoda 'head', 'ears' ve 'nose' kelimelerini öğrenerek vücudun bölümlerini keşfediyor."
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "iki_kisi",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Vücudumuzu İngilizce tanımaya hazır mısın?"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.3,
+     "kez": 1,
+     "son": 0.7
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Head!",
+     "anlam": "baş"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Baş demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Head, head!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.0,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.1,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.6,
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Ears!",
+     "anlam": "kulaklar"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Kulaklar demek. Hadi sen de söyle!"
+    },
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Ears, ears!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.6,
+     "yon": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "orta",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Nose!",
+     "anlam": "burun"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Burun demek. Sen de söyle!"
+    },
+    {
+     "kim": "findik",
+     "dil": "en",
+     "metin": "Nose, nose!",
+     "bekle": 1.5
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "bak",
+     "bas": 0.2,
+     "yon": 0.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.5,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "uzaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "dil": "en",
+     "metin": "Head! Ears! Nose!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Tebrikler! Üç vücut bölümünü harika öğrendin!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.45,
+     "son": 0.95
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 0.95
+    }
+   ]
+  }
+ ],
+ "muzik": "normal"
+}
