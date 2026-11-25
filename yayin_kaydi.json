@@ -1132,5 +1132,22 @@
   "yayin_zamani": "2026-11-28T14:00:00+00:00",
   "baslik": "Çiçeklere Dikkat | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-25T10:19:35+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e019.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "vhfpMqcp18U",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-29T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-29T09:00:00+00:00",
+  "baslik": "İngilizce Nazik Sözler: Please, Sorry, You're welcome | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
