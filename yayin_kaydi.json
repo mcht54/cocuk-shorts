@@ -1149,5 +1149,42 @@
   "yayin_zamani": "2026-11-29T09:00:00+00:00",
   "baslik": "İngilizce Nazik Sözler: Please, Sorry, You're welcome | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-25T19:46:45+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "karisik",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/b001.json",
+   "seri/findik-ile-pamuk/bolumler/b002.json",
+   "seri/findik-ile-pamuk/bolumler/b003.json",
+   "seri/findik-ile-pamuk/bolumler/b004.json",
+   "seri/findik-ile-pamuk/bolumler/b005.json",
+   "seri/findik-ile-pamuk/bolumler/b007.json",
+   "seri/findik-ile-pamuk/bolumler/b008.json",
+   "seri/findik-ile-pamuk/bolumler/b009.json",
+   "seri/findik-ile-pamuk/bolumler/b010.json",
+   "seri/findik-ile-pamuk/bolumler/b012.json",
+   "seri/findik-ile-pamuk/bolumler/b014.json",
+   "seri/findik-ile-pamuk/bolumler/b015.json",
+   "seri/findik-ile-pamuk/bolumler/b016.json",
+   "seri/findik-ile-pamuk/bolumler/b017.json",
+   "seri/findik-ile-pamuk/bolumler/b018.json",
+   "seri/findik-ile-pamuk/bolumler/b019.json",
+   "seri/findik-ile-pamuk/bolumler/b020.json",
+   "seri/findik-ile-pamuk/bolumler/b021.json",
+   "seri/findik-ile-pamuk/bolumler/b022.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 706.94,
+  "video_id": "PW9M4fdI61s",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "liste": "eklendi",
+  "kapak": "yuklendi"
  }
 ]
