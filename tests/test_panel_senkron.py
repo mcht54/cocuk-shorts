@@ -85,7 +85,7 @@ def test_icerik_fikri_bolume_doner(monkeypatch, tmp_path):
     monkeypatch.setenv("GEMINI_API_KEY", "k")
     yol = tmp_path / "b999.json"; yol.write_text(json.dumps({"baslik": "Paylaşan Fındık", "deger": "paylaşmak"}))
     gelen = []
-    monkeypatch.setattr(masal_yaz, "yaz_bir", lambda no, istek=None: (gelen.append(istek), yol if "oyuncak" in istek else None)[1])
+    monkeypatch.setattr(masal_yaz, "yaz_bir", lambda no, istek=None: (gelen.append(istek), yol if "fındık" in istek else None)[1])
     r = P.fikirleri_yaz([{"id": "a", "metin": "fındık oyuncagını vermio kardesine"}, {"id": "b", "metin": "uygunsuz"}])
     assert gelen == ["fındık oyuncagını vermio kardesine", "uygunsuz"]
     assert r[0]["id"] == "a" and r[0]["durum"] == "planlandi" and "Paylaşan Fındık" in r[0]["aciklama"]
