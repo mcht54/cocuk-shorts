@@ -74,3 +74,19 @@ class UzunVideoOzeti(unittest.TestCase):
         self.assertEqual(y["platformlar"][1]["durum"], "hata")  # özel kapak yüklenemedi
         # 23 Kasım pazartesi: önümüzdeki çarşamba, cuma, pazar planlı
         self.assertEqual(sorted(b["gun"] for b in o if b["durum"] == "sirada"), ["2026-11-25", "2026-11-27", "2026-11-29"])
+
+
+def test_icerik_fikri_bolume_doner(monkeypatch, tmp_path):
+    """Panel fikri yeni bölüm olarak yazılır (planlandi); yazılamazsa reddedilir; Gemini anahtarı yoksa hiç denenmez (fikir panelde bekler)."""
+    import json
+    from otonom import masal_yaz, panel_senkron as P
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    assert P.fikirleri_yaz([{"id": "a", "metin": "x"}]) == []
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    yol = tmp_path / "b999.json"; yol.write_text(json.dumps({"baslik": "Paylaşan Fındık", "deger": "paylaşmak"}))
+    gelen = []
+    monkeypatch.setattr(masal_yaz, "yaz_bir", lambda no, istek=None: (gelen.append(istek), yol if "oyuncak" in istek else None)[1])
+    r = P.fikirleri_yaz([{"id": "a", "metin": "fındık oyuncagını vermio kardesine"}, {"id": "b", "metin": "uygunsuz"}])
+    assert gelen == ["fındık oyuncagını vermio kardesine", "uygunsuz"]
+    assert r[0]["id"] == "a" and r[0]["durum"] == "planlandi" and "Paylaşan Fındık" in r[0]["aciklama"]
+    assert r[1] == {"id": "b", "durum": "reddedildi", "neden": "Bu fikirden çocuk güvenliği ve dizi kurallarına uyan bölüm yazılamadı."}

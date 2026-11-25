@@ -188,6 +188,27 @@ def _gonderildi():
         return False
 
 
+def fikirleri_yaz(tanitimlar, en_cok=2):
+    """Paneldeki "İçerik fikri" → yeni masal bölümü (stok sırasına eklenir; depoya akıştaki adım yazar). Gemini yoksa fikir panelde bekler."""
+    if not tanitimlar or not os.environ.get("GEMINI_API_KEY"):
+        return []
+    from otonom import masal_yaz
+    out = []
+    for t in tanitimlar[:en_cok]:
+        no = max(int(p.stem[1:]) for p in SERI.glob("bolumler/b*.json")) + 1
+        try:
+            yol = masal_yaz.yaz_bir(no, istek=str(t.get("metin") or ""))
+        except Exception as e:  # noqa: BLE001 — kota/ağ: fikir bekler, sonraki senkronda yeniden denenir
+            print("içerik fikri yazılamadı (sonra denenecek):", str(e)[:200], flush=True)
+            continue
+        if yol:
+            b = json.loads(yol.read_text())
+            out.append({"id": t["id"], "durum": "planlandi", "gun": None, "aciklama": f"\"{b['baslik']}\" bölümü yazıldı ({b['deger']}); yayın sırasına eklendi"})
+        else:
+            out.append({"id": t["id"], "durum": "reddedildi", "neden": "Bu fikirden çocuk güvenliği ve dizi kurallarına uyan bölüm yazılamadı."})
+    return out
+
+
 def _belge():
     url, tok = os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL"), os.environ.get("ACTIONS_ID_TOKEN_REQUEST_TOKEN")
     if not url or not tok:
@@ -208,13 +229,16 @@ def _post(yol, govde):
 def main(komut):
     try:
         if komut == "al":
-            uyg, ret = uygula(_post("", {"bolumler": takvim_ozeti()}).get("duzenlemeler", []))
-            ONAY.write_text(json.dumps({"uygulanan": uyg, "reddedilen": ret}))
-            print(f"panel: takvim gönderildi; {len(uyg)} düzenleme uygulandı, {len(ret)} reddedildi", flush=True)
+            cevap = _post("", {"bolumler": takvim_ozeti()})
+            uyg, ret = uygula(cevap.get("duzenlemeler", []))
+            fikir = fikirleri_yaz(cevap.get("tanitimlar", []))
+            ONAY.write_text(json.dumps({"uygulanan": uyg, "reddedilen": ret, "tanitim": fikir}))
+            print(f"panel: takvim gönderildi; {len(uyg)} düzenleme uygulandı, {len(ret)} reddedildi, {len(fikir)} içerik fikri işlendi", flush=True)
         elif komut == "son":
             if ONAY.exists():
                 o = json.loads(ONAY.read_text())
-                if (o["uygulanan"] or o["reddedilen"]) and (not o["uygulanan"] or _gonderildi()):
+                yazildi = o["uygulanan"] or any(t["durum"] == "planlandi" for t in o.get("tanitim", []))
+                if (o["uygulanan"] or o["reddedilen"] or o.get("tanitim")) and (not yazildi or _gonderildi()):
                     _post("/onay", o)
                 ONAY.unlink()
             _post("", {"bolumler": takvim_ozeti()})

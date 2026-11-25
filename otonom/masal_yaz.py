@@ -124,8 +124,8 @@ def _denetle(b, seri, basliklar):
     return h
 
 
-def yaz_bir(no):
-    """b{no}.json yazar; başarılıysa yol, değilse None."""
+def yaz_bir(no, istek=None):
+    """b{no}.json yazar; başarılıysa yol, değilse None. istek: paneldeki "İçerik fikri" (hesap sahibinin kendi cümlesi)."""
     seri = json.loads((SERI / "seri.json").read_text())
     onceki = [json.loads(p.read_text()) for p in sorted(SERI.glob("bolumler/b*.json"))]
     basliklar = {b["baslik"].lower() for b in onceki}
@@ -144,6 +144,10 @@ def yaz_bir(no):
         ifadeler="/".join(bolum_denetle.IFADELER), sx=bolum_denetle.SAHNE_X, sy=bolum_denetle.SAHNE_Y,
         atlayis=bolum_denetle.ATLAYIS, uzanma=bolum_denetle.UZANMA, verme=bolum_denetle.VERME,
         ornekler="\n\n".join(_ornek(a) for a in ORNEKLER if (SERI / "bolumler" / f"{a}.json").exists()))
+    if istek:  # 2026-11-26: panel fikri — sokak ağzıyla/yazım hatalı olabilir; niyet anlaşılır, çocuk güvenliği kuralları aynen geçerli
+        istem += (f"\n\nHESAP SAHİBİNİN FİKRİ (öncelikli): «{istek[:300]}». Kısaltmalı, yazım hatalı ya da sokak ağzıyla yazılmış olabilir; "
+                  "niyetini bir insan gibi anla ve bölümü bu fikirden kur. 'deger' alanına fikre en uygun değeri yaz "
+                  f"(uygunsa \"{deger}\"). Fikir çocuğa uygun değilse onu çocuğa uygun, sevimli bir hâle getir; korku/şiddet ekleme.")
     ham = gemini.sor(istem, sicaklik=1.0)
     for tur_no in range(DENEME):
         ham = ham if isinstance(ham, dict) else {}
