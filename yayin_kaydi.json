@@ -1220,5 +1220,22 @@
   "yayin_zamani": "2026-11-30T09:00:00+00:00",
   "baslik": "İngilizce Oyuncaklar: Toy, Ball, Box | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-26T22:38:43+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b027.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "ba3FPACNROY",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-30T14:00:00Z"
+  },
+  "yayin_zamani": "2026-11-30T14:00:00+00:00",
+  "baslik": "Sincap mı Tavşan mı? | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
