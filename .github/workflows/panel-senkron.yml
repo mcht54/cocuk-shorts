@@ -1,10 +1,10 @@
 name: Panel senkronu (İçerik takvimi)
 
-# 3 saatte bir: Minik Masal Evi takvimi Mchttasarım paneline gider; panelde düzenlenen (henüz yüklenmemiş) bölüm replikleri depoya işlenir.
+# 30 dakikada bir (2026-11-26: panel "Düzelt" düğmesi beklemesin; herkese açık depoda Actions ücretsiz): Minik Masal Evi takvimi Mchttasarım paneline gider; panelde düzenlenen (henüz yüklenmemiş) bölüm replikleri depoya işlenir.
 # Kimlik: GitHub OIDC (kısa ömürlü, imzalı); panelde GitHub anahtarı yoktur. Panel düşerse bu akış başarısız sayılmaz.
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    - cron: "17,47 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,9 @@ jobs:
       - name: Takvimi gönder, düzenlemeleri ve içerik fikirlerini al
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}          # yalnız "Düzelt" denetimi (okuma)
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python -m otonom.panel_senkron al
       - name: Düzenlemeleri depoya yaz
         run: |

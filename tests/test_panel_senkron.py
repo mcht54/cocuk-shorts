@@ -90,3 +90,12 @@ def test_icerik_fikri_bolume_doner(monkeypatch, tmp_path):
     assert gelen == ["fındık oyuncagını vermio kardesine", "uygunsuz"]
     assert r[0]["id"] == "a" and r[0]["durum"] == "planlandi" and "Paylaşan Fındık" in r[0]["aciklama"]
     assert r[1] == {"id": "b", "durum": "reddedildi", "neden": "Bu fikirden çocuk güvenliği ve dizi kurallarına uyan bölüm yazılamadı."}
+
+
+def test_duzelt_raporu_yetki_yoksa_sorun_ve_eylem(monkeypatch, tmp_path):
+    from otonom import panel_senkron as ps
+    from otonom import saglik
+    monkeypatch.setattr(saglik, "token_dene", lambda ad, r: "geçersiz")
+    monkeypatch.setattr(ps, "KAYIT", tmp_path / "yok.json")
+    r = ps.duzelt_raporu()
+    assert r["durum"] == "sorun" and r["eylemler"][0]["link"].startswith("https://")

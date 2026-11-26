@@ -226,19 +226,56 @@ def _post(yol, govde):
     return r.json()
 
 
+def duzelt_raporu():
+    """Panel "Düzelt": YouTube yetkisini ve son videoların YouTube'daki durumunu OKUYARAK denetler (yükleme yapmaz).
+    Yükleme hataları kendi akışında (gunluk3d) otomatik yeniden denenir; kapak için telefon doğrulaması insan adımıdır."""
+    from otonom import saglik
+    adimlar, eylemler = [], []
+    h = saglik.token_dene("Minik Masal Evi", os.environ.get("YT_REFRESH_TOKEN"))
+    if h:
+        adimlar.append({"ad": "YouTube bağlantısı", "durum": "hata", "mesaj": "Yetki geçersiz ya da tanımlı değil"})
+        eylemler.append({"ad": "YouTube kanal yetkisini kontrol et", "link": "https://myaccount.google.com/connections"})
+    else:
+        adimlar.append({"ad": "YouTube bağlantısı", "durum": "tamam", "mesaj": "Yetki geçerli"})
+        try:
+            sorun, _ = saglik.video_durumlari("Minik Masal Evi", "yayin_kaydi.json")
+            adimlar.append({"ad": "Son videolar YouTube'da", "durum": "hata" if sorun else "tamam",
+                            "mesaj": f"{len(sorun)} video reddedildi/işlenemedi" if sorun else "Reddedilen ya da işlenemeyen video yok"})
+        except Exception as e:  # noqa: BLE001
+            adimlar.append({"ad": "Son videolar YouTube'da", "durum": "uyari", "mesaj": f"okunamadı ({type(e).__name__})"})
+    kayit = json.loads(KAYIT.read_text()) if KAYIT.exists() else []
+    kapaksiz = [k for k in kayit[-10:] if k.get("video_id") and _kapak_durumu(k["video_id"], k)["durum"] == "hata"]
+    if kapaksiz:
+        adimlar.append({"ad": "Özel kapaklar", "durum": "uyari", "mesaj": f"{len(kapaksiz)} videoda özel kapak yüklenemedi: kanal telefonla doğrulanmalı"})
+        eylemler.append({"ad": "YouTube kanalını telefonla doğrula", "link": "https://www.youtube.com/verify"})
+    return {"durum": "sorun" if any(a["durum"] == "hata" for a in adimlar) else "tamam", "adimlar": adimlar, "eylemler": eylemler}
+
+
 def main(komut):
     try:
         if komut == "al":
             cevap = _post("", {"bolumler": takvim_ozeti()})
             uyg, ret = uygula(cevap.get("duzenlemeler", []))
             fikir = fikirleri_yaz(cevap.get("tanitimlar", []))
-            ONAY.write_text(json.dumps({"uygulanan": uyg, "reddedilen": ret, "tanitim": fikir}))
+            duzelt = []
+            for c in cevap.get("komutlar", []):
+                if c.get("tur") == "duzelt":
+                    try:
+                        duzelt.append({"id": c["id"], **duzelt_raporu()})
+                    except Exception as e:  # noqa: BLE001
+                        duzelt.append({"id": c["id"], "durum": "sorun", "adimlar": [{"ad": "Denetim yarıda kaldı", "durum": "hata", "mesaj": type(e).__name__}]})
+                    uyg.append(c["id"])
+            ONAY.write_text(json.dumps({"uygulanan": uyg, "reddedilen": ret, "tanitim": fikir, "duzelt": duzelt}))
             print(f"panel: takvim gönderildi; {len(uyg)} düzenleme uygulandı, {len(ret)} reddedildi, {len(fikir)} içerik fikri işlendi", flush=True)
         elif komut == "son":
             if ONAY.exists():
                 o = json.loads(ONAY.read_text())
                 yazildi = o["uygulanan"] or any(t["durum"] == "planlandi" for t in o.get("tanitim", []))
-                if (o["uygulanan"] or o["reddedilen"] or o.get("tanitim")) and (not yazildi or _gonderildi()):
+                if o.get("duzelt") and yazildi and not _gonderildi():  # düzelt raporu depo gönderiminden bağımsız gider
+                    _post("/onay", {"uygulanan": [d["id"] for d in o["duzelt"]], "duzelt": o["duzelt"]})
+                    o["uygulanan"] = [x for x in o["uygulanan"] if x not in {d["id"] for d in o["duzelt"]}]
+                    o["duzelt"] = []
+                if (o["uygulanan"] or o["reddedilen"] or o.get("tanitim") or o.get("duzelt")) and (not yazildi or _gonderildi()):
                     _post("/onay", o)
                 ONAY.unlink()
             _post("", {"bolumler": takvim_ozeti()})
