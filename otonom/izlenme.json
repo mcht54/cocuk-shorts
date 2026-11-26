@@ -1,12 +1,12 @@
 {
- "tarih": "2026-11-23T20:30:36+00:00",
+ "tarih": "2026-11-26T18:37:25+00:00",
  "videolar": [
   {
    "video_id": "cF-kTHsODOU",
    "profil": "derleme",
    "ad": "derleme (haftalik)",
    "yayin": "2026-11-15",
-   "izlenme": 518,
+   "izlenme": 525,
    "durum": "public"
   },
   {
@@ -18,11 +18,35 @@
    "durum": "public"
   },
   {
+   "video_id": "PW9M4fdI61s",
+   "profil": "derleme",
+   "ad": "derleme (karisik)",
+   "yayin": "2026-11-25",
+   "izlenme": 188,
+   "durum": "public"
+  },
+  {
    "video_id": "QMw1wVQhFeU",
    "profil": "derleme",
    "ad": "derleme (karisik)",
    "yayin": "2026-11-11",
+   "izlenme": 146,
+   "durum": "public"
+  },
+  {
+   "video_id": "_qoUc3CNPTQ",
+   "profil": "shorts",
+   "ad": "Renkli Orman",
+   "yayin": "2026-11-07",
    "izlenme": 145,
+   "durum": "public"
+  },
+  {
+   "video_id": "7drZ-3Theh8",
+   "profil": "shorts",
+   "ad": "Benimle Oynar mısın?",
+   "yayin": "2026-11-20",
+   "izlenme": 136,
    "durum": "public"
   },
   {
@@ -34,27 +58,11 @@
    "durum": "public"
   },
   {
-   "video_id": "_qoUc3CNPTQ",
-   "profil": "shorts",
-   "ad": "Renkli Orman",
-   "yayin": "2026-11-07",
-   "izlenme": 126,
-   "durum": "public"
-  },
-  {
-   "video_id": "7drZ-3Theh8",
-   "profil": "shorts",
-   "ad": "Benimle Oynar mısın?",
-   "yayin": "2026-11-20",
-   "izlenme": 81,
-   "durum": "public"
-  },
-  {
    "video_id": "nSGp9n4pV3Y",
    "profil": "shorts",
    "ad": "Bir, İki, Üç Zıpla!",
    "yayin": "2026-11-10",
-   "izlenme": 65,
+   "izlenme": 64,
    "durum": "public"
   },
   {
@@ -62,7 +70,7 @@
    "profil": "shorts",
    "ad": "Büyük Yarış",
    "yayin": "2026-11-06",
-   "izlenme": 50,
+   "izlenme": 53,
    "durum": "public"
   },
   {
@@ -86,7 +94,7 @@
    "profil": "shorts",
    "ad": "Hazine Avı 2: Dereyi Geçmek",
    "yayin": "2026-11-01",
-   "izlenme": 36,
+   "izlenme": 35,
    "durum": "public"
   },
   {
@@ -118,7 +126,7 @@
    "profil": "shorts",
    "ad": "Hazine Avı 1: Gizemli Harita",
    "yayin": "2026-10-31",
-   "izlenme": 18,
+   "izlenme": 19,
    "durum": "public"
   },
   {
@@ -134,6 +142,14 @@
    "profil": "shorts",
    "ad": "Sabırlı Pamuk",
    "yayin": "2026-11-08",
+   "izlenme": 12,
+   "durum": "public"
+  },
+  {
+   "video_id": "My68GourKdc",
+   "profil": "shorts",
+   "ad": "Sıra Kimde?",
+   "yayin": "2026-11-14",
    "izlenme": 12,
    "durum": "public"
   },
@@ -154,19 +170,27 @@
    "durum": "public"
   },
   {
-   "video_id": "My68GourKdc",
-   "profil": "shorts",
-   "ad": "Sıra Kimde?",
-   "yayin": "2026-11-14",
-   "izlenme": 11,
-   "durum": "public"
-  },
-  {
    "video_id": "X5Ez4yQtEOk",
    "profil": "shorts",
    "ad": "Hazine Avı 4: Hazine Sandığı",
    "yayin": "2026-11-03",
+   "izlenme": 10,
+   "durum": "public"
+  },
+  {
+   "video_id": "prRdKUPpw9k",
+   "profil": "derleme",
+   "ad": "derleme (karisik)",
+   "yayin": "2026-11-18",
    "izlenme": 8,
+   "durum": "public"
+  },
+  {
+   "video_id": "fe2FEHzy1HQ",
+   "profil": "shorts",
+   "ad": "Lütfen Dersen",
+   "yayin": "2026-11-19",
+   "izlenme": 6,
    "durum": "public"
   },
   {
@@ -174,6 +198,14 @@
    "profil": "shorts",
    "ad": "Hareketler: Jump, Run, Walk",
    "yayin": "2026-11-13",
+   "izlenme": 6,
+   "durum": "public"
+  },
+  {
+   "video_id": "2KTYHNFQY80",
+   "profil": "shorts",
+   "ad": "Zıt Kelimeler: Big, Small, Up",
+   "yayin": "2026-11-21",
    "izlenme": 6,
    "durum": "public"
   },
@@ -186,19 +218,19 @@
    "durum": "public"
   },
   {
+   "video_id": "slOVhDnTnBA",
+   "profil": "shorts",
+   "ad": "Paylaşılan Palamut",
+   "yayin": "2026-10-29",
+   "izlenme": 5,
+   "durum": "public"
+  },
+  {
    "video_id": "VIpQSvkLGdM",
    "profil": "shorts",
    "ad": "Renkler: Red, White, Orange",
    "yayin": "2026-11-16",
    "izlenme": 5,
-   "durum": "public"
-  },
-  {
-   "video_id": "slOVhDnTnBA",
-   "profil": "shorts",
-   "ad": "Paylaşılan Palamut",
-   "yayin": "2026-10-29",
-   "izlenme": 4,
    "durum": "public"
   },
   {
@@ -218,18 +250,18 @@
    "durum": "public"
   },
   {
-   "video_id": "fe2FEHzy1HQ",
+   "video_id": "Jtk8UwRLlcI",
    "profil": "shorts",
-   "ad": "Lütfen Dersen",
+   "ad": "Sayılar: Four, Five, Six",
    "yayin": "2026-11-19",
-   "izlenme": 3,
+   "izlenme": 4,
    "durum": "public"
   },
   {
-   "video_id": "prRdKUPpw9k",
-   "profil": "derleme",
-   "ad": "derleme (karisik)",
-   "yayin": "2026-11-18",
+   "video_id": "1-3DFJUbQEo",
+   "profil": "shorts",
+   "ad": "Meyveler: Apple, Banana, Strawberry",
+   "yayin": "2026-11-22",
    "izlenme": 3,
    "durum": "public"
   },
@@ -242,17 +274,25 @@
    "durum": "public"
   },
   {
-   "video_id": "Jtk8UwRLlcI",
+   "video_id": "iBNvN0VDl3E",
    "profil": "shorts",
-   "ad": "Sayılar: Four, Five, Six",
-   "yayin": "2026-11-19",
+   "ad": "Vücudumuz: Head, Ears, Nose",
+   "yayin": "2026-11-20",
    "izlenme": 2,
    "durum": "public"
   },
   {
-   "video_id": "1-3DFJUbQEo",
+   "video_id": "1LMXqLtSE6g",
    "profil": "shorts",
-   "ad": "Meyveler: Apple, Banana, Strawberry",
+   "ad": "Kıskanç Fındık",
+   "yayin": "2026-11-25",
+   "izlenme": 2,
+   "durum": "public"
+  },
+  {
+   "video_id": "6Wq6eO4TnHs",
+   "profil": "derleme",
+   "ad": "derleme (haftalik)",
    "yayin": "2026-11-22",
    "izlenme": 2,
    "durum": "public"
@@ -290,10 +330,10 @@
    "durum": "public"
   },
   {
-   "video_id": "iBNvN0VDl3E",
+   "video_id": "hpJM-PA3eSM",
    "profil": "shorts",
-   "ad": "Vücudumuz: Head, Ears, Nose",
-   "yayin": "2026-11-20",
+   "ad": "Hayvanlar: Squirrel, Rabbit, Bird",
+   "yayin": "2026-11-18",
    "izlenme": 1,
    "durum": "public"
   },
@@ -318,22 +358,6 @@
    "profil": "shorts",
    "ad": "İlk Kelimeler: Apple, Ball, Bucket",
    "yayin": "2026-11-15",
-   "izlenme": 0,
-   "durum": "public"
-  },
-  {
-   "video_id": "hpJM-PA3eSM",
-   "profil": "shorts",
-   "ad": "Hayvanlar: Squirrel, Rabbit, Bird",
-   "yayin": "2026-11-18",
-   "izlenme": 0,
-   "durum": "public"
-  },
-  {
-   "video_id": "2KTYHNFQY80",
-   "profil": "shorts",
-   "ad": "Zıt Kelimeler: Big, Small, Up",
-   "yayin": "2026-11-21",
    "izlenme": 0,
    "durum": "public"
   },
@@ -367,7 +391,7 @@
    "ad": "Hareketler: Sit down, Stand up, Wave",
    "yayin": "2026-11-24",
    "izlenme": 0,
-   "durum": "private (2026-11-24T09:00)"
+   "durum": "public"
   },
   {
    "video_id": "r9MURByE3BI",
@@ -375,29 +399,13 @@
    "ad": "Sözünü Tutan Pamuk",
    "yayin": "2026-11-24",
    "izlenme": 0,
-   "durum": "private (2026-11-24T14:00)"
+   "durum": "public"
   },
   {
    "video_id": "pUOW73x3rK4",
    "profil": "shorts",
    "ad": "Ailem: Mom, Dad, Baby",
    "yayin": "2026-11-25",
-   "izlenme": 0,
-   "durum": "private (2026-11-25T09:00)"
-  },
-  {
-   "video_id": "1LMXqLtSE6g",
-   "profil": "shorts",
-   "ad": "Kıskanç Fındık",
-   "yayin": "2026-11-25",
-   "izlenme": 0,
-   "durum": "private (2026-11-25T14:00)"
-  },
-  {
-   "video_id": "6Wq6eO4TnHs",
-   "profil": "derleme",
-   "ad": "derleme (haftalik)",
-   "yayin": "2026-11-22",
    "izlenme": 0,
    "durum": "public"
   },
@@ -407,7 +415,7 @@
    "ad": "Sayılar: Seven, Eight, Nine, Ten",
    "yayin": "2026-11-26",
    "izlenme": 0,
-   "durum": "private (2026-11-26T09:00)"
+   "durum": "public"
   },
   {
    "video_id": "5SRphZwvN_I",
@@ -415,7 +423,7 @@
    "ad": "Dinlemeyi Bilmek",
    "yayin": "2026-11-26",
    "izlenme": 0,
-   "durum": "private (2026-11-26T14:00)"
+   "durum": "public"
   },
   {
    "video_id": "xILHCOMtm2w",
@@ -424,6 +432,54 @@
    "yayin": "2026-11-27",
    "izlenme": 0,
    "durum": "private (2026-11-27T09:00)"
+  },
+  {
+   "video_id": "DqLV_8_j4SA",
+   "profil": "shorts",
+   "ad": "Pamuk'un Odası",
+   "yayin": "2026-11-27",
+   "izlenme": 0,
+   "durum": "private (2026-11-27T14:00)"
+  },
+  {
+   "video_id": "Gc4-RnaVaFQ",
+   "profil": "shorts",
+   "ad": "Şekiller: Circle, Square, Triangle",
+   "yayin": "2026-11-28",
+   "izlenme": 0,
+   "durum": "private (2026-11-28T09:00)"
+  },
+  {
+   "video_id": "6rCi15tdR68",
+   "profil": "shorts",
+   "ad": "Çiçeklere Dikkat",
+   "yayin": "2026-11-28",
+   "izlenme": 0,
+   "durum": "private (2026-11-28T14:00)"
+  },
+  {
+   "video_id": "vhfpMqcp18U",
+   "profil": "shorts",
+   "ad": "Nazik Sözler: Please, Sorry, You're welcome",
+   "yayin": "2026-11-29",
+   "izlenme": 0,
+   "durum": "private (2026-11-29T09:00)"
+  },
+  {
+   "video_id": "lWM_VoM4Zsw",
+   "profil": "shorts",
+   "ad": "Yardım İstemek",
+   "yayin": "2026-11-29",
+   "izlenme": 0,
+   "durum": "private (2026-11-29T14:00)"
+  },
+  {
+   "video_id": "76Z3Bh4TD-c",
+   "profil": "shorts",
+   "ad": "Oyuncaklar: Toy, Ball, Box",
+   "yayin": "2026-11-30",
+   "izlenme": 0,
+   "durum": "private (2026-11-30T09:00)"
   }
  ]
 }
