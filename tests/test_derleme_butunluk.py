@@ -29,8 +29,24 @@ class Butunluk(unittest.TestCase):
         self.assertFalse(any(b.endswith(("b042.json", "b043.json", "b044.json")) for b in secilen))
 
     def test_kapak_bekleyenleri(self):
-        vids, _ = kapak_tekrar.bekleyenler()
-        self.assertIn("prRdKUPpw9k", vids)
+        # canlı yayin_kaydi.json'a bağlı değil (kapak yüklenince test kırılıyordu, 2026-11-26): geçici örnek veriyle
+        import tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            (t / "kapaklar").mkdir()
+            for v in ("BEKLEYEN01", "YUKLENDI01"):
+                (t / "kapaklar" / f"{v}.jpg").write_bytes(b"x")
+            (t / "yayin_kaydi.json").write_text(json.dumps([
+                {"profil": "derleme", "video_id": "BEKLEYEN01", "kapak": "yuklenemedi: 403"},
+                {"profil": "derleme", "video_id": "YUKLENDI01", "kapak": "yuklenemedi: 403"},
+                {"profil": "derleme", "video_id": "RESIMSIZ01", "kapak": "yuklenemedi: 403"},
+                {"profil": "shorts", "video_id": "SHORTS01", "kapak": "yuklenemedi: 403"}]))
+            (t / "durum.json").write_text(json.dumps({"YUKLENDI01": "yuklendi"}))
+            with mock.patch.object(kapak_tekrar, "KOK", t), mock.patch.object(kapak_tekrar, "KAPAKLAR", t / "kapaklar"), \
+                    mock.patch.object(kapak_tekrar, "DURUM", t / "durum.json"):
+                vids, _ = kapak_tekrar.bekleyenler()
+        self.assertEqual(vids, ["BEKLEYEN01"])
 
 
 if __name__ == "__main__":
