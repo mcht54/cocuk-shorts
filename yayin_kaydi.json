@@ -1203,5 +1203,22 @@
   "yayin_zamani": "2026-11-29T14:00:00+00:00",
   "baslik": "Yardım İstemek | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-26T09:58:50+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e020.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "76Z3Bh4TD-c",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-11-30T09:00:00Z"
+  },
+  "yayin_zamani": "2026-11-30T09:00:00+00:00",
+  "baslik": "İngilizce Oyuncaklar: Toy, Ball, Box | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
