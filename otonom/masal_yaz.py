@@ -5,6 +5,7 @@ Denetimi geçemeyen bölüm hatalarıyla birlikte Gemini'ye düzelttirilir; DENE
 Çocuklar sakin bölümleri erken terk ettiği için (2026-10 gözlem) bölümlerin çoğu macera/aksiyon ağırlıklıdır.
 """
 import json
+import pathlib
 import random
 import re
 from datetime import date, timedelta
@@ -148,6 +149,13 @@ def yaz_bir(no, istek=None):
         istem += (f"\n\nHESAP SAHİBİNİN FİKRİ (öncelikli): «{istek[:300]}». Kısaltmalı, yazım hatalı ya da sokak ağzıyla yazılmış olabilir; "
                   "niyetini bir insan gibi anla ve bölümü bu fikirden kur. 'deger' alanına fikre en uygun değeri yaz "
                   f"(uygunsa \"{deger}\"). Fikir çocuğa uygun değilse onu çocuğa uygun, sevimli bir hâle getir; korku/şiddet ekleme.")
+    try:  # doğrulanmış, tarihli takvim notu (2026-11-27): haftada 3 gün, süresi geçen düşer
+        from otonom.gundem_notu import metin as _gundem
+        _g = _gundem(pathlib.Path(__file__).with_name("gundem.json"), kural='GÜNCEL TAKVİM (doğrulanmış; bugün geçerli olanlar). Bu bölümde ZORUNLU DEĞİL: yalnız masala doğal oturuyorsa EN ÇOK BİR maddeyi sevimli bir arka plan olarak kullan (ör. en uzun gece, karne günü, yarıyıl tatili). Tarih/rakam uydurma; korku, ders verme baskısı, reklam yok.')
+        if _g:
+            istem += "\n\n" + _g
+    except Exception:  # noqa: BLE001
+        pass
     ham = gemini.sor(istem, sicaklik=1.0)
     for tur_no in range(DENEME):
         ham = ham if isinstance(ham, dict) else {}

@@ -7,6 +7,7 @@ seri/findik-ile-pamuk/ingilizce_yaz1.py'deki elle yazılmış e001-e004 ile ayn�
 Yapı (cocuk3d.bolum_denetle), ders kuralları (ders_denetle) ve çocuk güvenliği denetiminden geçmeyen yazılmaz.
 """
 import json
+import pathlib
 import re
 from pathlib import Path
 
@@ -206,6 +207,13 @@ def yaz_bir(no):
         ifadeler="/".join(bolum_denetle.IFADELER), sx=bolum_denetle.SAHNE_X, sy=bolum_denetle.SAHNE_Y,
         uzanma=bolum_denetle.UZANMA, verme=bolum_denetle.VERME,
         ornekler="\n\n".join(_ornek(a) for a in ORNEKLER if (SERI / "bolumler" / f"{a}.json").exists()))
+    try:  # doğrulanmış, tarihli takvim notu (2026-11-27): haftada 3 gün, süresi geçen düşer
+        from otonom.gundem_notu import metin as _gundem
+        _g = _gundem(pathlib.Path(__file__).with_name("gundem.json"), kural='GÜNCEL TAKVİM (doğrulanmış; bugün geçerli olanlar). Bu bölümde ZORUNLU DEĞİL: yalnız masala doğal oturuyorsa EN ÇOK BİR maddeyi sevimli bir arka plan olarak kullan (ör. en uzun gece, karne günü, yarıyıl tatili). Tarih/rakam uydurma; korku, ders verme baskısı, reklam yok.')
+        if _g:
+            istem += "\n\n" + _g
+    except Exception:  # noqa: BLE001
+        pass
     ham = gemini.sor(istem, sicaklik=0.9)
     for tur_no in range(DENEME):
         b = _tamamla(ham, no, konu)
