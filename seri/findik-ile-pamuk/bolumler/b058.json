@@ -1,0 +1,207 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 58,
+ "baslik": "Hızlı Adımlar",
+ "deger": "dikkatli olmak",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "orman",
+ "baslangic": {
+  "findik": [
+   -1.2,
+   0.2
+  ],
+  "pamuk": [
+   -1.5,
+   0.4
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Hızlı mı, Dikkatli mi?",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Hızlı Adımlar | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık ile Pamuk ormanda koşarken dikkatli olmanın önemini öğreniyor. Bu bölümün değeri: dikkatli olmak.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "dikkatli olmak"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Hadi ormanda en hızlı biz koşalım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Bekle Fındık, önümüzdeki taşlara dikkat etmeliyiz!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "orta",
+   "hareket": "takip",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Ayy! Çok hızlı koştuğum için taşa takıldım!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.0,
+     "nereye": [
+      0.5,
+      0.15
+     ],
+     "son": 0.6
+    },
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.65,
+     "tur": "uzgun"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "iki_kisi",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "İyi misin Fındık? Acele ederken etrafımıza bakmalıyız."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.0,
+     "nereye": [
+      0.2,
+      0.35
+     ],
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.55,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "sabit",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Haklısın Pamuk, bundan sonra çok dikkatli olacağım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.1,
+     "tur": "mutlu"
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "tip": "genis",
+   "hareket": "uzaklas",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "anlatici",
+     "metin": "Dikkatli adımlar atmak, bizi kazalardan korur."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 1,
+     "son": 0.4
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.5,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
