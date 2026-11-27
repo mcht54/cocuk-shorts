@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "cocuk-shorts-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add seri/findik-ile-pamuk/bolumler merak/konular
+          git add seri/findik-ile-pamuk/bolumler merak/konular; [ ! -e otonom/kota.json ] || git add otonom/kota.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stok: yeni içerik $(date -u +%F)"
           for i in 1 2 3 4 5; do

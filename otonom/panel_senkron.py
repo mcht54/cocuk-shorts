@@ -218,6 +218,16 @@ def _belge():
     return r.json()["value"]
 
 
+def _kota_ekler():
+    """Panel tablosundaki 'Yapay zekâ' rozeti (2026-11-27): otonom/kota.json (rakam/anahtar yok)."""
+    try:
+        import pathlib
+        from ortak.kota_kaydi import rozet
+        return {"baglanti": {"minik_masal": {"gemini": rozet(pathlib.Path(__file__).resolve().parent)}}}
+    except Exception:  # noqa: BLE001
+        return {}
+
+
 def _post(yol, govde):
     r = requests.post(f"{PANEL}/api/icerik-takvimi/senkron/{KANAL}{yol}", json=govde, timeout=60,
                       headers={"Authorization": f"Bearer {_belge()}", "X-Requested-With": "ajans-web"})
@@ -254,7 +264,7 @@ def duzelt_raporu():
 def main(komut):
     try:
         if komut == "al":
-            cevap = _post("", {"bolumler": takvim_ozeti()})
+            cevap = _post("", {"bolumler": takvim_ozeti(), "ekler": _kota_ekler()})
             uyg, ret = uygula(cevap.get("duzenlemeler", []))
             fikir = fikirleri_yaz(cevap.get("tanitimlar", []))
             duzelt = []
@@ -278,7 +288,7 @@ def main(komut):
                 if (o["uygulanan"] or o["reddedilen"] or o.get("tanitim") or o.get("duzelt")) and (not yazildi or _gonderildi()):
                     _post("/onay", o)
                 ONAY.unlink()
-            _post("", {"bolumler": takvim_ozeti()})
+            _post("", {"bolumler": takvim_ozeti(), "ekler": _kota_ekler()})
             print("panel: güncel takvim gönderildi", flush=True)
     except Exception as e:  # noqa: BLE001 — panel düşse de hat durmaz
         print("panel senkronu yapılamadı (hat etkilenmez):", str(e)[:300], flush=True)

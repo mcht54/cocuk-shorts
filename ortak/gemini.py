@@ -77,10 +77,22 @@ def sor(istem, sicaklik=0.9, json_cikti=True):
             if r.status_code == 404:  # model kaldırılmış: sıradakine geç
                 break
             if r.status_code == 429 and re.search(r"per ?day|PerDay|daily", r.text, re.I):
+                _kota("gemini_metin")  # panel "Yapay zekâ" rozeti (2026-11-27)
                 break  # günlük ücretsiz kota bitti: beklemek işe yaramaz, sıradaki model
             if r.status_code in (429, 500, 502, 503, 504):  # dakikalık sınır 60 sn'de açılır
                 time.sleep(65 if r.status_code == 429 else 30 * (deneme + 1))
                 continue
             if r.status_code in (400, 401, 403):
                 raise GeminiYok(son_hata)
+    if son_hata and " 429 " in f" {son_hata} ":
+        _kota("metin_yok")
     raise GeminiYok(f"Gemini yanıt vermedi: {son_hata}")
+
+
+def _kota(tur):
+    try:
+        import pathlib
+        from ortak.kota_kaydi import kaydet
+        kaydet(pathlib.Path(__file__).resolve().parent.parent / "otonom", tur)
+    except Exception:  # noqa: BLE001
+        pass
