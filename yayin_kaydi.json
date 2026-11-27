@@ -1254,5 +1254,37 @@
   "yayin_zamani": "2026-12-01T09:00:00+00:00",
   "baslik": "İngilizce Yiyecekler: Bread, Milk, Cake | Çocuklar için İngilizce",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-27T19:44:09+00:00",
+  "profil": "derleme",
+  "bolum": "derleme",
+  "tur": "ingilizce",
+  "parcalar": [
+   "seri/findik-ile-pamuk/bolumler/e001.json",
+   "seri/findik-ile-pamuk/bolumler/e002.json",
+   "seri/findik-ile-pamuk/bolumler/e003.json",
+   "seri/findik-ile-pamuk/bolumler/e004.json",
+   "seri/findik-ile-pamuk/bolumler/e005.json",
+   "seri/findik-ile-pamuk/bolumler/e006.json",
+   "seri/findik-ile-pamuk/bolumler/e007.json",
+   "seri/findik-ile-pamuk/bolumler/e010.json",
+   "seri/findik-ile-pamuk/bolumler/e011.json",
+   "seri/findik-ile-pamuk/bolumler/e012.json",
+   "seri/findik-ile-pamuk/bolumler/e013.json",
+   "seri/findik-ile-pamuk/bolumler/e015.json",
+   "seri/findik-ile-pamuk/bolumler/e016.json",
+   "seri/findik-ile-pamuk/bolumler/e017.json"
+  ],
+  "durum": "yuklendi",
+  "sure": 668.8,
+  "video_id": "lAgX6AY3Vcc",
+  "youtube": {
+   "privacyStatus": "public",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true
+  },
+  "liste": "eklendi",
+  "kapak": "yuklendi"
  }
 ]
