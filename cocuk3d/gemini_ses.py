@@ -28,6 +28,8 @@ from pathlib import Path
 
 import numpy as np
 
+from ortak import gemini_havuz as _gh
+
 KOK = Path(__file__).resolve().parent.parent
 KUTUPHANE = KOK / "ses_kutuphane"
 SR = 24000
@@ -151,8 +153,8 @@ def _nokta(kel):
     return kel
 
 
-def _istek(govde, zaman=180):
-    k = os.environ.get("GEMINI_API_KEY")
+def _istek(govde, zaman=180, anahtar=None):
+    k = anahtar if anahtar is not None else (_gh.anahtarlar() or [""])[0]
     if not k:
         raise KotaBitti("GEMINI_API_KEY yok")
     req = urllib.request.Request(f"{API}/models/{TTS_MODEL}:generateContent", data=json.dumps(govde).encode(),
@@ -161,29 +163,47 @@ def _istek(govde, zaman=180):
         return json.load(r)
 
 
+HAVUZ_DOSYASI = Path(__file__).resolve().parent.parent / "otonom" / "gemini-havuz.json"
+
+
 class Sayac:
-    """Bir çalışmadaki Gemini ses isteği bütçesi (kotayı Dijital Çırak'tan yememek için sınırlı)."""
+    """Bir çalışmadaki Gemini ses isteği bütçesi (kotayı Dijital Çırak'tan yememek için sınırlı).
+    Anahtar havuzu (2026-11-28): bir anahtarın günlük TTS kotası dolunca (o gün işaretlenir) sıradakine geçilir;
+    dakikalık sınırda kotayı zorlamadan durulur. Her HTTP denemesi bütçeden bir düşer."""
 
     def __init__(self, butce):
         self.kalan = butce
 
+    def _gonder(self, model, govde, anahtar, zaman, yol="generateContent"):
+        if self.kalan <= 0:
+            raise KotaBitti("bu çalışmanın ses bütçesi bitti")
+        self.kalan -= 1
+        try:
+            return 200, json.dumps(_istek(govde, zaman, anahtar))
+        except urllib.error.HTTPError as e:
+            h = e.read().decode()[:2000]
+            print("gemini ses:", e.code, _gh._kota_ozet(_gh.kota_bilgisi(h)) if e.code == 429 else h[:200], flush=True)
+            return e.code, h
+
     def cagir(self, govde):
         if self.kalan <= 0:
             raise KotaBitti("bu çalışmanın ses bütçesi bitti")
+        h = _gh.Havuz(HAVUZ_DOSYASI, lambda: _gh.anahtarlar() or [""], gonder=self._gonder,
+                      gunluk=lambda m: print("gemini ses:", m, flush=True), uyku=lambda s: time.sleep(min(s, 30)))
+        if not _gh.anahtarlar():
+            h.yol = None  # anahtar yok (test/sahte istek): işaretler yalnız bu çağrıda tutulur, dosyaya yazılmaz
         for i in range(2):
-            self.kalan -= 1
             try:
-                r = _istek(govde)
+                r = h.cagir(TTS_MODEL, govde, zaman=180, deneme=2)
+            except _gh.GunlukKota as e:
+                raise KotaBitti(str(e)[:120]) from e
+            except _gh.GeminiHatasi as e:
+                if e.kod == 429:  # dakikalık sınır: kotayı zorlamadan dur (kalan bölümler sonraki gece)
+                    raise KotaBitti(str(e)[:120]) from e
+                raise RuntimeError(f"gemini ses: {e}") from e
+            try:
                 return base64.b64decode(r["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
-            except urllib.error.HTTPError as e:
-                h = e.read().decode()[:300]
-                print("gemini ses:", e.code, h[:200], flush=True)
-                if e.code == 429:  # dakikalık ya da günlük: kotayı zorlamadan dur (kalan bölümler sonraki gece)
-                    raise KotaBitti(h[:120])
-                if e.code not in (500, 503) or self.kalan <= 0:
-                    raise
-                time.sleep(30)
-            except (KeyError, IndexError, ValueError, TimeoutError, urllib.error.URLError) as e:
+            except (KeyError, IndexError, ValueError, TypeError) as e:
                 print("gemini ses:", repr(e)[:200], flush=True)
                 if i or self.kalan <= 0:
                     raise

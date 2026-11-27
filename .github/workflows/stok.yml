@@ -32,6 +32,14 @@ jobs:
       - name: Stok doldur
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+          GEMINI_API_KEY_7: ${{ secrets.GEMINI_API_KEY_7 }}
+          GEMINI_API_KEY_8: ${{ secrets.GEMINI_API_KEY_8 }}
+          GEMINI_API_KEY_9: ${{ secrets.GEMINI_API_KEY_9 }}
         run: python -m otonom.stok --kanal "${{ inputs.kanal || 'hepsi' }}"
       - name: Bölüm denetimi (tüm seri)
         if: always()
@@ -41,7 +49,7 @@ jobs:
         run: |
           git config user.name "cocuk-shorts-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add seri/findik-ile-pamuk/bolumler merak/konular; [ ! -e otonom/kota.json ] || git add otonom/kota.json
+          git add seri/findik-ile-pamuk/bolumler merak/konular; [ ! -e otonom/kota.json ] || git add otonom/kota.json; [ ! -e otonom/gemini-havuz.json ] || git add otonom/gemini-havuz.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stok: yeni içerik $(date -u +%F)"
           for i in 1 2 3 4 5; do

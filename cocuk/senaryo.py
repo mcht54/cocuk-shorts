@@ -66,26 +66,30 @@ YASAK = re.compile(r"\b(ölüm|öldü|ölmüş|ölecek|öldür|kanlı|kanama|bı
 
 
 def _gemini(istem, sicaklik):
-    global CAGRI
-    anahtar = os.environ.get("GEMINI_API_KEY")
-    if not anahtar:
+    """Anahtar havuzuyla (ortak.gemini_havuz) çağırır: günlük kotası dolan anahtar bugün atlanır, sıradakine geçilir."""
+    from ortak import gemini_havuz as _gh
+    if not _gh.anahtarlar():
         raise RuntimeError("GEMINI_API_KEY tanımlı değil; senaryo yazılamaz")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
     govde = {"contents": [{"parts": [{"text": istem}]}],
              "generationConfig": {"temperature": sicaklik, "responseMimeType": "application/json"}}
-    for deneme in range(4):
+
+    def gonder(model, g, anahtar, zaman, yol="generateContent"):
+        global CAGRI
         if CAGRI >= GUNLUK_SINIR:
             raise RuntimeError(f"Gemini günlük çağrı sınırına ulaşıldı ({GUNLUK_SINIR})")
         CAGRI += 1
-        r = requests.post(url, params={"key": anahtar}, json=govde, timeout=120)
-        if r.ok:
-            metin = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(metin)
-        if r.status_code in (429, 500, 503):
-            time.sleep(20 * (deneme + 1))
-            continue
-        raise RuntimeError(f"Gemini hatası {r.status_code}: {r.text[:300]}")
-    raise RuntimeError("Gemini kotası/servisi yanıt vermedi")
+        r = requests.post(f"{_gh.API}/models/{model}:{yol}", headers={"x-goog-api-key": anahtar}, json=g, timeout=120)
+        return r.status_code, r.text
+    from pathlib import Path
+    h = _gh.Havuz(Path(__file__).resolve().parent.parent / "otonom" / "gemini-havuz.json", _gh.anahtarlar, gonder=gonder,
+                  uyku=lambda s: time.sleep(max(s, 20)))
+    try:
+        j = h.cagir(MODEL, govde, zaman=120, deneme=4)
+    except _gh.GunlukKota as e:
+        raise RuntimeError(f"Gemini kotası doldu: {e}") from e
+    except _gh.GeminiHatasi as e:
+        raise RuntimeError(f"Gemini hatası {e.kod}: {e}") from e
+    return json.loads(j["candidates"][0]["content"]["parts"][0]["text"])
 
 
 def _gecerli(s):

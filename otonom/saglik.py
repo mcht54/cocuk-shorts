@@ -118,7 +118,7 @@ def main():
                 rapor.append(satir)
         except requests.RequestException as e:
             rapor.append(f"- {ad} YouTube: video durumu okunamadı ({e})")
-    if not os.environ.get("GEMINI_API_KEY"):
+    if not __import__("ortak.gemini_havuz", fromlist=["x"]).anahtarlar():  # havuz: GEMINI_API_KEY, _2 … _9
         sorunlar.append("GEMINI_API_KEY secret'ı yok: yeni bölüm/konu yazılamıyor, stok tükenince yayın durur.")
     try:
         from otonom import stok

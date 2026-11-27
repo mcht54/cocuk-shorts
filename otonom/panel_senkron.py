@@ -190,7 +190,7 @@ def _gonderildi():
 
 def fikirleri_yaz(tanitimlar, en_cok=2):
     """Paneldeki "İçerik fikri" → yeni masal bölümü (stok sırasına eklenir; depoya akıştaki adım yazar). Gemini yoksa fikir panelde bekler."""
-    if not tanitimlar or not os.environ.get("GEMINI_API_KEY"):
+    if not tanitimlar or not __import__("ortak.gemini_havuz", fromlist=["x"]).anahtarlar():
         return []
     from otonom import masal_yaz
     out = []

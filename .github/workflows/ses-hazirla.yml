@@ -37,11 +37,19 @@ jobs:
       - name: Sesler
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
+          GEMINI_API_KEY_7: ${{ secrets.GEMINI_API_KEY_7 }}
+          GEMINI_API_KEY_8: ${{ secrets.GEMINI_API_KEY_8 }}
+          GEMINI_API_KEY_9: ${{ secrets.GEMINI_API_KEY_9 }}
         run: python -m otonom.ses_hazirla ${{ inputs.bolum && format('--bolum "{0}"', inputs.bolum) || '' }}
       - run: |
           git config user.name "cocuk-shorts-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add ses_kutuphane 2>/dev/null || true
+          git add ses_kutuphane 2>/dev/null || true; [ ! -e otonom/gemini-havuz.json ] || git add otonom/gemini-havuz.json
           git diff --cached --quiet && exit 0
           git commit -q -m "ses kütüphanesi: $(date -u +%F)"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done
