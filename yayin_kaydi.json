@@ -1286,5 +1286,22 @@
   },
   "liste": "eklendi",
   "kapak": "yuklendi"
+ },
+ {
+  "tarih": "2026-11-27T22:17:03+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/b028.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "masal_shorts",
+  "video_id": "gTomjJYAff0",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-12-01T14:00:00Z"
+  },
+  "yayin_zamani": "2026-12-01T14:00:00+00:00",
+  "baslik": "Sürpriz Hediye | Fındık ile Pamuk | Çocuk Çizgi Filmi",
+  "liste": "eklendi"
  }
 ]
