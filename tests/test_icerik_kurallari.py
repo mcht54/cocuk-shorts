@@ -24,7 +24,45 @@ def _depo(n, durum="public"):
     return d
 
 
+def _merak(n, profil="shorts"):
+    d = Path(tempfile.mkdtemp())
+    (d / "konular" / "k1").mkdir(parents=True)
+    videolar = []
+    for i in range(n):
+        (d / "konular" / "k1" / f"kisa{i}.json").write_text(json.dumps(
+            {"baslik": f"Kısa {i}", "ekran_basligi": f"Ekran {i}", "parcalar": [{"metin": f"Açılış {i}."}]}))
+        videolar.append({"video_id": f"m{i}", "konu": "k1", "senaryo": f"kisa{i}", "profil": profil,
+                         "yayin": "2026-11-01" if i else "2026-11-25", "izlenme": i * 100, "durum": "public"})
+    (d / "izlenme.json").write_text(json.dumps({"tarih": "2026-11-26T10:00:00+00:00", "videolar": videolar}))
+    return d
+
+
 class Test(unittest.TestCase):
+    def test_merak_olcum(self):
+        o = k.merak_olcum_blogu("shorts", merak=_merak(8))
+        self.assertIn("«Kısa 7» açılış: Ekran 7 | Açılış 7. — 700 izlenme", o)
+        self.assertNotIn("Kısa 0»", o)  # 3 günden yeni: sayılmaz
+        self.assertEqual(k.merak_olcum_blogu("shorts", merak=_merak(6)), "")  # 1 tanesi yeni -> 5 ölçüm
+        self.assertEqual(k.merak_olcum_blogu("uzun", merak=_merak(8)), "")
+        self.assertEqual(k.merak_olcum_blogu("shorts", merak=Path(tempfile.mkdtemp())), "")
+
+    def test_merak_eslestir(self):
+        from merak import izlenme
+        kayit = [{"durum": "yuklendi", "video_id": "a", "konu": "k", "senaryo": "uzun", "profil": "uzun",
+                  "yayin_zamani": "2026-11-02T10:00:00"}, {"durum": "kalite_kaldi", "konu": "x"}]
+        kanal = [{"video_id": "a", "baslik": "X"}, {"video_id": "b", "baslik": "Batık Şehir! #shorts", "yayin": "2026-11-03T1"},
+                 {"video_id": "c", "baslik": "Başka"}]
+        e = izlenme.eslestir(kayit, kanal, {izlenme.baslik_norm("Batık şehir!"): ("pr", "kisa2", "shorts")})
+        self.assertEqual([(v["video_id"], v["senaryo"]) for v in e], [("a", "uzun"), ("b", "kisa2")])
+        self.assertEqual(e[1]["yayin"], "2026-11-03")
+
+    def test_merak_toplayici_anahtarsiz_atlar(self):
+        import os
+        from unittest import mock
+        from merak import izlenme
+        with mock.patch.dict(os.environ, {"YT_REFRESH_TOKEN": ""}):
+            self.assertEqual(izlenme.main(), 0)
+
     def test_metin_kural_ve_cocuk(self):
         m = k.metin(cocuk=True, son_acilislar=["A | b"])
         self.assertIn("EN AZ 5 KANCA", m)

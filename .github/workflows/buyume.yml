@@ -26,15 +26,26 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python -m otonom.buyume
+      - name: Merak Arşivi izlenmeleri (yalnız okuma; anahtar yoksa atlanır)
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.MERAK_YT_REFRESH_TOKEN }}
+        run: python -m merak.izlenme
       - name: Raporu depoya yaz
         run: |
           git config user.name "cocuk-shorts-bot"
           git config user.email "actions@users.noreply.github.com"
           cp otonom/izlenme.json "$RUNNER_TEMP/izlenme.json"
+          [ -f merak/izlenme.json ] && cp merak/izlenme.json "$RUNNER_TEMP/merak-izlenme.json"
           for i in 1 2 3 4 5; do
             git fetch -q origin main && git reset -q --hard origin/main
             cp "$RUNNER_TEMP/izlenme.json" otonom/izlenme.json
             git add otonom/izlenme.json
+            if [ -f "$RUNNER_TEMP/merak-izlenme.json" ]; then
+              cp "$RUNNER_TEMP/merak-izlenme.json" merak/izlenme.json && git add merak/izlenme.json
+            fi
             git diff --cached --quiet && exit 0
             git commit -q -m "izlenme raporu: $(date -u +%F)" && git push -q && exit 0
             sleep $((i * 5))

@@ -88,14 +88,47 @@ def olcum_blogu(onek: str, depo: Path | None = None, adet: int = 3) -> str:
                                            f"— {v['izlenme']} izlenme ({v.get('yayin', '')} yayın)"))
     except (OSError, ValueError, TypeError, AttributeError):
         return ""
+    return _olcum_metni(satirlar, olcum_gunu, adet, "bölüm")
+
+
+def _olcum_metni(satirlar, olcum_gunu, adet, birim) -> str:
     if len(satirlar) < OLCUM_EN_AZ:
         return ""
-    satirlar.sort(key=lambda x: -x[0])
+    satirlar = sorted(satirlar, key=lambda x: -x[0])
     n = min(adet, len(satirlar) // 2)
     return ("NE TUTUYOR / NE TUTMUYOR (ölçüm, " + olcum_gunu.isoformat() + "; YouTube izlenmesi, " + str(len(satirlar))
-            + " bölüm). Tutanların kanca tipini, konusunu ve ilk cümle yapısını taşı; tutmayanların açılışını tekrarlama. "
+            + f" {birim}). Tutanların kanca tipini, konusunu ve ilk cümle yapısını taşı; tutmayanların açılışını tekrarlama. "
               "Bu rakamları videoda kullanma.\nEN ÇOK İZLENEN:\n" + "\n".join("- " + s for _, s in satirlar[:n])
             + "\nEN AZ İZLENEN:\n" + "\n".join("- " + s for _, s in satirlar[-n:]))
+
+
+def merak_olcum_blogu(profil: str, merak: Path | None = None, adet: int = 3) -> str:
+    """Kural 8, Merak Arşivi: merak/izlenme.json (merak.izlenme toplar) + konular/<konu>/<senaryo>.json.
+    profil "shorts" ya da "uzun". Aynı eşikler (≥6 ölçülmüş, 3 günden yeni hariç); yoksa/bozuksa ''."""
+    import datetime as dt
+    import json
+    merak = merak or DEPO / "merak"
+    try:
+        rapor = json.loads((merak / "izlenme.json").read_text(encoding="utf-8"))
+        olcum_gunu = dt.date.fromisoformat(str(rapor.get("tarih", ""))[:10])
+        satirlar = []
+        for v in rapor.get("videolar", []):
+            if v.get("profil") != profil or v.get("durum") != "public" or not isinstance(v.get("izlenme"), int):
+                continue
+            try:
+                if (olcum_gunu - dt.date.fromisoformat(str(v.get("yayin", ""))[:10])).days < OLCUM_OLGUNLUK:
+                    continue
+                s = json.loads((merak / "konular" / str(v["konu"]) / f"{v['senaryo']}.json").read_text(encoding="utf-8"))
+            except (OSError, ValueError, KeyError, TypeError):
+                continue
+            parcalar = s.get("parcalar") or ((s.get("bolumler") or [{}])[0].get("parcalar") or [])
+            ilk = parcalar[0].get("metin", "") if parcalar and isinstance(parcalar[0], dict) else ""
+            ekran = s.get("ekran_basligi") or s.get("kapak_yazisi") or ""
+            satirlar.append((v["izlenme"], f"«{s.get('baslik', '')}» açılış: {ekran} | {ilk} "
+                                           f"— {v['izlenme']} izlenme ({v.get('yayin', '')} yayın)"))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return ""
+    return _olcum_metni(satirlar, olcum_gunu, adet, "video")
 
 
 def ekle(istem: str, **kw) -> str:

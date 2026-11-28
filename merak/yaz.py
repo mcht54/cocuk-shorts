@@ -902,7 +902,7 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
 def uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat):
     """Plan + bölüm bölüm yazım. Geçen tam senaryo ya da None."""
     tarz = random.choice(TARZLAR)
-    plan = gemini.sor(_ekle(PLAN_ISTEM.format(tarz=tarz, **ortak), ortak.get("strateji")), sicaklik=0.8)
+    plan = gemini.sor(_ekle(PLAN_ISTEM.format(tarz=tarz, **ortak), ortak.get("strateji_plan")), sicaklik=0.8)
     if isinstance(plan, dict):
         plan.pop("kanca_adaylari", None)  # isteğe bağlı (kural 2); seçilen kanca baslik/Giriş bölümünde
     for tur in range(DENEME):
@@ -977,6 +977,15 @@ def _strateji(**kw):
         return ""
 
 
+def _olcum(profil):
+    """Kural 8: ölçülen izlenme dersleri (merak/izlenme.json; ≥6 ölçülmüş video yoksa '')."""
+    try:
+        from ortak import icerik_kurallari
+        return icerik_kurallari.merak_olcum_blogu(profil)
+    except Exception:  # noqa: BLE001
+        return ""
+
+
 def _ekle(istem, ek):
     return f"{istem}\n\n{ek}" if ek else istem
 
@@ -996,7 +1005,8 @@ def yaz(kid):
     acilislar = son_acilislar()
     ortak = dict(konu=paket["wiki"], calisma=paket.get("calisma_basligi", ""), kurallar=kurallar,
                  gorseller=gorsel_listesi(gorseller), kaynak=kaynak[:60000],
-                 strateji=_strateji(son_acilislar=acilislar),
+                 strateji=_ekle(_strateji(son_acilislar=acilislar), _olcum("shorts")),
+                 strateji_plan=_ekle(_strateji(son_acilislar=acilislar), _olcum("uzun")),
                  strateji_bolum=_strateji(kanca_alani=False))
     if not (d / "uzun.json").exists():
         print(f"  uzun senaryo: {kid}", flush=True)
