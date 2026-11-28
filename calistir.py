@@ -132,8 +132,10 @@ def main():
             if hazir:
                 s = dict(hazir, tur=tur)
             else:
-                s = senaryo_mod.yaz(tur, [g["konu"] for g in gecmis if g.get("konu")])
-            kayit.update({"konu": s.get("konu", s["baslik"]), "baslik": s["baslik"]})
+                s = senaryo_mod.yaz(tur, [g["konu"] for g in gecmis if g.get("konu")],
+                                    son_acilislar=[g.get("ekran_basligi") or g.get("baslik") for g in gecmis[-12:]])
+            kayit.update({"konu": s.get("konu", s["baslik"]), "baslik": s["baslik"],
+                          "ekran_basligi": s.get("ekran_basligi", "")})
             log("senaryo:", s["baslik"])
             gecici = Path(tempfile.mkdtemp(prefix="cocuk-"))
             try:

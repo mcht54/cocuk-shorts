@@ -867,6 +867,7 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
                                plan=" | ".join(f"{i + 1}. {x['ad']}" for i, x in enumerate(plan["bolumler"])),
                                onceki=onceki[-6000:] or "(ilk bölüm)", kurallar=ortak["kurallar"],
                                gorseller=ortak["gorseller"], kaynak=ortak["kaynak"])
+    istem = _ekle(istem, ortak.get("strateji_bolum"))
     b = None
     for _ in range(3):
         b = _bolum_hazirla(gemini.sor(istem, sicaklik=0.8), len(gorseller))
@@ -901,7 +902,9 @@ def _bolum_yaz(no, plan, ortak, gorseller, kaynak, kaynak_sayilari, tarz, onceki
 def uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat):
     """Plan + bölüm bölüm yazım. Geçen tam senaryo ya da None."""
     tarz = random.choice(TARZLAR)
-    plan = gemini.sor(PLAN_ISTEM.format(tarz=tarz, **ortak), sicaklik=0.8)
+    plan = gemini.sor(_ekle(PLAN_ISTEM.format(tarz=tarz, **ortak), ortak.get("strateji")), sicaklik=0.8)
+    if isinstance(plan, dict):
+        plan.pop("kanca_adaylari", None)  # isteğe bağlı (kural 2); seçilen kanca baslik/Giriş bölümünde
     for tur in range(DENEME):
         plan = plan if isinstance(plan, dict) else {}
         h = plan_denetimi(plan, len(gorseller), koordinat, kaynak_sayilari)
@@ -944,6 +947,40 @@ def uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat):
     return s
 
 
+def son_acilislar(n=12):
+    """Kanalın son yazılmış Shorts/belgesel açılışları (ekran yazısı/başlık | ilk cümle), en yenisi sonda (kural 7)."""
+    out = []
+    try:
+        dosyalar = sorted(KONULAR.glob("*/kisa*.json"), key=lambda p: p.stat().st_mtime)[-n:]
+        dosyalar += sorted(KONULAR.glob("*/uzun.json"), key=lambda p: p.stat().st_mtime)[-4:]
+        for yol in dosyalar:
+            try:
+                s = json.loads(yol.read_text())
+                parcalar = s.get("parcalar") or ((s.get("bolumler") or [{}])[0].get("parcalar") or [])
+                ilk = parcalar[0].get("metin", "") if parcalar else ""
+                a = f"{s.get('ekran_basligi') or s.get('baslik') or ''} | {ilk}".strip(" |")
+                if a:
+                    out.append(a)
+            except (OSError, ValueError, AttributeError, IndexError, TypeError):
+                continue
+    except OSError:
+        pass
+    return out
+
+
+def _strateji(**kw):
+    """İçerik stratejisti kuralları (2026-11-28; ortak/icerik-stratejisti.md). Dosya yoksa ''."""
+    try:
+        from ortak import icerik_kurallari
+        return icerik_kurallari.metin(**kw)
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def _ekle(istem, ek):
+    return f"{istem}\n\n{ek}" if ek else istem
+
+
 def yaz(kid):
     """Konu klasörüne uzun.json ve kisa1..N.json yazar. Uzun senaryo geçemezse konu 'reddedildi' işaretlenir."""
     d = KONULAR / kid
@@ -956,8 +993,11 @@ def yaz(kid):
         referanslar=", ".join(f"{k} ({ad} {v:g} m)" for k, (ad, v) in REFERANSLAR.items()),
         harita=('- {"tur": "harita", "etiket": "yer adı"}  -> dünyadan konuma yakınlaşan harita (giriş bölümünde kullan)\n'
                 if koordinat else ""))
+    acilislar = son_acilislar()
     ortak = dict(konu=paket["wiki"], calisma=paket.get("calisma_basligi", ""), kurallar=kurallar,
-                 gorseller=gorsel_listesi(gorseller), kaynak=kaynak[:60000])
+                 gorseller=gorsel_listesi(gorseller), kaynak=kaynak[:60000],
+                 strateji=_strateji(son_acilislar=acilislar),
+                 strateji_bolum=_strateji(kanca_alani=False))
     if not (d / "uzun.json").exists():
         print(f"  uzun senaryo: {kid}", flush=True)
         s = uzun_yaz(ortak, gorseller, kaynak, kaynak_sayilari, koordinat)
@@ -973,11 +1013,14 @@ def yaz(kid):
         (d / "uzun.json").write_text(json.dumps(s, ensure_ascii=False, indent=1))
     if not list(d.glob("kisa*.json")):
         print(f"  Shorts senaryoları: {kid}", flush=True)
-        v = gemini.sor(KISA_ISTEM.format(adet=KISA_ADET, kelime_alt=KISA_KELIME[0] + 5,
-                                         kelime_ust=KISA_KELIME[1] - 15, **ortak), sicaklik=0.9)
+        v = gemini.sor(_ekle(KISA_ISTEM.format(adet=KISA_ADET, kelime_alt=KISA_KELIME[0] + 5,
+                                               kelime_ust=KISA_KELIME[1] - 15, **ortak), ortak.get("strateji")),
+                       sicaklik=0.9)
         kisalar = v.get("kisalar", []) if isinstance(v, dict) else v
         n = 0
         for k in kisalar[:KISA_ADET]:
+            if isinstance(k, dict):
+                k.pop("kanca_adaylari", None)  # isteğe bağlı aday listesi (kural 2); seçilen kanca asıl alanlarda
             k = _dogrula_duzelt(k, gorseller, False, kaynak, kaynak_sayilari, koordinat)
             if k:
                 n += 1

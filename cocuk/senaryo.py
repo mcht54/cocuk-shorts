@@ -108,12 +108,19 @@ def _gecerli(s):
     return None
 
 
-def yaz(tur, gecmis_konular, deneme_sayisi=4):
+def yaz(tur, gecmis_konular, deneme_sayisi=4, son_acilislar=None):
+    istem = YAZIM_ISTEMI.format(
+        tarif=TURLER[tur], gecmis="; ".join(gecmis_konular[-80:]) or "yok",
+        hayvanlar=", ".join(k for k, v in KATALOG.items() if v[2] == "hayvan"),
+        ortamlar=", ".join(ORTAMLAR), ogeler=", ".join(KATALOG))
+    try:  # içerik stratejisti kuralları + çocuk uyarlaması (2026-11-28; dosya yoksa atlanır)
+        from ortak import icerik_kurallari
+        istem = icerik_kurallari.ekle(istem, cocuk=True, son_acilislar=son_acilislar)
+    except Exception:  # noqa: BLE001
+        pass
     for _ in range(deneme_sayisi):
-        s = _gemini(YAZIM_ISTEMI.format(
-            tarif=TURLER[tur], gecmis="; ".join(gecmis_konular[-80:]) or "yok",
-            hayvanlar=", ".join(k for k, v in KATALOG.items() if v[2] == "hayvan"),
-            ortamlar=", ".join(ORTAMLAR), ogeler=", ".join(KATALOG)), 1.0)
+        s = _gemini(istem, 1.0)
+        s.pop("kanca_adaylari", None)  # isteğe bağlı aday listesi; seçilen kanca ekran_basligi'nda
         # listede olmayan öğe/ortam adlarını ayıkla (yerel çizim yalnız bunları tanır)
         for sahne in s.get("sahneler") or []:
             sahne["ogeler"] = [o for o in sahne.get("ogeler") or [] if o in KATALOG]
