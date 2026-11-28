@@ -1303,5 +1303,22 @@
   "yayin_zamani": "2026-12-01T14:00:00+00:00",
   "baslik": "Sürpriz Hediye | Fındık ile Pamuk | Çocuk Çizgi Filmi",
   "liste": "eklendi"
+ },
+ {
+  "tarih": "2026-11-28T09:17:13+00:00",
+  "bolum": "seri/findik-ile-pamuk/bolumler/e022.json",
+  "profil": "shorts",
+  "durum": "yuklendi",
+  "hat": "ingilizce_shorts",
+  "video_id": "6--vZUKVAg4",
+  "youtube": {
+   "privacyStatus": "private",
+   "uploadStatus": "uploaded",
+   "selfDeclaredMadeForKids": true,
+   "publishAt": "2026-12-02T09:00:00Z"
+  },
+  "yayin_zamani": "2026-12-02T09:00:00+00:00",
+  "baslik": "İngilizce Zıt Kelimeler: Fast, Slow, Down | Çocuklar için İngilizce",
+  "liste": "eklendi"
  }
 ]
