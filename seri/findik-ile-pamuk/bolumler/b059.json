@@ -1,0 +1,224 @@
+{
+ "seri_id": "findik-ile-pamuk",
+ "bolum_no": 59,
+ "baslik": "Taş Köprü",
+ "deger": "sabır",
+ "onceki_olaylar": [],
+ "bu_bolumde_degisen": [],
+ "mekan": "dere",
+ "baslangic": {
+  "findik": [
+   -1.4,
+   0.2
+  ],
+  "pamuk": [
+   -1.6,
+   0.4
+  ]
+ },
+ "nesne_yerlesim": {},
+ "ekran_basligi": "Acele Eden Kaybeder!",
+ "youtube": {
+  "baslik": "Fındık ile Pamuk | Taş Köprü | 3D Çocuk Çizgi Filmi",
+  "aciklama": "Fındık dereyi aceleyle geçmeye çalışır ancak sabırlı olmanın önemini öğrenir. Bu bölümün değeri: sabır.",
+  "etiketler": [
+   "çocuk çizgi filmi",
+   "3D animasyon",
+   "okul öncesi",
+   "masal",
+   "Fındık ile Pamuk",
+   "sincap",
+   "tavşan",
+   "sabır"
+  ]
+ },
+ "cekimler": [
+  {
+   "id": "c1",
+   "tip": "genis",
+   "hareket": "hizli_yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Karşı kıyıya ilk ben varacağım!"
+    },
+    {
+     "kim": "pamuk",
+     "metin": "Fındık, çok hızlı koşma!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "kararli"
+    },
+    {
+     "kim": "findik",
+     "eylem": "kos",
+     "bas": 0.2,
+     "nereye": [
+      -0.5,
+      0.2
+     ],
+     "son": 0.8
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "yuru",
+     "bas": 0.3,
+     "nereye": [
+      -1.0,
+      0.4
+     ],
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "tip": "orta",
+   "hareket": "sars",
+   "isik": "sabah",
+   "hedef": [
+    "findik"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Eyvah, ayağım kaydı!"
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "saskin"
+    },
+    {
+     "kim": "findik",
+     "eylem": "atla",
+     "bas": 0.4,
+     "nereye": [
+      0.0,
+      0.0
+     ],
+     "kez": 1,
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "tip": "yakin",
+   "hareket": "yaklas",
+   "isik": "sabah",
+   "hedef": [
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "Derin nefes al, yavaş ve dikkatli bas."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "pamuk",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "bak",
+     "bas": 0.5,
+     "kime": "findik"
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "tip": "genis",
+   "hareket": "takip",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "findik",
+     "metin": "Haklısın, yavaş ve dikkatli adım atmalıyım."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "ifade",
+     "bas": 0.0,
+     "tur": "mutlu"
+    },
+    {
+     "kim": "findik",
+     "eylem": "yuru",
+     "bas": 0.3,
+     "nereye": [
+      0.6,
+      0.2
+     ],
+     "son": 0.9
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "tip": "iki_kisi",
+   "hareket": "donus",
+   "isik": "ogle",
+   "hedef": [
+    "findik",
+    "pamuk"
+   ],
+   "satirlar": [
+    {
+     "kim": "pamuk",
+     "metin": "İşte başardık!"
+    },
+    {
+     "kim": "anlatici",
+     "metin": "Sabırlı olan adımlar, en güvenli yola varır."
+    }
+   ],
+   "eylemler": [
+    {
+     "kim": "findik",
+     "eylem": "zipla",
+     "bas": 0.1,
+     "kez": 2,
+     "son": 0.5
+    },
+    {
+     "kim": "pamuk",
+     "eylem": "el_salla",
+     "bas": 0.6,
+     "son": 1.0
+    },
+    {
+     "kim": "findik",
+     "eylem": "el_salla",
+     "bas": 0.62,
+     "son": 1.0
+    }
+   ]
+  }
+ ],
+ "muzik": "macera"
+}
