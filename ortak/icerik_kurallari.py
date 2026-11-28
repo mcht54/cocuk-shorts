@@ -56,6 +56,48 @@ def bolum_acilislari(bolumler, n=10) -> list[str]:
     return out
 
 
+DEPO = KLASOR.parent
+OLCUM_EN_AZ = 6      # bundan az ölçülmüş bölüm varsa blok eklenmez
+OLCUM_OLGUNLUK = 3   # ölçümden en az bu kadar gün önce yayınlanmış video sayılır (yeni video izlenmesi oturmamış)
+
+
+def olcum_blogu(onek: str, depo: Path | None = None, adet: int = 3) -> str:
+    """Kural 8: otonom/izlenme.json + yayin_kaydi.json'dan en çok/en az izlenen bölümler (onek: "b" masal,
+    "e" İngilizce). Yalnız ölçülen izlenme yazılır; veri az ya da dosya yok/bozuksa ''."""
+    import datetime as dt
+    import json
+    depo = depo or DEPO
+    try:
+        rapor = json.loads((depo / "otonom" / "izlenme.json").read_text(encoding="utf-8"))
+        kayit = json.loads((depo / "yayin_kaydi.json").read_text(encoding="utf-8"))
+        olcum_gunu = dt.date.fromisoformat(str(rapor.get("tarih", ""))[:10])
+        bolum_yolu = {k.get("video_id"): k.get("bolum", "") for k in kayit if isinstance(k, dict)}
+        satirlar = []
+        for v in rapor.get("videolar", []):
+            yol = bolum_yolu.get(v.get("video_id"), "")
+            if v.get("profil") != "shorts" or v.get("durum") != "public" or not Path(yol).name.startswith(onek) or not isinstance(v.get("izlenme"), int):
+                continue
+            try:
+                if (olcum_gunu - dt.date.fromisoformat(str(v.get("yayin", ""))[:10])).days < OLCUM_OLGUNLUK:
+                    continue
+                b = json.loads((depo / yol).read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            acilis = (bolum_acilislari([b]) or [""])[0]
+            satirlar.append((v["izlenme"], f"«{b.get('baslik') or v.get('ad', '')}» açılış: {acilis or '-'} "
+                                           f"— {v['izlenme']} izlenme ({v.get('yayin', '')} yayın)"))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return ""
+    if len(satirlar) < OLCUM_EN_AZ:
+        return ""
+    satirlar.sort(key=lambda x: -x[0])
+    n = min(adet, len(satirlar) // 2)
+    return ("NE TUTUYOR / NE TUTMUYOR (ölçüm, " + olcum_gunu.isoformat() + "; YouTube izlenmesi, " + str(len(satirlar))
+            + " bölüm). Tutanların kanca tipini, konusunu ve ilk cümle yapısını taşı; tutmayanların açılışını tekrarlama. "
+              "Bu rakamları videoda kullanma.\nEN ÇOK İZLENEN:\n" + "\n".join("- " + s for _, s in satirlar[:n])
+            + "\nEN AZ İZLENEN:\n" + "\n".join("- " + s for _, s in satirlar[-n:]))
+
+
 def ekle(istem: str, **kw) -> str:
     """istem + kurallar bloğu (kurallar yoksa istem aynen)."""
     m = metin(**kw)

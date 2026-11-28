@@ -217,6 +217,9 @@ def yaz_bir(no):
     try:  # içerik stratejisti kuralları + çocuk uyarlaması + son açılışlar (2026-11-28; dosya yoksa atlanır)
         from ortak import icerik_kurallari
         istem = icerik_kurallari.ekle(istem, cocuk=True, son_acilislar=icerik_kurallari.bolum_acilislari(mevcut()))
+        _o = icerik_kurallari.olcum_blogu("e")  # kural 8: ölçülen dersler (veri azsa boş)
+        if _o:
+            istem += "\n\n" + _o
     except Exception:  # noqa: BLE001
         pass
     ham = gemini.sor(istem, sicaklik=0.9)
